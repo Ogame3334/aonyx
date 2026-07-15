@@ -1,7 +1,7 @@
 #pragma once
 
-#include <format>
 #include <string>
+#include <format>
 
 #include <aonyx/util/concepts.hpp>
 #include <aonyx/util/numerical.hpp>
