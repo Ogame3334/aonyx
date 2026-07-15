@@ -12,21 +12,17 @@ namespace aonyx
         {
         public:
             numerical() = default;
-            numerical(int n)
+            constexpr numerical(int n) : data(std::to_string(n))
             {
-                data = std::to_string(n);
             }
-            numerical(double a)
+            constexpr numerical(double a) : data(std::to_string(a))
             {
-                data = std::to_string(a);
             }
-            numerical(unsigned long long int n, const std::string_view suffix)
+            constexpr numerical(unsigned long long int n, const std::string_view suffix) : data(std::format("{}{}", n, suffix))
             {
-                data = std::format("{}{}", n, suffix);
             }
-            numerical(long double a, const std::string_view suffix)
+            constexpr numerical(long double a, const std::string_view suffix) : data(std::format("{}{}", a, suffix))
             {
-                data = std::format("{}{}", a, suffix);
             }
 
             numerical &operator+(numerical other)
@@ -42,7 +38,7 @@ namespace aonyx
                 return *this;
             }
 
-            std::string to_string() const noexcept
+            constexpr std::string to_string() const noexcept
             {
                 return data;
             }
@@ -52,3 +48,12 @@ namespace aonyx
         };
     }
 }
+
+template <>
+struct std::formatter<aonyx::util::numerical> : std::formatter<const char *>
+{
+    auto format(aonyx::util::numerical n, std::format_context &ctx) const
+    {
+        return std::formatter<const char *>::format(n.to_string().c_str(), ctx);
+    }
+};

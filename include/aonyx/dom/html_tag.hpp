@@ -17,13 +17,11 @@ namespace aonyx
             tags tag;
             std::string tag_name;
 
-            constexpr html_tag(const std::string_view tag_name) : tag_name(tag_name)
+            constexpr html_tag(const std::string_view tag_name) : tag_name(tag_name), tag(str2tags(tag_name))
             {
-                tag = str2tags(tag_name);
             }
-            constexpr html_tag(const tags &tag) : tag(tag)
+            constexpr html_tag(const tags &tag) : tag(tag), tag_name(tags2str(tag))
             {
-                tag_name = tags2str(tag);
             }
 
             template <class... Attrs>

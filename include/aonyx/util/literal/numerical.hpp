@@ -36,7 +36,7 @@ namespace aonyx
             {
                 return numerical{n, "%"};
             }
-            numerical operator""_pcnt(long double a)
+            numerical operator""_per(long double a)
             {
                 return numerical{a, "%"};
             }

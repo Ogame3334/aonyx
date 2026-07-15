@@ -16,22 +16,20 @@ namespace aonyx
             {
                 struct padding : types::property_base<"padding">, constants::global_values<padding>
                 {
+                    using super_property = types::property_base<"padding">;
+
                     padding() = delete;
-                    padding(util::numerical n)
+                    padding(util::numerical n) : super_property(n.to_string())
                     {
-                        value = n.to_string();
                     }
-                    padding(util::numerical v, util::numerical h)
+                    padding(util::numerical v, util::numerical h) : super_property(std::format("{} {}", v, h))
                     {
-                        value = std::format("{} {}", v.to_string(), h.to_string());
                     }
-                    padding(util::numerical u, util::numerical h, util::numerical b)
+                    padding(util::numerical u, util::numerical h, util::numerical b) : super_property(std::format("{} {} {}", u, h, b))
                     {
-                        value = std::format("{} {} {}", u.to_string(), h.to_string(), b.to_string());
                     }
-                    padding(util::numerical u, util::numerical r, util::numerical b, util::numerical l)
+                    padding(util::numerical u, util::numerical r, util::numerical b, util::numerical l) : super_property(std::format("{} {} {} {}", u, r, b, l))
                     {
-                        value = std::format("{} {} {} {}", u.to_string(), r.to_string(), b.to_string(), l.to_string());
                     }
                 };
             }
