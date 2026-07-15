@@ -2,8 +2,8 @@
 
 #include <string>
 
-#include "method.hpp"
-#include "headers.hpp"
+#include <aonyx/http/method.hpp>
+#include <aonyx/http/headers.hpp>
 
 namespace aonyx
 {

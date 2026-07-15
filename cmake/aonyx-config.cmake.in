@@ -1,0 +1,10 @@
+@PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+
+find_dependency(nlohmann_json)
+
+find_dependency(Boost CONFIG COMPONENTS system url)
+find_dependency(OpenSSL)
+
+include("${CMAKE_CURRENT_LIST_DIR}/aonyx-targets.cmake")
