@@ -5,7 +5,6 @@ project(aonyx VERSION 0.1.0 LANGUAGES CXX)
 include(GNUInstallDirs)
 include(CMakePackageConfigHelpers)
 
-# Off by default when consumed as a subproject (FetchContent / add_subdirectory).
 option(
     AONYX_BUILD_EXAMPLES
     "Build the example executable"
@@ -51,7 +50,6 @@ target_link_libraries(
 
 target_compile_features(aonyx PUBLIC cxx_std_23)
 
-# Same target name whether consumed via find_package or FetchContent.
 add_library(aonyx::aonyx ALIAS aonyx)
 
 if(AONYX_BUILD_EXAMPLES)
