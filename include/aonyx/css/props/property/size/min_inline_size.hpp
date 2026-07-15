@@ -1,0 +1,36 @@
+#pragma once
+
+#include <string>
+#include <string_view>
+
+#include <aonyx/css/props/types/property.hpp>
+#include <aonyx/css/props/constants/global_values.hpp>
+#include <aonyx/util/numerical.hpp>
+
+namespace aonyx
+{
+    namespace css
+    {
+        namespace props
+        {
+            namespace property
+            {
+                struct min_inline_size : types::property_base<"min-inline-size">, constants::global_values<min_inline_size>
+                {
+                    using super_property = types::property_base<"min-inline-size">;
+
+                    min_inline_size() = delete;
+                    min_inline_size(util::numerical s) : super_property(s.to_string()) {}
+                    min_inline_size(std::string_view s) : super_property(std::string(s)) {}
+
+                    inline static constexpr std::string_view auto_ = "auto";
+                    inline static constexpr std::string_view fit_content = "fit-content";
+                    inline static constexpr std::string_view min_content = "min-content";
+                    inline static constexpr std::string_view max_content = "max-content";
+                    inline static constexpr std::string_view available = "available";
+                    inline static constexpr std::string_view stretch = "stretch";
+                };
+            }
+        }
+    }
+}
