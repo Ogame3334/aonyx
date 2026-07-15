@@ -7,9 +7,9 @@
 
 #include <aonyx/http/request.hpp>
 #include <aonyx/http/response.hpp>
-#include "handler.hpp"
-#include "param_from_string.hpp"
-#include "handler_traits.hpp"
+#include <aonyx/util/handler/handler.hpp>
+#include <aonyx/util/handler/param_from_string.hpp>
+#include <aonyx/util/handler/handler_traits.hpp>
 
 namespace aonyx
 {

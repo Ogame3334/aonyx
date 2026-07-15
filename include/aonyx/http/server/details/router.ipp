@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../router.hpp"
+#include <aonyx/http/server/router.hpp>
 #include <aonyx/util/handler/handler.hpp>
 #include <aonyx/util/handler/make_handler.hpp>
 
