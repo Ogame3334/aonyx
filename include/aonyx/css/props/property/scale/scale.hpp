@@ -18,15 +18,9 @@ namespace aonyx
                     using super_property = types::property_base<"scale">;
 
                     scale() = delete;
-                    scale(double a) : super_property(std::to_string(a))
-                    {
-                    }
-                    scale(double a, double b) : super_property(std::format("{} {}", a, b))
-                    {
-                    }
-                    scale(double a, double b, double c) : super_property(std::format("{} {} {}", a, b, c))
-                    {
-                    }
+                    scale(double a) : super_property(std::to_string(a)) {}
+                    scale(double a, double b) : super_property(std::format("{} {}", a, b)) {}
+                    scale(double a, double b, double c) : super_property(std::format("{} {} {}", a, b, c)) {}
 
                     inline static constexpr std::string_view none = "none";
                 };

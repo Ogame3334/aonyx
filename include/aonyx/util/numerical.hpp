@@ -12,18 +12,12 @@ namespace aonyx
         {
         public:
             numerical() = default;
-            constexpr numerical(int n) : data(std::to_string(n))
-            {
-            }
-            constexpr numerical(double a) : data(std::to_string(a))
-            {
-            }
-            constexpr numerical(unsigned long long int n, const std::string_view suffix) : data(std::format("{}{}", n, suffix))
-            {
-            }
-            constexpr numerical(long double a, const std::string_view suffix) : data(std::format("{}{}", a, suffix))
-            {
-            }
+            constexpr numerical(const numerical &n) = default;
+            constexpr numerical(numerical &&n) = default;
+            constexpr numerical(int n) : data(std::to_string(n)) {}
+            constexpr numerical(double a) : data(std::to_string(a)) {}
+            constexpr numerical(unsigned long long int n, const std::string_view suffix) : data(std::format("{}{}", n, suffix)) {}
+            constexpr numerical(long double a, const std::string_view suffix) : data(std::format("{}{}", a, suffix)) {}
 
             numerical &operator+(numerical other)
             {
@@ -37,14 +31,38 @@ namespace aonyx
 
                 return *this;
             }
+            numerical operator+() const
+            {
+                return numerical{data};
+            }
+            numerical operator-() const
+            {
+                if (is_positive())
+                {
+                    numerical temp{data.substr(1)};
+                    return temp;
+                }
+                else
+                {
+                    numerical temp{'-' + data};
+                    return temp;
+                }
+            }
 
             constexpr std::string to_string() const noexcept
             {
                 return data;
             }
 
+            bool is_positive() const noexcept
+            {
+                return data.starts_with('-');
+            }
+
         private:
             std::string data;
+
+            constexpr numerical(const std::string_view d) : data(d) {}
         };
     }
 }
