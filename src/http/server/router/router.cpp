@@ -8,6 +8,14 @@ namespace aonyx
     {
         void router::dispatch(const request &req, response &res) const
         {
+            if (req.method == method::unknown)
+            {
+                res.status = 405;
+                res.body = "405 Method Not Allowed";
+                res.headers["Content-Type"] = "text/html";
+                return;
+            }
+
             const route_trie &trie = dispatch_trie(req.method);
             util::inner_handler_params_t params;
             auto handler = trie.find(req.path, params);
@@ -125,20 +133,30 @@ namespace aonyx
             {
             case method::get:
                 return get_trie_;
-                break;
             case method::post:
                 return post_trie_;
-                break;
             case method::put:
                 return put_trie_;
-                break;
             case method::delete_:
                 return delete_trie_;
-                break;
-
             default:
+                return unknown_trie_;
+            }
+        }
+        router::route_trie &router::dispatch_trie(method method)
+        {
+            switch (method)
+            {
+            case method::get:
                 return get_trie_;
-                break;
+            case method::post:
+                return post_trie_;
+            case method::put:
+                return put_trie_;
+            case method::delete_:
+                return delete_trie_;
+            default:
+                return unknown_trie_;
             }
         }
     }

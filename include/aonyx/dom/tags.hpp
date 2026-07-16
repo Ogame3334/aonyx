@@ -391,9 +391,13 @@ namespace aonyx
                 return "summary";
             case tags::DIALOG:
                 return "dialog";
+            case tags::SLOT_ELEMENT:
+                return "slot";
+            case tags::NONE:
+            case tags::UNKNOWN:
+            default:
+                return "";
             }
-
-            return "";
         }
 
         constexpr tags

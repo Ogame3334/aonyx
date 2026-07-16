@@ -38,7 +38,8 @@ void session::handle_request()
         *res,
         [self, res](boost::beast::error_code, std::size_t)
         {
+            boost::system::error_code ec;
             self->socket_.shutdown(
-                boost::asio::ip::tcp::socket::shutdown_send);
+                boost::asio::ip::tcp::socket::shutdown_send, ec);
         });
 }

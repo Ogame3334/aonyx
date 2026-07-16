@@ -2,18 +2,26 @@
 
 #include <string>
 #include <string_view>
+#include <charconv>
+#include <stdexcept>
 
 namespace aonyx
 {
     namespace util
     {
         template <class T>
-        inline T param_from_string(std::string_view) {}
+        inline T param_from_string(std::string_view) = delete;
 
         template <>
         inline int param_from_string<int>(std::string_view s)
         {
-            return std::stoi(s.data());
+            int result = 0;
+            auto [ptr, ec] = std::from_chars(s.data(), s.data() + s.size(), result);
+            if (ec != std::errc{})
+            {
+                throw std::invalid_argument("invalid integer parameter: " + std::string(s));
+            }
+            return result;
         }
 
         template <>

@@ -60,11 +60,13 @@ namespace aonyx
             void register_method(http::method method, const std::string_view path, util::handler_t<std::type_identity_t<Args>...> &&handler);
 
             const route_trie &dispatch_trie(method method) const;
+            route_trie &dispatch_trie(method method);
 
             route_trie get_trie_;
             route_trie post_trie_;
             route_trie put_trie_;
             route_trie delete_trie_;
+            route_trie unknown_trie_;
         };
     }
 }

@@ -26,7 +26,8 @@ namespace aonyx
                 const std::string_view target,
                 const aonyx::http::method method = aonyx::http::method::get,
                 const std::string_view body = "",
-                const http::headers headers = {});
+                const http::headers headers = {},
+                bool is_https = false);
 
             aonyx::http::response get(
                 const std::string_view url,

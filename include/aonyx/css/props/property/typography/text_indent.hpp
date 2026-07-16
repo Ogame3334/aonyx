@@ -22,8 +22,8 @@ namespace aonyx
 
                     text_indent() = delete;
                     text_indent(util::numerical v) : super_property(v.to_string()) {}
-                    text_indent(util::numerical v, bool hanging) : super_property(std::format("{} hanging", v)) {}
-                    text_indent(util::numerical v, bool hanging, bool each_line) : super_property(std::format("{} hanging each-line", v)) {}
+                    text_indent(util::numerical v, bool hanging) : super_property(std::format("{} {}", v.to_string(), hanging ? "hanging" : "")) {}
+                    text_indent(util::numerical v, bool hanging, bool each_line) : super_property(std::format("{} {} {}", v.to_string(), hanging ? "hanging" : "", each_line ? "each-line" : "")) {}
                 };
             }
         }
