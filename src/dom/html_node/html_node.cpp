@@ -29,6 +29,10 @@ namespace aonyx
             if (this->tag_name.empty())
             {
                 std::string result = "";
+                if (!this->text_content.empty())
+                {
+                    result += this->text_content;
+                }
                 for (const auto &child : children)
                 {
                     result += child.to_string();

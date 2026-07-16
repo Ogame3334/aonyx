@@ -134,7 +134,8 @@ namespace aonyx
 
                 ssl::stream<tcp::socket> stream(ioc, ssl_context);
 
-                if (!SSL_set_tlsext_host_name(stream.native_handle(), host.data()))
+                std::string host_str(host);
+                if (!SSL_set_tlsext_host_name(stream.native_handle(), host_str.c_str()))
                 {
                     boost::system::error_code ec{static_cast<int>(::ERR_get_error()), boost::asio::error::get_ssl_category()};
                     throw boost::system::system_error{ec};
