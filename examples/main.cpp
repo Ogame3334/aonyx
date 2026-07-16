@@ -6,10 +6,17 @@ using namespace aonyx::dom;
 
 html_node hoge()
 {
+    namespace css = aonyx::css;
+    namespace props = css::props;
+
+    auto prop_list = css::make_property_list(
+        props::property::background_color(css::palette::lime),
+        props::property::color(css::palette::red));
+
     // do something
     int num = 10;
 
-    return div_(
+    return div_(aonyx::dom::attrs::style(prop_list))(
         div_("a"),
         div_("<p>hoge!!</p>"),
         div_("c"));

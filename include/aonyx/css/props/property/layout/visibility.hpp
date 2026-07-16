@@ -1,0 +1,31 @@
+#pragma once
+
+#include <string>
+#include <string_view>
+
+#include <aonyx/css/props/types/property.hpp>
+#include <aonyx/css/props/constants/global_values.hpp>
+
+namespace aonyx
+{
+    namespace css
+    {
+        namespace props
+        {
+            namespace property
+            {
+                struct visibility : types::property_base<"visibility">, constants::global_values<visibility>
+                {
+                    using super_property = types::property_base<"visibility">;
+
+                    visibility() = delete;
+                    visibility(std::string_view v) : super_property(std::string(v)) {}
+
+                    inline static constexpr types::property_constant visible{key, "visible"};
+                    inline static constexpr types::property_constant hidden{key, "hidden"};
+                    inline static constexpr types::property_constant collapse{key, "collapse"};
+                };
+            }
+        }
+    }
+}

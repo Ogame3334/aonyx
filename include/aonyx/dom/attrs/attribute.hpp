@@ -3,7 +3,7 @@
 #include <string>
 #include <string_view>
 
-#include <aonyx/css/rule.hpp>
+#include <aonyx/css/property_list.hpp>
 
 namespace aonyx
 {
@@ -31,9 +31,9 @@ namespace aonyx
             {
                 return attribute{"style", std::string(value)};
             }
-            inline attribute style(const css::style style)
+            inline attribute style(const css::property_list property_list)
             {
-                return attribute{"style", style.to_string()};
+                return attribute{"style", property_list.to_string()};
             }
 
             inline attribute href(const std::string_view value)

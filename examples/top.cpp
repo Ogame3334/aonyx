@@ -1,106 +1,79 @@
 #include <aonyx.hpp>
 
 using namespace aonyx::dom;
-using namespace aonyx::css::style_elements;
+namespace css = aonyx::css;
+namespace props = css::props;
 
-// 属性関数の名前空間衝突を避けるために必要なものだけ using します
-using aonyx::dom::attrs::charset;
-using aonyx::dom::attrs::class_;
-using aonyx::dom::attrs::content;
-using aonyx::dom::attrs::href;
-using aonyx::dom::attrs::lang;
-using aonyx::dom::attrs::name;
-
-void top_page(AONYX_PARAM(req, res))
+// AonyxのCSSシステムを利用してスタイルを構築
+html_node page_style()
 {
-    // グローバルなCSS（リセットやホバー、キーフレームなど動的な要素）
-    std::string global_css = R"(
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0, 114, 255, 0.6);
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    )";
+    using namespace aonyx::util::literal;
 
-    // CSS-in-C++ で各要素のスタイルを定義
-    auto body_style = aonyx::css::rule(
-        font_family("'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"),
-        background("linear-gradient(135deg, #1e1e2f 0%, #151522 100%)"),
-        color("#ffffff"),
-        display::flex,
-        justify_content::center,
-        align_items::center,
-        height("100vh"),
-        aonyx::css::style_element{"overflow", "hidden"} // 未定義のものは直接生成可能
-    );
+    // プロパティリストの構築
+    auto body_props = css::make_property_list(
+        props::property::background_color("#121212"),
+        props::property::color("#e0e0e0"),
+        props::property::font_family("'Inter', system-ui, -apple-system, sans-serif"),
+        props::property::margin(0_px),
+        props::property::padding(2_rem),
+        props::property::display("flex"),
+        props::property::flex_direction("column"),
+        props::property::align_items("center"),
+        props::property::line_height("1.6"));
 
-    auto container_style = aonyx::css::rule(
-        text_align::center,
-        background("rgba(255, 255, 255, 0.05)"),
-        aonyx::css::style_element{"backdrop-filter", "blur(12px)"},
-        aonyx::css::style_element{"-webkit-backdrop-filter", "blur(12px)"},
-        padding("4rem 5rem"),
-        border_radius("24px"),
-        box_shadow("0 8px 32px rgba(0, 0, 0, 0.3)"),
-        border("1px solid rgba(255, 255, 255, 0.1)"),
-        aonyx::css::style_element{"animation", "fadeIn 1s ease-out"},
-        max_width("600px"),
-        width("90%"));
+    auto h1_props = css::make_property_list(
+        props::property::color("#00e676"),
+        props::property::font_size("3.5rem"),
+        props::property::margin_bottom(0.5_rem));
 
-    auto h1_style = aonyx::css::rule(
-        font_size("3.5rem"),
-        margin_bottom("1.5rem"),
-        aonyx::css::style_element{"background-image", "linear-gradient(to right, #00c6ff, #0072ff)"}, // backgroundの代わりにbackground-imageを使用
-        aonyx::css::style_element{"-webkit-background-clip", "text"},
-        aonyx::css::style_element{"-webkit-text-fill-color", "transparent"},
-        font_weight("800"));
+    auto hero_props = css::make_property_list(
+        props::property::text_align("center"),
+        props::property::margin_bottom(3_rem));
 
-    auto p_style = aonyx::css::rule(
-        font_size("1.25rem"),
-        color("#b0b0c0"),
-        margin_bottom("2.5rem"),
-        line_height("1.6"));
+    auto features_props = css::make_property_list(
+        props::property::display("grid"),
+        props::property::grid_template_columns("repeat(auto-fit, minmax(300px, 1fr))"),
+        props::property::gap("1.5rem"),
+        props::property::width("100%"),
+        props::property::max_width("900px"));
 
-    auto btn_style = aonyx::css::rule(
-        display::inline_block,
-        background("linear-gradient(45deg, #00c6ff, #0072ff)"),
-        color("white"),
-        padding("1rem 2.5rem"),
-        border_radius("50px"),
-        aonyx::css::style_element{"text-decoration", "none"},
-        font_weight("600"),
-        font_size("1.1rem"),
-        aonyx::css::style_element{"transition", "all 0.3s ease"},
-        box_shadow("0 4px 15px rgba(0, 114, 255, 0.4)"));
+    auto feature_props = css::make_property_list(
+        props::property::background("#1e1e1e"),
+        props::property::padding(2_rem),
+        props::property::border_radius(16_px),
+        props::property::border(1_px, "solid", "#333"),
+        props::property::transition("transform 0.2s, box-shadow 0.2s"),
+        props::property::box_shadow(0_px, 4_px, 6_px, props::func::rgb(0, 0, 0, 0.3)));
 
-    // 以前実装した属性ヘルパーをフル活用したDOM構築
-    // aonyx::dom::style (タグ) と aonyx::dom::attrs::style (属性) が被るので、
-    // 属性側は aonyx::dom::attrs::style とフルで指定するかエイリアスを使います
-    namespace attrs = aonyx::dom::attrs;
+    // スタイルシートの構築
+    auto stylesheet = css::make_stylesheet(
+        css::rule("body", body_props),
+        css::rule("h1", h1_props),
+        css::rule(".hero", hero_props),
+        css::rule(".features", features_props),
+        css::rule(".feature", feature_props));
 
-    auto node = html(lang("en"))(
-        head(
-            meta(charset("UTF-8")),
-            meta(name("viewport"), content("width=device-width, initial-scale=1.0")),
-            title("Aonyx Web Framework"),
-            aonyx::dom::style(global_css) // タグとしての style
-        ),
-        body(attrs::style(body_style))( // 属性としての style
-            div_(class_("container"), attrs::style(container_style))(
-                h1(attrs::style(h1_style))("Welcome to Aonyx"),
-                p(attrs::style(p_style))("The next generation C++ web framework. Fast, declarative, and elegant."),
-                a(href("https://github.com/Ogame3334/aonyx"), class_("btn"), attrs::style(btn_style))("View on GitHub")
-            )
-        )
-    );
+    return style()(stylesheet.to_string());
+}
+
+void top(AONYX_PARAM(req, res))
+{
+    auto node =
+        html(attrs::class_("ja"))(
+            head(
+                title("Aonyx - Modern C++ Web Framework"),
+                page_style()),
+            body(
+                div_(attrs::class_("hero"))(
+                    h1("Aonyx"),
+                    p("Aonyx is a powerful and stylish C++ web framework.")),
+                div_(attrs::class_("features"))(
+                    div_(attrs::class_("feature"))(
+                        h2("Lightweight"),
+                        p("Built for performance and simplicity.")),
+                    div_(attrs::class_("feature"))(
+                        h2("Modern C++"),
+                        p("Utilizing modern C++ standards for safety and speed.")))));
 
     res.body = node.to_string();
     res.status = 200;
@@ -111,12 +84,8 @@ int main()
 {
     aonyx::http::server server;
     auto &router = server.router();
-
-    // / と /top の両方でアクセスできるように設定
-    router.get("/", top_page);
-    router.get("/top", top_page);
+    router.get("/top", top);
 
     server.run();
-
     return 0;
 }

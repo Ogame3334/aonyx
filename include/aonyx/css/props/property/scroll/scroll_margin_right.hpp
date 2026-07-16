@@ -1,0 +1,27 @@
+#pragma once
+
+#include <string>
+#include <string_view>
+
+#include <aonyx/css/props/types/property.hpp>
+#include <aonyx/css/props/constants/global_values.hpp>
+
+namespace aonyx
+{
+    namespace css
+    {
+        namespace props
+        {
+            namespace property
+            {
+                struct scroll_margin_right : types::property_base<"scroll-margin-right">, constants::global_values<scroll_margin_right>
+                {
+                    using super_property = types::property_base<"scroll-margin-right">;
+
+                    scroll_margin_right() = delete;
+                    scroll_margin_right(std::string_view v) : super_property(std::string(v)) {}
+                };
+            }
+        }
+    }
+}

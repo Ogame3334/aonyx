@@ -31,4 +31,4 @@ namespace aonyx
     } // namespace dom
 } // namespace aonyx
 
-#include "details/html_node.ipp"
+#include <aonyx/dom/details/html_node.ipp>
