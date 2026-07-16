@@ -549,3 +549,14 @@
 // view_transition
 #include <aonyx/css/props/property/view_transition/view_transition_class.hpp>
 #include <aonyx/css/props/property/view_transition/view_transition_name.hpp>
+
+namespace aonyx
+{
+    namespace css
+    {
+        namespace props
+        {
+            using namespace property;
+        }
+    }
+}
