@@ -21,8 +21,8 @@ namespace aonyx
                     text_overflow() = delete;
                     text_overflow(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view clip = "clip";
-                    inline static constexpr std::string_view ellipsis = "ellipsis";
+                    inline static constexpr types::property_constant clip{key, "clip"};
+                    inline static constexpr types::property_constant ellipsis{key, "ellipsis"};
                 };
             }
         }

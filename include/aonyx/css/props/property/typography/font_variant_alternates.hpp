@@ -21,13 +21,13 @@ namespace aonyx
                     font_variant_alternates() = delete;
                     font_variant_alternates(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view normal = "normal";
-                    inline static constexpr std::string_view stylistic = "stylistic";
-                    inline static constexpr std::string_view styleset = "styleset";
-                    inline static constexpr std::string_view character_variant = "character-variant";
-                    inline static constexpr std::string_view swash = "swash";
-                    inline static constexpr std::string_view ornaments = "ornaments";
-                    inline static constexpr std::string_view annotation = "annotation";
+                    inline static constexpr types::property_constant normal{key, "normal"};
+                    inline static constexpr types::property_constant stylistic{key, "stylistic"};
+                    inline static constexpr types::property_constant styleset{key, "styleset"};
+                    inline static constexpr types::property_constant character_variant{key, "character-variant"};
+                    inline static constexpr types::property_constant swash{key, "swash"};
+                    inline static constexpr types::property_constant ornaments{key, "ornaments"};
+                    inline static constexpr types::property_constant annotation{key, "annotation"};
                 };
             }
         }

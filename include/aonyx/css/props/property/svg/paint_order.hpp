@@ -24,10 +24,10 @@ namespace aonyx
                     paint_order(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2)) {}
                     paint_order(std::string_view v1, std::string_view v2, std::string_view v3) : super_property(std::format("{} {} {}", v1, v2, v3)) {}
 
-                    inline static constexpr std::string_view normal = "normal";
-                    inline static constexpr std::string_view fill = "fill";
-                    inline static constexpr std::string_view stroke = "stroke";
-                    inline static constexpr std::string_view markers = "markers";
+                    inline static constexpr types::property_constant normal{key, "normal"};
+                    inline static constexpr types::property_constant fill{key, "fill"};
+                    inline static constexpr types::property_constant stroke{key, "stroke"};
+                    inline static constexpr types::property_constant markers{key, "markers"};
                 };
             }
         }

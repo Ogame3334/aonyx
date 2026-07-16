@@ -21,12 +21,12 @@ namespace aonyx
                     text_transform() = delete;
                     text_transform(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view none = "none";
-                    inline static constexpr std::string_view capitalize = "capitalize";
-                    inline static constexpr std::string_view uppercase = "uppercase";
-                    inline static constexpr std::string_view lowercase = "lowercase";
-                    inline static constexpr std::string_view full_width = "full-width";
-                    inline static constexpr std::string_view full_size_kana = "full-size-kana";
+                    inline static constexpr types::property_constant none{key, "none"};
+                    inline static constexpr types::property_constant capitalize{key, "capitalize"};
+                    inline static constexpr types::property_constant uppercase{key, "uppercase"};
+                    inline static constexpr types::property_constant lowercase{key, "lowercase"};
+                    inline static constexpr types::property_constant full_width{key, "full-width"};
+                    inline static constexpr types::property_constant full_size_kana{key, "full-size-kana"};
                 };
             }
         }

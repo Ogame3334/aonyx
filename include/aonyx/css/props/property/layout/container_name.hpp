@@ -23,7 +23,7 @@ namespace aonyx
                     container_name(std::string_view name) : super_property(std::string(name)) {}
                     container_name(std::string_view name1, std::string_view name2) : super_property(std::format("{} {}", name1, name2)) {}
 
-                    inline static constexpr std::string_view none = "none";
+                    inline static constexpr types::property_constant none{key, "none"};
                 };
             }
         }

@@ -21,11 +21,11 @@ namespace aonyx
                     object_fit() = delete;
                     object_fit(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view fill = "fill";
-                    inline static constexpr std::string_view contain = "contain";
-                    inline static constexpr std::string_view cover = "cover";
-                    inline static constexpr std::string_view none = "none";
-                    inline static constexpr std::string_view scale_down = "scale-down";
+                    inline static constexpr types::property_constant fill{key, "fill"};
+                    inline static constexpr types::property_constant contain{key, "contain"};
+                    inline static constexpr types::property_constant cover{key, "cover"};
+                    inline static constexpr types::property_constant none{key, "none"};
+                    inline static constexpr types::property_constant scale_down{key, "scale-down"};
                 };
             }
         }

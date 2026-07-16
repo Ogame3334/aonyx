@@ -25,11 +25,11 @@ namespace aonyx
                     text_decoration_inset(std::string_view v1, std::string_view v2, std::string_view v3) : super_property(std::format("{} {} {}", v1, v2, v3)) {}
                     text_decoration_inset(std::string_view v1, std::string_view v2, std::string_view v3, std::string_view v4) : super_property(std::format("{} {} {} {}", v1, v2, v3, v4)) {}
 
-                    inline static constexpr std::string_view normal = "normal";
-                    inline static constexpr std::string_view leading = "leading";
-                    inline static constexpr std::string_view text = "text";
-                    inline static constexpr std::string_view edges = "edges";
-                    inline static constexpr std::string_view box_decoration = "box-decoration";
+                    inline static constexpr types::property_constant normal{key, "normal"};
+                    inline static constexpr types::property_constant leading{key, "leading"};
+                    inline static constexpr types::property_constant text{key, "text"};
+                    inline static constexpr types::property_constant edges{key, "edges"};
+                    inline static constexpr types::property_constant box_decoration{key, "box-decoration"};
                 };
             }
         }

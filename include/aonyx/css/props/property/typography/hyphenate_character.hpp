@@ -21,7 +21,7 @@ namespace aonyx
                     hyphenate_character() = delete;
                     hyphenate_character(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
                 };
             }
         }

@@ -21,13 +21,13 @@ namespace aonyx
                     font_variant_caps() = delete;
                     font_variant_caps(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view normal = "normal";
-                    inline static constexpr std::string_view small_caps = "small-caps";
-                    inline static constexpr std::string_view all_small_caps = "all-small-caps";
-                    inline static constexpr std::string_view petite_caps = "petite-caps";
-                    inline static constexpr std::string_view all_petite_caps = "all-petite-caps";
-                    inline static constexpr std::string_view unicase = "unicase";
-                    inline static constexpr std::string_view titling_caps = "titling-caps";
+                    inline static constexpr types::property_constant normal{key, "normal"};
+                    inline static constexpr types::property_constant small_caps{key, "small-caps"};
+                    inline static constexpr types::property_constant all_small_caps{key, "all-small-caps"};
+                    inline static constexpr types::property_constant petite_caps{key, "petite-caps"};
+                    inline static constexpr types::property_constant all_petite_caps{key, "all-petite-caps"};
+                    inline static constexpr types::property_constant unicase{key, "unicase"};
+                    inline static constexpr types::property_constant titling_caps{key, "titling-caps"};
                 };
             }
         }

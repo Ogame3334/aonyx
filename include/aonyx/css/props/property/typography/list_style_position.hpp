@@ -21,8 +21,8 @@ namespace aonyx
                     list_style_position() = delete;
                     list_style_position(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view inside = "inside";
-                    inline static constexpr std::string_view outside = "outside";
+                    inline static constexpr types::property_constant inside{key, "inside"};
+                    inline static constexpr types::property_constant outside{key, "outside"};
                 };
             }
         }

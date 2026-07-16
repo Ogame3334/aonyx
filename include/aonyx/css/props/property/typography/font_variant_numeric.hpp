@@ -25,15 +25,15 @@ namespace aonyx
                     font_variant_numeric(std::string_view v1, std::string_view v2, std::string_view v3) : super_property(std::format("{} {} {}", v1, v2, v3)) {}
                     font_variant_numeric(std::string_view v1, std::string_view v2, std::string_view v3, std::string_view v4) : super_property(std::format("{} {} {} {}", v1, v2, v3, v4)) {}
 
-                    inline static constexpr std::string_view normal = "normal";
-                    inline static constexpr std::string_view ordinal = "ordinal";
-                    inline static constexpr std::string_view slashed_zero = "slashed-zero";
-                    inline static constexpr std::string_view lining_nums = "lining-nums";
-                    inline static constexpr std::string_view oldstyle_nums = "oldstyle-nums";
-                    inline static constexpr std::string_view proportional_nums = "proportional-nums";
-                    inline static constexpr std::string_view tabular_nums = "tabular-nums";
-                    inline static constexpr std::string_view diagonal_fractions = "diagonal-fractions";
-                    inline static constexpr std::string_view stacked_fractions = "stacked-fractions";
+                    inline static constexpr types::property_constant normal{key, "normal"};
+                    inline static constexpr types::property_constant ordinal{key, "ordinal"};
+                    inline static constexpr types::property_constant slashed_zero{key, "slashed-zero"};
+                    inline static constexpr types::property_constant lining_nums{key, "lining-nums"};
+                    inline static constexpr types::property_constant oldstyle_nums{key, "oldstyle-nums"};
+                    inline static constexpr types::property_constant proportional_nums{key, "proportional-nums"};
+                    inline static constexpr types::property_constant tabular_nums{key, "tabular-nums"};
+                    inline static constexpr types::property_constant diagonal_fractions{key, "diagonal-fractions"};
+                    inline static constexpr types::property_constant stacked_fractions{key, "stacked-fractions"};
                 };
             }
         }

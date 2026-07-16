@@ -21,21 +21,21 @@ namespace aonyx
                     justify_self() = delete;
                     justify_self(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
-                    inline static constexpr std::string_view normal = "normal";
-                    inline static constexpr std::string_view stretch = "stretch";
-                    inline static constexpr std::string_view center = "center";
-                    inline static constexpr std::string_view start = "start";
-                    inline static constexpr std::string_view end = "end";
-                    inline static constexpr std::string_view flex_start = "flex-start";
-                    inline static constexpr std::string_view flex_end = "flex-end";
-                    inline static constexpr std::string_view self_start = "self-start";
-                    inline static constexpr std::string_view self_end = "self-end";
-                    inline static constexpr std::string_view left = "left";
-                    inline static constexpr std::string_view right = "right";
-                    inline static constexpr std::string_view baseline = "baseline";
-                    inline static constexpr std::string_view safe_center = "safe center";
-                    inline static constexpr std::string_view unsafe_center = "unsafe center";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
+                    inline static constexpr types::property_constant normal{key, "normal"};
+                    inline static constexpr types::property_constant stretch{key, "stretch"};
+                    inline static constexpr types::property_constant center{key, "center"};
+                    inline static constexpr types::property_constant start{key, "start"};
+                    inline static constexpr types::property_constant end{key, "end"};
+                    inline static constexpr types::property_constant flex_start{key, "flex-start"};
+                    inline static constexpr types::property_constant flex_end{key, "flex-end"};
+                    inline static constexpr types::property_constant self_start{key, "self-start"};
+                    inline static constexpr types::property_constant self_end{key, "self-end"};
+                    inline static constexpr types::property_constant left{key, "left"};
+                    inline static constexpr types::property_constant right{key, "right"};
+                    inline static constexpr types::property_constant baseline{key, "baseline"};
+                    inline static constexpr types::property_constant safe_center{key, "safe center"};
+                    inline static constexpr types::property_constant unsafe_center{key, "unsafe center"};
                 };
             }
         }

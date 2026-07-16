@@ -21,7 +21,7 @@ namespace aonyx
                     column_gap() = delete;
                     column_gap(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view normal = "normal";
+                    inline static constexpr types::property_constant normal{key, "normal"};
                 };
             }
         }

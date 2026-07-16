@@ -23,8 +23,8 @@ namespace aonyx
                     scrollbar_gutter(std::string_view v) : super_property(std::string(v)) {}
                     scrollbar_gutter(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2)) {}
 
-                    inline static constexpr std::string_view stable = "stable";
-                    inline static constexpr std::string_view both_edges = "both-edges";
+                    inline static constexpr types::property_constant stable{key, "stable"};
+                    inline static constexpr types::property_constant both_edges{key, "both-edges"};
                 };
             }
         }

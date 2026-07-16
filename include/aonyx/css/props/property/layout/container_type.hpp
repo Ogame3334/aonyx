@@ -21,9 +21,9 @@ namespace aonyx
                     container_type() = delete;
                     container_type(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view normal = "normal";
-                    inline static constexpr std::string_view inline_size = "inline-size";
-                    inline static constexpr std::string_view size = "size";
+                    inline static constexpr types::property_constant normal{key, "normal"};
+                    inline static constexpr types::property_constant inline_size{key, "inline-size"};
+                    inline static constexpr types::property_constant size{key, "size"};
                 };
             }
         }

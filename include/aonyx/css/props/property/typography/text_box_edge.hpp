@@ -23,12 +23,12 @@ namespace aonyx
                     text_box_edge(std::string_view over_under) : super_property(std::string(over_under)) {}
                     text_box_edge(std::string_view over, std::string_view under) : super_property(std::format("{} {}", over, under)) {}
 
-                    inline static constexpr std::string_view none = "none";
-                    inline static constexpr std::string_view cap = "cap";
-                    inline static constexpr std::string_view ex = "ex";
-                    inline static constexpr std::string_view alphabetic = "alphabetic";
-                    inline static constexpr std::string_view text = "text";
-                    inline static constexpr std::string_view overshoot = "overshoot";
+                    inline static constexpr types::property_constant none{key, "none"};
+                    inline static constexpr types::property_constant cap{key, "cap"};
+                    inline static constexpr types::property_constant ex{key, "ex"};
+                    inline static constexpr types::property_constant alphabetic{key, "alphabetic"};
+                    inline static constexpr types::property_constant text{key, "text"};
+                    inline static constexpr types::property_constant overshoot{key, "overshoot"};
                 };
             }
         }

@@ -21,12 +21,12 @@ namespace aonyx
                     clear() = delete;
                     clear(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view none = "none";
-                    inline static constexpr std::string_view left = "left";
-                    inline static constexpr std::string_view right = "right";
-                    inline static constexpr std::string_view both = "both";
-                    inline static constexpr std::string_view inline_start = "inline-start";
-                    inline static constexpr std::string_view inline_end = "inline-end";
+                    inline static constexpr types::property_constant none{key, "none"};
+                    inline static constexpr types::property_constant left{key, "left"};
+                    inline static constexpr types::property_constant right{key, "right"};
+                    inline static constexpr types::property_constant both{key, "both"};
+                    inline static constexpr types::property_constant inline_start{key, "inline-start"};
+                    inline static constexpr types::property_constant inline_end{key, "inline-end"};
                 };
             }
         }

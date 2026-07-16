@@ -21,11 +21,11 @@ namespace aonyx
                     image_rendering() = delete;
                     image_rendering(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
-                    inline static constexpr std::string_view smooth = "smooth";
-                    inline static constexpr std::string_view high_quality = "high-quality";
-                    inline static constexpr std::string_view crisp_edges = "crisp-edges";
-                    inline static constexpr std::string_view pixelated = "pixelated";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
+                    inline static constexpr types::property_constant smooth{key, "smooth"};
+                    inline static constexpr types::property_constant high_quality{key, "high-quality"};
+                    inline static constexpr types::property_constant crisp_edges{key, "crisp-edges"};
+                    inline static constexpr types::property_constant pixelated{key, "pixelated"};
                 };
             }
         }

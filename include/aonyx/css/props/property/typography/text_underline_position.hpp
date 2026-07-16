@@ -23,13 +23,13 @@ namespace aonyx
                     text_underline_position(std::string_view v) : super_property(std::string(v)) {}
                     text_underline_position(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
-                    inline static constexpr std::string_view under = "under";
-                    inline static constexpr std::string_view left = "left";
-                    inline static constexpr std::string_view right = "right";
-                    inline static constexpr std::string_view under_left = "under left";
-                    inline static constexpr std::string_view under_right = "under right";
-                    inline static constexpr std::string_view from_font = "from-font";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
+                    inline static constexpr types::property_constant under{key, "under"};
+                    inline static constexpr types::property_constant left{key, "left"};
+                    inline static constexpr types::property_constant right{key, "right"};
+                    inline static constexpr types::property_constant under_left{key, "under left"};
+                    inline static constexpr types::property_constant under_right{key, "under right"};
+                    inline static constexpr types::property_constant from_font{key, "from-font"};
                 };
             }
         }

@@ -21,8 +21,8 @@ namespace aonyx
                     column_span() = delete;
                     column_span(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view none = "none";
-                    inline static constexpr std::string_view all = "all";
+                    inline static constexpr types::property_constant none{key, "none"};
+                    inline static constexpr types::property_constant all{key, "all"};
                 };
             }
         }

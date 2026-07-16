@@ -23,19 +23,19 @@ namespace aonyx
                     font_weight(util::numerical v) : super_property(v.to_string()) {}
                     font_weight(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view normal = "normal";
-                    inline static constexpr std::string_view bold = "bold";
-                    inline static constexpr std::string_view bolder = "bolder";
-                    inline static constexpr std::string_view lighter = "lighter";
-                    inline static constexpr std::string_view thin = "100";
-                    inline static constexpr std::string_view extra_light = "200";
-                    inline static constexpr std::string_view light = "300";
-                    inline static constexpr std::string_view medium_weight = "400";
-                    inline static constexpr std::string_view medium = "500";
-                    inline static constexpr std::string_view semi_bold = "600";
-                    inline static constexpr std::string_view bold_value = "700";
-                    inline static constexpr std::string_view extra_bold = "800";
-                    inline static constexpr std::string_view black = "900";
+                    inline static constexpr types::property_constant normal{key, "normal"};
+                    inline static constexpr types::property_constant bold{key, "bold"};
+                    inline static constexpr types::property_constant bolder{key, "bolder"};
+                    inline static constexpr types::property_constant lighter{key, "lighter"};
+                    inline static constexpr types::property_constant thin{key, "100"};
+                    inline static constexpr types::property_constant extra_light{key, "200"};
+                    inline static constexpr types::property_constant light{key, "300"};
+                    inline static constexpr types::property_constant medium_weight{key, "400"};
+                    inline static constexpr types::property_constant medium{key, "500"};
+                    inline static constexpr types::property_constant semi_bold{key, "600"};
+                    inline static constexpr types::property_constant bold_value{key, "700"};
+                    inline static constexpr types::property_constant extra_bold{key, "800"};
+                    inline static constexpr types::property_constant black{key, "900"};
                 };
             }
         }

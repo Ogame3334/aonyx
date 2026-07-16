@@ -24,9 +24,9 @@ namespace aonyx
                     background_origin(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2)) {}
                     background_origin(std::string_view v1, std::string_view v2, std::string_view v3) : super_property(std::format("{}, {}, {}", v1, v2, v3)) {}
 
-                    inline static constexpr std::string_view border_box = "border-box";
-                    inline static constexpr std::string_view padding_box = "padding-box";
-                    inline static constexpr std::string_view content_box = "content-box";
+                    inline static constexpr types::property_constant border_box{key, "border-box"};
+                    inline static constexpr types::property_constant padding_box{key, "padding-box"};
+                    inline static constexpr types::property_constant content_box{key, "content-box"};
                 };
             }
         }

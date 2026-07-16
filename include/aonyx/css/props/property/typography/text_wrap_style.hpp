@@ -21,10 +21,10 @@ namespace aonyx
                     text_wrap_style() = delete;
                     text_wrap_style(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
-                    inline static constexpr std::string_view balance = "balance";
-                    inline static constexpr std::string_view pretty = "pretty";
-                    inline static constexpr std::string_view stable = "stable";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
+                    inline static constexpr types::property_constant balance{key, "balance"};
+                    inline static constexpr types::property_constant pretty{key, "pretty"};
+                    inline static constexpr types::property_constant stable{key, "stable"};
                 };
             }
         }

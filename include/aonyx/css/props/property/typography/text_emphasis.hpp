@@ -24,14 +24,14 @@ namespace aonyx
                     text_emphasis(std::string_view style, std::string_view color) : super_property(std::format("{} {}", style, color)) {}
                     text_emphasis(std::string_view style, std::string_view color, std::string_view shape) : super_property(std::format("{} {} {}", style, color, shape)) {}
 
-                    inline static constexpr std::string_view none = "none";
-                    inline static constexpr std::string_view filled = "filled";
-                    inline static constexpr std::string_view open = "open";
-                    inline static constexpr std::string_view dot = "dot";
-                    inline static constexpr std::string_view circle = "circle";
-                    inline static constexpr std::string_view double_circle = "double-circle";
-                    inline static constexpr std::string_view triangle = "triangle";
-                    inline static constexpr std::string_view sesame = "sesame";
+                    inline static constexpr types::property_constant none{key, "none"};
+                    inline static constexpr types::property_constant filled{key, "filled"};
+                    inline static constexpr types::property_constant open{key, "open"};
+                    inline static constexpr types::property_constant dot{key, "dot"};
+                    inline static constexpr types::property_constant circle{key, "circle"};
+                    inline static constexpr types::property_constant double_circle{key, "double-circle"};
+                    inline static constexpr types::property_constant triangle{key, "triangle"};
+                    inline static constexpr types::property_constant sesame{key, "sesame"};
                 };
             }
         }

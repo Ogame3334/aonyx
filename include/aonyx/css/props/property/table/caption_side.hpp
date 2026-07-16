@@ -21,12 +21,12 @@ namespace aonyx
                     caption_side() = delete;
                     caption_side(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view top = "top";
-                    inline static constexpr std::string_view bottom = "bottom";
-                    inline static constexpr std::string_view block_start = "block-start";
-                    inline static constexpr std::string_view block_end = "block-end";
-                    inline static constexpr std::string_view inline_start = "inline-start";
-                    inline static constexpr std::string_view inline_end = "inline-end";
+                    inline static constexpr types::property_constant top{key, "top"};
+                    inline static constexpr types::property_constant bottom{key, "bottom"};
+                    inline static constexpr types::property_constant block_start{key, "block-start"};
+                    inline static constexpr types::property_constant block_end{key, "block-end"};
+                    inline static constexpr types::property_constant inline_start{key, "inline-start"};
+                    inline static constexpr types::property_constant inline_end{key, "inline-end"};
                 };
             }
         }

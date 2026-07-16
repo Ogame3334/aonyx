@@ -21,11 +21,11 @@ namespace aonyx
                     line_break() = delete;
                     line_break(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
-                    inline static constexpr std::string_view loose = "loose";
-                    inline static constexpr std::string_view normal = "normal";
-                    inline static constexpr std::string_view strict = "strict";
-                    inline static constexpr std::string_view anywhere = "anywhere";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
+                    inline static constexpr types::property_constant loose{key, "loose"};
+                    inline static constexpr types::property_constant normal{key, "normal"};
+                    inline static constexpr types::property_constant strict{key, "strict"};
+                    inline static constexpr types::property_constant anywhere{key, "anywhere"};
                 };
             }
         }

@@ -23,10 +23,10 @@ namespace aonyx
                     flex_basis(util::numerical v) : super_property(v.to_string()) {}
                     flex_basis(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
-                    inline static constexpr std::string_view fit_content = "fit-content";
-                    inline static constexpr std::string_view max_content = "max-content";
-                    inline static constexpr std::string_view min_content = "min-content";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
+                    inline static constexpr types::property_constant fit_content{key, "fit-content"};
+                    inline static constexpr types::property_constant max_content{key, "max-content"};
+                    inline static constexpr types::property_constant min_content{key, "min-content"};
                 };
             }
         }

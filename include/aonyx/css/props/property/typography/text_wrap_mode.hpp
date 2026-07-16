@@ -21,8 +21,8 @@ namespace aonyx
                     text_wrap_mode() = delete;
                     text_wrap_mode(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view nowrap = "nowrap";
-                    inline static constexpr std::string_view wrap = "wrap";
+                    inline static constexpr types::property_constant nowrap{key, "nowrap"};
+                    inline static constexpr types::property_constant wrap{key, "wrap"};
                 };
             }
         }

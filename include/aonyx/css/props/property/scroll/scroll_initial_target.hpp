@@ -21,7 +21,7 @@ namespace aonyx
                     scroll_initial_target() = delete;
                     scroll_initial_target(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view none = "none";
+                    inline static constexpr types::property_constant none{key, "none"};
                 };
             }
         }

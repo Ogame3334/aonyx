@@ -21,8 +21,8 @@ namespace aonyx
                     scroll_behavior() = delete;
                     scroll_behavior(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
-                    inline static constexpr std::string_view smooth = "smooth";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
+                    inline static constexpr types::property_constant smooth{key, "smooth"};
                 };
             }
         }

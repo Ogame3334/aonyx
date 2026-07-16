@@ -21,15 +21,15 @@ namespace aonyx
                     pointer_events() = delete;
                     pointer_events(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
-                    inline static constexpr std::string_view none = "none";
-                    inline static constexpr std::string_view visible = "visible";
-                    inline static constexpr std::string_view visible_paint = "visiblePainted";
-                    inline static constexpr std::string_view visible_fill = "visibleFill";
-                    inline static constexpr std::string_view visible_stroke = "visibleStroke";
-                    inline static constexpr std::string_view painted = "painted";
-                    inline static constexpr std::string_view fill = "fill";
-                    inline static constexpr std::string_view stroke = "stroke";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
+                    inline static constexpr types::property_constant none{key, "none"};
+                    inline static constexpr types::property_constant visible{key, "visible"};
+                    inline static constexpr types::property_constant visible_paint{key, "visiblePainted"};
+                    inline static constexpr types::property_constant visible_fill{key, "visibleFill"};
+                    inline static constexpr types::property_constant visible_stroke{key, "visibleStroke"};
+                    inline static constexpr types::property_constant painted{key, "painted"};
+                    inline static constexpr types::property_constant fill{key, "fill"};
+                    inline static constexpr types::property_constant stroke{key, "stroke"};
                 };
             }
         }

@@ -21,10 +21,10 @@ namespace aonyx
                     font_variant_emoji() = delete;
                     font_variant_emoji(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view normal = "normal";
-                    inline static constexpr std::string_view text = "text";
-                    inline static constexpr std::string_view emoji = "emoji";
-                    inline static constexpr std::string_view unicode = "unicode";
+                    inline static constexpr types::property_constant normal{key, "normal"};
+                    inline static constexpr types::property_constant text{key, "text"};
+                    inline static constexpr types::property_constant emoji{key, "emoji"};
+                    inline static constexpr types::property_constant unicode{key, "unicode"};
                 };
             }
         }

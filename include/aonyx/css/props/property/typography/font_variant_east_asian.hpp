@@ -24,16 +24,16 @@ namespace aonyx
                     font_variant_east_asian(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2)) {}
                     font_variant_east_asian(std::string_view v1, std::string_view v2, std::string_view v3) : super_property(std::format("{} {} {}", v1, v2, v3)) {}
 
-                    inline static constexpr std::string_view normal = "normal";
-                    inline static constexpr std::string_view jis78 = "jis78";
-                    inline static constexpr std::string_view jis83 = "jis83";
-                    inline static constexpr std::string_view jis90 = "jis90";
-                    inline static constexpr std::string_view jis04 = "jis04";
-                    inline static constexpr std::string_view simplified = "simplified";
-                    inline static constexpr std::string_view traditional = "traditional";
-                    inline static constexpr std::string_view full_width = "full-width";
-                    inline static constexpr std::string_view proportional_width = "proportional-width";
-                    inline static constexpr std::string_view ruby = "ruby";
+                    inline static constexpr types::property_constant normal{key, "normal"};
+                    inline static constexpr types::property_constant jis78{key, "jis78"};
+                    inline static constexpr types::property_constant jis83{key, "jis83"};
+                    inline static constexpr types::property_constant jis90{key, "jis90"};
+                    inline static constexpr types::property_constant jis04{key, "jis04"};
+                    inline static constexpr types::property_constant simplified{key, "simplified"};
+                    inline static constexpr types::property_constant traditional{key, "traditional"};
+                    inline static constexpr types::property_constant full_width{key, "full-width"};
+                    inline static constexpr types::property_constant proportional_width{key, "proportional-width"};
+                    inline static constexpr types::property_constant ruby{key, "ruby"};
                 };
             }
         }

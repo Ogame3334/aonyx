@@ -24,10 +24,10 @@ namespace aonyx
                     font_synthesis(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2)) {}
                     font_synthesis(std::string_view v1, std::string_view v2, std::string_view v3) : super_property(std::format("{} {} {}", v1, v2, v3)) {}
 
-                    inline static constexpr std::string_view none = "none";
-                    inline static constexpr std::string_view weight = "weight";
-                    inline static constexpr std::string_view style = "style";
-                    inline static constexpr std::string_view small_caps = "small-caps";
+                    inline static constexpr types::property_constant none{key, "none"};
+                    inline static constexpr types::property_constant weight{key, "weight"};
+                    inline static constexpr types::property_constant style{key, "style"};
+                    inline static constexpr types::property_constant small_caps{key, "small-caps"};
                 };
             }
         }

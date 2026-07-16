@@ -21,9 +21,9 @@ namespace aonyx
                     stroke_linecap() = delete;
                     stroke_linecap(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view butt = "butt";
-                    inline static constexpr std::string_view round = "round";
-                    inline static constexpr std::string_view square = "square";
+                    inline static constexpr types::property_constant butt{key, "butt"};
+                    inline static constexpr types::property_constant round{key, "round"};
+                    inline static constexpr types::property_constant square{key, "square"};
                 };
             }
         }

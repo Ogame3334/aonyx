@@ -23,12 +23,12 @@ namespace aonyx
                     min_height(util::numerical h) : super_property(h.to_string()) {}
                     min_height(std::string_view h) : super_property(std::string(h)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
-                    inline static constexpr std::string_view fit_content = "fit-content";
-                    inline static constexpr std::string_view min_content = "min-content";
-                    inline static constexpr std::string_view max_content = "max-content";
-                    inline static constexpr std::string_view available = "available";
-                    inline static constexpr std::string_view stretch = "stretch";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
+                    inline static constexpr types::property_constant fit_content{key, "fit-content"};
+                    inline static constexpr types::property_constant min_content{key, "min-content"};
+                    inline static constexpr types::property_constant max_content{key, "max-content"};
+                    inline static constexpr types::property_constant available{key, "available"};
+                    inline static constexpr types::property_constant stretch{key, "stretch"};
                 };
             }
         }

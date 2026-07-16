@@ -23,7 +23,7 @@ namespace aonyx
                     grid_column(std::string_view start, std::string_view end) : super_property(std::format("{} / {}", start, end)) {}
                     grid_column(std::string_view start) : super_property(std::string(start)) {}
 
-                    inline static constexpr std::string_view span = "span";
+                    inline static constexpr types::property_constant span{key, "span"};
                 };
             }
         }

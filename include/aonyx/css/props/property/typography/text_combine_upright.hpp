@@ -23,17 +23,17 @@ namespace aonyx
                     text_combine_upright(std::string_view v) : super_property(std::string(v)) {}
                     text_combine_upright(std::string_view v, std::string_view digits) : super_property(std::format("{} {}", v, digits)) {}
 
-                    inline static constexpr std::string_view none = "none";
-                    inline static constexpr std::string_view all = "all";
-                    inline static constexpr std::string_view digits = "digits";
-                    inline static constexpr std::string_view auto_ = "auto";
-                    inline static constexpr std::string_view full_width = "full-width";
-                    inline static constexpr std::string_view up = "up";
-                    inline static constexpr std::string_view down = "down";
-                    inline static constexpr std::string_view mixed = "mixed";
-                    inline static constexpr std::string_view upright = "upright";
-                    inline static constexpr std::string_view sideways = "sideways";
-                    inline static constexpr std::string_view sideways_right = "sideways-right";
+                    inline static constexpr types::property_constant none{key, "none"};
+                    inline static constexpr types::property_constant all{key, "all"};
+                    inline static constexpr types::property_constant digits{key, "digits"};
+                    inline static constexpr types::property_constant auto_{key, "auto"};
+                    inline static constexpr types::property_constant full_width{key, "full-width"};
+                    inline static constexpr types::property_constant up{key, "up"};
+                    inline static constexpr types::property_constant down{key, "down"};
+                    inline static constexpr types::property_constant mixed{key, "mixed"};
+                    inline static constexpr types::property_constant upright{key, "upright"};
+                    inline static constexpr types::property_constant sideways{key, "sideways"};
+                    inline static constexpr types::property_constant sideways_right{key, "sideways-right"};
                 };
             }
         }

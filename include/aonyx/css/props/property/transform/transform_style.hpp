@@ -21,8 +21,8 @@ namespace aonyx
                     transform_style() = delete;
                     transform_style(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view flat = "flat";
-                    inline static constexpr std::string_view preserve_3d = "preserve-3d";
+                    inline static constexpr types::property_constant flat{key, "flat"};
+                    inline static constexpr types::property_constant preserve_3d{key, "preserve-3d"};
                 };
             }
         }

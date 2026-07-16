@@ -24,13 +24,13 @@ namespace aonyx
                     transition_timing_function(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2)) {}
                     transition_timing_function(std::string_view v1, std::string_view v2, std::string_view v3) : super_property(std::format("{}, {}, {}", v1, v2, v3)) {}
 
-                    inline static constexpr std::string_view ease = "ease";
-                    inline static constexpr std::string_view linear = "linear";
-                    inline static constexpr std::string_view ease_in = "ease-in";
-                    inline static constexpr std::string_view ease_out = "ease-out";
-                    inline static constexpr std::string_view ease_in_out = "ease-in-out";
-                    inline static constexpr std::string_view step_start = "step-start";
-                    inline static constexpr std::string_view step_end = "step-end";
+                    inline static constexpr types::property_constant ease{key, "ease"};
+                    inline static constexpr types::property_constant linear{key, "linear"};
+                    inline static constexpr types::property_constant ease_in{key, "ease-in"};
+                    inline static constexpr types::property_constant ease_out{key, "ease-out"};
+                    inline static constexpr types::property_constant ease_in_out{key, "ease-in-out"};
+                    inline static constexpr types::property_constant step_start{key, "step-start"};
+                    inline static constexpr types::property_constant step_end{key, "step-end"};
                 };
             }
         }

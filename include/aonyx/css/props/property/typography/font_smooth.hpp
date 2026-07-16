@@ -24,10 +24,10 @@ namespace aonyx
                     font_smooth(std::string_view v) : super_property(std::string(v)) {}
                     font_smooth(std::string_view v, util::numerical size) : super_property(std::format("{} {}", v, size)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
-                    inline static constexpr std::string_view never = "never";
-                    inline static constexpr std::string_view always = "always";
-                    inline static constexpr std::string_view grayscale = "grayscale";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
+                    inline static constexpr types::property_constant never{key, "never"};
+                    inline static constexpr types::property_constant always{key, "always"};
+                    inline static constexpr types::property_constant grayscale{key, "grayscale"};
                 };
             }
         }

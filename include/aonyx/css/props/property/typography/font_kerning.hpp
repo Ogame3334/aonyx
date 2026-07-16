@@ -21,9 +21,9 @@ namespace aonyx
                     font_kerning() = delete;
                     font_kerning(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
-                    inline static constexpr std::string_view normal = "normal";
-                    inline static constexpr std::string_view none = "none";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
+                    inline static constexpr types::property_constant normal{key, "normal"};
+                    inline static constexpr types::property_constant none{key, "none"};
                 };
             }
         }

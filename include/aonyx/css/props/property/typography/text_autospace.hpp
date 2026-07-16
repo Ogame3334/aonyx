@@ -25,11 +25,11 @@ namespace aonyx
                     text_autospace(std::string_view v1, std::string_view v2, std::string_view v3) : super_property(std::format("{} {} {}", v1, v2, v3)) {}
                     text_autospace(std::string_view v1, std::string_view v2, std::string_view v3, std::string_view v4) : super_property(std::format("{} {} {} {}", v1, v2, v3, v4)) {}
 
-                    inline static constexpr std::string_view none = "none";
-                    inline static constexpr std::string_view ideograph_alpha = "ideograph-alpha";
-                    inline static constexpr std::string_view ideograph_numeric = "ideograph-numeric";
-                    inline static constexpr std::string_view punctuation = "punctuation";
-                    inline static constexpr std::string_view no_autospace = "no-autospace";
+                    inline static constexpr types::property_constant none{key, "none"};
+                    inline static constexpr types::property_constant ideograph_alpha{key, "ideograph-alpha"};
+                    inline static constexpr types::property_constant ideograph_numeric{key, "ideograph-numeric"};
+                    inline static constexpr types::property_constant punctuation{key, "punctuation"};
+                    inline static constexpr types::property_constant no_autospace{key, "no-autospace"};
                 };
             }
         }

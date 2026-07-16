@@ -24,7 +24,7 @@ namespace aonyx
                     text_shadow(std::string_view shadow1, std::string_view shadow2) : super_property(std::format("{}, {}", shadow1, shadow2)) {}
                     text_shadow(std::string_view shadow1, std::string_view shadow2, std::string_view shadow3) : super_property(std::format("{}, {}, {}", shadow1, shadow2, shadow3)) {}
 
-                    inline static constexpr std::string_view none = "none";
+                    inline static constexpr types::property_constant none{key, "none"};
                 };
             }
         }

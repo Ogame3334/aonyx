@@ -24,14 +24,14 @@ namespace aonyx
                     contain(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2)) {}
                     contain(std::string_view v1, std::string_view v2, std::string_view v3) : super_property(std::format("{} {} {}", v1, v2, v3)) {}
 
-                    inline static constexpr std::string_view none = "none";
-                    inline static constexpr std::string_view strict = "strict";
-                    inline static constexpr std::string_view content = "content";
-                    inline static constexpr std::string_view size = "size";
-                    inline static constexpr std::string_view inline_size = "inline-size";
-                    inline static constexpr std::string_view layout = "layout";
-                    inline static constexpr std::string_view style = "style";
-                    inline static constexpr std::string_view paint = "paint";
+                    inline static constexpr types::property_constant none{key, "none"};
+                    inline static constexpr types::property_constant strict{key, "strict"};
+                    inline static constexpr types::property_constant content{key, "content"};
+                    inline static constexpr types::property_constant size{key, "size"};
+                    inline static constexpr types::property_constant inline_size{key, "inline-size"};
+                    inline static constexpr types::property_constant layout{key, "layout"};
+                    inline static constexpr types::property_constant style{key, "style"};
+                    inline static constexpr types::property_constant paint{key, "paint"};
                 };
             }
         }

@@ -21,9 +21,9 @@ namespace aonyx
                     visibility() = delete;
                     visibility(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view visible = "visible";
-                    inline static constexpr std::string_view hidden = "hidden";
-                    inline static constexpr std::string_view collapse = "collapse";
+                    inline static constexpr types::property_constant visible{key, "visible"};
+                    inline static constexpr types::property_constant hidden{key, "hidden"};
+                    inline static constexpr types::property_constant collapse{key, "collapse"};
                 };
             }
         }

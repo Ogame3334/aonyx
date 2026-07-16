@@ -23,11 +23,11 @@ namespace aonyx
                     background_position_y(std::string_view v) : super_property(std::string(v)) {}
                     background_position_y(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2)) {}
 
-                    inline static constexpr std::string_view top = "top";
-                    inline static constexpr std::string_view center = "center";
-                    inline static constexpr std::string_view bottom = "bottom";
-                    inline static constexpr std::string_view y_start = "y-start";
-                    inline static constexpr std::string_view y_end = "y-end";
+                    inline static constexpr types::property_constant top{key, "top"};
+                    inline static constexpr types::property_constant center{key, "center"};
+                    inline static constexpr types::property_constant bottom{key, "bottom"};
+                    inline static constexpr types::property_constant y_start{key, "y-start"};
+                    inline static constexpr types::property_constant y_end{key, "y-end"};
                 };
             }
         }

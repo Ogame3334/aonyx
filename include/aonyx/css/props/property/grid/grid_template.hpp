@@ -24,7 +24,7 @@ namespace aonyx
                     grid_template(std::string_view rows, std::string_view columns, std::string_view areas) : super_property(std::format("{} / {} / {}", rows, columns, areas)) {}
                     grid_template(std::string_view rows) : super_property(std::string(rows)) {}
 
-                    inline static constexpr std::string_view none = "none";
+                    inline static constexpr types::property_constant none{key, "none"};
                 };
             }
         }

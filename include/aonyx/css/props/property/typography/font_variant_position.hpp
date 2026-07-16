@@ -21,9 +21,9 @@ namespace aonyx
                     font_variant_position() = delete;
                     font_variant_position(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view normal = "normal";
-                    inline static constexpr std::string_view sub = "sub";
-                    inline static constexpr std::string_view super = "super";
+                    inline static constexpr types::property_constant normal{key, "normal"};
+                    inline static constexpr types::property_constant sub{key, "sub"};
+                    inline static constexpr types::property_constant super{key, "super"};
                 };
             }
         }

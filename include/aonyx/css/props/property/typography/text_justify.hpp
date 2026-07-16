@@ -21,13 +21,13 @@ namespace aonyx
                     text_justify() = delete;
                     text_justify(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
-                    inline static constexpr std::string_view inter_word = "inter-word";
-                    inline static constexpr std::string_view inter_idograph = "inter-ideograph";
-                    inline static constexpr std::string_view inter_cluster = "inter-cluster";
-                    inline static constexpr std::string_view distribute = "distribute";
-                    inline static constexpr std::string_view kashida = "kashida";
-                    inline static constexpr std::string_view trim = "trim";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
+                    inline static constexpr types::property_constant inter_word{key, "inter-word"};
+                    inline static constexpr types::property_constant inter_idograph{key, "inter-ideograph"};
+                    inline static constexpr types::property_constant inter_cluster{key, "inter-cluster"};
+                    inline static constexpr types::property_constant distribute{key, "distribute"};
+                    inline static constexpr types::property_constant kashida{key, "kashida"};
+                    inline static constexpr types::property_constant trim{key, "trim"};
                 };
             }
         }

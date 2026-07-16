@@ -21,13 +21,13 @@ namespace aonyx
                     page_break_before() = delete;
                     page_break_before(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
-                    inline static constexpr std::string_view always = "always";
-                    inline static constexpr std::string_view avoid = "avoid";
-                    inline static constexpr std::string_view left = "left";
-                    inline static constexpr std::string_view right = "right";
-                    inline static constexpr std::string_view recto = "recto";
-                    inline static constexpr std::string_view verso = "verso";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
+                    inline static constexpr types::property_constant always{key, "always"};
+                    inline static constexpr types::property_constant avoid{key, "avoid"};
+                    inline static constexpr types::property_constant left{key, "left"};
+                    inline static constexpr types::property_constant right{key, "right"};
+                    inline static constexpr types::property_constant recto{key, "recto"};
+                    inline static constexpr types::property_constant verso{key, "verso"};
                 };
             }
         }

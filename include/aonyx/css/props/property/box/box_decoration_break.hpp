@@ -21,8 +21,8 @@ namespace aonyx
                     box_decoration_break() = delete;
                     box_decoration_break(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view slice = "slice";
-                    inline static constexpr std::string_view clone = "clone";
+                    inline static constexpr types::property_constant slice{key, "slice"};
+                    inline static constexpr types::property_constant clone{key, "clone"};
                 };
             }
         }

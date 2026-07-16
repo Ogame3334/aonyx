@@ -23,10 +23,10 @@ namespace aonyx
                     border_image_repeat(std::string_view repeat) : super_property(std::string(repeat)) {}
                     border_image_repeat(std::string_view horizontal, std::string_view vertical) : super_property(std::format("{} {}", horizontal, vertical)) {}
 
-                    inline static constexpr std::string_view stretch = "stretch";
-                    inline static constexpr std::string_view repeat = "repeat";
-                    inline static constexpr std::string_view round = "round";
-                    inline static constexpr std::string_view space = "space";
+                    inline static constexpr types::property_constant stretch{key, "stretch"};
+                    inline static constexpr types::property_constant repeat{key, "repeat"};
+                    inline static constexpr types::property_constant round{key, "round"};
+                    inline static constexpr types::property_constant space{key, "space"};
                 };
             }
         }

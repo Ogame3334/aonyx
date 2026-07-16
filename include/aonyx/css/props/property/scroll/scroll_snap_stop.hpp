@@ -21,8 +21,8 @@ namespace aonyx
                     scroll_snap_stop() = delete;
                     scroll_snap_stop(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view normal = "normal";
-                    inline static constexpr std::string_view always = "always";
+                    inline static constexpr types::property_constant normal{key, "normal"};
+                    inline static constexpr types::property_constant always{key, "always"};
                 };
             }
         }

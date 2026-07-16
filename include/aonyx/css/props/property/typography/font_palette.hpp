@@ -21,9 +21,9 @@ namespace aonyx
                     font_palette() = delete;
                     font_palette(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view normal = "normal";
-                    inline static constexpr std::string_view light = "light";
-                    inline static constexpr std::string_view dark = "dark";
+                    inline static constexpr types::property_constant normal{key, "normal"};
+                    inline static constexpr types::property_constant light{key, "light"};
+                    inline static constexpr types::property_constant dark{key, "dark"};
                 };
             }
         }

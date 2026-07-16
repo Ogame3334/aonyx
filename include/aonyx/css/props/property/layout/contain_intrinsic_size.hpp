@@ -28,8 +28,8 @@ namespace aonyx
                     contain_intrinsic_size(util::numerical w, std::string_view h) : super_property(std::format("{} {}", w, h)) {}
                     contain_intrinsic_size(std::string_view w, util::numerical h) : super_property(std::format("{} {}", w, h)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
-                    inline static constexpr std::string_view none = "none";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
+                    inline static constexpr types::property_constant none{key, "none"};
                 };
             }
         }

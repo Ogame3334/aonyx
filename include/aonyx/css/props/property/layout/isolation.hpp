@@ -21,8 +21,8 @@ namespace aonyx
                     isolation() = delete;
                     isolation(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
-                    inline static constexpr std::string_view isolate = "isolate";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
+                    inline static constexpr types::property_constant isolate{key, "isolate"};
                 };
             }
         }

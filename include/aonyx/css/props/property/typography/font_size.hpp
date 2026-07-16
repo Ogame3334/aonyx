@@ -23,15 +23,15 @@ namespace aonyx
                     font_size(util::numerical v) : super_property(v.to_string()) {}
                     font_size(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view xx_small = "xx-small";
-                    inline static constexpr std::string_view x_small = "x-small";
-                    inline static constexpr std::string_view small = "small";
-                    inline static constexpr std::string_view medium = "medium";
-                    inline static constexpr std::string_view large = "large";
-                    inline static constexpr std::string_view x_large = "x-large";
-                    inline static constexpr std::string_view xx_large = "xx-large";
-                    inline static constexpr std::string_view smaller = "smaller";
-                    inline static constexpr std::string_view larger = "larger";
+                    inline static constexpr types::property_constant xx_small{key, "xx-small"};
+                    inline static constexpr types::property_constant x_small{key, "x-small"};
+                    inline static constexpr types::property_constant small{key, "small"};
+                    inline static constexpr types::property_constant medium{key, "medium"};
+                    inline static constexpr types::property_constant large{key, "large"};
+                    inline static constexpr types::property_constant x_large{key, "x-large"};
+                    inline static constexpr types::property_constant xx_large{key, "xx-large"};
+                    inline static constexpr types::property_constant smaller{key, "smaller"};
+                    inline static constexpr types::property_constant larger{key, "larger"};
                 };
             }
         }

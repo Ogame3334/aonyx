@@ -21,7 +21,7 @@ namespace aonyx
                     border_image_source() = delete;
                     border_image_source(std::string_view source) : super_property(std::string(source)) {}
 
-                    inline static constexpr std::string_view none = "none";
+                    inline static constexpr types::property_constant none{key, "none"};
                 };
             }
         }

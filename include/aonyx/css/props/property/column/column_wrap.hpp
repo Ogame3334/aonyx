@@ -21,9 +21,9 @@ namespace aonyx
                     column_wrap() = delete;
                     column_wrap(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view nowrap = "nowrap";
-                    inline static constexpr std::string_view wrap = "wrap";
-                    inline static constexpr std::string_view balance = "balance";
+                    inline static constexpr types::property_constant nowrap{key, "nowrap"};
+                    inline static constexpr types::property_constant wrap{key, "wrap"};
+                    inline static constexpr types::property_constant balance{key, "balance"};
                 };
             }
         }

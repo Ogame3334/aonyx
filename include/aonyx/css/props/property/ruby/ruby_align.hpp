@@ -21,10 +21,10 @@ namespace aonyx
                     ruby_align() = delete;
                     ruby_align(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view start = "start";
-                    inline static constexpr std::string_view center = "center";
-                    inline static constexpr std::string_view space_around = "space-around";
-                    inline static constexpr std::string_view space_between = "space-between";
+                    inline static constexpr types::property_constant start{key, "start"};
+                    inline static constexpr types::property_constant center{key, "center"};
+                    inline static constexpr types::property_constant space_around{key, "space-around"};
+                    inline static constexpr types::property_constant space_between{key, "space-between"};
                 };
             }
         }

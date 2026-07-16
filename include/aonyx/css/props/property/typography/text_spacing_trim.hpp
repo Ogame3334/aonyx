@@ -21,12 +21,12 @@ namespace aonyx
                     text_spacing_trim() = delete;
                     text_spacing_trim(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view normal = "normal";
-                    inline static constexpr std::string_view space_all = "space-all";
-                    inline static constexpr std::string_view trim_start = "trim-start";
-                    inline static constexpr std::string_view trim_end = "trim-end";
-                    inline static constexpr std::string_view trim_start_end = "trim-start-end";
-                    inline static constexpr std::string_view trim_all = "trim-all";
+                    inline static constexpr types::property_constant normal{key, "normal"};
+                    inline static constexpr types::property_constant space_all{key, "space-all"};
+                    inline static constexpr types::property_constant trim_start{key, "trim-start"};
+                    inline static constexpr types::property_constant trim_end{key, "trim-end"};
+                    inline static constexpr types::property_constant trim_start_end{key, "trim-start-end"};
+                    inline static constexpr types::property_constant trim_all{key, "trim-all"};
                 };
             }
         }

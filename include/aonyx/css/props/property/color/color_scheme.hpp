@@ -23,10 +23,10 @@ namespace aonyx
                     color_scheme(std::string_view v) : super_property(std::string(v)) {}
                     color_scheme(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2)) {}
 
-                    inline static constexpr std::string_view normal = "normal";
-                    inline static constexpr std::string_view light = "light";
-                    inline static constexpr std::string_view dark = "dark";
-                    inline static constexpr std::string_view only = "only";
+                    inline static constexpr types::property_constant normal{key, "normal"};
+                    inline static constexpr types::property_constant light{key, "light"};
+                    inline static constexpr types::property_constant dark{key, "dark"};
+                    inline static constexpr types::property_constant only{key, "only"};
                 };
             }
         }

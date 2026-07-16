@@ -21,8 +21,8 @@ namespace aonyx
                     reading_order() = delete;
                     reading_order(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view normal = "normal";
-                    inline static constexpr std::string_view reverse = "reverse";
+                    inline static constexpr types::property_constant normal{key, "normal"};
+                    inline static constexpr types::property_constant reverse{key, "reverse"};
                 };
             }
         }

@@ -24,8 +24,8 @@ namespace aonyx
                     transition_property(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2)) {}
                     transition_property(std::string_view v1, std::string_view v2, std::string_view v3) : super_property(std::format("{}, {}, {}", v1, v2, v3)) {}
 
-                    inline static constexpr std::string_view none = "none";
-                    inline static constexpr std::string_view all = "all";
+                    inline static constexpr types::property_constant none{key, "none"};
+                    inline static constexpr types::property_constant all{key, "all"};
                 };
             }
         }

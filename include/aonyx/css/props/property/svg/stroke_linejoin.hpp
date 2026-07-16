@@ -21,9 +21,9 @@ namespace aonyx
                     stroke_linejoin() = delete;
                     stroke_linejoin(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view miter = "miter";
-                    inline static constexpr std::string_view round = "round";
-                    inline static constexpr std::string_view bevel = "bevel";
+                    inline static constexpr types::property_constant miter{key, "miter"};
+                    inline static constexpr types::property_constant round{key, "round"};
+                    inline static constexpr types::property_constant bevel{key, "bevel"};
                 };
             }
         }

@@ -21,9 +21,9 @@ namespace aonyx
                     position_visibility() = delete;
                     position_visibility(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view always = "always";
-                    inline static constexpr std::string_view anchors_visible = "anchors-visible";
-                    inline static constexpr std::string_view no_overflow = "no-overflow";
+                    inline static constexpr types::property_constant always{key, "always"};
+                    inline static constexpr types::property_constant anchors_visible{key, "anchors-visible"};
+                    inline static constexpr types::property_constant no_overflow{key, "no-overflow"};
                 };
             }
         }

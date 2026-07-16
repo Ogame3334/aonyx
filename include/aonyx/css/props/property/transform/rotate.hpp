@@ -23,10 +23,10 @@ namespace aonyx
                     rotate(std::string_view v) : super_property(std::string(v)) {}
                     rotate(std::string_view v1, std::string_view v2, std::string_view v3) : super_property(std::format("{} {} {}", v1, v2, v3)) {}
 
-                    inline static constexpr std::string_view none = "none";
-                    inline static constexpr std::string_view x = "x";
-                    inline static constexpr std::string_view y = "y";
-                    inline static constexpr std::string_view z = "z";
+                    inline static constexpr types::property_constant none{key, "none"};
+                    inline static constexpr types::property_constant x{key, "x"};
+                    inline static constexpr types::property_constant y{key, "y"};
+                    inline static constexpr types::property_constant z{key, "z"};
                 };
             }
         }

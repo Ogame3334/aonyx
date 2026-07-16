@@ -21,9 +21,9 @@ namespace aonyx
                     baseline_shift() = delete;
                     baseline_shift(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
-                    inline static constexpr std::string_view sub = "sub";
-                    inline static constexpr std::string_view super = "super";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
+                    inline static constexpr types::property_constant sub{key, "sub"};
+                    inline static constexpr types::property_constant super{key, "super"};
                 };
             }
         }

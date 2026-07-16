@@ -21,11 +21,11 @@ namespace aonyx
                     position() = delete;
                     position(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view static_ = "static";
-                    inline static constexpr std::string_view relative = "relative";
-                    inline static constexpr std::string_view absolute = "absolute";
-                    inline static constexpr std::string_view fixed = "fixed";
-                    inline static constexpr std::string_view sticky = "sticky";
+                    inline static constexpr types::property_constant static_{key, "static"};
+                    inline static constexpr types::property_constant relative{key, "relative"};
+                    inline static constexpr types::property_constant absolute{key, "absolute"};
+                    inline static constexpr types::property_constant fixed{key, "fixed"};
+                    inline static constexpr types::property_constant sticky{key, "sticky"};
                 };
             }
         }

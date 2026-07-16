@@ -24,7 +24,7 @@ namespace aonyx
                     aspect_ratio(util::numerical width, util::numerical height) : super_property(std::format("{} / {}", width, height)) {}
                     aspect_ratio(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
                 };
             }
         }

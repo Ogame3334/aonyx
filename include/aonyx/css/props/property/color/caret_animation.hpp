@@ -21,9 +21,9 @@ namespace aonyx
                     caret_animation() = delete;
                     caret_animation(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
-                    inline static constexpr std::string_view blink = "blink";
-                    inline static constexpr std::string_view steady = "steady";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
+                    inline static constexpr types::property_constant blink{key, "blink"};
+                    inline static constexpr types::property_constant steady{key, "steady"};
                 };
             }
         }

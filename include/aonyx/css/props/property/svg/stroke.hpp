@@ -21,9 +21,9 @@ namespace aonyx
                     stroke() = delete;
                     stroke(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view none = "none";
-                    inline static constexpr std::string_view context_fill = "context-fill";
-                    inline static constexpr std::string_view context_stroke = "context-stroke";
+                    inline static constexpr types::property_constant none{key, "none"};
+                    inline static constexpr types::property_constant context_fill{key, "context-fill"};
+                    inline static constexpr types::property_constant context_stroke{key, "context-stroke"};
                 };
             }
         }

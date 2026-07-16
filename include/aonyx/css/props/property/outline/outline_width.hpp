@@ -21,9 +21,9 @@ namespace aonyx
                     outline_width() = delete;
                     outline_width(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view thin = "thin";
-                    inline static constexpr std::string_view medium = "medium";
-                    inline static constexpr std::string_view thick = "thick";
+                    inline static constexpr types::property_constant thin{key, "thin"};
+                    inline static constexpr types::property_constant medium{key, "medium"};
+                    inline static constexpr types::property_constant thick{key, "thick"};
                 };
             }
         }

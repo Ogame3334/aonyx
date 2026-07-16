@@ -21,8 +21,8 @@ namespace aonyx
                     empty_cells() = delete;
                     empty_cells(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view show = "show";
-                    inline static constexpr std::string_view hide = "hide";
+                    inline static constexpr types::property_constant show{key, "show"};
+                    inline static constexpr types::property_constant hide{key, "hide"};
                 };
             }
         }

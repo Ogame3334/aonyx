@@ -20,13 +20,13 @@ namespace aonyx
                     margin_trim() = delete;
                     margin_trim(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view none = "none";
-                    inline static constexpr std::string_view block = "block";
-                    inline static constexpr std::string_view block_start = "block-start";
-                    inline static constexpr std::string_view block_end = "block-end";
-                    inline static constexpr std::string_view inline_ = "inline";
-                    inline static constexpr std::string_view inline_start = "inline-start";
-                    inline static constexpr std::string_view inline_end = "inline-end";
+                    inline static constexpr types::property_constant none{key, "none"};
+                    inline static constexpr types::property_constant block{key, "block"};
+                    inline static constexpr types::property_constant block_start{key, "block-start"};
+                    inline static constexpr types::property_constant block_end{key, "block-end"};
+                    inline static constexpr types::property_constant inline_{key, "inline"};
+                    inline static constexpr types::property_constant inline_start{key, "inline-start"};
+                    inline static constexpr types::property_constant inline_end{key, "inline-end"};
                 };
             }
         }

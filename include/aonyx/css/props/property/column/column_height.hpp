@@ -21,7 +21,7 @@ namespace aonyx
                     column_height() = delete;
                     column_height(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
                 };
             }
         }

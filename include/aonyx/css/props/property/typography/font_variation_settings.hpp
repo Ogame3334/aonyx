@@ -24,7 +24,7 @@ namespace aonyx
                     font_variation_settings(std::string_view tag, std::string_view value) : super_property(std::format("\"{}\" {}", tag, value)) {}
                     font_variation_settings(std::string_view tag1, std::string_view value1, std::string_view tag2, std::string_view value2) : super_property(std::format("\"{}\" {}, \"{}\" {}", tag1, value1, tag2, value2)) {}
 
-                    inline static constexpr std::string_view normal = "normal";
+                    inline static constexpr types::property_constant normal{key, "normal"};
                 };
             }
         }

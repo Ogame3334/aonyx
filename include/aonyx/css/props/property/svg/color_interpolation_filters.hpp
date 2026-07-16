@@ -21,9 +21,9 @@ namespace aonyx
                     color_interpolation_filters() = delete;
                     color_interpolation_filters(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
-                    inline static constexpr std::string_view srgb = "srgb";
-                    inline static constexpr std::string_view linear_rgb = "linearRGB";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
+                    inline static constexpr types::property_constant srgb{key, "srgb"};
+                    inline static constexpr types::property_constant linear_rgb{key, "linearRGB"};
                 };
             }
         }

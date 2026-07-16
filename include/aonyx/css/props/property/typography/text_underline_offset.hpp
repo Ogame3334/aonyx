@@ -23,8 +23,8 @@ namespace aonyx
                     text_underline_offset(util::numerical v) : super_property(v.to_string()) {}
                     text_underline_offset(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
-                    inline static constexpr std::string_view from_font = "from-font";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
+                    inline static constexpr types::property_constant from_font{key, "from-font"};
                 };
             }
         }

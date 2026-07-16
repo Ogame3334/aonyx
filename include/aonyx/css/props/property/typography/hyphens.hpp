@@ -21,9 +21,9 @@ namespace aonyx
                     hyphens() = delete;
                     hyphens(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view none = "none";
-                    inline static constexpr std::string_view manual = "manual";
-                    inline static constexpr std::string_view auto_ = "auto";
+                    inline static constexpr types::property_constant none{key, "none"};
+                    inline static constexpr types::property_constant manual{key, "manual"};
+                    inline static constexpr types::property_constant auto_{key, "auto"};
                 };
             }
         }

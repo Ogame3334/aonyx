@@ -21,12 +21,12 @@ namespace aonyx
                     resize() = delete;
                     resize(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view none = "none";
-                    inline static constexpr std::string_view both = "both";
-                    inline static constexpr std::string_view horizontal = "horizontal";
-                    inline static constexpr std::string_view vertical = "vertical";
-                    inline static constexpr std::string_view block = "block";
-                    inline static constexpr std::string_view inline_ = "inline";
+                    inline static constexpr types::property_constant none{key, "none"};
+                    inline static constexpr types::property_constant both{key, "both"};
+                    inline static constexpr types::property_constant horizontal{key, "horizontal"};
+                    inline static constexpr types::property_constant vertical{key, "vertical"};
+                    inline static constexpr types::property_constant block{key, "block"};
+                    inline static constexpr types::property_constant inline_{key, "inline"};
                 };
             }
         }

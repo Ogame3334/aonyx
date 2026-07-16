@@ -21,8 +21,8 @@ namespace aonyx
                     direction() = delete;
                     direction(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view ltr = "ltr";
-                    inline static constexpr std::string_view rtl = "rtl";
+                    inline static constexpr types::property_constant ltr{key, "ltr"};
+                    inline static constexpr types::property_constant rtl{key, "rtl"};
                 };
             }
         }

@@ -21,9 +21,9 @@ namespace aonyx
                     text_anchor() = delete;
                     text_anchor(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view start = "start";
-                    inline static constexpr std::string_view middle = "middle";
-                    inline static constexpr std::string_view end = "end";
+                    inline static constexpr types::property_constant start{key, "start"};
+                    inline static constexpr types::property_constant middle{key, "middle"};
+                    inline static constexpr types::property_constant end{key, "end"};
                 };
             }
         }

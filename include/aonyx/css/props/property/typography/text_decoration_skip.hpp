@@ -27,13 +27,13 @@ namespace aonyx
                     text_decoration_skip(std::string_view v1, std::string_view v2, std::string_view v3, std::string_view v4, std::string_view v5) : super_property(std::format("{} {} {} {} {}", v1, v2, v3, v4, v5)) {}
                     text_decoration_skip(std::string_view v1, std::string_view v2, std::string_view v3, std::string_view v4, std::string_view v5, std::string_view v6) : super_property(std::format("{} {} {} {} {} {}", v1, v2, v3, v4, v5, v6)) {}
 
-                    inline static constexpr std::string_view none = "none";
-                    inline static constexpr std::string_view objects = "objects";
-                    inline static constexpr std::string_view edges = "edges";
-                    inline static constexpr std::string_view box_decoration = "box-decoration";
-                    inline static constexpr std::string_view leading_whitespace = "leading-spaces";
-                    inline static constexpr std::string_view trailing_whitespace = "trailing-spaces";
-                    inline static constexpr std::string_view content = "content";
+                    inline static constexpr types::property_constant none{key, "none"};
+                    inline static constexpr types::property_constant objects{key, "objects"};
+                    inline static constexpr types::property_constant edges{key, "edges"};
+                    inline static constexpr types::property_constant box_decoration{key, "box-decoration"};
+                    inline static constexpr types::property_constant leading_whitespace{key, "leading-spaces"};
+                    inline static constexpr types::property_constant trailing_whitespace{key, "trailing-spaces"};
+                    inline static constexpr types::property_constant content{key, "content"};
                 };
             }
         }

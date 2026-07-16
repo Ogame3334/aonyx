@@ -21,8 +21,8 @@ namespace aonyx
                     print_color_adjust() = delete;
                     print_color_adjust(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view normal = "normal";
-                    inline static constexpr std::string_view exact = "exact";
+                    inline static constexpr types::property_constant normal{key, "normal"};
+                    inline static constexpr types::property_constant exact{key, "exact"};
                 };
             }
         }

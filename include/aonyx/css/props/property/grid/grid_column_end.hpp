@@ -21,8 +21,8 @@ namespace aonyx
                     grid_column_end() = delete;
                     grid_column_end(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
-                    inline static constexpr std::string_view span = "span";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
+                    inline static constexpr types::property_constant span{key, "span"};
                 };
             }
         }

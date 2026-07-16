@@ -21,8 +21,8 @@ namespace aonyx
                     page_break_inside() = delete;
                     page_break_inside(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
-                    inline static constexpr std::string_view avoid = "avoid";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
+                    inline static constexpr types::property_constant avoid{key, "avoid"};
                 };
             }
         }

@@ -21,9 +21,9 @@ namespace aonyx
                     ruby_position() = delete;
                     ruby_position(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view over = "over";
-                    inline static constexpr std::string_view under = "under";
-                    inline static constexpr std::string_view alt = "alt";
+                    inline static constexpr types::property_constant over{key, "over"};
+                    inline static constexpr types::property_constant under{key, "under"};
+                    inline static constexpr types::property_constant alt{key, "alt"};
                 };
             }
         }

@@ -21,9 +21,9 @@ namespace aonyx
                     image_orientation() = delete;
                     image_orientation(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view from_image = "from-image";
-                    inline static constexpr std::string_view none = "none";
-                    inline static constexpr std::string_view flip = "flip";
+                    inline static constexpr types::property_constant from_image{key, "from-image"};
+                    inline static constexpr types::property_constant none{key, "none"};
+                    inline static constexpr types::property_constant flip{key, "flip"};
                 };
             }
         }

@@ -23,10 +23,10 @@ namespace aonyx
                     animation_direction(std::string_view v) : super_property(std::string(v)) {}
                     animation_direction(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2)) {}
 
-                    inline static constexpr std::string_view normal = "normal";
-                    inline static constexpr std::string_view reverse = "reverse";
-                    inline static constexpr std::string_view alternate = "alternate";
-                    inline static constexpr std::string_view alternate_reverse = "alternate-reverse";
+                    inline static constexpr types::property_constant normal{key, "normal"};
+                    inline static constexpr types::property_constant reverse{key, "reverse"};
+                    inline static constexpr types::property_constant alternate{key, "alternate"};
+                    inline static constexpr types::property_constant alternate_reverse{key, "alternate-reverse"};
                 };
             }
         }

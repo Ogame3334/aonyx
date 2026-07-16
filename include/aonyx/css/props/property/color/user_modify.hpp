@@ -21,9 +21,9 @@ namespace aonyx
                     user_modify() = delete;
                     user_modify(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view read_only = "read-only";
-                    inline static constexpr std::string_view read_write = "read-write";
-                    inline static constexpr std::string_view write_only = "write-only";
+                    inline static constexpr types::property_constant read_only{key, "read-only"};
+                    inline static constexpr types::property_constant read_write{key, "read-write"};
+                    inline static constexpr types::property_constant write_only{key, "write-only"};
                 };
             }
         }

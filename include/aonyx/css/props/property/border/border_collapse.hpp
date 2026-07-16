@@ -21,8 +21,8 @@ namespace aonyx
                     border_collapse() = delete;
                     border_collapse(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view separate = "separate";
-                    inline static constexpr std::string_view collapse = "collapse";
+                    inline static constexpr types::property_constant separate{key, "separate"};
+                    inline static constexpr types::property_constant collapse{key, "collapse"};
                 };
             }
         }

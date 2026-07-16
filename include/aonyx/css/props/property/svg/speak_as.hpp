@@ -24,12 +24,12 @@ namespace aonyx
                     speak_as(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2)) {}
                     speak_as(std::string_view v1, std::string_view v2, std::string_view v3) : super_property(std::format("{} {} {}", v1, v2, v3)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
-                    inline static constexpr std::string_view normal = "normal";
-                    inline static constexpr std::string_view spell_out = "spell-out";
-                    inline static constexpr std::string_view digits = "digits";
-                    inline static constexpr std::string_view literal_punctuation = "literal-punctuation";
-                    inline static constexpr std::string_view no_punctuation = "no-punctuation";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
+                    inline static constexpr types::property_constant normal{key, "normal"};
+                    inline static constexpr types::property_constant spell_out{key, "spell-out"};
+                    inline static constexpr types::property_constant digits{key, "digits"};
+                    inline static constexpr types::property_constant literal_punctuation{key, "literal-punctuation"};
+                    inline static constexpr types::property_constant no_punctuation{key, "no-punctuation"};
                 };
             }
         }

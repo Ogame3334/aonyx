@@ -24,12 +24,12 @@ namespace aonyx
                     text_box(std::string_view trim, std::string_view edge) : super_property(std::format("{} {}", trim, edge)) {}
                     text_box(std::string_view trim, std::string_view over, std::string_view under) : super_property(std::format("{} {} {}", trim, over, under)) {}
 
-                    inline static constexpr std::string_view none = "none";
-                    inline static constexpr std::string_view trim = "trim";
-                    inline static constexpr std::string_view cap = "cap";
-                    inline static constexpr std::string_view ex = "ex";
-                    inline static constexpr std::string_view alphabetic = "alphabetic";
-                    inline static constexpr std::string_view text = "text";
+                    inline static constexpr types::property_constant none{key, "none"};
+                    inline static constexpr types::property_constant trim{key, "trim"};
+                    inline static constexpr types::property_constant cap{key, "cap"};
+                    inline static constexpr types::property_constant ex{key, "ex"};
+                    inline static constexpr types::property_constant alphabetic{key, "alphabetic"};
+                    inline static constexpr types::property_constant text{key, "text"};
                 };
             }
         }

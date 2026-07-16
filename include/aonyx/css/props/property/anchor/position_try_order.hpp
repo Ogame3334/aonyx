@@ -21,12 +21,12 @@ namespace aonyx
                     position_try_order() = delete;
                     position_try_order(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view normal = "normal";
-                    inline static constexpr std::string_view most_width = "most-width";
-                    inline static constexpr std::string_view most_height = "most-height";
-                    inline static constexpr std::string_view most_size = "most-size";
-                    inline static constexpr std::string_view most_block_size = "most-block-size";
-                    inline static constexpr std::string_view most_inline_size = "most-inline-size";
+                    inline static constexpr types::property_constant normal{key, "normal"};
+                    inline static constexpr types::property_constant most_width{key, "most-width"};
+                    inline static constexpr types::property_constant most_height{key, "most-height"};
+                    inline static constexpr types::property_constant most_size{key, "most-size"};
+                    inline static constexpr types::property_constant most_block_size{key, "most-block-size"};
+                    inline static constexpr types::property_constant most_inline_size{key, "most-inline-size"};
                 };
             }
         }

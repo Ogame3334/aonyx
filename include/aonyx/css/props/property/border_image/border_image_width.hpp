@@ -25,7 +25,7 @@ namespace aonyx
                     border_image_width(std::string_view top, std::string_view left_right, std::string_view bottom) : super_property(std::format("{} {} {}", top, left_right, bottom)) {}
                     border_image_width(std::string_view top, std::string_view right, std::string_view bottom, std::string_view left) : super_property(std::format("{} {} {} {}", top, right, bottom, left)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
                 };
             }
         }

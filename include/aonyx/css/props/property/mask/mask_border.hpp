@@ -25,11 +25,11 @@ namespace aonyx
                     mask_border(std::string_view v1, std::string_view v2, std::string_view v3) : super_property(std::format("{} {} {}", v1, v2, v3)) {}
                     mask_border(std::string_view v1, std::string_view v2, std::string_view v3, std::string_view v4) : super_property(std::format("{} {} {} {}", v1, v2, v3, v4)) {}
 
-                    inline static constexpr std::string_view none = "none";
-                    inline static constexpr std::string_view repeat = "repeat";
-                    inline static constexpr std::string_view stretch = "stretch";
-                    inline static constexpr std::string_view round = "round";
-                    inline static constexpr std::string_view space = "space";
+                    inline static constexpr types::property_constant none{key, "none"};
+                    inline static constexpr types::property_constant repeat{key, "repeat"};
+                    inline static constexpr types::property_constant stretch{key, "stretch"};
+                    inline static constexpr types::property_constant round{key, "round"};
+                    inline static constexpr types::property_constant space{key, "space"};
                 };
             }
         }

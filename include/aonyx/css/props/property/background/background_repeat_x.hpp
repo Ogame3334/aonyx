@@ -21,10 +21,10 @@ namespace aonyx
                     background_repeat_x() = delete;
                     background_repeat_x(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view repeat = "repeat";
-                    inline static constexpr std::string_view no_repeat = "no-repeat";
-                    inline static constexpr std::string_view space = "space";
-                    inline static constexpr std::string_view round = "round";
+                    inline static constexpr types::property_constant repeat{key, "repeat"};
+                    inline static constexpr types::property_constant no_repeat{key, "no-repeat"};
+                    inline static constexpr types::property_constant space{key, "space"};
+                    inline static constexpr types::property_constant round{key, "round"};
                 };
             }
         }

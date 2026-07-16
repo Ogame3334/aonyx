@@ -23,11 +23,11 @@ namespace aonyx
                     grid_auto_flow(std::string_view v) : super_property(std::string(v)) {}
                     grid_auto_flow(std::string_view direction, std::string_view packing) : super_property(std::format("{} {}", direction, packing)) {}
 
-                    inline static constexpr std::string_view row = "row";
-                    inline static constexpr std::string_view column = "column";
-                    inline static constexpr std::string_view dense = "dense";
-                    inline static constexpr std::string_view row_dense = "row dense";
-                    inline static constexpr std::string_view column_dense = "column dense";
+                    inline static constexpr types::property_constant row{key, "row"};
+                    inline static constexpr types::property_constant column{key, "column"};
+                    inline static constexpr types::property_constant dense{key, "dense"};
+                    inline static constexpr types::property_constant row_dense{key, "row dense"};
+                    inline static constexpr types::property_constant column_dense{key, "column dense"};
                 };
             }
         }

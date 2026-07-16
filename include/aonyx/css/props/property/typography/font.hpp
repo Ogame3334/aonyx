@@ -24,12 +24,12 @@ namespace aonyx
                     font(std::string_view style, std::string_view weight, std::string_view size, std::string_view family) : super_property(std::format("{} {} {} / normal {}", style, weight, size, family)) {}
                     font(std::string_view style, std::string_view weight, std::string_view size_line_height, std::string_view family) : super_property(std::format("{} {} {} {}", style, weight, size_line_height, family)) {}
 
-                    inline static constexpr std::string_view caption = "caption";
-                    inline static constexpr std::string_view icon = "icon";
-                    inline static constexpr std::string_view menu = "menu";
-                    inline static constexpr std::string_view message_box = "message-box";
-                    inline static constexpr std::string_view small_caption = "small-caption";
-                    inline static constexpr std::string_view status_bar = "status-bar";
+                    inline static constexpr types::property_constant caption{key, "caption"};
+                    inline static constexpr types::property_constant icon{key, "icon"};
+                    inline static constexpr types::property_constant menu{key, "menu"};
+                    inline static constexpr types::property_constant message_box{key, "message-box"};
+                    inline static constexpr types::property_constant small_caption{key, "small-caption"};
+                    inline static constexpr types::property_constant status_bar{key, "status-bar"};
                 };
             }
         }

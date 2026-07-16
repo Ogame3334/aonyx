@@ -23,8 +23,8 @@ namespace aonyx
                     quotes(std::string_view open1, std::string_view close1) : super_property(std::format("{} {}", open1, close1)) {}
                     quotes(std::string_view open1, std::string_view close1, std::string_view open2, std::string_view close2) : super_property(std::format("{} {} {} {}", open1, close1, open2, close2)) {}
 
-                    inline static constexpr std::string_view none = "none";
-                    inline static constexpr std::string_view auto_ = "auto";
+                    inline static constexpr types::property_constant none{key, "none"};
+                    inline static constexpr types::property_constant auto_{key, "auto"};
                 };
             }
         }

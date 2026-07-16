@@ -24,13 +24,13 @@ namespace aonyx
                     text_decoration_line(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2)) {}
                     text_decoration_line(std::string_view v1, std::string_view v2, std::string_view v3) : super_property(std::format("{} {} {}", v1, v2, v3)) {}
 
-                    inline static constexpr std::string_view none = "none";
-                    inline static constexpr std::string_view underline = "underline";
-                    inline static constexpr std::string_view overline = "overline";
-                    inline static constexpr std::string_view line_through = "line-through";
-                    inline static constexpr std::string_view blink = "blink";
-                    inline static constexpr std::string_view spelling_error = "spelling-error";
-                    inline static constexpr std::string_view grammar_error = "grammar-error";
+                    inline static constexpr types::property_constant none{key, "none"};
+                    inline static constexpr types::property_constant underline{key, "underline"};
+                    inline static constexpr types::property_constant overline{key, "overline"};
+                    inline static constexpr types::property_constant line_through{key, "line-through"};
+                    inline static constexpr types::property_constant blink{key, "blink"};
+                    inline static constexpr types::property_constant spelling_error{key, "spelling-error"};
+                    inline static constexpr types::property_constant grammar_error{key, "grammar-error"};
                 };
             }
         }

@@ -23,7 +23,7 @@ namespace aonyx
                     will_change(std::string_view v) : super_property(std::string(v)) {}
                     will_change(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
                 };
             }
         }

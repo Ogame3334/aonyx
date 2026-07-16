@@ -24,11 +24,11 @@ namespace aonyx
                     transform_origin(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2)) {}
                     transform_origin(std::string_view v1, std::string_view v2, std::string_view v3) : super_property(std::format("{} {} {}", v1, v2, v3)) {}
 
-                    inline static constexpr std::string_view left = "left";
-                    inline static constexpr std::string_view center = "center";
-                    inline static constexpr std::string_view right = "right";
-                    inline static constexpr std::string_view top = "top";
-                    inline static constexpr std::string_view bottom = "bottom";
+                    inline static constexpr types::property_constant left{key, "left"};
+                    inline static constexpr types::property_constant center{key, "center"};
+                    inline static constexpr types::property_constant right{key, "right"};
+                    inline static constexpr types::property_constant top{key, "top"};
+                    inline static constexpr types::property_constant bottom{key, "bottom"};
                 };
             }
         }

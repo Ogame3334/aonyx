@@ -24,13 +24,13 @@ namespace aonyx
                     font_size_adjust(util::numerical v) : super_property(v.to_string()) {}
                     font_size_adjust(std::string_view metric, util::numerical v) : super_property(std::format("{} {}", metric, v)) {}
 
-                    inline static constexpr std::string_view ex_height = "ex-height";
-                    inline static constexpr std::string_view cap_height = "cap-height";
-                    inline static constexpr std::string_view ic_width = "ic-width";
-                    inline static constexpr std::string_view ic_height = "ic-height";
-                    inline static constexpr std::string_view alphabetic = "alphabetic";
-                    inline static constexpr std::string_view numeric = "numeric";
-                    inline static constexpr std::string_view none = "none";
+                    inline static constexpr types::property_constant ex_height{key, "ex-height"};
+                    inline static constexpr types::property_constant cap_height{key, "cap-height"};
+                    inline static constexpr types::property_constant ic_width{key, "ic-width"};
+                    inline static constexpr types::property_constant ic_height{key, "ic-height"};
+                    inline static constexpr types::property_constant alphabetic{key, "alphabetic"};
+                    inline static constexpr types::property_constant numeric{key, "numeric"};
+                    inline static constexpr types::property_constant none{key, "none"};
                 };
             }
         }

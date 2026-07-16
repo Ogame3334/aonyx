@@ -21,8 +21,8 @@ namespace aonyx
                     table_layout() = delete;
                     table_layout(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
-                    inline static constexpr std::string_view fixed = "fixed";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
+                    inline static constexpr types::property_constant fixed{key, "fixed"};
                 };
             }
         }

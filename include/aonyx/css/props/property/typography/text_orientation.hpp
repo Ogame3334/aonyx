@@ -21,10 +21,10 @@ namespace aonyx
                     text_orientation() = delete;
                     text_orientation(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view mixed = "mixed";
-                    inline static constexpr std::string_view upright = "upright";
-                    inline static constexpr std::string_view sideways = "sideways";
-                    inline static constexpr std::string_view sideways_right = "sideways-right";
+                    inline static constexpr types::property_constant mixed{key, "mixed"};
+                    inline static constexpr types::property_constant upright{key, "upright"};
+                    inline static constexpr types::property_constant sideways{key, "sideways"};
+                    inline static constexpr types::property_constant sideways_right{key, "sideways-right"};
                 };
             }
         }

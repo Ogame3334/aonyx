@@ -23,8 +23,8 @@ namespace aonyx
                     transition_behavior(std::string_view v) : super_property(std::string(v)) {}
                     transition_behavior(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2)) {}
 
-                    inline static constexpr std::string_view normal = "normal";
-                    inline static constexpr std::string_view allow_discrete = "allow-discrete";
+                    inline static constexpr types::property_constant normal{key, "normal"};
+                    inline static constexpr types::property_constant allow_discrete{key, "allow-discrete"};
                 };
             }
         }

@@ -21,8 +21,8 @@ namespace aonyx
                     box_sizing() = delete;
                     box_sizing(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view content_box = "content-box";
-                    inline static constexpr std::string_view border_box = "border-box";
+                    inline static constexpr types::property_constant content_box{key, "content-box"};
+                    inline static constexpr types::property_constant border_box{key, "border-box"};
                 };
             }
         }

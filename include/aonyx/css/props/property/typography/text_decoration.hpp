@@ -26,16 +26,16 @@ namespace aonyx
                     text_decoration(std::string_view line, std::string_view color, std::string_view style) : super_property(std::format("{} {} {}", line, color, style)) {}
                     text_decoration(std::string_view line, std::string_view style, std::string_view color, std::string_view thickness) : super_property(std::format("{} {} {} {}", line, style, color, thickness)) {}
 
-                    inline static constexpr std::string_view none = "none";
-                    inline static constexpr std::string_view underline = "underline";
-                    inline static constexpr std::string_view overline = "overline";
-                    inline static constexpr std::string_view line_through = "line-through";
-                    inline static constexpr std::string_view blink = "blink";
-                    inline static constexpr std::string_view solid = "solid";
-                    inline static constexpr std::string_view double_ = "double";
-                    inline static constexpr std::string_view dotted = "dotted";
-                    inline static constexpr std::string_view dashed = "dashed";
-                    inline static constexpr std::string_view wavy = "wavy";
+                    inline static constexpr types::property_constant none{key, "none"};
+                    inline static constexpr types::property_constant underline{key, "underline"};
+                    inline static constexpr types::property_constant overline{key, "overline"};
+                    inline static constexpr types::property_constant line_through{key, "line-through"};
+                    inline static constexpr types::property_constant blink{key, "blink"};
+                    inline static constexpr types::property_constant solid{key, "solid"};
+                    inline static constexpr types::property_constant double_{key, "double"};
+                    inline static constexpr types::property_constant dotted{key, "dotted"};
+                    inline static constexpr types::property_constant dashed{key, "dashed"};
+                    inline static constexpr types::property_constant wavy{key, "wavy"};
                 };
             }
         }

@@ -23,10 +23,10 @@ namespace aonyx
                     view_timeline_axis(std::string_view v) : super_property(std::string(v)) {}
                     view_timeline_axis(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2)) {}
 
-                    inline static constexpr std::string_view block = "block";
-                    inline static constexpr std::string_view inline_ = "inline";
-                    inline static constexpr std::string_view x = "x";
-                    inline static constexpr std::string_view y = "y";
+                    inline static constexpr types::property_constant block{key, "block"};
+                    inline static constexpr types::property_constant inline_{key, "inline"};
+                    inline static constexpr types::property_constant x{key, "x"};
+                    inline static constexpr types::property_constant y{key, "y"};
                 };
             }
         }

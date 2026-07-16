@@ -21,11 +21,11 @@ namespace aonyx
                     text_decoration_style() = delete;
                     text_decoration_style(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view solid = "solid";
-                    inline static constexpr std::string_view double_ = "double";
-                    inline static constexpr std::string_view dotted = "dotted";
-                    inline static constexpr std::string_view dashed = "dashed";
-                    inline static constexpr std::string_view wavy = "wavy";
+                    inline static constexpr types::property_constant solid{key, "solid"};
+                    inline static constexpr types::property_constant double_{key, "double"};
+                    inline static constexpr types::property_constant dotted{key, "dotted"};
+                    inline static constexpr types::property_constant dashed{key, "dashed"};
+                    inline static constexpr types::property_constant wavy{key, "wavy"};
                 };
             }
         }

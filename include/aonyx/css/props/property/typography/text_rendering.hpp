@@ -21,10 +21,10 @@ namespace aonyx
                     text_rendering() = delete;
                     text_rendering(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
-                    inline static constexpr std::string_view optimize_speed = "optimizeSpeed";
-                    inline static constexpr std::string_view optimize_legibility = "optimizeLegibility";
-                    inline static constexpr std::string_view geometric_precision = "geometricPrecision";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
+                    inline static constexpr types::property_constant optimize_speed{key, "optimizeSpeed"};
+                    inline static constexpr types::property_constant optimize_legibility{key, "optimizeLegibility"};
+                    inline static constexpr types::property_constant geometric_precision{key, "geometricPrecision"};
                 };
             }
         }

@@ -24,9 +24,9 @@ namespace aonyx
                     background_attachment(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2)) {}
                     background_attachment(std::string_view v1, std::string_view v2, std::string_view v3) : super_property(std::format("{}, {}, {}", v1, v2, v3)) {}
 
-                    inline static constexpr std::string_view scroll = "scroll";
-                    inline static constexpr std::string_view fixed = "fixed";
-                    inline static constexpr std::string_view local = "local";
+                    inline static constexpr types::property_constant scroll{key, "scroll"};
+                    inline static constexpr types::property_constant fixed{key, "fixed"};
+                    inline static constexpr types::property_constant local{key, "local"};
                 };
             }
         }

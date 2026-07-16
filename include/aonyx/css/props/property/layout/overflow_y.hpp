@@ -21,11 +21,11 @@ namespace aonyx
                     overflow_y() = delete;
                     overflow_y(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view visible = "visible";
-                    inline static constexpr std::string_view hidden = "hidden";
-                    inline static constexpr std::string_view clip = "clip";
-                    inline static constexpr std::string_view scroll = "scroll";
-                    inline static constexpr std::string_view auto_ = "auto";
+                    inline static constexpr types::property_constant visible{key, "visible"};
+                    inline static constexpr types::property_constant hidden{key, "hidden"};
+                    inline static constexpr types::property_constant clip{key, "clip"};
+                    inline static constexpr types::property_constant scroll{key, "scroll"};
+                    inline static constexpr types::property_constant auto_{key, "auto"};
                 };
             }
         }

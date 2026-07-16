@@ -21,14 +21,14 @@ namespace aonyx
                     text_align() = delete;
                     text_align(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view left = "left";
-                    inline static constexpr std::string_view right = "right";
-                    inline static constexpr std::string_view center = "center";
-                    inline static constexpr std::string_view justify = "justify";
-                    inline static constexpr std::string_view start = "start";
-                    inline static constexpr std::string_view end = "end";
-                    inline static constexpr std::string_view match_parent = "match-parent";
-                    inline static constexpr std::string_view justify_all = "justify-all";
+                    inline static constexpr types::property_constant left{key, "left"};
+                    inline static constexpr types::property_constant right{key, "right"};
+                    inline static constexpr types::property_constant center{key, "center"};
+                    inline static constexpr types::property_constant justify{key, "justify"};
+                    inline static constexpr types::property_constant start{key, "start"};
+                    inline static constexpr types::property_constant end{key, "end"};
+                    inline static constexpr types::property_constant match_parent{key, "match-parent"};
+                    inline static constexpr types::property_constant justify_all{key, "justify-all"};
                 };
             }
         }

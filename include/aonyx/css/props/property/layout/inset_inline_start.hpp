@@ -23,7 +23,7 @@ namespace aonyx
                     inset_inline_start(util::numerical v) : super_property(v.to_string()) {}
                     inset_inline_start(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
                 };
             }
         }

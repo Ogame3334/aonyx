@@ -23,10 +23,10 @@ namespace aonyx
                     scroll_snap_align(std::string_view v) : super_property(std::string(v)) {}
                     scroll_snap_align(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2)) {}
 
-                    inline static constexpr std::string_view none = "none";
-                    inline static constexpr std::string_view start = "start";
-                    inline static constexpr std::string_view end = "end";
-                    inline static constexpr std::string_view center = "center";
+                    inline static constexpr types::property_constant none{key, "none"};
+                    inline static constexpr types::property_constant start{key, "start"};
+                    inline static constexpr types::property_constant end{key, "end"};
+                    inline static constexpr types::property_constant center{key, "center"};
                 };
             }
         }

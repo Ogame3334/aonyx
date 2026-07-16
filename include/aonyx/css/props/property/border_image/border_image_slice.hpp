@@ -23,7 +23,7 @@ namespace aonyx
                     border_image_slice(std::string_view slice) : super_property(std::string(slice)) {}
                     border_image_slice(std::string_view slice, std::string_view fill) : super_property(std::format("{} {}", slice, fill)) {}
 
-                    inline static constexpr std::string_view fill = "fill";
+                    inline static constexpr types::property_constant fill{key, "fill"};
                 };
             }
         }

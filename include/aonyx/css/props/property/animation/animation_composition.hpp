@@ -23,9 +23,9 @@ namespace aonyx
                     animation_composition(std::string_view v) : super_property(std::string(v)) {}
                     animation_composition(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2)) {}
 
-                    inline static constexpr std::string_view replace = "replace";
-                    inline static constexpr std::string_view add = "add";
-                    inline static constexpr std::string_view accumulate = "accumulate";
+                    inline static constexpr types::property_constant replace{key, "replace"};
+                    inline static constexpr types::property_constant add{key, "add"};
+                    inline static constexpr types::property_constant accumulate{key, "accumulate"};
                 };
             }
         }

@@ -23,11 +23,11 @@ namespace aonyx
                     text_wrap(std::string_view mode) : super_property(std::string(mode)) {}
                     text_wrap(std::string_view mode, std::string_view style) : super_property(std::format("{} {}", mode, style)) {}
 
-                    inline static constexpr std::string_view nowrap = "nowrap";
-                    inline static constexpr std::string_view wrap = "wrap";
-                    inline static constexpr std::string_view balance = "balance";
-                    inline static constexpr std::string_view pretty = "pretty";
-                    inline static constexpr std::string_view stable = "stable";
+                    inline static constexpr types::property_constant nowrap{key, "nowrap"};
+                    inline static constexpr types::property_constant wrap{key, "wrap"};
+                    inline static constexpr types::property_constant balance{key, "balance"};
+                    inline static constexpr types::property_constant pretty{key, "pretty"};
+                    inline static constexpr types::property_constant stable{key, "stable"};
                 };
             }
         }

@@ -24,12 +24,12 @@ namespace aonyx
                     mask_repeat(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2)) {}
                     mask_repeat(std::string_view v1, std::string_view v2, std::string_view v3, std::string_view v4) : super_property(std::format("{} {} {} {}", v1, v2, v3, v4)) {}
 
-                    inline static constexpr std::string_view repeat = "repeat";
-                    inline static constexpr std::string_view repeat_x = "repeat-x";
-                    inline static constexpr std::string_view repeat_y = "repeat-y";
-                    inline static constexpr std::string_view no_repeat = "no-repeat";
-                    inline static constexpr std::string_view space = "space";
-                    inline static constexpr std::string_view round = "round";
+                    inline static constexpr types::property_constant repeat{key, "repeat"};
+                    inline static constexpr types::property_constant repeat_x{key, "repeat-x"};
+                    inline static constexpr types::property_constant repeat_y{key, "repeat-y"};
+                    inline static constexpr types::property_constant no_repeat{key, "no-repeat"};
+                    inline static constexpr types::property_constant space{key, "space"};
+                    inline static constexpr types::property_constant round{key, "round"};
                 };
             }
         }

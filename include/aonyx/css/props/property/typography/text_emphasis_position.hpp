@@ -22,10 +22,10 @@ namespace aonyx
                     text_emphasis_position() = delete;
                     text_emphasis_position(std::string_view over_under, std::string_view left_right) : super_property(std::format("{} {}", over_under, left_right)) {}
 
-                    inline static constexpr std::string_view over = "over";
-                    inline static constexpr std::string_view under = "under";
-                    inline static constexpr std::string_view right = "right";
-                    inline static constexpr std::string_view left = "left";
+                    inline static constexpr types::property_constant over{key, "over"};
+                    inline static constexpr types::property_constant under{key, "under"};
+                    inline static constexpr types::property_constant right{key, "right"};
+                    inline static constexpr types::property_constant left{key, "left"};
                 };
             }
         }

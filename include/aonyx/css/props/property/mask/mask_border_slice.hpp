@@ -26,7 +26,7 @@ namespace aonyx
                     mask_border_slice(std::string_view v1, std::string_view v2, std::string_view v3, std::string_view v4) : super_property(std::format("{} {} {} {}", v1, v2, v3, v4)) {}
                     mask_border_slice(std::string_view v1, std::string_view v2, std::string_view v3, std::string_view v4, std::string_view fill) : super_property(std::format("{} {} {} {} {}", v1, v2, v3, v4, fill)) {}
 
-                    inline static constexpr std::string_view fill = "fill";
+                    inline static constexpr types::property_constant fill{key, "fill"};
                 };
             }
         }

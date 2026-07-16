@@ -23,9 +23,9 @@ namespace aonyx
                     mask_mode(std::string_view v) : super_property(std::string(v)) {}
                     mask_mode(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2)) {}
 
-                    inline static constexpr std::string_view alpha = "alpha";
-                    inline static constexpr std::string_view luminance = "luminance";
-                    inline static constexpr std::string_view match_source = "match-source";
+                    inline static constexpr types::property_constant alpha{key, "alpha"};
+                    inline static constexpr types::property_constant luminance{key, "luminance"};
+                    inline static constexpr types::property_constant match_source{key, "match-source"};
                 };
             }
         }

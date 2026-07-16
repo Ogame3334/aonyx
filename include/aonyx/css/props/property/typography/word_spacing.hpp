@@ -23,7 +23,7 @@ namespace aonyx
                     word_spacing(util::numerical v) : super_property(v.to_string()) {}
                     word_spacing(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view normal = "normal";
+                    inline static constexpr types::property_constant normal{key, "normal"};
                 };
             }
         }

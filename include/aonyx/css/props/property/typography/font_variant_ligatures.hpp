@@ -24,16 +24,16 @@ namespace aonyx
                     font_variant_ligatures(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2)) {}
                     font_variant_ligatures(std::string_view v1, std::string_view v2, std::string_view v3) : super_property(std::format("{} {} {}", v1, v2, v3)) {}
 
-                    inline static constexpr std::string_view normal = "normal";
-                    inline static constexpr std::string_view none = "none";
-                    inline static constexpr std::string_view common_ligatures = "common-ligatures";
-                    inline static constexpr std::string_view no_common_ligatures = "no-common-ligatures";
-                    inline static constexpr std::string_view discretionary_ligatures = "discretionary-ligatures";
-                    inline static constexpr std::string_view no_discretionary_ligatures = "no-discretionary-ligatures";
-                    inline static constexpr std::string_view historical_ligatures = "historical-ligatures";
-                    inline static constexpr std::string_view no_historical_ligatures = "no-historical-ligatures";
-                    inline static constexpr std::string_view contextual = "contextual";
-                    inline static constexpr std::string_view no_contextual = "no-contextual";
+                    inline static constexpr types::property_constant normal{key, "normal"};
+                    inline static constexpr types::property_constant none{key, "none"};
+                    inline static constexpr types::property_constant common_ligatures{key, "common-ligatures"};
+                    inline static constexpr types::property_constant no_common_ligatures{key, "no-common-ligatures"};
+                    inline static constexpr types::property_constant discretionary_ligatures{key, "discretionary-ligatures"};
+                    inline static constexpr types::property_constant no_discretionary_ligatures{key, "no-discretionary-ligatures"};
+                    inline static constexpr types::property_constant historical_ligatures{key, "historical-ligatures"};
+                    inline static constexpr types::property_constant no_historical_ligatures{key, "no-historical-ligatures"};
+                    inline static constexpr types::property_constant contextual{key, "contextual"};
+                    inline static constexpr types::property_constant no_contextual{key, "no-contextual"};
                 };
             }
         }

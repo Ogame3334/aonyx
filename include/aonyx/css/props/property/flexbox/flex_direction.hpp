@@ -21,10 +21,10 @@ namespace aonyx
                     flex_direction() = delete;
                     flex_direction(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view row = "row";
-                    inline static constexpr std::string_view row_reverse = "row-reverse";
-                    inline static constexpr std::string_view column = "column";
-                    inline static constexpr std::string_view column_reverse = "column-reverse";
+                    inline static constexpr types::property_constant row{key, "row"};
+                    inline static constexpr types::property_constant row_reverse{key, "row-reverse"};
+                    inline static constexpr types::property_constant column{key, "column"};
+                    inline static constexpr types::property_constant column_reverse{key, "column-reverse"};
                 };
             }
         }

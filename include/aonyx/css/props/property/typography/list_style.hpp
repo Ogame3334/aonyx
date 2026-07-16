@@ -25,21 +25,21 @@ namespace aonyx
                     list_style(std::string_view type, std::string_view position, std::string_view image) : super_property(std::format("{} {} {}", type, position, image)) {}
                     list_style(std::string_view position, std::string_view image) : super_property(std::format("{} {}", position, image)) {}
 
-                    inline static constexpr std::string_view none = "none";
-                    inline static constexpr std::string_view disc = "disc";
-                    inline static constexpr std::string_view circle = "circle";
-                    inline static constexpr std::string_view square = "square";
-                    inline static constexpr std::string_view decimal = "decimal";
-                    inline static constexpr std::string_view decimal_leading_zero = "decimal-leading-zero";
-                    inline static constexpr std::string_view lower_alpha = "lower-alpha";
-                    inline static constexpr std::string_view upper_alpha = "upper-alpha";
-                    inline static constexpr std::string_view lower_greek = "lower-greek";
-                    inline static constexpr std::string_view lower_latin = "lower-latin";
-                    inline static constexpr std::string_view upper_latin = "upper-latin";
-                    inline static constexpr std::string_view lower_roman = "lower-roman";
-                    inline static constexpr std::string_view upper_roman = "upper-roman";
-                    inline static constexpr std::string_view inside = "inside";
-                    inline static constexpr std::string_view outside = "outside";
+                    inline static constexpr types::property_constant none{key, "none"};
+                    inline static constexpr types::property_constant disc{key, "disc"};
+                    inline static constexpr types::property_constant circle{key, "circle"};
+                    inline static constexpr types::property_constant square{key, "square"};
+                    inline static constexpr types::property_constant decimal{key, "decimal"};
+                    inline static constexpr types::property_constant decimal_leading_zero{key, "decimal-leading-zero"};
+                    inline static constexpr types::property_constant lower_alpha{key, "lower-alpha"};
+                    inline static constexpr types::property_constant upper_alpha{key, "upper-alpha"};
+                    inline static constexpr types::property_constant lower_greek{key, "lower-greek"};
+                    inline static constexpr types::property_constant lower_latin{key, "lower-latin"};
+                    inline static constexpr types::property_constant upper_latin{key, "upper-latin"};
+                    inline static constexpr types::property_constant lower_roman{key, "lower-roman"};
+                    inline static constexpr types::property_constant upper_roman{key, "upper-roman"};
+                    inline static constexpr types::property_constant inside{key, "inside"};
+                    inline static constexpr types::property_constant outside{key, "outside"};
                 };
             }
         }

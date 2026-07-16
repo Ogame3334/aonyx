@@ -23,10 +23,10 @@ namespace aonyx
                     mask_composite(std::string_view v) : super_property(std::string(v)) {}
                     mask_composite(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2)) {}
 
-                    inline static constexpr std::string_view add = "add";
-                    inline static constexpr std::string_view subtract = "subtract";
-                    inline static constexpr std::string_view intersect = "intersect";
-                    inline static constexpr std::string_view exclude = "exclude";
+                    inline static constexpr types::property_constant add{key, "add"};
+                    inline static constexpr types::property_constant subtract{key, "subtract"};
+                    inline static constexpr types::property_constant intersect{key, "intersect"};
+                    inline static constexpr types::property_constant exclude{key, "exclude"};
                 };
             }
         }

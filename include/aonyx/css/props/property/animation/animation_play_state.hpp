@@ -23,8 +23,8 @@ namespace aonyx
                     animation_play_state(std::string_view v) : super_property(std::string(v)) {}
                     animation_play_state(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2)) {}
 
-                    inline static constexpr std::string_view running = "running";
-                    inline static constexpr std::string_view paused = "paused";
+                    inline static constexpr types::property_constant running{key, "running"};
+                    inline static constexpr types::property_constant paused{key, "paused"};
                 };
             }
         }

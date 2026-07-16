@@ -21,9 +21,9 @@ namespace aonyx
                     font_style() = delete;
                     font_style(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view normal = "normal";
-                    inline static constexpr std::string_view italic = "italic";
-                    inline static constexpr std::string_view oblique = "oblique";
+                    inline static constexpr types::property_constant normal{key, "normal"};
+                    inline static constexpr types::property_constant italic{key, "italic"};
+                    inline static constexpr types::property_constant oblique{key, "oblique"};
                 };
             }
         }

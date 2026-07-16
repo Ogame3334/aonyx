@@ -28,7 +28,7 @@ namespace aonyx
                     contain_intrinsic_width(util::numerical v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2)) {}
                     contain_intrinsic_width(std::string_view v1, util::numerical v2) : super_property(std::format("{} {}", v1, v2)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
                 };
             }
         }

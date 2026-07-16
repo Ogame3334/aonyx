@@ -25,11 +25,11 @@ namespace aonyx
                     hanging_punctuation(std::string_view v1, std::string_view v2, std::string_view v3) : super_property(std::format("{} {} {}", v1, v2, v3)) {}
                     hanging_punctuation(std::string_view v1, std::string_view v2, std::string_view v3, std::string_view v4) : super_property(std::format("{} {} {} {}", v1, v2, v3, v4)) {}
 
-                    inline static constexpr std::string_view none = "none";
-                    inline static constexpr std::string_view first = "first";
-                    inline static constexpr std::string_view last = "last";
-                    inline static constexpr std::string_view allow_end = "allow-end";
-                    inline static constexpr std::string_view force_end = "force-end";
+                    inline static constexpr types::property_constant none{key, "none"};
+                    inline static constexpr types::property_constant first{key, "first"};
+                    inline static constexpr types::property_constant last{key, "last"};
+                    inline static constexpr types::property_constant allow_end{key, "allow-end"};
+                    inline static constexpr types::property_constant force_end{key, "force-end"};
                 };
             }
         }

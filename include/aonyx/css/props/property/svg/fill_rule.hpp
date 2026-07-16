@@ -21,8 +21,8 @@ namespace aonyx
                     fill_rule() = delete;
                     fill_rule(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view nonzero = "nonzero";
-                    inline static constexpr std::string_view evenodd = "evenodd";
+                    inline static constexpr types::property_constant nonzero{key, "nonzero"};
+                    inline static constexpr types::property_constant evenodd{key, "evenodd"};
                 };
             }
         }

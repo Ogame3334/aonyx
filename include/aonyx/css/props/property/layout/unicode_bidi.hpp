@@ -21,12 +21,12 @@ namespace aonyx
                     unicode_bidi() = delete;
                     unicode_bidi(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view normal = "normal";
-                    inline static constexpr std::string_view embed = "embed";
-                    inline static constexpr std::string_view isolate = "isolate";
-                    inline static constexpr std::string_view bidi_override = "bidi-override";
-                    inline static constexpr std::string_view isolate_override = "isolate-override";
-                    inline static constexpr std::string_view plaintext = "plaintext";
+                    inline static constexpr types::property_constant normal{key, "normal"};
+                    inline static constexpr types::property_constant embed{key, "embed"};
+                    inline static constexpr types::property_constant isolate{key, "isolate"};
+                    inline static constexpr types::property_constant bidi_override{key, "bidi-override"};
+                    inline static constexpr types::property_constant isolate_override{key, "isolate-override"};
+                    inline static constexpr types::property_constant plaintext{key, "plaintext"};
                 };
             }
         }

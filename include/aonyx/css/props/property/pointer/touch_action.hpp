@@ -23,16 +23,16 @@ namespace aonyx
                     touch_action(std::string_view v) : super_property(std::string(v)) {}
                     touch_action(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
-                    inline static constexpr std::string_view none = "none";
-                    inline static constexpr std::string_view pan_x = "pan-x";
-                    inline static constexpr std::string_view pan_y = "pan-y";
-                    inline static constexpr std::string_view pan_left = "pan-left";
-                    inline static constexpr std::string_view pan_right = "pan-right";
-                    inline static constexpr std::string_view pan_up = "pan-up";
-                    inline static constexpr std::string_view pan_down = "pan-down";
-                    inline static constexpr std::string_view pinch_zoom = "pinch-zoom";
-                    inline static constexpr std::string_view manipulation = "manipulation";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
+                    inline static constexpr types::property_constant none{key, "none"};
+                    inline static constexpr types::property_constant pan_x{key, "pan-x"};
+                    inline static constexpr types::property_constant pan_y{key, "pan-y"};
+                    inline static constexpr types::property_constant pan_left{key, "pan-left"};
+                    inline static constexpr types::property_constant pan_right{key, "pan-right"};
+                    inline static constexpr types::property_constant pan_up{key, "pan-up"};
+                    inline static constexpr types::property_constant pan_down{key, "pan-down"};
+                    inline static constexpr types::property_constant pinch_zoom{key, "pinch-zoom"};
+                    inline static constexpr types::property_constant manipulation{key, "manipulation"};
                 };
             }
         }

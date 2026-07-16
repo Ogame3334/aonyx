@@ -28,20 +28,20 @@ namespace aonyx
                     border(std::string_view width, std::string_view style, std::string_view color) : super_property(std::format("{} {} {}", width, style, color)) {}
                     border(util::numerical width, std::string_view style, std::string_view color) : super_property(std::format("{} {} {}", width, style, color)) {}
 
-                    inline static constexpr std::string_view none = "none";
-                    inline static constexpr std::string_view hidden = "hidden";
-                    inline static constexpr std::string_view dotted = "dotted";
-                    inline static constexpr std::string_view dashed = "dashed";
-                    inline static constexpr std::string_view solid = "solid";
-                    inline static constexpr std::string_view double_ = "double";
-                    inline static constexpr std::string_view groove = "groove";
-                    inline static constexpr std::string_view ridge = "ridge";
-                    inline static constexpr std::string_view inset = "inset";
-                    inline static constexpr std::string_view outset = "outset";
+                    inline static constexpr types::property_constant none{key, "none"};
+                    inline static constexpr types::property_constant hidden{key, "hidden"};
+                    inline static constexpr types::property_constant dotted{key, "dotted"};
+                    inline static constexpr types::property_constant dashed{key, "dashed"};
+                    inline static constexpr types::property_constant solid{key, "solid"};
+                    inline static constexpr types::property_constant double_{key, "double"};
+                    inline static constexpr types::property_constant groove{key, "groove"};
+                    inline static constexpr types::property_constant ridge{key, "ridge"};
+                    inline static constexpr types::property_constant inset{key, "inset"};
+                    inline static constexpr types::property_constant outset{key, "outset"};
 
-                    inline static constexpr std::string_view thin = "thin";
-                    inline static constexpr std::string_view medium = "medium";
-                    inline static constexpr std::string_view thick = "thick";
+                    inline static constexpr types::property_constant thin{key, "thin"};
+                    inline static constexpr types::property_constant medium{key, "medium"};
+                    inline static constexpr types::property_constant thick{key, "thick"};
                 };
             }
         }

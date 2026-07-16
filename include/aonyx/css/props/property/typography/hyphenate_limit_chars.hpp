@@ -25,7 +25,7 @@ namespace aonyx
                     hyphenate_limit_chars(util::numerical total, util::numerical before) : super_property(std::format("{} {}", total, before)) {}
                     hyphenate_limit_chars(util::numerical total, util::numerical before, util::numerical after) : super_property(std::format("{} {} {}", total, before, after)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
                 };
             }
         }

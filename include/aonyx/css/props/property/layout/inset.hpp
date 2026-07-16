@@ -26,7 +26,7 @@ namespace aonyx
                     inset(util::numerical top, util::numerical horizontal, util::numerical bottom) : super_property(std::format("{} {} {}", top, horizontal, bottom)) {}
                     inset(util::numerical top, util::numerical right, util::numerical bottom, util::numerical left) : super_property(std::format("{} {} {} {}", top, right, bottom, left)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
                 };
             }
         }

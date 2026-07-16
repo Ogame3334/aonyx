@@ -21,10 +21,10 @@ namespace aonyx
                     text_box_trim() = delete;
                     text_box_trim(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view none = "none";
-                    inline static constexpr std::string_view start = "start";
-                    inline static constexpr std::string_view end = "end";
-                    inline static constexpr std::string_view both = "both";
+                    inline static constexpr types::property_constant none{key, "none"};
+                    inline static constexpr types::property_constant start{key, "start"};
+                    inline static constexpr types::property_constant end{key, "end"};
+                    inline static constexpr types::property_constant both{key, "both"};
                 };
             }
         }

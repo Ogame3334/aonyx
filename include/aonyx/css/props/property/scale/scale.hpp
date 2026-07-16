@@ -22,7 +22,7 @@ namespace aonyx
                     scale(double a, double b) : super_property(std::format("{} {}", a, b)) {}
                     scale(double a, double b, double c) : super_property(std::format("{} {} {}", a, b, c)) {}
 
-                    inline static constexpr std::string_view none = "none";
+                    inline static constexpr types::property_constant none{key, "none"};
                 };
             }
         }

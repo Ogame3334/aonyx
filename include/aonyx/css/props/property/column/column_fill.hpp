@@ -21,9 +21,9 @@ namespace aonyx
                     column_fill() = delete;
                     column_fill(std::string_view v) : super_property(std::string(v)) {}
 
-                    inline static constexpr std::string_view auto_ = "auto";
-                    inline static constexpr std::string_view balance = "balance";
-                    inline static constexpr std::string_view balance_all = "balance-all";
+                    inline static constexpr types::property_constant auto_{key, "auto"};
+                    inline static constexpr types::property_constant balance{key, "balance"};
+                    inline static constexpr types::property_constant balance_all{key, "balance-all"};
                 };
             }
         }
