@@ -8,7 +8,7 @@ namespace aonyx
     namespace util
     {
         template <class T>
-        inline T param_from_string(std::string_view) {}
+        inline T param_from_string(std::string_view) = delete;
 
         template <>
         inline int param_from_string<int>(std::string_view s)
