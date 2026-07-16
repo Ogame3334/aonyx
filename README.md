@@ -5,9 +5,10 @@
 aonyx is a brand new web framework for C++ !!
 
 ## requires
-C++23
-Boost
-OpenSSL
+- C++23
+- Boost
+- OpenSSL
+- nlohmann/json
 
 ## Features
 - **Routing**: Routing paths and binding parameters.
@@ -26,3 +27,8 @@ cmake ..
 cmake --build .
 cmake --install .
 ```
+
+## Special Thanks
+I deeply appreciate the help of the following people.
+
+<a href="https://github.com/yaito3014"><img alt="yaito3014" width=50 src="https://avatars.githubusercontent.com/u/29890657?v=4"></a>
