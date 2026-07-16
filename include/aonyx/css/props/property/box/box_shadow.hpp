@@ -20,9 +20,9 @@ namespace aonyx
                     using super_property = types::property_base<"box-shadow">;
 
                     box_shadow() = delete;
-                    box_shadow(std::string_view shadow) : super_property(std::string(shadow)) {}
-                    box_shadow(std::string_view shadow1, std::string_view shadow2) : super_property(std::format("{}, {}", shadow1, shadow2)) {}
-                    box_shadow(std::string_view shadow1, std::string_view shadow2, std::string_view shadow3) : super_property(std::format("{}, {}, {}", shadow1, shadow2, shadow3)) {}
+                    box_shadow(const std::string_view s) : super_property(std::string(s)) {}
+                    box_shadow(util::numerical shadow1, util::numerical shadow2, std::string_view color) : super_property(std::format("{} {} {}", shadow1, shadow2, color)) {}
+                    box_shadow(util::numerical shadow1, util::numerical shadow2, util::numerical shadow3, std::string_view color) : super_property(std::format("{} {} {} {}", shadow1, shadow2, shadow3, color)) {}
 
                     inline static constexpr types::property_constant none{key, "none"};
                 };

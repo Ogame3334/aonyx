@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../numerical.hpp"
+#include <aonyx/util/numerical.hpp>
 
 namespace aonyx
 {

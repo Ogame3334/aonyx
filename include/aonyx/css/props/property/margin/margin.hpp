@@ -19,6 +19,7 @@ namespace aonyx
                     using super_property = types::property_base<"margin">;
 
                     margin() = delete;
+                    margin(const std::string_view s) : super_property(std::string(s)) {}
                     margin(util::numerical n) : super_property(n.to_string()) {}
                     margin(util::numerical v, util::numerical h) : super_property(std::format("{} {}", v, h)) {}
                     margin(util::numerical u, util::numerical h, util::numerical b) : super_property(std::format("{} {} {}", u, h, b)) {}

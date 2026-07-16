@@ -2,9 +2,9 @@
 
 #include <string>
 #include <string_view>
-#include <unordered_map>
 
 #include <aonyx/css/props/types/property.hpp>
+#include <aonyx/css/property_list.hpp>
 
 namespace aonyx
 {
@@ -13,35 +13,13 @@ namespace aonyx
         class rule
         {
         public:
-            template <props::concepts::propertiable Prop>
-            void add(Prop prop)
-            {
-                properties[std::string(prop.key)] = std::string(prop.value);
-            }
+            rule(const std::string_view selector_list, property_list plist) : selector_list(selector_list), plist(plist) {}
 
-            std::string to_string() const
-            {
-                std::string res = "";
-                for (const auto &[k, v] : properties)
-                {
-                    res += k + ":" + v + ";";
-                }
-
-                return res;
-            }
+            std::string to_string() const;
 
         private:
-            std::unordered_map<std::string, std::string> properties;
+            std::string selector_list;
+            property_list plist;
         };
-
-        template <props::concepts::propertiable... Props>
-        rule make_rule(Props... props)
-        {
-            rule result{};
-
-            (result.add(props), ...);
-
-            return result;
-        }
     }
 }

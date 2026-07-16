@@ -24,6 +24,9 @@ find_package(nlohmann_json REQUIRED)
 
 add_library(
     aonyx
+    src/css/property_list/property_list.cpp
+    src/css/rule/rule.cpp
+    src/css/stylesheet/stylesheet.cpp
     src/dom/html_node/html_node.cpp
     src/dom/html_tag/html_tag.cpp
     src/http/server/helper/convert.cpp
@@ -37,8 +40,8 @@ add_library(
 target_include_directories(
     aonyx
     PUBLIC
-        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-        $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+    $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
     PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src
 )
 
@@ -73,8 +76,8 @@ if(AONYX_INSTALL)
 
     install(
         FILES
-            ${CMAKE_CURRENT_BINARY_DIR}/aonyx-config.cmake
-            ${CMAKE_CURRENT_BINARY_DIR}/aonyx-config-version.cmake
+        ${CMAKE_CURRENT_BINARY_DIR}/aonyx-config.cmake
+        ${CMAKE_CURRENT_BINARY_DIR}/aonyx-config-version.cmake
         DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/aonyx
     )
 

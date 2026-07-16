@@ -5,3 +5,4 @@
 #include <aonyx/http/client/client.hpp>
 #include <aonyx/http/server/server.hpp>
 #include <aonyx/wrap/nlohmann/json.hpp>
+#include <aonyx/util/literal/numerical.hpp>
