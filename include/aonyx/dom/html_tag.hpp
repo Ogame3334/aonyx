@@ -14,8 +14,8 @@ namespace aonyx
     {
         struct html_tag
         {
-            tags tag;
             std::string tag_name;
+            tags tag;
 
             constexpr html_tag(const std::string_view tag_name) : tag_name(tag_name), tag(str2tags(tag_name))
             {

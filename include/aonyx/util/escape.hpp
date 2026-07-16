@@ -7,7 +7,7 @@ namespace aonyx
 {
     namespace util
     {
-        inline std::string escape_html(std::string_view data) noexcept
+        inline std::string escape_html(std::string_view data)
         {
             std::string buffer;
             buffer.reserve(data.size());

@@ -18,13 +18,13 @@ namespace aonyx
         namespace details
         {
             template <class Fn, class... Args>
-            void call_handler_impl(Fn fn, const http::request &req, http::response &res, Args... args)
+            void call_handler_impl(const Fn &fn, const http::request &req, http::response &res, Args... args)
             {
                 return fn(req, res, args...);
             }
 
             template <class Fn, std::size_t... I>
-            bool call_handler(Fn fn, const http::request &req, http::response &res, const inner_handler_params_t params, std::index_sequence<I...>)
+            bool call_handler(Fn fn, const http::request &req, http::response &res, const inner_handler_params_t &params, std::index_sequence<I...>)
             {
                 call_handler_impl<
                     Fn,
@@ -38,7 +38,7 @@ namespace aonyx
             }
 
             template <class Fn>
-            bool call_handler(Fn fn, const http::request &req, http::response &res, const inner_handler_params_t params)
+            bool call_handler(Fn fn, const http::request &req, http::response &res, const inner_handler_params_t &params)
             {
                 auto fn_args_size = util::handler_args_size_v<Fn>;
 

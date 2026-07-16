@@ -16,20 +16,14 @@ namespace aonyx
                         {
                         case aonyx_method::get:
                             return boost_verb::get;
-                            break;
                         case aonyx_method::post:
                             return boost_verb::post;
-                            break;
                         case aonyx_method::put:
                             return boost_verb::put;
-                            break;
                         case aonyx_method::delete_:
                             return boost_verb::delete_;
-                            break;
-
                         default:
                             return boost_verb::unknown;
-                            break;
                         }
                     }
                     aonyx_method convert(const boost_verb verb)
@@ -38,20 +32,14 @@ namespace aonyx
                         {
                         case boost_verb::get:
                             return aonyx_method::get;
-                            break;
                         case boost_verb::post:
                             return aonyx_method::post;
-                            break;
                         case boost_verb::put:
                             return aonyx_method::put;
-                            break;
                         case boost_verb::delete_:
                             return aonyx_method::delete_;
-                            break;
-
                         default:
                             return aonyx_method::unknown;
-                            break;
                         }
                     }
                 }
@@ -82,7 +70,18 @@ namespace aonyx
                         aonyx_request result;
 
                         result.method = method::convert(req.method());
-                        result.path = std::string(req.target());
+                        
+                        auto target = req.target();
+                        auto query_pos = target.find('?');
+                        if (query_pos != std::string_view::npos)
+                        {
+                            result.path = std::string(target.substr(0, query_pos));
+                        }
+                        else
+                        {
+                            result.path = std::string(target);
+                        }
+                        
                         result.body = req.body();
 
                         for (const auto &field : req)

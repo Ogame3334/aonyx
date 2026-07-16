@@ -19,17 +19,13 @@ namespace aonyx
             constexpr numerical(unsigned long long int n, const std::string_view suffix) : data(std::format("{}{}", n, suffix)) {}
             constexpr numerical(long double a, const std::string_view suffix) : data(std::format("{}{}", a, suffix)) {}
 
-            numerical &operator+(numerical other)
+            numerical operator+(numerical other) const
             {
-                data = std::format("{} + {}", data, other.data);
-
-                return *this;
+                return numerical{std::format("{} + {}", data, other.data)};
             }
-            numerical &operator-(numerical other)
+            numerical operator-(numerical other) const
             {
-                data = std::format("{} - {}", data, other.data);
-
-                return *this;
+                return numerical{std::format("{} - {}", data, other.data)};
             }
             numerical operator+() const
             {
@@ -37,14 +33,18 @@ namespace aonyx
             }
             numerical operator-() const
             {
-                if (is_positive())
+                if (data.empty())
                 {
-                    numerical temp{data.substr(1)};
+                    return numerical{data};
+                }
+                if (!data.starts_with('-'))
+                {
+                    numerical temp{'-' + data};
                     return temp;
                 }
                 else
                 {
-                    numerical temp{'-' + data};
+                    numerical temp{data.substr(1)};
                     return temp;
                 }
             }
@@ -56,7 +56,7 @@ namespace aonyx
 
             bool is_positive() const noexcept
             {
-                return data.starts_with('-');
+                return !data.starts_with('-');
             }
 
         private:
@@ -68,10 +68,10 @@ namespace aonyx
 }
 
 template <>
-struct std::formatter<aonyx::util::numerical> : std::formatter<const char *>
+struct std::formatter<aonyx::util::numerical> : std::formatter<std::string>
 {
-    auto format(aonyx::util::numerical n, std::format_context &ctx) const
+    auto format(const aonyx::util::numerical &n, std::format_context &ctx) const
     {
-        return std::formatter<const char *>::format(n.to_string().c_str(), ctx);
+        return std::formatter<std::string>::format(n.to_string(), ctx);
     }
 };

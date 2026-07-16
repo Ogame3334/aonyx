@@ -13,6 +13,7 @@
 #include <boost/asio/ip/tcp.hpp>
 #include <boost/asio/ssl.hpp>
 #include <boost/url.hpp>
+#include <stdexcept>
 
 #include <openssl/ssl.h>
 
@@ -35,26 +36,24 @@ namespace aonyx
                     {
                     case aonyx::http::method::get:
                         return beast::http::verb::get;
-                        break;
                     case aonyx::http::method::post:
                         return beast::http::verb::post;
-                        break;
                     case aonyx::http::method::put:
                         return beast::http::verb::put;
-                        break;
                     case aonyx::http::method::delete_:
                         return beast::http::verb::delete_;
-                        break;
-
                     default:
                         return beast::http::verb::unknown;
-                        break;
                     }
                 }
 
                 std::tuple<std::string, std::string, std::string> parse_url(const std::string_view url)
                 {
                     auto result = boost::urls::parse_uri(url);
+                    if (result.has_error())
+                    {
+                        throw std::invalid_argument("invalid URL: " + std::string(url));
+                    }
 
                     auto u = result.value();
 
@@ -174,6 +173,8 @@ namespace aonyx
                         std::string(field.value()));
                 }
 
+                boost::system::error_code ec;
+                stream.shutdown(ec);
                 stream.next_layer().close();
 
                 return response;

@@ -13,7 +13,7 @@ namespace aonyx
         template <class F>
         inner_handler_t make_handler(F &&f)
         {
-            return [fn = std::forward<F>(f)](const http::request &req, http::response &res, const util::inner_handler_params_t params)
+            return [fn = std::forward<F>(f)](const http::request &req, http::response &res, const util::inner_handler_params_t& params)
             {
                 try
                 {
@@ -42,6 +42,14 @@ namespace aonyx
                 {
                     res.status = 400;
                     res.body = "400 Bad Request";
+                    res.headers["Content-Type"] = "text/html";
+
+                    return;
+                }
+                catch (...)
+                {
+                    res.status = 500;
+                    res.body = "500 Internal Server Error";
                     res.headers["Content-Type"] = "text/html";
 
                     return;

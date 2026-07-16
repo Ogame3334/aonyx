@@ -2,7 +2,8 @@
 
 #include <string>
 #include <string_view>
-#include <unordered_map>
+#include <vector>
+#include <utility>
 #include <format>
 
 #include <aonyx/css/props/types/property.hpp>
@@ -20,7 +21,7 @@ namespace aonyx
             std::string to_string() const;
 
         private:
-            std::unordered_map<std::string, std::string> properties;
+            std::vector<std::pair<std::string, std::string>> properties;
         };
 
         template <props::concepts::propertiable... Props>
@@ -31,10 +32,10 @@ namespace aonyx
 #include <aonyx/css/details/property_list.ipp>
 
 template <>
-struct std::formatter<aonyx::css::property_list> : std::formatter<const char *>
+struct std::formatter<aonyx::css::property_list> : std::formatter<std::string>
 {
-    auto format(aonyx::css::property_list plist, std::format_context &ctx) const
+    auto format(const aonyx::css::property_list &plist, std::format_context &ctx) const
     {
-        return std::formatter<const char *>::format(plist.to_string().c_str(), ctx);
+        return std::formatter<std::string>::format(plist.to_string(), ctx);
     }
 };
