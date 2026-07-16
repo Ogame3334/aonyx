@@ -23,7 +23,6 @@ namespace aonyx
                     text_decoration(std::string_view line) : super_property(std::string(line)) {}
                     text_decoration(std::string_view line, std::string_view style) : super_property(std::format("{} {}", line, style)) {}
                     text_decoration(std::string_view line, std::string_view style, std::string_view color) : super_property(std::format("{} {} {}", line, style, color)) {}
-                    text_decoration(std::string_view line, std::string_view color, std::string_view style) : super_property(std::format("{} {} {}", line, color, style)) {}
                     text_decoration(std::string_view line, std::string_view style, std::string_view color, std::string_view thickness) : super_property(std::format("{} {} {} {}", line, style, color, thickness)) {}
 
                     inline static constexpr types::property_constant none{key, "none"};

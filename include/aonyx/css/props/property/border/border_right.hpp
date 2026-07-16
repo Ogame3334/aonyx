@@ -22,7 +22,6 @@ namespace aonyx
 
                     border_right() = delete;
                     border_right(std::string_view style) : super_property(std::string(style)) {}
-                    border_right(std::string_view width, std::string_view style) : super_property(std::format("{} {}", width, style)) {}
                     border_right(util::numerical width, std::string_view style) : super_property(std::format("{} {}", width, style)) {}
                     border_right(std::string_view style, std::string_view color) : super_property(std::format("{} {}", style, color)) {}
                     border_right(std::string_view width, std::string_view style, std::string_view color) : super_property(std::format("{} {} {}", width, style, color)) {}

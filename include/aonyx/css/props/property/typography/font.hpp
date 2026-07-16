@@ -21,8 +21,7 @@ namespace aonyx
 
                     font() = delete;
                     font(std::string_view system_font) : super_property(std::string(system_font)) {}
-                    font(std::string_view style, std::string_view weight, std::string_view size, std::string_view family) : super_property(std::format("{} {} {} / normal {}", style, weight, size, family)) {}
-                    font(std::string_view style, std::string_view weight, std::string_view size_line_height, std::string_view family) : super_property(std::format("{} {} {} {}", style, weight, size_line_height, family)) {}
+                    font(std::string_view style, std::string_view weight, util::numerical size, std::string_view family) : super_property(std::format("{} {} {} {}", style, weight, size, family)) {}
 
                     inline static constexpr types::property_constant caption{key, "caption"};
                     inline static constexpr types::property_constant icon{key, "icon"};

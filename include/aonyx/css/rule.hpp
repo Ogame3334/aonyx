@@ -21,12 +21,11 @@ namespace aonyx
 
             std::string to_string() const
             {
-                std::string res = "{";
+                std::string res = "";
                 for (const auto &[k, v] : properties)
                 {
                     res += k + ":" + v + ";";
                 }
-                res += "}";
 
                 return res;
             }

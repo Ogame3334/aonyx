@@ -445,8 +445,6 @@
 #include <aonyx/css/props/property/transform/backface_visibility.hpp>
 #include <aonyx/css/props/property/transform/perspective.hpp>
 #include <aonyx/css/props/property/transform/perspective_origin.hpp>
-#include <aonyx/css/props/property/transform/rotate.hpp>
-#include <aonyx/css/props/property/transform/scale.hpp>
 #include <aonyx/css/props/property/transform/transform_box.hpp>
 #include <aonyx/css/props/property/transform/transform.hpp>
 #include <aonyx/css/props/property/transform/transform_origin.hpp>

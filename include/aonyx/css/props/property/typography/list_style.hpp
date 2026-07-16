@@ -21,9 +21,8 @@ namespace aonyx
 
                     list_style() = delete;
                     list_style(std::string_view type) : super_property(std::string(type)) {}
-                    list_style(std::string_view type, std::string_view position) : super_property(std::format("{} {}", type, position)) {}
+                    list_style(std::string_view type, std::string_view position_or_url) : super_property(std::format("{} {}", type, position_or_url)) {}
                     list_style(std::string_view type, std::string_view position, std::string_view image) : super_property(std::format("{} {} {}", type, position, image)) {}
-                    list_style(std::string_view position, std::string_view image) : super_property(std::format("{} {}", position, image)) {}
 
                     inline static constexpr types::property_constant none{key, "none"};
                     inline static constexpr types::property_constant disc{key, "disc"};

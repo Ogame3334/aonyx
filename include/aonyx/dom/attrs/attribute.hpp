@@ -31,9 +31,9 @@ namespace aonyx
             {
                 return attribute{"style", std::string(value)};
             }
-            inline attribute style(const css::style style)
+            inline attribute style(const css::rule rule)
             {
-                return attribute{"style", style.to_string()};
+                return attribute{"style", rule.to_string()};
             }
 
             inline attribute href(const std::string_view value)
