@@ -1,3 +1,7 @@
+/** @brief CSS function: anchor
+ *
+ * CSS function utilities for anchor.
+ */
 #pragma once
 
 #include <string>

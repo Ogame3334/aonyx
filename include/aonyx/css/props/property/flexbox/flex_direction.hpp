@@ -1,3 +1,7 @@
+/** @brief CSS property: flex-direction
+ *
+ * flex-direction CSS property.
+ */
 #pragma once
 
 #include <string>

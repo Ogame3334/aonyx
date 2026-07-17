@@ -1,3 +1,7 @@
+/** @brief CSS property: border-inline-color
+ *
+ * border-inline-color CSS property.
+ */
 #pragma once
 
 #include <string>

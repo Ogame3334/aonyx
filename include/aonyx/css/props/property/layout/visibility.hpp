@@ -1,3 +1,7 @@
+/** @brief CSS property: visibility
+ *
+ * visibility CSS property.
+ */
 #pragma once
 
 #include <string>

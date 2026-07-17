@@ -1,3 +1,7 @@
+/** @brief CSS property: font-variant-emoji
+ *
+ * font-variant-emoji CSS property.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,7 @@
+/** @brief CSS property: quotes
+ *
+ * quotes CSS property.
+ */
 #pragma once
 
 #include <string>

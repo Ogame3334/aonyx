@@ -1,3 +1,7 @@
+/** @brief CSS property: place-items
+ *
+ * place-items CSS property.
+ */
 #pragma once
 
 #include <string>

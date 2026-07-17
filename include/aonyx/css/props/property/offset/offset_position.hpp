@@ -1,3 +1,7 @@
+/** @brief CSS property: offset-position
+ *
+ * offset-position CSS property.
+ */
 #pragma once
 
 #include <string>

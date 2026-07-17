@@ -1,3 +1,7 @@
+/** @brief CSS property: grid-column
+ *
+ * grid-column CSS property.
+ */
 #pragma once
 
 #include <string>

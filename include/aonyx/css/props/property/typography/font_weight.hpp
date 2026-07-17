@@ -1,3 +1,7 @@
+/** @brief CSS property: font-weight
+ *
+ * font-weight CSS property.
+ */
 #pragma once
 
 #include <string>

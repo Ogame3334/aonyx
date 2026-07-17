@@ -1,3 +1,7 @@
+/** @brief CSS property: orphans
+ *
+ * orphans CSS property.
+ */
 #pragma once
 
 #include <string>

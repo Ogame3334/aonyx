@@ -1,3 +1,7 @@
+/** @brief CSS property: mask-border-outset
+ *
+ * mask-border-outset CSS property.
+ */
 #pragma once
 
 #include <string>

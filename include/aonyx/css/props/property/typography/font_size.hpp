@@ -1,3 +1,7 @@
+/** @brief CSS property: font-size
+ *
+ * font-size CSS property.
+ */
 #pragma once
 
 #include <string>

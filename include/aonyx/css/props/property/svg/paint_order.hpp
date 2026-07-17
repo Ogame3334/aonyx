@@ -1,3 +1,7 @@
+/** @brief CSS property: paint-order
+ *
+ * paint-order CSS property.
+ */
 #pragma once
 
 #include <string>

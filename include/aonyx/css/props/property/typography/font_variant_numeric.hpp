@@ -1,3 +1,7 @@
+/** @brief CSS property: font-variant-numeric
+ *
+ * font-variant-numeric CSS property.
+ */
 #pragma once
 
 #include <string>

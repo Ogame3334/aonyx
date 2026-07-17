@@ -1,3 +1,7 @@
+/** @brief CSS property: animation-timing-function
+ *
+ * animation-timing-function CSS property.
+ */
 #pragma once
 
 #include <string>

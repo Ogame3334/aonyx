@@ -1,3 +1,7 @@
+/** @brief CSS property: mask-border-slice
+ *
+ * mask-border-slice CSS property.
+ */
 #pragma once
 
 #include <string>

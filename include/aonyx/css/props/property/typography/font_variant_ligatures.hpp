@@ -1,3 +1,7 @@
+/** @brief CSS property: font-variant-ligatures
+ *
+ * font-variant-ligatures CSS property.
+ */
 #pragma once
 
 #include <string>

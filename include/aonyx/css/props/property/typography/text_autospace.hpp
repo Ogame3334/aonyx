@@ -1,3 +1,7 @@
+/** @brief CSS property: text-autospace
+ *
+ * text-autospace CSS property.
+ */
 #pragma once
 
 #include <string>

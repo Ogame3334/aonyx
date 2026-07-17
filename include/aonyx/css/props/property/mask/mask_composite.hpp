@@ -1,3 +1,7 @@
+/** @brief CSS property: mask-composite
+ *
+ * mask-composite CSS property.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,7 @@
+/** @brief CSS property: font-language-override
+ *
+ * font-language-override CSS property.
+ */
 #pragma once
 
 #include <string>

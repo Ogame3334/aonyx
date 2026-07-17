@@ -1,3 +1,7 @@
+/** @brief CSS property: max-block-size
+ *
+ * max-block-size CSS property.
+ */
 #pragma once
 
 #include <string>

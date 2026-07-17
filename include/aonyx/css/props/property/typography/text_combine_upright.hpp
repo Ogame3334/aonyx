@@ -1,3 +1,7 @@
+/** @brief CSS property: text-combine-upright
+ *
+ * text-combine-upright CSS property.
+ */
 #pragma once
 
 #include <string>

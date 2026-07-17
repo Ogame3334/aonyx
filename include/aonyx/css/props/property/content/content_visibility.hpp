@@ -1,3 +1,7 @@
+/** @brief CSS property: content-visibility
+ *
+ * content-visibility CSS property.
+ */
 #pragma once
 
 #include <string>

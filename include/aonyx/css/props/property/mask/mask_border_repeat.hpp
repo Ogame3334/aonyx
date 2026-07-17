@@ -1,3 +1,7 @@
+/** @brief CSS property: mask-border-repeat
+ *
+ * mask-border-repeat CSS property.
+ */
 #pragma once
 
 #include <string>

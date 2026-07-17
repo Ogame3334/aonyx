@@ -1,3 +1,7 @@
+/** @brief CSS property: border-bottom-width
+ *
+ * border-bottom-width CSS property.
+ */
 #pragma once
 
 #include <string>

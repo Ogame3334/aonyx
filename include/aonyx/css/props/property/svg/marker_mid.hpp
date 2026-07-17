@@ -1,3 +1,7 @@
+/** @brief CSS property: marker-mid
+ *
+ * marker-mid CSS property.
+ */
 #pragma once
 
 #include <string>

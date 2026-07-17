@@ -1,3 +1,7 @@
+/** @brief CSS function: transform
+ *
+ * CSS function utilities for transform.
+ */
 #pragma once
 
 #include <string>

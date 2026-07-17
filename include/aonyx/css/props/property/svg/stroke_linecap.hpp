@@ -1,3 +1,7 @@
+/** @brief CSS property: stroke-linecap
+ *
+ * stroke-linecap CSS property.
+ */
 #pragma once
 
 #include <string>

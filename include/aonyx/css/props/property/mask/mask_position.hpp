@@ -1,3 +1,7 @@
+/** @brief CSS property: mask-position
+ *
+ * mask-position CSS property.
+ */
 #pragma once
 
 #include <string>

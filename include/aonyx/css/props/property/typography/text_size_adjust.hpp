@@ -1,3 +1,7 @@
+/** @brief CSS property: text-size-adjust
+ *
+ * text-size-adjust CSS property.
+ */
 #pragma once
 
 #include <string>

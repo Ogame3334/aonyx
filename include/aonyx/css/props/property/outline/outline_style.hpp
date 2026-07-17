@@ -1,3 +1,7 @@
+/** @brief CSS property: outline-style
+ *
+ * outline-style CSS property.
+ */
 #pragma once
 
 #include <string>

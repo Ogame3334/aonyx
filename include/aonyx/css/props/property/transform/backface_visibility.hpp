@@ -1,3 +1,7 @@
+/** @brief CSS property: backface-visibility
+ *
+ * backface-visibility CSS property.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,7 @@
+/** @brief CSS property: offset-rotate
+ *
+ * offset-rotate CSS property.
+ */
 #pragma once
 
 #include <string>

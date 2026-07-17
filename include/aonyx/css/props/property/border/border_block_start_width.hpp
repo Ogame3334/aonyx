@@ -1,3 +1,7 @@
+/** @brief CSS property: border-block-start-width
+ *
+ * border-block-start-width CSS property.
+ */
 #pragma once
 
 #include <string>

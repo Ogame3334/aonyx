@@ -1,3 +1,7 @@
+/** @brief CSS function: color
+ *
+ * CSS function utilities for color.
+ */
 #pragma once
 
 #include <string>

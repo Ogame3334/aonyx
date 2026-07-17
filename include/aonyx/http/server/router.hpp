@@ -1,3 +1,10 @@
+/**
+ * @brief HTTP request router.
+ *
+ * Maps URL patterns to handler functions for each HTTP method
+ * using a prefix-trie (radix tree) data structure.
+ */
+
 #pragma once
 
 #include <functional>
@@ -18,18 +25,53 @@ namespace aonyx
 {
     namespace http
     {
+        /**
+         * @brief Trie-based HTTP request router.
+         *
+         * Supports GET, POST, PUT, and DELETE method routing with
+         * wildcard path parameters.
+         */
         class router
         {
         public:
+            /**
+             * @brief Register a handler for GET requests on the given path.
+             * @tparam Args Handler argument types.
+             * @param path URL path pattern (e.g., "/api/users/:id").
+             * @param handler Callable invoked when the path is matched.
+             */
             template <class... Args>
             void get(const std::string_view path, util::handler_t<std::type_identity_t<Args>...> &&handler);
+            /**
+             * @brief Register a handler for POST requests on the given path.
+             * @tparam Args Handler argument types.
+             * @param path URL path pattern.
+             * @param handler Callable invoked when the path is matched.
+             */
             template <class... Args>
             void post(const std::string_view path, util::handler_t<std::type_identity_t<Args>...> &&handler);
+            /**
+             * @brief Register a handler for PUT requests on the given path.
+             * @tparam Args Handler argument types.
+             * @param path URL path pattern.
+             * @param handler Callable invoked when the path is matched.
+             */
             template <class... Args>
             void put(const std::string_view path, util::handler_t<std::type_identity_t<Args>...> &&handler);
+            /**
+             * @brief Register a handler for DELETE requests on the given path.
+             * @tparam Args Handler argument types.
+             * @param path URL path pattern.
+             * @param handler Callable invoked when the path is matched.
+             */
             template <class... Args>
             void delete_(const std::string_view path, util::handler_t<std::type_identity_t<Args>...> &&handler);
 
+            /**
+             * @brief Route an incoming request to its registered handler.
+             * @param req The incoming HTTP request.
+             * @param res The response object to be populated by the handler.
+             */
             void dispatch(const request &req, response &res) const;
 
         private:

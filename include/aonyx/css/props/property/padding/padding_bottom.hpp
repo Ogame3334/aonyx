@@ -1,3 +1,7 @@
+/** @brief CSS property: padding-bottom
+ *
+ * padding-bottom CSS property.
+ */
 #pragma once
 
 #include <format>

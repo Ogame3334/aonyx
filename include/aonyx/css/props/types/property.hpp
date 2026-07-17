@@ -1,3 +1,5 @@
+/** @brief Core property type definitions used throughout the CSS property system. */
+
 #pragma once
 
 #include <string>
@@ -15,6 +17,10 @@ namespace aonyx
         {
             namespace types
             {
+                /**
+                 * @brief Base type for a typed CSS property.
+                 * @tparam Key A static_string representing the CSS property name.
+                 */
                 template <util::static_string Key>
                 struct property_base
                 {
@@ -22,6 +28,9 @@ namespace aonyx
                     std::string value;
                 };
 
+                /**
+                 * @brief Represents a constant CSS property value (e.g., inherit, initial).
+                 */
                 struct property_constant
                 {
                     const char *key;
@@ -30,6 +39,9 @@ namespace aonyx
             }
             namespace concepts
             {
+                /**
+                 * @brief Concept requiring a type to have key and value members usable as CSS property entries.
+                 */
                 template <typename T>
                 concept propertiable = requires(T t) {
                     { t.key } -> util::like<const char *>;

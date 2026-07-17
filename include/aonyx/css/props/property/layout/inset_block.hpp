@@ -1,3 +1,7 @@
+/** @brief CSS property: inset-block
+ *
+ * inset-block CSS property.
+ */
 #pragma once
 
 #include <string>

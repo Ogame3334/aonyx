@@ -1,3 +1,7 @@
+/** @brief CSS property: inset-inline
+ *
+ * inset-inline CSS property.
+ */
 #pragma once
 
 #include <string>

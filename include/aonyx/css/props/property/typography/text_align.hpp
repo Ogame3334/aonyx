@@ -1,3 +1,7 @@
+/** @brief CSS property: text-align
+ *
+ * text-align CSS property.
+ */
 #pragma once
 
 #include <string>

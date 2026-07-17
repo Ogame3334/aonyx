@@ -1,3 +1,5 @@
+/** @brief Template implementations of property_list::add() and make_property_list(). */
+
 #pragma once
 
 #include <aonyx/css/property_list.hpp>

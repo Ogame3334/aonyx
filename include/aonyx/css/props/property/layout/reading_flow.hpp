@@ -1,3 +1,7 @@
+/** @brief CSS property: reading-flow
+ *
+ * reading-flow CSS property.
+ */
 #pragma once
 
 #include <string>

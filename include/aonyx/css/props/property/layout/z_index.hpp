@@ -1,3 +1,7 @@
+/** @brief CSS property: z-index
+ *
+ * z-index CSS property.
+ */
 #pragma once
 
 #include <string>

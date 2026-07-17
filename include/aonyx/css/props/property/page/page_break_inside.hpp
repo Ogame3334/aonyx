@@ -1,3 +1,7 @@
+/** @brief CSS property: page-break-inside
+ *
+ * page-break-inside CSS property.
+ */
 #pragma once
 
 #include <string>

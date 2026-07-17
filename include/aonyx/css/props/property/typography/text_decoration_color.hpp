@@ -1,3 +1,7 @@
+/** @brief CSS property: text-decoration-color
+ *
+ * text-decoration-color CSS property.
+ */
 #pragma once
 
 #include <string>

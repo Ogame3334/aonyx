@@ -1,3 +1,7 @@
+/** @brief CSS property: column-count
+ *
+ * column-count CSS property.
+ */
 #pragma once
 
 #include <string>

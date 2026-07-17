@@ -1,3 +1,7 @@
+/** @brief CSS property: unicode-bidi
+ *
+ * unicode-bidi CSS property.
+ */
 #pragma once
 
 #include <string>

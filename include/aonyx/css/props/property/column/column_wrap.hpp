@@ -1,3 +1,7 @@
+/** @brief CSS property: column-wrap
+ *
+ * column-wrap CSS property.
+ */
 #pragma once
 
 #include <string>

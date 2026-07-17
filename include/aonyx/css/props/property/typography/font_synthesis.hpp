@@ -1,3 +1,7 @@
+/** @brief CSS property: font-synthesis
+ *
+ * font-synthesis CSS property.
+ */
 #pragma once
 
 #include <string>

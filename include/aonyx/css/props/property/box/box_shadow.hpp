@@ -1,3 +1,7 @@
+/** @brief CSS property: box-shadow
+ *
+ * box-shadow CSS property.
+ */
 #pragma once
 
 #include <string>

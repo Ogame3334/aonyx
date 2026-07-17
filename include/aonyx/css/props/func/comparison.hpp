@@ -1,3 +1,7 @@
+/** @brief CSS function: comparison
+ *
+ * CSS function utilities for comparison.
+ */
 #pragma once
 
 #include <string>

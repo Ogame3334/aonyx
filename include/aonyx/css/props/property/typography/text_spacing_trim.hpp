@@ -1,3 +1,7 @@
+/** @brief CSS property: text-spacing-trim
+ *
+ * text-spacing-trim CSS property.
+ */
 #pragma once
 
 #include <string>

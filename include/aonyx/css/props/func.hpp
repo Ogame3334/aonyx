@@ -1,3 +1,5 @@
+/** @brief Aggregate header that includes all CSS function definition headers. */
+
 #pragma once
 
 // anchor

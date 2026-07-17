@@ -1,3 +1,7 @@
+/** @brief CSS property: animation-duration
+ *
+ * animation-duration CSS property.
+ */
 #pragma once
 
 #include <string>

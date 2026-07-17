@@ -1,3 +1,7 @@
+/** @brief CSS property: image-orientation
+ *
+ * image-orientation CSS property.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,7 @@
+/** @brief CSS property: min-height
+ *
+ * min-height CSS property.
+ */
 #pragma once
 
 #include <string>

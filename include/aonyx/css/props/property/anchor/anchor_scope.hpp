@@ -1,3 +1,7 @@
+/** @brief CSS property: anchor-scope
+ *
+ * anchor-scope CSS property.
+ */
 #pragma once
 
 #include <string>

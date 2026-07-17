@@ -1,3 +1,7 @@
+/** @brief CSS property: transition-duration
+ *
+ * transition-duration CSS property.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,7 @@
+/** @brief CSS property: font-smooth
+ *
+ * font-smooth CSS property.
+ */
 #pragma once
 
 #include <string>

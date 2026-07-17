@@ -1,3 +1,4 @@
+/** @brief Factory function to wrap a callable into an inner_handler_t with error handling. */
 #pragma once
 
 #include <exception>
@@ -10,6 +11,11 @@ namespace aonyx
 {
     namespace util
     {
+        /** @brief Wrap a callable @p f into an inner_handler_t with exception-to-HTTP-error mapping.
+         *  @tparam F The callable type.
+         *  @param f The callable to wrap.
+         *  @return An inner_handler_t that catches std::invalid_argument -> 400,
+         *          std::out_of_range -> 400, and any other exception -> 500. */
         template <class F>
         inner_handler_t make_handler(F &&f)
         {

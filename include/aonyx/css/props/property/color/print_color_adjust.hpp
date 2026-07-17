@@ -1,3 +1,7 @@
+/** @brief CSS property: print-color-adjust
+ *
+ * print-color-adjust CSS property.
+ */
 #pragma once
 
 #include <string>

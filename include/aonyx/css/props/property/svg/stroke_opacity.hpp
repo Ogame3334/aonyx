@@ -1,3 +1,7 @@
+/** @brief CSS property: stroke-opacity
+ *
+ * stroke-opacity CSS property.
+ */
 #pragma once
 
 #include <string>

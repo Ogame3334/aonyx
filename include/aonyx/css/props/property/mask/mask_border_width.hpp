@@ -1,3 +1,7 @@
+/** @brief CSS property: mask-border-width
+ *
+ * mask-border-width CSS property.
+ */
 #pragma once
 
 #include <string>

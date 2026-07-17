@@ -1,3 +1,7 @@
+/** @brief CSS function: image
+ *
+ * CSS function utilities for image.
+ */
 #pragma once
 
 #include <string>

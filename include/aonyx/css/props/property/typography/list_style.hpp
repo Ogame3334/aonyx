@@ -1,3 +1,7 @@
+/** @brief CSS property: list-style
+ *
+ * list-style CSS property.
+ */
 #pragma once
 
 #include <string>

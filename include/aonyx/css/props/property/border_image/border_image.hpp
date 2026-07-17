@@ -1,3 +1,7 @@
+/** @brief CSS property: border-image
+ *
+ * border-image CSS property.
+ */
 #pragma once
 
 #include <string>

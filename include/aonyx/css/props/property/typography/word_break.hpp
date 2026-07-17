@@ -1,3 +1,7 @@
+/** @brief CSS property: word-break
+ *
+ * word-break CSS property.
+ */
 #pragma once
 
 #include <string>

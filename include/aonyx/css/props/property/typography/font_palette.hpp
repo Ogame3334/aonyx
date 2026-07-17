@@ -1,3 +1,7 @@
+/** @brief CSS property: font-palette
+ *
+ * font-palette CSS property.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,7 @@
+/** @brief CSS property: scroll-timeline-axis
+ *
+ * scroll-timeline-axis CSS property.
+ */
 #pragma once
 
 #include <string>

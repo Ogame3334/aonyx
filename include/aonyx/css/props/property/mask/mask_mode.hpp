@@ -1,3 +1,7 @@
+/** @brief CSS property: mask-mode
+ *
+ * mask-mode CSS property.
+ */
 #pragma once
 
 #include <string>

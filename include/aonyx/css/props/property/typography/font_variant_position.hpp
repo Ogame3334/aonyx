@@ -1,3 +1,7 @@
+/** @brief CSS property: font-variant-position
+ *
+ * font-variant-position CSS property.
+ */
 #pragma once
 
 #include <string>

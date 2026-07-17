@@ -1,3 +1,7 @@
+/** @brief CSS property: transition-behavior
+ *
+ * transition-behavior CSS property.
+ */
 #pragma once
 
 #include <string>

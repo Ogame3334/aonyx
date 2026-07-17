@@ -1,3 +1,7 @@
+/** @brief CSS property: tab-size
+ *
+ * tab-size CSS property.
+ */
 #pragma once
 
 #include <string>

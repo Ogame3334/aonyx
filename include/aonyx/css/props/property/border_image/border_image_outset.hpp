@@ -1,3 +1,7 @@
+/** @brief CSS property: border-image-outset
+ *
+ * border-image-outset CSS property.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,7 @@
+/** @brief CSS function: sign-related
+ *
+ * CSS function utilities for sign-related.
+ */
 #pragma once
 
 #include <format>

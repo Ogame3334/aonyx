@@ -1,3 +1,7 @@
+/** @brief CSS property: dominant-baseline
+ *
+ * dominant-baseline CSS property.
+ */
 #pragma once
 
 #include <string>

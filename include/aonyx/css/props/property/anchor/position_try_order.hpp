@@ -1,3 +1,7 @@
+/** @brief CSS property: position-try-order
+ *
+ * position-try-order CSS property.
+ */
 #pragma once
 
 #include <string>

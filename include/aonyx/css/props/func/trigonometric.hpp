@@ -1,3 +1,7 @@
+/** @brief CSS function: trigonometric
+ *
+ * CSS function utilities for trigonometric.
+ */
 #pragma once
 
 #include <format>

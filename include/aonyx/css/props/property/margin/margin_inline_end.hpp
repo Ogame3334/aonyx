@@ -1,3 +1,7 @@
+/** @brief CSS property: margin-inline-end
+ *
+ * margin-inline-end CSS property.
+ */
 #pragma once
 
 #include <format>

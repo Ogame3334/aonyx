@@ -1,3 +1,7 @@
+/** @brief CSS property: grid-auto-flow
+ *
+ * grid-auto-flow CSS property.
+ */
 #pragma once
 
 #include <string>

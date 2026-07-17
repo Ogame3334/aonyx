@@ -1,3 +1,7 @@
+/** @brief CSS property: text-underline-position
+ *
+ * text-underline-position CSS property.
+ */
 #pragma once
 
 #include <string>

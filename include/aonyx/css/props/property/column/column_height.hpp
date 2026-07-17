@@ -1,3 +1,7 @@
+/** @brief CSS property: column-height
+ *
+ * column-height CSS property.
+ */
 #pragma once
 
 #include <string>

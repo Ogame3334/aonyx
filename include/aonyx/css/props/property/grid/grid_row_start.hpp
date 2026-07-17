@@ -1,3 +1,7 @@
+/** @brief CSS property: grid-row-start
+ *
+ * grid-row-start CSS property.
+ */
 #pragma once
 
 #include <string>

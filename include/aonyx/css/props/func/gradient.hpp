@@ -1,3 +1,7 @@
+/** @brief CSS function: gradient
+ *
+ * CSS function utilities for gradient.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,7 @@
+/** @brief CSS property: background-blend-mode
+ *
+ * background-blend-mode CSS property.
+ */
 #pragma once
 
 #include <string>

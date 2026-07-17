@@ -1,3 +1,7 @@
+/** @brief CSS property: grid-template-areas
+ *
+ * grid-template-areas CSS property.
+ */
 #pragma once
 
 #include <string>

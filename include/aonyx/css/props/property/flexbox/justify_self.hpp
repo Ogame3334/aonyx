@@ -1,3 +1,7 @@
+/** @brief CSS property: justify-self
+ *
+ * justify-self CSS property.
+ */
 #pragma once
 
 #include <string>

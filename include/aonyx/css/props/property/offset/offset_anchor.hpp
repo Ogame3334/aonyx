@@ -1,3 +1,7 @@
+/** @brief CSS property: offset-anchor
+ *
+ * offset-anchor CSS property.
+ */
 #pragma once
 
 #include <string>

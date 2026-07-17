@@ -1,3 +1,7 @@
+/** @brief CSS property: mask-clip
+ *
+ * mask-clip CSS property.
+ */
 #pragma once
 
 #include <string>

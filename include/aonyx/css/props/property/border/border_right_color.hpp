@@ -1,3 +1,7 @@
+/** @brief CSS property: border-right-color
+ *
+ * border-right-color CSS property.
+ */
 #pragma once
 
 #include <string>

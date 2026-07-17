@@ -1,3 +1,7 @@
+/** @brief CSS property: vertical-align
+ *
+ * vertical-align CSS property.
+ */
 #pragma once
 
 #include <string>

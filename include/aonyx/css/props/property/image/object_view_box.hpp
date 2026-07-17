@@ -1,3 +1,7 @@
+/** @brief CSS property: object-view-box
+ *
+ * object-view-box CSS property.
+ */
 #pragma once
 
 #include <string>

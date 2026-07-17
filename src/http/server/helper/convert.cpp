@@ -1,3 +1,5 @@
+/** @brief Implementations of type converters between aonyx types and Boost.Beast types. */
+
 #include "http/server/helper/convert.hpp"
 
 namespace aonyx
@@ -10,6 +12,9 @@ namespace aonyx
             {
                 namespace method
                 {
+                    /** @brief Convert an aonyx HTTP method to a Boost.Beast verb.
+                     *  @param method The aonyx method.
+                     *  @return The corresponding Boost.Beast verb. */
                     boost_verb convert(const aonyx_method method)
                     {
                         switch (method)
@@ -26,6 +31,9 @@ namespace aonyx
                             return boost_verb::unknown;
                         }
                     }
+                    /** @brief Convert a Boost.Beast verb to an aonyx HTTP method.
+                     *  @param verb The Boost.Beast verb.
+                     *  @return The corresponding aonyx method. */
                     aonyx_method convert(const boost_verb verb)
                     {
                         switch (verb)
@@ -46,6 +54,9 @@ namespace aonyx
 
                 namespace request
                 {
+                    /** @brief Convert an aonyx request to a Boost.Beast request.
+                     *  @param req The aonyx request.
+                     *  @return The corresponding Boost.Beast HTTP request. */
                     boost_request convert(const aonyx_request &req)
                     {
                         namespace http = boost::beast::http;
@@ -65,6 +76,9 @@ namespace aonyx
 
                         return result;
                     }
+                    /** @brief Convert a Boost.Beast request to an aonyx request.
+                     *  @param req The Boost.Beast request.
+                     *  @return The corresponding aonyx request. */
                     aonyx_request convert(const boost_request &req)
                     {
                         aonyx_request result;
@@ -97,6 +111,9 @@ namespace aonyx
 
                 namespace response
                 {
+                    /** @brief Convert an aonyx response to a Boost.Beast response.
+                     *  @param res The aonyx response.
+                     *  @return The corresponding Boost.Beast HTTP response. */
                     boost_response convert(const aonyx_response &res)
                     {
                         namespace http = boost::beast::http;
@@ -117,6 +134,9 @@ namespace aonyx
 
                         return result;
                     }
+                    /** @brief Convert a Boost.Beast response to an aonyx response.
+                     *  @param res The Boost.Beast response.
+                     *  @return The corresponding aonyx response. */
                     aonyx_response convert(const boost_response &res)
                     {
                         aonyx_response result;

@@ -1,3 +1,7 @@
+/** @brief CSS function: grid
+ *
+ * CSS function utilities for grid.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,7 @@
+/** @brief CSS property: vector-effect
+ *
+ * vector-effect CSS property.
+ */
 #pragma once
 
 #include <string>

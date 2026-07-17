@@ -1,3 +1,7 @@
+/** @brief CSS property: align-items
+ *
+ * align-items CSS property.
+ */
 #pragma once
 
 #include <string>

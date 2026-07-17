@@ -1,3 +1,7 @@
+/** @brief CSS property: border-image-slice
+ *
+ * border-image-slice CSS property.
+ */
 #pragma once
 
 #include <string>

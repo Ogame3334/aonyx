@@ -1,3 +1,7 @@
+/** @brief CSS function: font
+ *
+ * CSS function utilities for font.
+ */
 #pragma once
 
 #include <string>

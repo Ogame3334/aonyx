@@ -1,3 +1,7 @@
+/** @brief CSS property: rx
+ *
+ * rx CSS property.
+ */
 #pragma once
 
 #include <string>

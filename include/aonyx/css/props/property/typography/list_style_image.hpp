@@ -1,3 +1,7 @@
+/** @brief CSS property: list-style-image
+ *
+ * list-style-image CSS property.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,7 @@
+/** @brief CSS property: ruby-position
+ *
+ * ruby-position CSS property.
+ */
 #pragma once
 
 #include <string>

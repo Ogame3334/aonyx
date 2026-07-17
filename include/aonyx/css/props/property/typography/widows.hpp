@@ -1,3 +1,7 @@
+/** @brief CSS property: widows
+ *
+ * widows CSS property.
+ */
 #pragma once
 
 #include <string>

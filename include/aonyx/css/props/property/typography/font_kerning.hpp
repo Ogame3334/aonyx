@@ -1,3 +1,7 @@
+/** @brief CSS property: font-kerning
+ *
+ * font-kerning CSS property.
+ */
 #pragma once
 
 #include <string>

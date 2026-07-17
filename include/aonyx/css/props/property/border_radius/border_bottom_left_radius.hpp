@@ -1,3 +1,7 @@
+/** @brief CSS property: border-bottom-left-radius
+ *
+ * border-bottom-left-radius CSS property.
+ */
 #pragma once
 
 #include <string>

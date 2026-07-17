@@ -1,3 +1,7 @@
+/** @brief CSS property: display
+ *
+ * display CSS property.
+ */
 #pragma once
 
 #include <string>

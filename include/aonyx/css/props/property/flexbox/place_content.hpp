@@ -1,3 +1,7 @@
+/** @brief CSS property: place-content
+ *
+ * place-content CSS property.
+ */
 #pragma once
 
 #include <string>

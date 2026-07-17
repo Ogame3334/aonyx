@@ -1,11 +1,15 @@
+/** @brief Implementation of the HTTP session (read request, dispatch, send response). */
+
 #include "http/server/session/session.hpp"
 #include "http/server/helper/convert.hpp"
 
+/** @brief Start the session by initiating an async read. */
 void session::run()
 {
     read();
 }
 
+/** @brief Begin an asynchronous HTTP read from the socket. */
 void session::read()
 {
     auto self = shared_from_this();
@@ -23,6 +27,7 @@ void session::read()
         });
 }
 
+/** @brief Convert the request, dispatch via router, and write the response asynchronously. */
 void session::handle_request()
 {
     const auto req = aonyx::impl::http::helper::request::convert(req_);

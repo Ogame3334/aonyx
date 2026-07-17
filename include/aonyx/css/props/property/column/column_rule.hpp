@@ -1,3 +1,7 @@
+/** @brief CSS property: column-rule
+ *
+ * column-rule CSS property.
+ */
 #pragma once
 
 #include <string>

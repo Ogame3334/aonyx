@@ -1,3 +1,7 @@
+/** @brief CSS property: max-inline-size
+ *
+ * max-inline-size CSS property.
+ */
 #pragma once
 
 #include <string>

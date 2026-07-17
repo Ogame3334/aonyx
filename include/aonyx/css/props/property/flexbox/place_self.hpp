@@ -1,3 +1,7 @@
+/** @brief CSS property: place-self
+ *
+ * place-self CSS property.
+ */
 #pragma once
 
 #include <string>

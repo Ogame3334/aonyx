@@ -1,3 +1,7 @@
+/** @brief CSS property: scroll-target-group
+ *
+ * scroll-target-group CSS property.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,7 @@
+/** @brief CSS property: border-width
+ *
+ * border-width CSS property.
+ */
 #pragma once
 
 #include <string>

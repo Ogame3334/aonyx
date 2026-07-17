@@ -1,3 +1,7 @@
+/** @brief CSS property: scroll-margin-block
+ *
+ * scroll-margin-block CSS property.
+ */
 #pragma once
 
 #include <string>

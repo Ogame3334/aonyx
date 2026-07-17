@@ -1,3 +1,7 @@
+/** @brief CSS property: box-sizing
+ *
+ * box-sizing CSS property.
+ */
 #pragma once
 
 #include <string>

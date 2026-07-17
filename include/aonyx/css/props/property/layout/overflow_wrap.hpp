@@ -1,3 +1,7 @@
+/** @brief CSS property: overflow-wrap
+ *
+ * overflow-wrap CSS property.
+ */
 #pragma once
 
 #include <string>

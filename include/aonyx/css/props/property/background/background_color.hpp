@@ -1,3 +1,7 @@
+/** @brief CSS property: background-color
+ *
+ * background-color CSS property.
+ */
 #pragma once
 
 #include <string>

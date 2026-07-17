@@ -1,3 +1,7 @@
+/** @brief CSS property: caret-animation
+ *
+ * caret-animation CSS property.
+ */
 #pragma once
 
 #include <string>

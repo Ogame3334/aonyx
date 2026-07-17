@@ -1,3 +1,7 @@
+/** @brief CSS property: text-transform
+ *
+ * text-transform CSS property.
+ */
 #pragma once
 
 #include <string>

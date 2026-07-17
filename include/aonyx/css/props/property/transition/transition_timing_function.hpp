@@ -1,3 +1,7 @@
+/** @brief CSS property: transition-timing-function
+ *
+ * transition-timing-function CSS property.
+ */
 #pragma once
 
 #include <string>

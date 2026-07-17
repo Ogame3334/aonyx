@@ -1,3 +1,7 @@
+/** @brief CSS property: text-box-edge
+ *
+ * text-box-edge CSS property.
+ */
 #pragma once
 
 #include <string>

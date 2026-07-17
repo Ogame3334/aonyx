@@ -1,3 +1,7 @@
+/** @brief CSS property: fill-opacity
+ *
+ * fill-opacity CSS property.
+ */
 #pragma once
 
 #include <string>

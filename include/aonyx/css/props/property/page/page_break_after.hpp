@@ -1,3 +1,7 @@
+/** @brief CSS property: page-break-after
+ *
+ * page-break-after CSS property.
+ */
 #pragma once
 
 #include <string>

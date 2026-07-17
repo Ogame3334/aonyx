@@ -1,3 +1,7 @@
+/** @brief CSS property: text-align-last
+ *
+ * text-align-last CSS property.
+ */
 #pragma once
 
 #include <string>

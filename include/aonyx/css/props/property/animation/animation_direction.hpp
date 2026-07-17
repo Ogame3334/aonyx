@@ -1,3 +1,7 @@
+/** @brief CSS property: animation-direction
+ *
+ * animation-direction CSS property.
+ */
 #pragma once
 
 #include <string>

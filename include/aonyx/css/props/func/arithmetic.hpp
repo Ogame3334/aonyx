@@ -1,3 +1,7 @@
+/** @brief CSS function: arithmetic
+ *
+ * CSS function utilities for arithmetic.
+ */
 #pragma once
 
 #include <string>

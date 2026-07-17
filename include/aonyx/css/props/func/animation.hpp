@@ -1,3 +1,7 @@
+/** @brief CSS function: animation
+ *
+ * CSS function utilities for animation.
+ */
 #pragma once
 
 #include <string>

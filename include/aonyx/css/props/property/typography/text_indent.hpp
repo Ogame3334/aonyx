@@ -1,3 +1,7 @@
+/** @brief CSS property: text-indent
+ *
+ * text-indent CSS property.
+ */
 #pragma once
 
 #include <string>

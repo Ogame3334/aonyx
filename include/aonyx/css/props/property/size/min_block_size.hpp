@@ -1,3 +1,7 @@
+/** @brief CSS property: min-block-size
+ *
+ * min-block-size CSS property.
+ */
 #pragma once
 
 #include <string>

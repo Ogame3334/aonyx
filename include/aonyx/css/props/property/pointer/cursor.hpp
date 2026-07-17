@@ -1,3 +1,7 @@
+/** @brief CSS property: cursor
+ *
+ * cursor CSS property.
+ */
 #pragma once
 
 #include <string>

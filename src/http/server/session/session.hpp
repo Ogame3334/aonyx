@@ -1,3 +1,5 @@
+/** @brief HTTP session: owns a socket, reads one request, dispatches, and sends the response. */
+
 #pragma once
 
 #include <memory>
@@ -10,6 +12,9 @@
 class session : public std::enable_shared_from_this<session>
 {
 public:
+    /** @brief Construct a session from an accepted socket.
+     *  @param socket The accepted TCP socket.
+     *  @param router The router to dispatch requests against. */
     session(
         boost::asio::ip::tcp::socket socket,
         const aonyx::http::router &router)
@@ -17,10 +22,13 @@ public:
     {
     }
 
+    /** @brief Start reading the HTTP request. */
     void run();
 
 private:
+    /** @brief Async read handler. */
     void read();
+    /** @brief Dispatch the request and send the response. */
     void handle_request();
 
 private:

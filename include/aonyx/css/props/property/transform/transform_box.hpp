@@ -1,3 +1,7 @@
+/** @brief CSS property: transform-box
+ *
+ * transform-box CSS property.
+ */
 #pragma once
 
 #include <string>

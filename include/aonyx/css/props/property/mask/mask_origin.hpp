@@ -1,3 +1,7 @@
+/** @brief CSS property: mask-origin
+ *
+ * mask-origin CSS property.
+ */
 #pragma once
 
 #include <string>

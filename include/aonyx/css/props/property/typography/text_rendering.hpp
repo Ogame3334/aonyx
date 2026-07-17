@@ -1,3 +1,7 @@
+/** @brief CSS property: text-rendering
+ *
+ * text-rendering CSS property.
+ */
 #pragma once
 
 #include <string>

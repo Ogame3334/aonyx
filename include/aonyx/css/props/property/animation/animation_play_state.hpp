@@ -1,3 +1,7 @@
+/** @brief CSS property: animation-play-state
+ *
+ * animation-play-state CSS property.
+ */
 #pragma once
 
 #include <string>

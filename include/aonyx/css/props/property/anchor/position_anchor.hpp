@@ -1,3 +1,7 @@
+/** @brief CSS property: position-anchor
+ *
+ * position-anchor CSS property.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,7 @@
+/** @brief CSS property: background-repeat
+ *
+ * background-repeat CSS property.
+ */
 #pragma once
 
 #include <string>

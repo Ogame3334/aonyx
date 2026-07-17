@@ -1,3 +1,5 @@
+/** @brief Defines CSS global keyword constants (inherit, initial, revert, etc.). */
+
 #pragma once
 
 #include <aonyx/css/props/types/property.hpp>
@@ -10,6 +12,10 @@ namespace aonyx
         {
             namespace constants
             {
+                /**
+                 * @brief Provides static constant members for CSS global keywords.
+                 * @tparam T A property type whose `key` is used as the property name for each constant.
+                 */
                 template <typename T>
                 struct global_values
                 {

@@ -1,3 +1,7 @@
+/** @brief CSS property: stop-color
+ *
+ * stop-color CSS property.
+ */
 #pragma once
 
 #include <string>

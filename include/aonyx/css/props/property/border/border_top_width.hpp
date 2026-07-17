@@ -1,3 +1,7 @@
+/** @brief CSS property: border-top-width
+ *
+ * border-top-width CSS property.
+ */
 #pragma once
 
 #include <string>

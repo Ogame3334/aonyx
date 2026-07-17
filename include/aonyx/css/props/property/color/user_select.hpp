@@ -1,3 +1,7 @@
+/** @brief CSS property: user-select
+ *
+ * user-select CSS property.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,7 @@
+/** @brief CSS property: background-size
+ *
+ * background-size CSS property.
+ */
 #pragma once
 
 #include <string>

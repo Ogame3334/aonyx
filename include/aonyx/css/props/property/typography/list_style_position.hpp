@@ -1,3 +1,7 @@
+/** @brief CSS property: list-style-position
+ *
+ * list-style-position CSS property.
+ */
 #pragma once
 
 #include <string>

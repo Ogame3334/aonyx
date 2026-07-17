@@ -1,3 +1,7 @@
+/** @brief CSS property: text-decoration-thickness
+ *
+ * text-decoration-thickness CSS property.
+ */
 #pragma once
 
 #include <string>

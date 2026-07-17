@@ -1,3 +1,7 @@
+/** @brief CSS property: animation-iteration-count
+ *
+ * animation-iteration-count CSS property.
+ */
 #pragma once
 
 #include <string>

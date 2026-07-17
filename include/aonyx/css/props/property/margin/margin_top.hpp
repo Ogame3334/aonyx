@@ -1,3 +1,7 @@
+/** @brief CSS property: margin-top
+ *
+ * margin-top CSS property.
+ */
 #pragma once
 
 #include <format>

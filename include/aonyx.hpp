@@ -1,3 +1,8 @@
+/** @brief Main aggregate header for the aonyx web framework
+ *
+ * Includes all major components: CSS, DOM, HTTP client/server,
+ * JSON support, and numerical literal utilities.
+ */
 #pragma once
 
 #include <aonyx/css.hpp>

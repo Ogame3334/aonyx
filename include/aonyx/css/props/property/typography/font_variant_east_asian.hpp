@@ -1,3 +1,7 @@
+/** @brief CSS property: font-variant-east-asian
+ *
+ * font-variant-east-asian CSS property.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,7 @@
+/** @brief CSS property: column-width
+ *
+ * column-width CSS property.
+ */
 #pragma once
 
 #include <string>

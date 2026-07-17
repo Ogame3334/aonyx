@@ -1,3 +1,7 @@
+/** @brief CSS property: flood-opacity
+ *
+ * flood-opacity CSS property.
+ */
 #pragma once
 
 #include <string>

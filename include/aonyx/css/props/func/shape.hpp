@@ -1,3 +1,7 @@
+/** @brief CSS function: shape
+ *
+ * CSS function utilities for shape.
+ */
 #pragma once
 
 #include <string>

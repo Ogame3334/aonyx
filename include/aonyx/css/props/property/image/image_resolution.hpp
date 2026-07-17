@@ -1,3 +1,7 @@
+/** @brief CSS property: image-resolution
+ *
+ * image-resolution CSS property.
+ */
 #pragma once
 
 #include <string>

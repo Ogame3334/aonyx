@@ -1,3 +1,7 @@
+/** @brief CSS property: stroke-dashoffset
+ *
+ * stroke-dashoffset CSS property.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,7 @@
+/** @brief CSS property: grid-row-end
+ *
+ * grid-row-end CSS property.
+ */
 #pragma once
 
 #include <string>

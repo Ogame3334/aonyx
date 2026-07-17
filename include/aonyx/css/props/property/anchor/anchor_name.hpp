@@ -1,3 +1,7 @@
+/** @brief CSS property: anchor-name
+ *
+ * anchor-name CSS property.
+ */
 #pragma once
 
 #include <string>

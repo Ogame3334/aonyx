@@ -1,3 +1,7 @@
+/** @brief CSS property: contain-intrinsic-inline-size
+ *
+ * contain-intrinsic-inline-size CSS property.
+ */
 #pragma once
 
 #include <string>

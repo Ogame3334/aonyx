@@ -1,3 +1,7 @@
+/** @brief CSS property: shape-image-threshold
+ *
+ * shape-image-threshold CSS property.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,7 @@
+/** @brief CSS property: block-size
+ *
+ * block-size CSS property.
+ */
 #pragma once
 
 #include <string>

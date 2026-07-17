@@ -1,3 +1,7 @@
+/** @brief CSS property: scroll-marker-group
+ *
+ * scroll-marker-group CSS property.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,7 @@
+/** @brief CSS property: offset-path
+ *
+ * offset-path CSS property.
+ */
 #pragma once
 
 #include <string>

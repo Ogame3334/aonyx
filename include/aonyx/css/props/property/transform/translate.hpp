@@ -1,3 +1,7 @@
+/** @brief CSS property: translate
+ *
+ * translate CSS property.
+ */
 #pragma once
 
 #include <string>

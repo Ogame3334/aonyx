@@ -1,9 +1,11 @@
+/** @brief Defines the tags enum and conversion functions for HTML tag names. */
 #pragma once
 
 namespace aonyx
 {
     namespace dom
     {
+        /** @brief Enumeration of all supported HTML tag values. */
         enum class tags
         {
             // Document metadata
@@ -150,6 +152,9 @@ namespace aonyx
             UNKNOWN
         };
 
+        /** @brief Convert a tags enum value to its string representation.
+         *  @param tag The tag enum value.
+         *  @return The corresponding HTML tag name as a string_view. */
         constexpr std::string_view tags2str(tags tag) noexcept
         {
             switch (tag)
@@ -400,6 +405,9 @@ namespace aonyx
             }
         }
 
+        /** @brief Convert an HTML tag name string to its tags enum value.
+         *  @param tag The HTML tag name.
+         *  @return The corresponding tags enum value, or tags::UNKNOWN if not recognized. */
         constexpr tags
         str2tags(std::string_view tag) noexcept
         {

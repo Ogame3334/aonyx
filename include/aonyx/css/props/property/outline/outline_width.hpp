@@ -1,3 +1,7 @@
+/** @brief CSS property: outline-width
+ *
+ * outline-width CSS property.
+ */
 #pragma once
 
 #include <string>

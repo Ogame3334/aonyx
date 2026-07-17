@@ -1,3 +1,7 @@
+/** @brief CSS property: border-top
+ *
+ * border-top CSS property.
+ */
 #pragma once
 
 #include <string>

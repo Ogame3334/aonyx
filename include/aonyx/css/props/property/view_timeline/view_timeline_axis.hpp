@@ -1,3 +1,7 @@
+/** @brief CSS property: view-timeline-axis
+ *
+ * view-timeline-axis CSS property.
+ */
 #pragma once
 
 #include <string>

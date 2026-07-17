@@ -1,3 +1,7 @@
+/** @brief CSS property: clear
+ *
+ * clear CSS property.
+ */
 #pragma once
 
 #include <string>

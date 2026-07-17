@@ -1,3 +1,7 @@
+/** @brief CSS property: clip-path
+ *
+ * clip-path CSS property.
+ */
 #pragma once
 
 #include <string>

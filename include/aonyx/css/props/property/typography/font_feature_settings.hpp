@@ -1,3 +1,7 @@
+/** @brief CSS property: font-feature-settings
+ *
+ * font-feature-settings CSS property.
+ */
 #pragma once
 
 #include <string>

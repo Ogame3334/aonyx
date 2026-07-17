@@ -1,3 +1,7 @@
+/** @brief CSS property: writing-mode
+ *
+ * writing-mode CSS property.
+ */
 #pragma once
 
 #include <string>

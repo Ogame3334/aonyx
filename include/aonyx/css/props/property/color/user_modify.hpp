@@ -1,3 +1,7 @@
+/** @brief CSS property: user-modify
+ *
+ * user-modify CSS property.
+ */
 #pragma once
 
 #include <string>
