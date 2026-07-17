@@ -95,5 +95,5 @@ if(AONYX_INSTALL)
         FILE aonyx-targets.cmake
     )
 
-    install(DIRECTORY include DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+    install(DIRECTORY include/ DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
 endif()
