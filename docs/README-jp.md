@@ -4,25 +4,25 @@
 <a href="https://github.com/Ogame3334/aonyx/blob/main/LICENCE"><img src="https://img.shields.io/badge/license-MIT-4aaa4a"></a>
 </div>
 
-<p align="center">English | <a href="./docs/README-jp.md">日本語</a></p>
+<p align="center"><a href="../README.md">English</a> | 日本語</p>
 
-**aonyx** is a brand new web framework for C++ !!
+**aonyx** は新時代のC++用Webフレームワークです！！
 
-## requires
+## 動作要件
 - C++23
 - Boost
 - OpenSSL
 - nlohmann/json
 
-## Features
-- **Routing**: Routing paths and binding parameters.
-- **JSON**: JSON support.
-- **HTML DOM**: HTML DOM support.
-- **Concurrency**: Multi-threaded server. 
-- **Client**: client request.
-- **CSS**: C++ object for CSS.
+## 特徴
+- **ルーティング**: パスのルーティングとパラメータのバインディング。
+- **JSON**: JSONのサポート。
+- **HTML DOM**: HTML DOMのサポート。
+- **並行処理**: マルチスレッドサーバー。
+- **クライアント**: クライアントリクエストの送信。
+- **CSS**: CSSを構築するためのC++オブジェクト。
 
-## How to build and install
+## ビルド & インストール
 
 ```bash
 git clone https://github.com/Ogame3334/aonyx.git
@@ -34,9 +34,9 @@ cmake --build .
 cmake --install .
 ```
 
-## How to integrate into your CMake project
+## CMakeプロジェクトへの統合方法
 
-### Using `find_package` (after install)
+### `find_package` を使う場合 (aonyx インストール後)
 
 ```cmake
 find_package(aonyx REQUIRED)
@@ -44,7 +44,7 @@ find_package(aonyx REQUIRED)
 target_link_libraries(your_target PRIVATE aonyx::aonyx)
 ```
 
-### Using `add_subdirectory` (FetchContent / submodule)
+### `add_subdirectory` を使う場合 (FetchContent / サブモジュール)
 
 ```cmake
 include(FetchContent)
@@ -61,7 +61,7 @@ target_link_libraries(your_target PRIVATE aonyx::aonyx)
 ```
 
 ## Special Thanks
-I deeply appreciate the help of the following people.
+以下の方々のご協力に深く感謝いたします。
 
 <table>
   <tr>
