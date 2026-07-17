@@ -41,6 +41,11 @@ void server::server_impl::accept()
     acceptor_.async_accept(
         [this](boost::beast::error_code ec, boost::asio::ip::tcp::socket socket)
         {
+            if (ec == boost::asio::error::operation_aborted)
+            {
+                return;
+            }
+
             if (!ec)
             {
                 std::make_shared<session>(std::move(socket), router_)->run();
