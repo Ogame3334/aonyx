@@ -9,6 +9,7 @@
 
 #include <memory>
 #include <aonyx/http/server/router.hpp>
+#include <aonyx/http/server/middleware.hpp>
 
 namespace aonyx
 {
@@ -34,6 +35,11 @@ namespace aonyx
             void run();
             /** @brief Access the router to register routes. */
             http::router &router();
+
+            /** @brief Register a global middleware. */
+            void use(middleware_t mw);
+            /** @brief Register a prefix-scoped middleware. */
+            void use(const std::string_view prefix, middleware_t mw);
 
         private:
             class server_impl;

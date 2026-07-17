@@ -8,7 +8,25 @@ namespace aonyx
 {
     namespace http
     {
-        /** @brief Dispatch an incoming request to the matching handler.
+        void router::use(middleware_t mw)
+        {
+            middlewares_.push_back({"", std::move(mw)});
+        }
+
+        void router::use(const std::string_view prefix, middleware_t mw)
+        {
+            middlewares_.push_back({std::string(prefix), std::move(mw)});
+        }
+
+        bool router::matches_prefix(std::string_view path, std::string_view prefix)
+        {
+            if (prefix.empty()) return true;
+            if (path == prefix) return true;
+            if (not path.starts_with(prefix)) return false;
+            return path.size() > prefix.size() && path[prefix.size()] == '/';
+        }
+
+        /** @brief Dispatch an incoming request through middleware chain.
          *  @param req The incoming HTTP request.
          *  @param res The response to populate. */
         void router::dispatch(const request &req, response &res) const
@@ -21,21 +39,49 @@ namespace aonyx
                 return;
             }
 
-            const route_trie &trie = dispatch_trie(req.method);
-            util::inner_handler_params_t params;
-            auto handler = trie.find(req.path, params);
-
-            if (not handler)
+            std::vector<middleware_t> matched;
+            for (const auto &entry : middlewares_)
             {
-                res.status = 404;
-                res.body = "404 Not Found";
-
-                res.headers["Content-Type"] = "text/html";
-
-                return;
+                if (matches_prefix(req.path, entry.prefix))
+                {
+                    matched.push_back(entry.handler);
+                }
             }
 
-            handler(req, res, params);
+            const route_trie &trie = dispatch_trie(req.method);
+            util::inner_handler_params_t params;
+            auto route_handler = trie.find(req.path, params);
+
+            std::function<void()> final_handler;
+            if (route_handler)
+            {
+                final_handler = [&]() { route_handler(req, res, params); };
+            }
+            else
+            {
+                final_handler = [&]()
+                {
+                    res.status = 404;
+                    res.body = "404 Not Found";
+                    res.headers["Content-Type"] = "text/html";
+                };
+            }
+
+            size_t index = 0;
+            std::function<void()> next;
+            next = [&]()
+            {
+                if (index < matched.size())
+                {
+                    matched[index++](req, res, next);
+                }
+                else
+                {
+                    final_handler();
+                }
+            };
+
+            next();
         }
 
         /** @brief Register a handler at the given path in the trie.

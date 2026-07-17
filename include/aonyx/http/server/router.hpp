@@ -17,6 +17,7 @@
 #include <aonyx/dom/html_node.hpp>
 #include <aonyx/http/request.hpp>
 #include <aonyx/http/response.hpp>
+#include <aonyx/http/server/middleware.hpp>
 #include <aonyx/util/handler/handler.hpp>
 
 #define AONYX_PARAM(req, res) const aonyx::http::request& req, aonyx::http::response& res
@@ -67,6 +68,9 @@ namespace aonyx
             template <class... Args>
             void delete_(const std::string_view path, util::handler_t<std::type_identity_t<Args>...> &&handler);
 
+            void use(middleware_t mw);
+            void use(const std::string_view prefix, middleware_t mw);
+
             /**
              * @brief Route an incoming request to its registered handler.
              * @param req The incoming HTTP request.
@@ -104,11 +108,21 @@ namespace aonyx
             const route_trie &dispatch_trie(method method) const;
             route_trie &dispatch_trie(method method);
 
+            struct middleware_entry
+            {
+                std::string prefix;
+                middleware_t handler;
+            };
+
+            static bool matches_prefix(std::string_view path, std::string_view prefix);
+
             route_trie get_trie_;
             route_trie post_trie_;
             route_trie put_trie_;
             route_trie delete_trie_;
             route_trie unknown_trie_;
+
+            std::vector<middleware_entry> middlewares_;
         };
     }
 }

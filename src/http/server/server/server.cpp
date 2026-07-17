@@ -35,4 +35,14 @@ namespace aonyx::http
         return pimpl_->router();
     }
 
+    void server::use(middleware_t mw)
+    {
+        pimpl_->router().use(std::move(mw));
+    }
+
+    void server::use(const std::string_view prefix, middleware_t mw)
+    {
+        pimpl_->router().use(prefix, std::move(mw));
+    }
+
 } // namespace aonyx::http
