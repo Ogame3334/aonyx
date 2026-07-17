@@ -4,6 +4,7 @@
 
 #include <string>
 #include <string_view>
+#include <utility>
 
 #include <aonyx/css/props/types/property.hpp>
 #include <aonyx/css/property_list.hpp>
@@ -23,7 +24,7 @@ namespace aonyx
              * @param selector_list The CSS selector(s) for this rule.
              * @param plist The property list containing CSS declarations.
              */
-            rule(const std::string_view selector_list, property_list plist) : selector_list(selector_list), plist(plist) {}
+            rule(const std::string_view selector_list, property_list plist) : selector_list(selector_list), plist(std::move(plist)) {}
 
             /**
              * @brief Serialize the rule to a CSS string.

@@ -7,6 +7,7 @@
 #pragma once
 
 #include <string>
+#include <unordered_map>
 
 #include <aonyx/http/method.hpp>
 #include <aonyx/http/headers.hpp>
@@ -28,6 +29,7 @@ namespace aonyx
             std::string body;
 
             http::headers headers;
+            std::unordered_map<std::string, std::string> queries;
         };
     }
 }

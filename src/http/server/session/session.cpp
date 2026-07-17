@@ -35,16 +35,29 @@ void session::handle_request()
     router_.dispatch(req, response);
     auto res = std::make_shared<boost::beast::http::response<boost::beast::http::string_body>>(
         aonyx::impl::http::helper::response::convert(response));
+        
+    res->keep_alive(req_.keep_alive());
 
     auto self = shared_from_this();
 
     boost::beast::http::async_write(
         socket_,
         *res,
-        [self, res](boost::beast::error_code, std::size_t)
+        [self, res](boost::beast::error_code ec, std::size_t)
         {
-            boost::system::error_code ec;
-            self->socket_.shutdown(
-                boost::asio::ip::tcp::socket::shutdown_send, ec);
+            if (ec)
+                return;
+                
+            if (res->keep_alive())
+            {
+                self->req_ = {};
+                self->read();
+            }
+            else
+            {
+                boost::system::error_code ec_shutdown;
+                self->socket_.shutdown(
+                    boost::asio::ip::tcp::socket::shutdown_send, ec_shutdown);
+            }
         });
 }

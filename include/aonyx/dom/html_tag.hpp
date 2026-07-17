@@ -16,11 +16,11 @@ namespace aonyx
         /** @brief A named HTML tag that can be invoked to produce html_node instances. */
         struct html_tag
         {
-            std::string tag_name;
             tags tag;
+            std::string tag_name;
 
             /** @brief Construct from a string tag name. */
-            constexpr html_tag(const std::string_view tag_name) : tag_name(tag_name), tag(str2tags(tag_name))
+            constexpr html_tag(const std::string_view tag_name) : tag(str2tags(tag_name)), tag_name(tag_name)
             {
             }
             /** @brief Construct from a tags enum value. */

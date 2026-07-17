@@ -1,6 +1,7 @@
 /** @brief Implementations of type converters between aonyx types and Boost.Beast types. */
 
 #include "http/server/helper/convert.hpp"
+#include <cstdio>
 
 namespace aonyx
 {
@@ -10,6 +11,47 @@ namespace aonyx
         {
             namespace helper
             {
+                namespace
+                {
+                    std::string url_decode(std::string_view str)
+                    {
+                        std::string decoded;
+                        decoded.reserve(str.length());
+                        for (size_t i = 0; i < str.length(); ++i)
+                        {
+                            if (str[i] == '%')
+                            {
+                                if (i + 2 < str.length())
+                                {
+                                    int value;
+                                    if (std::sscanf(str.data() + i + 1, "%2x", &value) == 1)
+                                    {
+                                        decoded += static_cast<char>(value);
+                                        i += 2;
+                                    }
+                                    else
+                                    {
+                                        decoded += '%';
+                                    }
+                                }
+                                else
+                                {
+                                    decoded += '%';
+                                }
+                            }
+                            else if (str[i] == '+')
+                            {
+                                decoded += ' ';
+                            }
+                            else
+                            {
+                                decoded += str[i];
+                            }
+                        }
+                        return decoded;
+                    }
+                }
+
                 namespace method
                 {
                     /** @brief Convert an aonyx HTTP method to a Boost.Beast verb.
@@ -89,11 +131,37 @@ namespace aonyx
                         auto query_pos = target.find('?');
                         if (query_pos != std::string_view::npos)
                         {
-                            result.path = std::string(target.substr(0, query_pos));
+                            result.path = url_decode(target.substr(0, query_pos));
+                            
+                            auto query_string = target.substr(query_pos + 1);
+                            size_t start = 0;
+                            while (start < query_string.length())
+                            {
+                                size_t end = query_string.find('&', start);
+                                if (end == std::string_view::npos)
+                                {
+                                    end = query_string.length();
+                                }
+                                
+                                auto pair = query_string.substr(start, end - start);
+                                size_t eq_pos = pair.find('=');
+                                if (eq_pos != std::string_view::npos)
+                                {
+                                    auto key = url_decode(pair.substr(0, eq_pos));
+                                    auto val = url_decode(pair.substr(eq_pos + 1));
+                                    result.queries[key] = val;
+                                }
+                                else if (!pair.empty())
+                                {
+                                    result.queries[url_decode(pair)] = "";
+                                }
+                                
+                                start = end + 1;
+                            }
                         }
                         else
                         {
-                            result.path = std::string(target);
+                            result.path = url_decode(target);
                         }
                         
                         result.body = req.body();

@@ -50,7 +50,12 @@ namespace aonyx
 
                 return result;
             }
-            std::string result = "<" + tag_name;
+            std::string result = "";
+            if (tag_name == "html")
+            {
+                result += "<!DOCTYPE html>\n";
+            }
+            result += "<" + tag_name;
             for (const auto &attr : attributes)
             {
                 result += " " + attr.name + "=\"" + aonyx::util::escape_html(attr.value) + "\"";
