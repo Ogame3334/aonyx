@@ -27,7 +27,7 @@ struct min_inline_size : types::property_base<"min-inline-size">, constants::glo
     min_inline_size(util::numerical s) : super_property(s.to_string())
     {
     }
-    min_inline_size(std::string_view s) : super_property(std::string(s))
+    min_inline_size(const std::string_view s) : super_property(std::string(s))
     {
     }
 

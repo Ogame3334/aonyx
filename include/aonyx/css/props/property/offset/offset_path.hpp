@@ -23,7 +23,7 @@ struct offset_path : types::property_base<"offset-path">, constants::global_valu
     using super_property = types::property_base<"offset-path">;
 
     offset_path() = delete;
-    offset_path(std::string_view v) : super_property(std::string(v))
+    offset_path(const std::string_view s) : super_property(std::string(s))
     {
     }
 

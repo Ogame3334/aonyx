@@ -28,7 +28,7 @@ struct grid : types::property_base<"grid">, constants::global_values<grid>
         : super_property(std::format("{} / {}", template_, auto_flow))
     {
     }
-    grid(std::string_view template_) : super_property(std::string(template_))
+    grid(const std::string_view s) : super_property(std::string(s))
     {
     }
     grid(std::string_view template_, std::string_view auto_flow, std::string_view auto_columns)

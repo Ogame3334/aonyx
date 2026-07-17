@@ -27,7 +27,7 @@ struct left : types::property_base<"left">, constants::global_values<left>
     left(util::numerical v) : super_property(v.to_string())
     {
     }
-    left(std::string_view v) : super_property(std::string(v))
+    left(const std::string_view s) : super_property(std::string(s))
     {
     }
 

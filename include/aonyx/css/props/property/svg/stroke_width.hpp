@@ -23,7 +23,7 @@ struct stroke_width : types::property_base<"stroke-width">, constants::global_va
     using super_property = types::property_base<"stroke-width">;
 
     stroke_width() = delete;
-    stroke_width(std::string_view v) : super_property(std::string(v))
+    stroke_width(const std::string_view s) : super_property(std::string(s))
     {
     }
 };

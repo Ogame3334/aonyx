@@ -24,7 +24,7 @@ struct font_family : types::property_base<"font-family">, constants::global_valu
     using super_property = types::property_base<"font-family">;
 
     font_family() = delete;
-    font_family(std::string_view family) : super_property(std::string(family))
+    font_family(const std::string_view s) : super_property(std::string(s))
     {
     }
     font_family(std::string_view family1, std::string_view family2)

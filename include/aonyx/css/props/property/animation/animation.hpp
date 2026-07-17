@@ -24,7 +24,7 @@ struct animation : types::property_base<"animation">, constants::global_values<a
     using super_property = types::property_base<"animation">;
 
     animation() = delete;
-    animation(std::string_view v) : super_property(std::string(v))
+    animation(const std::string_view s) : super_property(std::string(s))
     {
     }
     animation(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2))

@@ -23,7 +23,7 @@ struct fill_opacity : types::property_base<"fill-opacity">, constants::global_va
     using super_property = types::property_base<"fill-opacity">;
 
     fill_opacity() = delete;
-    fill_opacity(std::string_view v) : super_property(std::string(v))
+    fill_opacity(const std::string_view s) : super_property(std::string(s))
     {
     }
 };

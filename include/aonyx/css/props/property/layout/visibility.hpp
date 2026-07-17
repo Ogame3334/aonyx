@@ -23,7 +23,7 @@ struct visibility : types::property_base<"visibility">, constants::global_values
     using super_property = types::property_base<"visibility">;
 
     visibility() = delete;
-    visibility(std::string_view v) : super_property(std::string(v))
+    visibility(const std::string_view s) : super_property(std::string(s))
     {
     }
 

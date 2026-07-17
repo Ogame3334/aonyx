@@ -24,7 +24,7 @@ struct mask : types::property_base<"mask">, constants::global_values<mask>
     using super_property = types::property_base<"mask">;
 
     mask() = delete;
-    mask(std::string_view v) : super_property(std::string(v))
+    mask(const std::string_view s) : super_property(std::string(s))
     {
     }
     mask(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2))

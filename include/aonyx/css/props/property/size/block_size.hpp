@@ -27,7 +27,7 @@ struct block_size : types::property_base<"block-size">, constants::global_values
     block_size(util::numerical s) : super_property(s.to_string())
     {
     }
-    block_size(std::string_view s) : super_property(std::string(s))
+    block_size(const std::string_view s) : super_property(std::string(s))
     {
     }
 

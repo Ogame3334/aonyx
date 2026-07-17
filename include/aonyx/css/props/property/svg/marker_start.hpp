@@ -23,7 +23,7 @@ struct marker_start : types::property_base<"marker-start">, constants::global_va
     using super_property = types::property_base<"marker-start">;
 
     marker_start() = delete;
-    marker_start(std::string_view v) : super_property(std::string(v))
+    marker_start(const std::string_view s) : super_property(std::string(s))
     {
     }
 

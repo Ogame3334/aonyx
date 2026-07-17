@@ -24,7 +24,7 @@ struct font_variant : types::property_base<"font-variant">, constants::global_va
     using super_property = types::property_base<"font-variant">;
 
     font_variant() = delete;
-    font_variant(std::string_view v) : super_property(std::string(v))
+    font_variant(const std::string_view s) : super_property(std::string(s))
     {
     }
     font_variant(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

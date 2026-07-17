@@ -24,7 +24,7 @@ struct border_style : types::property_base<"border-style">, constants::global_va
     using super_property = types::property_base<"border-style">;
 
     border_style() = delete;
-    border_style(std::string_view style) : super_property(std::string(style))
+    border_style(const std::string_view s) : super_property(std::string(s))
     {
     }
     border_style(std::string_view vertical, std::string_view horizontal)

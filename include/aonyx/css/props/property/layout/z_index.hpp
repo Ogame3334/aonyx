@@ -27,7 +27,7 @@ struct z_index : types::property_base<"z-index">, constants::global_values<z_ind
     z_index(util::numerical v) : super_property(v.to_string())
     {
     }
-    z_index(std::string_view v) : super_property(std::string(v))
+    z_index(const std::string_view s) : super_property(std::string(s))
     {
     }
 

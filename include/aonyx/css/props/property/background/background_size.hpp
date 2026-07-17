@@ -24,7 +24,7 @@ struct background_size : types::property_base<"background-size">, constants::glo
     using super_property = types::property_base<"background-size">;
 
     background_size() = delete;
-    background_size(std::string_view v) : super_property(std::string(v))
+    background_size(const std::string_view s) : super_property(std::string(s))
     {
     }
     background_size(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

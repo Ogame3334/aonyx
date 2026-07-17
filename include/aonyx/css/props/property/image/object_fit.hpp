@@ -23,7 +23,7 @@ struct object_fit : types::property_base<"object-fit">, constants::global_values
     using super_property = types::property_base<"object-fit">;
 
     object_fit() = delete;
-    object_fit(std::string_view v) : super_property(std::string(v))
+    object_fit(const std::string_view s) : super_property(std::string(s))
     {
     }
 

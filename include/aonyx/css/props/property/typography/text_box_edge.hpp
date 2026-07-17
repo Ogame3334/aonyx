@@ -24,7 +24,7 @@ struct text_box_edge : types::property_base<"text-box-edge">, constants::global_
     using super_property = types::property_base<"text-box-edge">;
 
     text_box_edge() = delete;
-    text_box_edge(std::string_view over_under) : super_property(std::string(over_under))
+    text_box_edge(const std::string_view s) : super_property(std::string(s))
     {
     }
     text_box_edge(std::string_view over, std::string_view under) : super_property(std::format("{} {}", over, under))

@@ -24,7 +24,7 @@ struct outline : types::property_base<"outline">, constants::global_values<outli
     using super_property = types::property_base<"outline">;
 
     outline() = delete;
-    outline(std::string_view v) : super_property(std::string(v))
+    outline(const std::string_view s) : super_property(std::string(s))
     {
     }
     outline(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

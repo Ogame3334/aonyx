@@ -24,7 +24,7 @@ struct position_try : types::property_base<"position-try">, constants::global_va
     using super_property = types::property_base<"position-try">;
 
     position_try() = delete;
-    position_try(std::string_view v) : super_property(std::string(v))
+    position_try(const std::string_view s) : super_property(std::string(s))
     {
     }
     position_try(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

@@ -24,6 +24,9 @@ struct border_right_width : types::property_base<"border-right-width">, constant
     using super_property = types::property_base<"border-right-width">;
 
     border_right_width() = delete;
+    border_right_width(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     border_right_width(util::numerical w) : super_property(w.to_string())
     {
     }

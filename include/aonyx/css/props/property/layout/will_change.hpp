@@ -24,7 +24,7 @@ struct will_change : types::property_base<"will-change">, constants::global_valu
     using super_property = types::property_base<"will-change">;
 
     will_change() = delete;
-    will_change(std::string_view v) : super_property(std::string(v))
+    will_change(const std::string_view s) : super_property(std::string(s))
     {
     }
     will_change(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2))

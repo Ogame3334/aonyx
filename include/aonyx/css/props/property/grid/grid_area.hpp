@@ -35,7 +35,7 @@ struct grid_area : types::property_base<"grid-area">, constants::global_values<g
         : super_property(std::format("{} / {}", row_start, column_start))
     {
     }
-    grid_area(std::string_view row_start) : super_property(std::string(row_start))
+    grid_area(const std::string_view s) : super_property(std::string(s))
     {
     }
 };

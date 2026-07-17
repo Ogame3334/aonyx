@@ -23,7 +23,7 @@ struct color_interpolation : types::property_base<"color-interpolation">, consta
     using super_property = types::property_base<"color-interpolation">;
 
     color_interpolation() = delete;
-    color_interpolation(std::string_view v) : super_property(std::string(v))
+    color_interpolation(const std::string_view s) : super_property(std::string(s))
     {
     }
 

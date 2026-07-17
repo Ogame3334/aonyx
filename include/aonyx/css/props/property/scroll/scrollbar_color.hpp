@@ -24,7 +24,7 @@ struct scrollbar_color : types::property_base<"scrollbar-color">, constants::glo
     using super_property = types::property_base<"scrollbar-color">;
 
     scrollbar_color() = delete;
-    scrollbar_color(std::string_view v) : super_property(std::string(v))
+    scrollbar_color(const std::string_view s) : super_property(std::string(s))
     {
     }
     scrollbar_color(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

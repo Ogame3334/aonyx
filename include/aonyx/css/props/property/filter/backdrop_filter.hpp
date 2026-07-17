@@ -24,7 +24,7 @@ struct backdrop_filter : types::property_base<"backdrop-filter">, constants::glo
     using super_property = types::property_base<"backdrop-filter">;
 
     backdrop_filter() = delete;
-    backdrop_filter(std::string_view v) : super_property(std::string(v))
+    backdrop_filter(const std::string_view s) : super_property(std::string(s))
     {
     }
     backdrop_filter(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

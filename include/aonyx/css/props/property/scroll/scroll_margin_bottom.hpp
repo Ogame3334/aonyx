@@ -24,7 +24,7 @@ struct scroll_margin_bottom : types::property_base<"scroll-margin-bottom">,
     using super_property = types::property_base<"scroll-margin-bottom">;
 
     scroll_margin_bottom() = delete;
-    scroll_margin_bottom(std::string_view v) : super_property(std::string(v))
+    scroll_margin_bottom(const std::string_view s) : super_property(std::string(s))
     {
     }
 };

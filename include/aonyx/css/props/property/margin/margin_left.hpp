@@ -5,6 +5,8 @@
 #pragma once
 
 #include <format>
+#include <string>
+#include <string_view>
 
 #include <aonyx/css/props/constants/global_values.hpp>
 #include <aonyx/css/props/types/property.hpp>
@@ -23,6 +25,9 @@ struct margin_left : types::property_base<"margin-left">, constants::global_valu
     using super_property = types::property_base<"margin-left">;
 
     margin_left() = delete;
+    margin_left(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     margin_left(util::numerical l) : super_property(l.to_string())
     {
     }

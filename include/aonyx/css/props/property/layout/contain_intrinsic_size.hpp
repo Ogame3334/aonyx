@@ -32,7 +32,7 @@ struct contain_intrinsic_size : types::property_base<"contain-intrinsic-size">,
     contain_intrinsic_size(util::numerical w, util::numerical h) : super_property(std::format("{} {}", w, h))
     {
     }
-    contain_intrinsic_size(std::string_view v) : super_property(std::string(v))
+    contain_intrinsic_size(const std::string_view s) : super_property(std::string(s))
     {
     }
     contain_intrinsic_size(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

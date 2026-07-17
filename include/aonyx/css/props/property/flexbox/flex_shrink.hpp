@@ -24,6 +24,9 @@ struct flex_shrink : types::property_base<"flex-shrink">, constants::global_valu
     using super_property = types::property_base<"flex-shrink">;
 
     flex_shrink() = delete;
+    flex_shrink(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     flex_shrink(util::numerical v) : super_property(v.to_string())
     {
     }

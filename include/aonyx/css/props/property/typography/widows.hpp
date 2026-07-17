@@ -24,6 +24,9 @@ struct widows : types::property_base<"widows">, constants::global_values<widows>
     using super_property = types::property_base<"widows">;
 
     widows() = delete;
+    widows(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     widows(util::numerical v) : super_property(v.to_string())
     {
     }

@@ -25,7 +25,7 @@ struct animation_play_state : types::property_base<"animation-play-state">,
     using super_property = types::property_base<"animation-play-state">;
 
     animation_play_state() = delete;
-    animation_play_state(std::string_view v) : super_property(std::string(v))
+    animation_play_state(const std::string_view s) : super_property(std::string(s))
     {
     }
     animation_play_state(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2))

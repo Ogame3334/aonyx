@@ -25,7 +25,7 @@ struct animation_range_start : types::property_base<"animation-range-start">,
     using super_property = types::property_base<"animation-range-start">;
 
     animation_range_start() = delete;
-    animation_range_start(std::string_view v) : super_property(std::string(v))
+    animation_range_start(const std::string_view s) : super_property(std::string(s))
     {
     }
     animation_range_start(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

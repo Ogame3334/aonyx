@@ -25,7 +25,7 @@ struct scroll_margin_inline : types::property_base<"scroll-margin-inline">,
     using super_property = types::property_base<"scroll-margin-inline">;
 
     scroll_margin_inline() = delete;
-    scroll_margin_inline(std::string_view v) : super_property(std::string(v))
+    scroll_margin_inline(const std::string_view s) : super_property(std::string(s))
     {
     }
     scroll_margin_inline(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

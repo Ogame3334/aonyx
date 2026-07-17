@@ -23,7 +23,7 @@ struct stroke_dashoffset : types::property_base<"stroke-dashoffset">, constants:
     using super_property = types::property_base<"stroke-dashoffset">;
 
     stroke_dashoffset() = delete;
-    stroke_dashoffset(std::string_view v) : super_property(std::string(v))
+    stroke_dashoffset(const std::string_view s) : super_property(std::string(s))
     {
     }
 };

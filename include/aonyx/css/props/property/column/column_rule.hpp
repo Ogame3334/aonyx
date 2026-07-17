@@ -24,7 +24,7 @@ struct column_rule : types::property_base<"column-rule">, constants::global_valu
     using super_property = types::property_base<"column-rule">;
 
     column_rule() = delete;
-    column_rule(std::string_view v) : super_property(std::string(v))
+    column_rule(const std::string_view s) : super_property(std::string(s))
     {
     }
     column_rule(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

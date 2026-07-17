@@ -27,7 +27,7 @@ struct right : types::property_base<"right">, constants::global_values<right>
     right(util::numerical v) : super_property(v.to_string())
     {
     }
-    right(std::string_view v) : super_property(std::string(v))
+    right(const std::string_view s) : super_property(std::string(s))
     {
     }
 

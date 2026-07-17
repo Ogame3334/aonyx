@@ -23,7 +23,7 @@ struct column_gap : types::property_base<"column-gap">, constants::global_values
     using super_property = types::property_base<"column-gap">;
 
     column_gap() = delete;
-    column_gap(std::string_view v) : super_property(std::string(v))
+    column_gap(const std::string_view s) : super_property(std::string(s))
     {
     }
 

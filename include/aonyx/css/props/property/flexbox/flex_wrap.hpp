@@ -23,7 +23,7 @@ struct flex_wrap : types::property_base<"flex-wrap">, constants::global_values<f
     using super_property = types::property_base<"flex-wrap">;
 
     flex_wrap() = delete;
-    flex_wrap(std::string_view v) : super_property(std::string(v))
+    flex_wrap(const std::string_view s) : super_property(std::string(s))
     {
     }
 

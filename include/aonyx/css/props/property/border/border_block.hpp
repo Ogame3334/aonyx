@@ -25,7 +25,7 @@ struct border_block : types::property_base<"border-block">, constants::global_va
     using super_property = types::property_base<"border-block">;
 
     border_block() = delete;
-    border_block(std::string_view style) : super_property(std::string(style))
+    border_block(const std::string_view s) : super_property(std::string(s))
     {
     }
     border_block(util::numerical width, std::string_view style) : super_property(std::format("{} {}", width, style))

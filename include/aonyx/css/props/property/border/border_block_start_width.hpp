@@ -25,6 +25,9 @@ struct border_block_start_width : types::property_base<"border-block-start-width
     using super_property = types::property_base<"border-block-start-width">;
 
     border_block_start_width() = delete;
+    border_block_start_width(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     border_block_start_width(util::numerical w) : super_property(w.to_string())
     {
     }

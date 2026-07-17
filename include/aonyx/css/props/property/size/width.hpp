@@ -27,7 +27,7 @@ struct width : types::property_base<"width">, constants::global_values<width>
     width(util::numerical w) : super_property(w.to_string())
     {
     }
-    width(std::string_view w) : super_property(std::string(w))
+    width(const std::string_view s) : super_property(std::string(s))
     {
     }
 

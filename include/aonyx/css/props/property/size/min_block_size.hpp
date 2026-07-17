@@ -27,7 +27,7 @@ struct min_block_size : types::property_base<"min-block-size">, constants::globa
     min_block_size(util::numerical s) : super_property(s.to_string())
     {
     }
-    min_block_size(std::string_view s) : super_property(std::string(s))
+    min_block_size(const std::string_view s) : super_property(std::string(s))
     {
     }
 

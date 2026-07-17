@@ -23,7 +23,7 @@ struct text_size_adjust : types::property_base<"text-size-adjust">, constants::g
     using super_property = types::property_base<"text-size-adjust">;
 
     text_size_adjust() = delete;
-    text_size_adjust(std::string_view v) : super_property(std::string(v))
+    text_size_adjust(const std::string_view s) : super_property(std::string(s))
     {
     }
 

@@ -24,7 +24,7 @@ struct background_image : types::property_base<"background-image">, constants::g
     using super_property = types::property_base<"background-image">;
 
     background_image() = delete;
-    background_image(std::string_view v) : super_property(std::string(v))
+    background_image(const std::string_view s) : super_property(std::string(s))
     {
     }
     background_image(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2))

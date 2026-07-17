@@ -23,7 +23,7 @@ struct font_stretch : types::property_base<"font-stretch">, constants::global_va
     using super_property = types::property_base<"font-stretch">;
 
     font_stretch() = delete;
-    font_stretch(std::string_view v) : super_property(std::string(v))
+    font_stretch(const std::string_view s) : super_property(std::string(s))
     {
     }
 

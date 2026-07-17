@@ -23,7 +23,7 @@ struct align_self : types::property_base<"align-self">, constants::global_values
     using super_property = types::property_base<"align-self">;
 
     align_self() = delete;
-    align_self(std::string_view v) : super_property(std::string(v))
+    align_self(const std::string_view s) : super_property(std::string(s))
     {
     }
 

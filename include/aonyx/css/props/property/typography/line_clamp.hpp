@@ -24,6 +24,9 @@ struct line_clamp : types::property_base<"line-clamp">, constants::global_values
     using super_property = types::property_base<"line-clamp">;
 
     line_clamp() = delete;
+    line_clamp(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     line_clamp(util::numerical v) : super_property(v.to_string())
     {
     }

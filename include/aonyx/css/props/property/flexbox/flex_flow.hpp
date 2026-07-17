@@ -24,7 +24,7 @@ struct flex_flow : types::property_base<"flex-flow">, constants::global_values<f
     using super_property = types::property_base<"flex-flow">;
 
     flex_flow() = delete;
-    flex_flow(std::string_view direction) : super_property(std::string(direction))
+    flex_flow(const std::string_view s) : super_property(std::string(s))
     {
     }
     flex_flow(std::string_view direction, std::string_view wrap) : super_property(std::format("{} {}", direction, wrap))

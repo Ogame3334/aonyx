@@ -23,7 +23,7 @@ struct writing_mode : types::property_base<"writing-mode">, constants::global_va
     using super_property = types::property_base<"writing-mode">;
 
     writing_mode() = delete;
-    writing_mode(std::string_view v) : super_property(std::string(v))
+    writing_mode(const std::string_view s) : super_property(std::string(s))
     {
     }
 

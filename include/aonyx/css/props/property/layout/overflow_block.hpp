@@ -23,7 +23,7 @@ struct overflow_block : types::property_base<"overflow-block">, constants::globa
     using super_property = types::property_base<"overflow-block">;
 
     overflow_block() = delete;
-    overflow_block(std::string_view v) : super_property(std::string(v))
+    overflow_block(const std::string_view s) : super_property(std::string(s))
     {
     }
 

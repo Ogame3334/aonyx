@@ -23,7 +23,7 @@ struct pointer_events : types::property_base<"pointer-events">, constants::globa
     using super_property = types::property_base<"pointer-events">;
 
     pointer_events() = delete;
-    pointer_events(std::string_view v) : super_property(std::string(v))
+    pointer_events(const std::string_view s) : super_property(std::string(s))
     {
     }
 

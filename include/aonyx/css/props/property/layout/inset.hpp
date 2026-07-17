@@ -25,6 +25,9 @@ struct inset : types::property_base<"inset">, constants::global_values<inset>
     using super_property = types::property_base<"inset">;
 
     inset() = delete;
+    inset(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     inset(util::numerical v) : super_property(v.to_string())
     {
     }

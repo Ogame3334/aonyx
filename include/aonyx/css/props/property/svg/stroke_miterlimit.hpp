@@ -23,7 +23,7 @@ struct stroke_miterlimit : types::property_base<"stroke-miterlimit">, constants:
     using super_property = types::property_base<"stroke-miterlimit">;
 
     stroke_miterlimit() = delete;
-    stroke_miterlimit(std::string_view v) : super_property(std::string(v))
+    stroke_miterlimit(const std::string_view s) : super_property(std::string(s))
     {
     }
 };

@@ -24,7 +24,7 @@ struct translate : types::property_base<"translate">, constants::global_values<t
     using super_property = types::property_base<"translate">;
 
     translate() = delete;
-    translate(std::string_view v) : super_property(std::string(v))
+    translate(const std::string_view s) : super_property(std::string(s))
     {
     }
     translate(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

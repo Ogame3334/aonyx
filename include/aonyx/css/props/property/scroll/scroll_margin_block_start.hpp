@@ -24,7 +24,7 @@ struct scroll_margin_block_start : types::property_base<"scroll-margin-block-sta
     using super_property = types::property_base<"scroll-margin-block-start">;
 
     scroll_margin_block_start() = delete;
-    scroll_margin_block_start(std::string_view v) : super_property(std::string(v))
+    scroll_margin_block_start(const std::string_view s) : super_property(std::string(s))
     {
     }
 };

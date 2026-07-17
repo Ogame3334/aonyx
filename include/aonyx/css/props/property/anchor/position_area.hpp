@@ -24,7 +24,7 @@ struct position_area : types::property_base<"position-area">, constants::global_
     using super_property = types::property_base<"position-area">;
 
     position_area() = delete;
-    position_area(std::string_view v) : super_property(std::string(v))
+    position_area(const std::string_view s) : super_property(std::string(s))
     {
     }
     position_area(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

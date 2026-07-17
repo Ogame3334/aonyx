@@ -26,6 +26,9 @@ struct border_start_start_radius : types::property_base<"border-start-start-radi
     using super_property = types::property_base<"border-start-start-radius">;
 
     border_start_start_radius() = delete;
+    border_start_start_radius(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     border_start_start_radius(util::numerical r) : super_property(r.to_string())
     {
     }

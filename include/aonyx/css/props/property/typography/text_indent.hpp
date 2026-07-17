@@ -25,6 +25,9 @@ struct text_indent : types::property_base<"text-indent">, constants::global_valu
     using super_property = types::property_base<"text-indent">;
 
     text_indent() = delete;
+    text_indent(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     text_indent(util::numerical v) : super_property(v.to_string())
     {
     }

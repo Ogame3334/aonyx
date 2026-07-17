@@ -23,7 +23,7 @@ struct grid_column_start : types::property_base<"grid-column-start">, constants:
     using super_property = types::property_base<"grid-column-start">;
 
     grid_column_start() = delete;
-    grid_column_start(std::string_view v) : super_property(std::string(v))
+    grid_column_start(const std::string_view s) : super_property(std::string(s))
     {
     }
 

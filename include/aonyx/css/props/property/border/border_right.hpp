@@ -25,7 +25,7 @@ struct border_right : types::property_base<"border-right">, constants::global_va
     using super_property = types::property_base<"border-right">;
 
     border_right() = delete;
-    border_right(std::string_view style) : super_property(std::string(style))
+    border_right(const std::string_view s) : super_property(std::string(s))
     {
     }
     border_right(util::numerical width, std::string_view style) : super_property(std::format("{} {}", width, style))

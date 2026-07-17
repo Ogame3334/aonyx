@@ -23,7 +23,7 @@ struct column_count : types::property_base<"column-count">, constants::global_va
     using super_property = types::property_base<"column-count">;
 
     column_count() = delete;
-    column_count(std::string_view v) : super_property(std::string(v))
+    column_count(const std::string_view s) : super_property(std::string(s))
     {
     }
 

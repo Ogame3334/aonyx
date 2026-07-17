@@ -24,7 +24,7 @@ struct text_decoration : types::property_base<"text-decoration">, constants::glo
     using super_property = types::property_base<"text-decoration">;
 
     text_decoration() = delete;
-    text_decoration(std::string_view line) : super_property(std::string(line))
+    text_decoration(const std::string_view s) : super_property(std::string(s))
     {
     }
     text_decoration(std::string_view line, std::string_view style) : super_property(std::format("{} {}", line, style))

@@ -23,7 +23,7 @@ struct mix_blend_mode : types::property_base<"mix-blend-mode">, constants::globa
     using super_property = types::property_base<"mix-blend-mode">;
 
     mix_blend_mode() = delete;
-    mix_blend_mode(std::string_view v) : super_property(std::string(v))
+    mix_blend_mode(const std::string_view s) : super_property(std::string(s))
     {
     }
 

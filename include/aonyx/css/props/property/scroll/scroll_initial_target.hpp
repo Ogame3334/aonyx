@@ -24,7 +24,7 @@ struct scroll_initial_target : types::property_base<"scroll-initial-target">,
     using super_property = types::property_base<"scroll-initial-target">;
 
     scroll_initial_target() = delete;
-    scroll_initial_target(std::string_view v) : super_property(std::string(v))
+    scroll_initial_target(const std::string_view s) : super_property(std::string(s))
     {
     }
 

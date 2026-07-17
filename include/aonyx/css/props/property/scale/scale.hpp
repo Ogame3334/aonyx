@@ -4,6 +4,8 @@
  */
 #pragma once
 
+#include <string>
+#include <string_view>
 #include <format>
 
 #include <aonyx/css/props/constants/global_values.hpp>
@@ -22,6 +24,9 @@ struct scale : types::property_base<"scale">, constants::global_values<scale>
     using super_property = types::property_base<"scale">;
 
     scale() = delete;
+    scale(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     scale(double a) : super_property(std::to_string(a))
     {
     }

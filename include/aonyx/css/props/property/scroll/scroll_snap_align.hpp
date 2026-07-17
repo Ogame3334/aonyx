@@ -24,7 +24,7 @@ struct scroll_snap_align : types::property_base<"scroll-snap-align">, constants:
     using super_property = types::property_base<"scroll-snap-align">;
 
     scroll_snap_align() = delete;
-    scroll_snap_align(std::string_view v) : super_property(std::string(v))
+    scroll_snap_align(const std::string_view s) : super_property(std::string(s))
     {
     }
     scroll_snap_align(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

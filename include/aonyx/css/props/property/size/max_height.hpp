@@ -27,7 +27,7 @@ struct max_height : types::property_base<"max-height">, constants::global_values
     max_height(util::numerical h) : super_property(h.to_string())
     {
     }
-    max_height(std::string_view h) : super_property(std::string(h))
+    max_height(const std::string_view s) : super_property(std::string(s))
     {
     }
 

@@ -23,7 +23,7 @@ struct font_palette : types::property_base<"font-palette">, constants::global_va
     using super_property = types::property_base<"font-palette">;
 
     font_palette() = delete;
-    font_palette(std::string_view v) : super_property(std::string(v))
+    font_palette(const std::string_view s) : super_property(std::string(s))
     {
     }
 

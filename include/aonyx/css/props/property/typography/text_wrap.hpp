@@ -24,7 +24,7 @@ struct text_wrap : types::property_base<"text-wrap">, constants::global_values<t
     using super_property = types::property_base<"text-wrap">;
 
     text_wrap() = delete;
-    text_wrap(std::string_view mode) : super_property(std::string(mode))
+    text_wrap(const std::string_view s) : super_property(std::string(s))
     {
     }
     text_wrap(std::string_view mode, std::string_view style) : super_property(std::format("{} {}", mode, style))

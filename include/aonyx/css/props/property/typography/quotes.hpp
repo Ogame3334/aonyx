@@ -24,6 +24,9 @@ struct quotes : types::property_base<"quotes">, constants::global_values<quotes>
     using super_property = types::property_base<"quotes">;
 
     quotes() = delete;
+    quotes(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     quotes(std::string_view open1, std::string_view close1) : super_property(std::format("{} {}", open1, close1))
     {
     }

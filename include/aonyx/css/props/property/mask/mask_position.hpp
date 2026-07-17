@@ -24,7 +24,7 @@ struct mask_position : types::property_base<"mask-position">, constants::global_
     using super_property = types::property_base<"mask-position">;
 
     mask_position() = delete;
-    mask_position(std::string_view v) : super_property(std::string(v))
+    mask_position(const std::string_view s) : super_property(std::string(s))
     {
     }
     mask_position(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

@@ -24,7 +24,7 @@ struct list_style : types::property_base<"list-style">, constants::global_values
     using super_property = types::property_base<"list-style">;
 
     list_style() = delete;
-    list_style(std::string_view type) : super_property(std::string(type))
+    list_style(const std::string_view s) : super_property(std::string(s))
     {
     }
     list_style(std::string_view type, std::string_view position_or_url)

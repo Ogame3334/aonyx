@@ -24,7 +24,7 @@ struct grid_auto_columns : types::property_base<"grid-auto-columns">, constants:
     using super_property = types::property_base<"grid-auto-columns">;
 
     grid_auto_columns() = delete;
-    grid_auto_columns(std::string_view v) : super_property(std::string(v))
+    grid_auto_columns(const std::string_view s) : super_property(std::string(s))
     {
     }
     grid_auto_columns(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

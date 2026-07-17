@@ -25,7 +25,7 @@ struct border_inline_start : types::property_base<"border-inline-start">, consta
     using super_property = types::property_base<"border-inline-start">;
 
     border_inline_start() = delete;
-    border_inline_start(std::string_view style) : super_property(std::string(style))
+    border_inline_start(const std::string_view s) : super_property(std::string(s))
     {
     }
     border_inline_start(util::numerical width, std::string_view style)

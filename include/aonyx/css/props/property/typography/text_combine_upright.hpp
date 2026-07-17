@@ -25,7 +25,7 @@ struct text_combine_upright : types::property_base<"text-combine-upright">,
     using super_property = types::property_base<"text-combine-upright">;
 
     text_combine_upright() = delete;
-    text_combine_upright(std::string_view v) : super_property(std::string(v))
+    text_combine_upright(const std::string_view s) : super_property(std::string(s))
     {
     }
     text_combine_upright(std::string_view v, std::string_view digits) : super_property(std::format("{} {}", v, digits))

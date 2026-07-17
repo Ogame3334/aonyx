@@ -23,7 +23,7 @@ struct flood_opacity : types::property_base<"flood-opacity">, constants::global_
     using super_property = types::property_base<"flood-opacity">;
 
     flood_opacity() = delete;
-    flood_opacity(std::string_view v) : super_property(std::string(v))
+    flood_opacity(const std::string_view s) : super_property(std::string(s))
     {
     }
 };

@@ -28,7 +28,7 @@ struct text_decoration_thickness : types::property_base<"text-decoration-thickne
     text_decoration_thickness(util::numerical v) : super_property(v.to_string())
     {
     }
-    text_decoration_thickness(std::string_view v) : super_property(std::string(v))
+    text_decoration_thickness(const std::string_view s) : super_property(std::string(s))
     {
     }
 

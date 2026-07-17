@@ -23,7 +23,7 @@ struct unicode_bidi : types::property_base<"unicode-bidi">, constants::global_va
     using super_property = types::property_base<"unicode-bidi">;
 
     unicode_bidi() = delete;
-    unicode_bidi(std::string_view v) : super_property(std::string(v))
+    unicode_bidi(const std::string_view s) : super_property(std::string(s))
     {
     }
 

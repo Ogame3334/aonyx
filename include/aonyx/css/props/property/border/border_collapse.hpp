@@ -23,7 +23,7 @@ struct border_collapse : types::property_base<"border-collapse">, constants::glo
     using super_property = types::property_base<"border-collapse">;
 
     border_collapse() = delete;
-    border_collapse(std::string_view v) : super_property(std::string(v))
+    border_collapse(const std::string_view s) : super_property(std::string(s))
     {
     }
 

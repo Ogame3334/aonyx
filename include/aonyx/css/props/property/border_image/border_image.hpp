@@ -24,7 +24,7 @@ struct border_image : types::property_base<"border-image">, constants::global_va
     using super_property = types::property_base<"border-image">;
 
     border_image() = delete;
-    border_image(std::string_view source) : super_property(std::string(source))
+    border_image(const std::string_view s) : super_property(std::string(s))
     {
     }
     border_image(std::string_view source, std::string_view slice) : super_property(std::format("{} {}", source, slice))

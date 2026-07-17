@@ -27,7 +27,7 @@ struct max_inline_size : types::property_base<"max-inline-size">, constants::glo
     max_inline_size(util::numerical s) : super_property(s.to_string())
     {
     }
-    max_inline_size(std::string_view s) : super_property(std::string(s))
+    max_inline_size(const std::string_view s) : super_property(std::string(s))
     {
     }
 

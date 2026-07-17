@@ -23,7 +23,7 @@ struct container_type : types::property_base<"container-type">, constants::globa
     using super_property = types::property_base<"container-type">;
 
     container_type() = delete;
-    container_type(std::string_view v) : super_property(std::string(v))
+    container_type(const std::string_view s) : super_property(std::string(s))
     {
     }
 

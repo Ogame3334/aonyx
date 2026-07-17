@@ -23,7 +23,7 @@ struct clip_path : types::property_base<"clip-path">, constants::global_values<c
     using super_property = types::property_base<"clip-path">;
 
     clip_path() = delete;
-    clip_path(std::string_view v) : super_property(std::string(v))
+    clip_path(const std::string_view s) : super_property(std::string(s))
     {
     }
 

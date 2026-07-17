@@ -23,7 +23,7 @@ struct grid_column_end : types::property_base<"grid-column-end">, constants::glo
     using super_property = types::property_base<"grid-column-end">;
 
     grid_column_end() = delete;
-    grid_column_end(std::string_view v) : super_property(std::string(v))
+    grid_column_end(const std::string_view s) : super_property(std::string(s))
     {
     }
 

@@ -23,7 +23,7 @@ struct line_break : types::property_base<"line-break">, constants::global_values
     using super_property = types::property_base<"line-break">;
 
     line_break() = delete;
-    line_break(std::string_view v) : super_property(std::string(v))
+    line_break(const std::string_view s) : super_property(std::string(s))
     {
     }
 

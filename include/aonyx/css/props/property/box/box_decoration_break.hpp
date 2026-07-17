@@ -24,7 +24,7 @@ struct box_decoration_break : types::property_base<"box-decoration-break">,
     using super_property = types::property_base<"box-decoration-break">;
 
     box_decoration_break() = delete;
-    box_decoration_break(std::string_view v) : super_property(std::string(v))
+    box_decoration_break(const std::string_view s) : super_property(std::string(s))
     {
     }
 

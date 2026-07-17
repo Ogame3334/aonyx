@@ -23,7 +23,7 @@ struct text_rendering : types::property_base<"text-rendering">, constants::globa
     using super_property = types::property_base<"text-rendering">;
 
     text_rendering() = delete;
-    text_rendering(std::string_view v) : super_property(std::string(v))
+    text_rendering(const std::string_view s) : super_property(std::string(s))
     {
     }
 

@@ -25,6 +25,9 @@ struct font_size_adjust : types::property_base<"font-size-adjust">, constants::g
     using super_property = types::property_base<"font-size-adjust">;
 
     font_size_adjust() = delete;
+    font_size_adjust(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     font_size_adjust(util::numerical v) : super_property(v.to_string())
     {
     }

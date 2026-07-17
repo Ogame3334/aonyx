@@ -5,6 +5,8 @@
 #pragma once
 
 #include <format>
+#include <string>
+#include <string_view>
 
 #include <aonyx/css/props/constants/global_values.hpp>
 #include <aonyx/css/props/types/property.hpp>
@@ -23,6 +25,9 @@ struct padding_end : types::property_base<"padding-end">, constants::global_valu
     using super_property = types::property_base<"padding-end">;
 
     padding_end() = delete;
+    padding_end(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     padding_end(util::numerical e) : super_property(e.to_string())
     {
     }

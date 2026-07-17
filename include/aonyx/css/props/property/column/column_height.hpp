@@ -23,7 +23,7 @@ struct column_height : types::property_base<"column-height">, constants::global_
     using super_property = types::property_base<"column-height">;
 
     column_height() = delete;
-    column_height(std::string_view v) : super_property(std::string(v))
+    column_height(const std::string_view s) : super_property(std::string(s))
     {
     }
 

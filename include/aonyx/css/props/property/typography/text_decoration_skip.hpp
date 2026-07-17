@@ -25,7 +25,7 @@ struct text_decoration_skip : types::property_base<"text-decoration-skip">,
     using super_property = types::property_base<"text-decoration-skip">;
 
     text_decoration_skip() = delete;
-    text_decoration_skip(std::string_view v) : super_property(std::string(v))
+    text_decoration_skip(const std::string_view s) : super_property(std::string(s))
     {
     }
     text_decoration_skip(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

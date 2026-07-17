@@ -23,7 +23,7 @@ struct word_break : types::property_base<"word-break">, constants::global_values
     using super_property = types::property_base<"word-break">;
 
     word_break() = delete;
-    word_break(std::string_view v) : super_property(std::string(v))
+    word_break(const std::string_view s) : super_property(std::string(s))
     {
     }
 

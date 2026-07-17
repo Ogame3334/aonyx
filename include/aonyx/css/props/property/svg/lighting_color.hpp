@@ -23,7 +23,7 @@ struct lighting_color : types::property_base<"lighting-color">, constants::globa
     using super_property = types::property_base<"lighting-color">;
 
     lighting_color() = delete;
-    lighting_color(std::string_view v) : super_property(std::string(v))
+    lighting_color(const std::string_view s) : super_property(std::string(s))
     {
     }
 };

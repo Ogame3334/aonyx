@@ -23,7 +23,7 @@ struct table_layout : types::property_base<"table-layout">, constants::global_va
     using super_property = types::property_base<"table-layout">;
 
     table_layout() = delete;
-    table_layout(std::string_view v) : super_property(std::string(v))
+    table_layout(const std::string_view s) : super_property(std::string(s))
     {
     }
 

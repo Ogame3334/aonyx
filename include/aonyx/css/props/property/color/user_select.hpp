@@ -23,7 +23,7 @@ struct user_select : types::property_base<"user-select">, constants::global_valu
     using super_property = types::property_base<"user-select">;
 
     user_select() = delete;
-    user_select(std::string_view v) : super_property(std::string(v))
+    user_select(const std::string_view s) : super_property(std::string(s))
     {
     }
 

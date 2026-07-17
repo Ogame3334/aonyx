@@ -24,7 +24,7 @@ struct transition_delay : types::property_base<"transition-delay">, constants::g
     using super_property = types::property_base<"transition-delay">;
 
     transition_delay() = delete;
-    transition_delay(std::string_view v) : super_property(std::string(v))
+    transition_delay(const std::string_view s) : super_property(std::string(s))
     {
     }
     transition_delay(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2))

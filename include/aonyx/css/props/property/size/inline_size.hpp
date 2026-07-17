@@ -27,7 +27,7 @@ struct inline_size : types::property_base<"inline-size">, constants::global_valu
     inline_size(util::numerical s) : super_property(s.to_string())
     {
     }
-    inline_size(std::string_view s) : super_property(std::string(s))
+    inline_size(const std::string_view s) : super_property(std::string(s))
     {
     }
 

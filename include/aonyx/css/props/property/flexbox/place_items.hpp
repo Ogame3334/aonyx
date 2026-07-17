@@ -24,7 +24,7 @@ struct place_items : types::property_base<"place-items">, constants::global_valu
     using super_property = types::property_base<"place-items">;
 
     place_items() = delete;
-    place_items(std::string_view alignment) : super_property(std::string(alignment))
+    place_items(const std::string_view s) : super_property(std::string(s))
     {
     }
     place_items(std::string_view align, std::string_view justify) : super_property(std::format("{} {}", align, justify))

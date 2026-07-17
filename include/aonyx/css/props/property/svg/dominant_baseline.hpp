@@ -23,7 +23,7 @@ struct dominant_baseline : types::property_base<"dominant-baseline">, constants:
     using super_property = types::property_base<"dominant-baseline">;
 
     dominant_baseline() = delete;
-    dominant_baseline(std::string_view v) : super_property(std::string(v))
+    dominant_baseline(const std::string_view s) : super_property(std::string(s))
     {
     }
 

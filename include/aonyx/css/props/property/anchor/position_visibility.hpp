@@ -23,7 +23,7 @@ struct position_visibility : types::property_base<"position-visibility">, consta
     using super_property = types::property_base<"position-visibility">;
 
     position_visibility() = delete;
-    position_visibility(std::string_view v) : super_property(std::string(v))
+    position_visibility(const std::string_view s) : super_property(std::string(s))
     {
     }
 

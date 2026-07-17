@@ -24,7 +24,7 @@ struct scroll_margin_block : types::property_base<"scroll-margin-block">, consta
     using super_property = types::property_base<"scroll-margin-block">;
 
     scroll_margin_block() = delete;
-    scroll_margin_block(std::string_view v) : super_property(std::string(v))
+    scroll_margin_block(const std::string_view s) : super_property(std::string(s))
     {
     }
     scroll_margin_block(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

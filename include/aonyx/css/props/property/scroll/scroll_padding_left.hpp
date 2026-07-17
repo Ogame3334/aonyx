@@ -23,7 +23,7 @@ struct scroll_padding_left : types::property_base<"scroll-padding-left">, consta
     using super_property = types::property_base<"scroll-padding-left">;
 
     scroll_padding_left() = delete;
-    scroll_padding_left(std::string_view v) : super_property(std::string(v))
+    scroll_padding_left(const std::string_view s) : super_property(std::string(s))
     {
     }
 };

@@ -24,6 +24,9 @@ struct order : types::property_base<"order">, constants::global_values<order>
     using super_property = types::property_base<"order">;
 
     order() = delete;
+    order(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     order(util::numerical v) : super_property(v.to_string())
     {
     }

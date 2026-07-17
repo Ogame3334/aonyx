@@ -23,7 +23,7 @@ struct isolation : types::property_base<"isolation">, constants::global_values<i
     using super_property = types::property_base<"isolation">;
 
     isolation() = delete;
-    isolation(std::string_view v) : super_property(std::string(v))
+    isolation(const std::string_view s) : super_property(std::string(s))
     {
     }
 

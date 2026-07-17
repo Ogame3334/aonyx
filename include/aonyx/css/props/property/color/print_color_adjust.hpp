@@ -23,7 +23,7 @@ struct print_color_adjust : types::property_base<"print-color-adjust">, constant
     using super_property = types::property_base<"print-color-adjust">;
 
     print_color_adjust() = delete;
-    print_color_adjust(std::string_view v) : super_property(std::string(v))
+    print_color_adjust(const std::string_view s) : super_property(std::string(s))
     {
     }
 

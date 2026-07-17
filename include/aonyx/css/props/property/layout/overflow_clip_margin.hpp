@@ -25,6 +25,9 @@ struct overflow_clip_margin : types::property_base<"overflow-clip-margin">,
     using super_property = types::property_base<"overflow-clip-margin">;
 
     overflow_clip_margin() = delete;
+    overflow_clip_margin(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     overflow_clip_margin(util::numerical v) : super_property(v.to_string())
     {
     }

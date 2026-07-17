@@ -23,7 +23,7 @@ struct content_visibility : types::property_base<"content-visibility">, constant
     using super_property = types::property_base<"content-visibility">;
 
     content_visibility() = delete;
-    content_visibility(std::string_view v) : super_property(std::string(v))
+    content_visibility(const std::string_view s) : super_property(std::string(s))
     {
     }
 

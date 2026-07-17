@@ -23,7 +23,7 @@ struct stop_opacity : types::property_base<"stop-opacity">, constants::global_va
     using super_property = types::property_base<"stop-opacity">;
 
     stop_opacity() = delete;
-    stop_opacity(std::string_view v) : super_property(std::string(v))
+    stop_opacity(const std::string_view s) : super_property(std::string(s))
     {
     }
 };

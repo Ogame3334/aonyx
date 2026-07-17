@@ -24,7 +24,7 @@ struct border_image_slice : types::property_base<"border-image-slice">, constant
     using super_property = types::property_base<"border-image-slice">;
 
     border_image_slice() = delete;
-    border_image_slice(std::string_view slice) : super_property(std::string(slice))
+    border_image_slice(const std::string_view s) : super_property(std::string(s))
     {
     }
     border_image_slice(std::string_view slice, std::string_view fill)

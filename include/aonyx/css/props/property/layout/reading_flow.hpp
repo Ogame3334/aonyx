@@ -23,7 +23,7 @@ struct reading_flow : types::property_base<"reading-flow">, constants::global_va
     using super_property = types::property_base<"reading-flow">;
 
     reading_flow() = delete;
-    reading_flow(std::string_view v) : super_property(std::string(v))
+    reading_flow(const std::string_view s) : super_property(std::string(s))
     {
     }
 

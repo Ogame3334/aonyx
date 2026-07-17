@@ -23,7 +23,7 @@ struct align_content : types::property_base<"align-content">, constants::global_
     using super_property = types::property_base<"align-content">;
 
     align_content() = delete;
-    align_content(std::string_view v) : super_property(std::string(v))
+    align_content(const std::string_view s) : super_property(std::string(s))
     {
     }
 

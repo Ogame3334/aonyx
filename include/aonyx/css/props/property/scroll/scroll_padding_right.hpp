@@ -24,7 +24,7 @@ struct scroll_padding_right : types::property_base<"scroll-padding-right">,
     using super_property = types::property_base<"scroll-padding-right">;
 
     scroll_padding_right() = delete;
-    scroll_padding_right(std::string_view v) : super_property(std::string(v))
+    scroll_padding_right(const std::string_view s) : super_property(std::string(s))
     {
     }
 };

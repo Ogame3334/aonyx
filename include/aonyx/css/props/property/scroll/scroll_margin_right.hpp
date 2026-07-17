@@ -23,7 +23,7 @@ struct scroll_margin_right : types::property_base<"scroll-margin-right">, consta
     using super_property = types::property_base<"scroll-margin-right">;
 
     scroll_margin_right() = delete;
-    scroll_margin_right(std::string_view v) : super_property(std::string(v))
+    scroll_margin_right(const std::string_view s) : super_property(std::string(s))
     {
     }
 };

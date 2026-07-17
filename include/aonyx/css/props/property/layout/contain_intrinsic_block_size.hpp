@@ -29,7 +29,7 @@ struct contain_intrinsic_block_size : types::property_base<"contain-intrinsic-bl
     contain_intrinsic_block_size(util::numerical v) : super_property(v.to_string())
     {
     }
-    contain_intrinsic_block_size(std::string_view v) : super_property(std::string(v))
+    contain_intrinsic_block_size(const std::string_view s) : super_property(std::string(s))
     {
     }
     contain_intrinsic_block_size(util::numerical v1, util::numerical v2) : super_property(std::format("{} {}", v1, v2))

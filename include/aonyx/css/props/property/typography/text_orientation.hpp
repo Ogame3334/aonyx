@@ -23,7 +23,7 @@ struct text_orientation : types::property_base<"text-orientation">, constants::g
     using super_property = types::property_base<"text-orientation">;
 
     text_orientation() = delete;
-    text_orientation(std::string_view v) : super_property(std::string(v))
+    text_orientation(const std::string_view s) : super_property(std::string(s))
     {
     }
 

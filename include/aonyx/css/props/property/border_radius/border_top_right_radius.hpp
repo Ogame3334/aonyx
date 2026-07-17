@@ -26,6 +26,9 @@ struct border_top_right_radius : types::property_base<"border-top-right-radius">
     using super_property = types::property_base<"border-top-right-radius">;
 
     border_top_right_radius() = delete;
+    border_top_right_radius(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     border_top_right_radius(util::numerical r) : super_property(r.to_string())
     {
     }

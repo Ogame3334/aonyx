@@ -27,7 +27,7 @@ struct vertical_align : types::property_base<"vertical-align">, constants::globa
     vertical_align(util::numerical v) : super_property(v.to_string())
     {
     }
-    vertical_align(std::string_view v) : super_property(std::string(v))
+    vertical_align(const std::string_view s) : super_property(std::string(s))
     {
     }
 

@@ -24,7 +24,7 @@ struct color_scheme : types::property_base<"color-scheme">, constants::global_va
     using super_property = types::property_base<"color-scheme">;
 
     color_scheme() = delete;
-    color_scheme(std::string_view v) : super_property(std::string(v))
+    color_scheme(const std::string_view s) : super_property(std::string(s))
     {
     }
     color_scheme(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

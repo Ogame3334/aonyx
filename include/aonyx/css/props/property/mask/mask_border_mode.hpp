@@ -23,7 +23,7 @@ struct mask_border_mode : types::property_base<"mask-border-mode">, constants::g
     using super_property = types::property_base<"mask-border-mode">;
 
     mask_border_mode() = delete;
-    mask_border_mode(std::string_view v) : super_property(std::string(v))
+    mask_border_mode(const std::string_view s) : super_property(std::string(s))
     {
     }
 

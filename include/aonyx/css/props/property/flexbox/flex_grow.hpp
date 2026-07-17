@@ -24,6 +24,9 @@ struct flex_grow : types::property_base<"flex-grow">, constants::global_values<f
     using super_property = types::property_base<"flex-grow">;
 
     flex_grow() = delete;
+    flex_grow(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     flex_grow(util::numerical v) : super_property(v.to_string())
     {
     }

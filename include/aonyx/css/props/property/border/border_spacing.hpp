@@ -25,6 +25,9 @@ struct border_spacing : types::property_base<"border-spacing">, constants::globa
     using super_property = types::property_base<"border-spacing">;
 
     border_spacing() = delete;
+    border_spacing(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     border_spacing(util::numerical l) : super_property(l.to_string())
     {
     }

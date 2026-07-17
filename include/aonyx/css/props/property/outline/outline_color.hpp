@@ -23,7 +23,7 @@ struct outline_color : types::property_base<"outline-color">, constants::global_
     using super_property = types::property_base<"outline-color">;
 
     outline_color() = delete;
-    outline_color(std::string_view v) : super_property(std::string(v))
+    outline_color(const std::string_view s) : super_property(std::string(s))
     {
     }
 

@@ -23,7 +23,7 @@ struct stroke_linejoin : types::property_base<"stroke-linejoin">, constants::glo
     using super_property = types::property_base<"stroke-linejoin">;
 
     stroke_linejoin() = delete;
-    stroke_linejoin(std::string_view v) : super_property(std::string(v))
+    stroke_linejoin(const std::string_view s) : super_property(std::string(s))
     {
     }
 

@@ -23,7 +23,7 @@ struct grid_row_end : types::property_base<"grid-row-end">, constants::global_va
     using super_property = types::property_base<"grid-row-end">;
 
     grid_row_end() = delete;
-    grid_row_end(std::string_view v) : super_property(std::string(v))
+    grid_row_end(const std::string_view s) : super_property(std::string(s))
     {
     }
 

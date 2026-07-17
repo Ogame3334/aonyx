@@ -23,7 +23,7 @@ struct align_items : types::property_base<"align-items">, constants::global_valu
     using super_property = types::property_base<"align-items">;
 
     align_items() = delete;
-    align_items(std::string_view v) : super_property(std::string(v))
+    align_items(const std::string_view s) : super_property(std::string(s))
     {
     }
 

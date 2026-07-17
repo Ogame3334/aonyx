@@ -23,7 +23,7 @@ struct page_break_after : types::property_base<"page-break-after">, constants::g
     using super_property = types::property_base<"page-break-after">;
 
     page_break_after() = delete;
-    page_break_after(std::string_view v) : super_property(std::string(v))
+    page_break_after(const std::string_view s) : super_property(std::string(s))
     {
     }
 

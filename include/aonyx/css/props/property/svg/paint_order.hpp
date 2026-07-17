@@ -24,7 +24,7 @@ struct paint_order : types::property_base<"paint-order">, constants::global_valu
     using super_property = types::property_base<"paint-order">;
 
     paint_order() = delete;
-    paint_order(std::string_view v) : super_property(std::string(v))
+    paint_order(const std::string_view s) : super_property(std::string(s))
     {
     }
     paint_order(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

@@ -27,7 +27,7 @@ struct grid_column : types::property_base<"grid-column">, constants::global_valu
     grid_column(std::string_view start, std::string_view end) : super_property(std::format("{} / {}", start, end))
     {
     }
-    grid_column(std::string_view start) : super_property(std::string(start))
+    grid_column(const std::string_view s) : super_property(std::string(s))
     {
     }
 

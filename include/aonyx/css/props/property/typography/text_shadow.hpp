@@ -24,7 +24,7 @@ struct text_shadow : types::property_base<"text-shadow">, constants::global_valu
     using super_property = types::property_base<"text-shadow">;
 
     text_shadow() = delete;
-    text_shadow(std::string_view shadow) : super_property(std::string(shadow))
+    text_shadow(const std::string_view s) : super_property(std::string(s))
     {
     }
     text_shadow(std::string_view shadow1, std::string_view shadow2)

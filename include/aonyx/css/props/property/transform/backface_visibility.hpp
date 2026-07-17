@@ -23,7 +23,7 @@ struct backface_visibility : types::property_base<"backface-visibility">, consta
     using super_property = types::property_base<"backface-visibility">;
 
     backface_visibility() = delete;
-    backface_visibility(std::string_view v) : super_property(std::string(v))
+    backface_visibility(const std::string_view s) : super_property(std::string(s))
     {
     }
 

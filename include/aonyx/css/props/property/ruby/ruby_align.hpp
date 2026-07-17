@@ -23,7 +23,7 @@ struct ruby_align : types::property_base<"ruby-align">, constants::global_values
     using super_property = types::property_base<"ruby-align">;
 
     ruby_align() = delete;
-    ruby_align(std::string_view v) : super_property(std::string(v))
+    ruby_align(const std::string_view s) : super_property(std::string(s))
     {
     }
 

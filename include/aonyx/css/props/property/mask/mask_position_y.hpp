@@ -24,7 +24,7 @@ struct mask_position_y : types::property_base<"mask-position-y">, constants::glo
     using super_property = types::property_base<"mask-position-y">;
 
     mask_position_y() = delete;
-    mask_position_y(std::string_view v) : super_property(std::string(v))
+    mask_position_y(const std::string_view s) : super_property(std::string(s))
     {
     }
     mask_position_y(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

@@ -27,7 +27,7 @@ struct max_block_size : types::property_base<"max-block-size">, constants::globa
     max_block_size(util::numerical s) : super_property(s.to_string())
     {
     }
-    max_block_size(std::string_view s) : super_property(std::string(s))
+    max_block_size(const std::string_view s) : super_property(std::string(s))
     {
     }
 

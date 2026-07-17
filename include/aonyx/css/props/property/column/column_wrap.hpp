@@ -23,7 +23,7 @@ struct column_wrap : types::property_base<"column-wrap">, constants::global_valu
     using super_property = types::property_base<"column-wrap">;
 
     column_wrap() = delete;
-    column_wrap(std::string_view v) : super_property(std::string(v))
+    column_wrap(const std::string_view s) : super_property(std::string(s))
     {
     }
 

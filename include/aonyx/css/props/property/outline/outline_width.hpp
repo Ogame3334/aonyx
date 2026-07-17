@@ -23,7 +23,7 @@ struct outline_width : types::property_base<"outline-width">, constants::global_
     using super_property = types::property_base<"outline-width">;
 
     outline_width() = delete;
-    outline_width(std::string_view v) : super_property(std::string(v))
+    outline_width(const std::string_view s) : super_property(std::string(s))
     {
     }
 

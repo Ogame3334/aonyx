@@ -24,7 +24,7 @@ struct border_image_width : types::property_base<"border-image-width">, constant
     using super_property = types::property_base<"border-image-width">;
 
     border_image_width() = delete;
-    border_image_width(std::string_view width) : super_property(std::string(width))
+    border_image_width(const std::string_view s) : super_property(std::string(s))
     {
     }
     border_image_width(std::string_view top_bottom, std::string_view left_right)

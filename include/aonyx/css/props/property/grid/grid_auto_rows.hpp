@@ -24,7 +24,7 @@ struct grid_auto_rows : types::property_base<"grid-auto-rows">, constants::globa
     using super_property = types::property_base<"grid-auto-rows">;
 
     grid_auto_rows() = delete;
-    grid_auto_rows(std::string_view v) : super_property(std::string(v))
+    grid_auto_rows(const std::string_view s) : super_property(std::string(s))
     {
     }
     grid_auto_rows(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

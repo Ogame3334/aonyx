@@ -23,7 +23,7 @@ struct background_repeat_y : types::property_base<"background-repeat-y">, consta
     using super_property = types::property_base<"background-repeat-y">;
 
     background_repeat_y() = delete;
-    background_repeat_y(std::string_view v) : super_property(std::string(v))
+    background_repeat_y(const std::string_view s) : super_property(std::string(s))
     {
     }
 

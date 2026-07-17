@@ -23,7 +23,7 @@ struct reading_order : types::property_base<"reading-order">, constants::global_
     using super_property = types::property_base<"reading-order">;
 
     reading_order() = delete;
-    reading_order(std::string_view v) : super_property(std::string(v))
+    reading_order(const std::string_view s) : super_property(std::string(s))
     {
     }
 

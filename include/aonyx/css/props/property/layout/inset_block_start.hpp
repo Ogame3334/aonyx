@@ -27,7 +27,7 @@ struct inset_block_start : types::property_base<"inset-block-start">, constants:
     inset_block_start(util::numerical v) : super_property(v.to_string())
     {
     }
-    inset_block_start(std::string_view v) : super_property(std::string(v))
+    inset_block_start(const std::string_view s) : super_property(std::string(s))
     {
     }
 

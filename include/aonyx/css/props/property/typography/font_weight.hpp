@@ -27,7 +27,7 @@ struct font_weight : types::property_base<"font-weight">, constants::global_valu
     font_weight(util::numerical v) : super_property(v.to_string())
     {
     }
-    font_weight(std::string_view v) : super_property(std::string(v))
+    font_weight(const std::string_view s) : super_property(std::string(s))
     {
     }
 

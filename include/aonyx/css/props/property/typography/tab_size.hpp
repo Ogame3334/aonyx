@@ -27,7 +27,7 @@ struct tab_size : types::property_base<"tab-size">, constants::global_values<tab
     tab_size(util::numerical v) : super_property(v.to_string())
     {
     }
-    tab_size(std::string_view v) : super_property(std::string(v))
+    tab_size(const std::string_view s) : super_property(std::string(s))
     {
     }
 };

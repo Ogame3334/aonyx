@@ -24,7 +24,7 @@ struct transform_origin : types::property_base<"transform-origin">, constants::g
     using super_property = types::property_base<"transform-origin">;
 
     transform_origin() = delete;
-    transform_origin(std::string_view v) : super_property(std::string(v))
+    transform_origin(const std::string_view s) : super_property(std::string(s))
     {
     }
     transform_origin(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

@@ -23,7 +23,7 @@ struct box_sizing : types::property_base<"box-sizing">, constants::global_values
     using super_property = types::property_base<"box-sizing">;
 
     box_sizing() = delete;
-    box_sizing(std::string_view v) : super_property(std::string(v))
+    box_sizing(const std::string_view s) : super_property(std::string(s))
     {
     }
 

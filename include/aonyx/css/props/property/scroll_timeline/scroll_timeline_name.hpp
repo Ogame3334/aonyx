@@ -25,7 +25,7 @@ struct scroll_timeline_name : types::property_base<"scroll-timeline-name">,
     using super_property = types::property_base<"scroll-timeline-name">;
 
     scroll_timeline_name() = delete;
-    scroll_timeline_name(std::string_view v) : super_property(std::string(v))
+    scroll_timeline_name(const std::string_view s) : super_property(std::string(s))
     {
     }
     scroll_timeline_name(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2))

@@ -25,7 +25,7 @@ struct font_smooth : types::property_base<"font-smooth">, constants::global_valu
     using super_property = types::property_base<"font-smooth">;
 
     font_smooth() = delete;
-    font_smooth(std::string_view v) : super_property(std::string(v))
+    font_smooth(const std::string_view s) : super_property(std::string(s))
     {
     }
     font_smooth(std::string_view v, util::numerical size) : super_property(std::format("{} {}", v, size))

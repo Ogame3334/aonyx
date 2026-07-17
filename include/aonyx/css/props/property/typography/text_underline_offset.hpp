@@ -28,7 +28,7 @@ struct text_underline_offset : types::property_base<"text-underline-offset">,
     text_underline_offset(util::numerical v) : super_property(v.to_string())
     {
     }
-    text_underline_offset(std::string_view v) : super_property(std::string(v))
+    text_underline_offset(const std::string_view s) : super_property(std::string(s))
     {
     }
 

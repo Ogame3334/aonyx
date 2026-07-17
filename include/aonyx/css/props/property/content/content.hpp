@@ -24,7 +24,7 @@ struct content : types::property_base<"content">, constants::global_values<conte
     using super_property = types::property_base<"content">;
 
     content() = delete;
-    content(std::string_view v) : super_property(std::string(v))
+    content(const std::string_view s) : super_property(std::string(s))
     {
     }
     content(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

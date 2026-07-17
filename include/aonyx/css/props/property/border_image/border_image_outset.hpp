@@ -24,7 +24,7 @@ struct border_image_outset : types::property_base<"border-image-outset">, consta
     using super_property = types::property_base<"border-image-outset">;
 
     border_image_outset() = delete;
-    border_image_outset(std::string_view outset) : super_property(std::string(outset))
+    border_image_outset(const std::string_view s) : super_property(std::string(s))
     {
     }
     border_image_outset(std::string_view top_bottom, std::string_view left_right)

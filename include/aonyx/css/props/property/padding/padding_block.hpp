@@ -4,6 +4,8 @@
  */
 #pragma once
 
+#include <string>
+#include <string_view>
 #include <format>
 
 #include <aonyx/css/props/constants/global_values.hpp>
@@ -23,6 +25,9 @@ struct padding_block : types::property_base<"padding-block">, constants::global_
     using super_property = types::property_base<"padding-block">;
 
     padding_block() = delete;
+    padding_block(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     padding_block(util::numerical se) : super_property(se.to_string())
     {
     }

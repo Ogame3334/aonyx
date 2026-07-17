@@ -24,7 +24,7 @@ struct stroke_dasharray : types::property_base<"stroke-dasharray">, constants::g
     using super_property = types::property_base<"stroke-dasharray">;
 
     stroke_dasharray() = delete;
-    stroke_dasharray(std::string_view v) : super_property(std::string(v))
+    stroke_dasharray(const std::string_view s) : super_property(std::string(s))
     {
     }
     stroke_dasharray(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2))

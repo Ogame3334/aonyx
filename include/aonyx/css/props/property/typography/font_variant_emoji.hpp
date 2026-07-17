@@ -23,7 +23,7 @@ struct font_variant_emoji : types::property_base<"font-variant-emoji">, constant
     using super_property = types::property_base<"font-variant-emoji">;
 
     font_variant_emoji() = delete;
-    font_variant_emoji(std::string_view v) : super_property(std::string(v))
+    font_variant_emoji(const std::string_view s) : super_property(std::string(s))
     {
     }
 

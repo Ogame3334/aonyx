@@ -23,7 +23,7 @@ struct position_try_order : types::property_base<"position-try-order">, constant
     using super_property = types::property_base<"position-try-order">;
 
     position_try_order() = delete;
-    position_try_order(std::string_view v) : super_property(std::string(v))
+    position_try_order(const std::string_view s) : super_property(std::string(s))
     {
     }
 

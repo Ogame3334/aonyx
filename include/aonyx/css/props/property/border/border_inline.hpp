@@ -25,7 +25,7 @@ struct border_inline : types::property_base<"border-inline">, constants::global_
     using super_property = types::property_base<"border-inline">;
 
     border_inline() = delete;
-    border_inline(std::string_view style) : super_property(std::string(style))
+    border_inline(const std::string_view s) : super_property(std::string(s))
     {
     }
     border_inline(util::numerical width, std::string_view style) : super_property(std::format("{} {}", width, style))

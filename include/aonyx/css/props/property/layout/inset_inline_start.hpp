@@ -27,7 +27,7 @@ struct inset_inline_start : types::property_base<"inset-inline-start">, constant
     inset_inline_start(util::numerical v) : super_property(v.to_string())
     {
     }
-    inset_inline_start(std::string_view v) : super_property(std::string(v))
+    inset_inline_start(const std::string_view s) : super_property(std::string(s))
     {
     }
 

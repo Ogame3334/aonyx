@@ -24,7 +24,7 @@ struct gap : types::property_base<"gap">, constants::global_values<gap>
     using super_property = types::property_base<"gap">;
 
     gap() = delete;
-    gap(std::string_view v) : super_property(std::string(v))
+    gap(const std::string_view s) : super_property(std::string(s))
     {
     }
     gap(std::string_view row, std::string_view column) : super_property(std::format("{} {}", row, column))

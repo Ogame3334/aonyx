@@ -24,7 +24,7 @@ struct background_clip : types::property_base<"background-clip">, constants::glo
     using super_property = types::property_base<"background-clip">;
 
     background_clip() = delete;
-    background_clip(std::string_view v) : super_property(std::string(v))
+    background_clip(const std::string_view s) : super_property(std::string(s))
     {
     }
     background_clip(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2))

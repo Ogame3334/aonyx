@@ -23,7 +23,7 @@ struct mask_border_source : types::property_base<"mask-border-source">, constant
     using super_property = types::property_base<"mask-border-source">;
 
     mask_border_source() = delete;
-    mask_border_source(std::string_view v) : super_property(std::string(v))
+    mask_border_source(const std::string_view s) : super_property(std::string(s))
     {
     }
 

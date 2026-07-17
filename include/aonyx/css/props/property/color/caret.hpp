@@ -24,7 +24,7 @@ struct caret : types::property_base<"caret">, constants::global_values<caret>
     using super_property = types::property_base<"caret">;
 
     caret() = delete;
-    caret(std::string_view color) : super_property(std::string(color))
+    caret(const std::string_view s) : super_property(std::string(s))
     {
     }
     caret(std::string_view color, std::string_view shape) : super_property(std::format("{} {}", color, shape))

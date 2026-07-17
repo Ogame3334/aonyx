@@ -24,7 +24,7 @@ struct font_variant_position : types::property_base<"font-variant-position">,
     using super_property = types::property_base<"font-variant-position">;
 
     font_variant_position() = delete;
-    font_variant_position(std::string_view v) : super_property(std::string(v))
+    font_variant_position(const std::string_view s) : super_property(std::string(s))
     {
     }
 

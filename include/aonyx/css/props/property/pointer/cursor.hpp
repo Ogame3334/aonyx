@@ -23,7 +23,7 @@ struct cursor : types::property_base<"cursor">, constants::global_values<cursor>
     using super_property = types::property_base<"cursor">;
 
     cursor() = delete;
-    cursor(std::string_view v) : super_property(std::string(v))
+    cursor(const std::string_view s) : super_property(std::string(s))
     {
     }
 

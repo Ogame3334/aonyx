@@ -23,7 +23,7 @@ struct position_anchor : types::property_base<"position-anchor">, constants::glo
     using super_property = types::property_base<"position-anchor">;
 
     position_anchor() = delete;
-    position_anchor(std::string_view v) : super_property(std::string(v))
+    position_anchor(const std::string_view s) : super_property(std::string(s))
     {
     }
 

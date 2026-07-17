@@ -24,7 +24,7 @@ struct font : types::property_base<"font">, constants::global_values<font>
     using super_property = types::property_base<"font">;
 
     font() = delete;
-    font(std::string_view system_font) : super_property(std::string(system_font))
+    font(const std::string_view s) : super_property(std::string(s))
     {
     }
     font(std::string_view style, std::string_view weight, util::numerical size, std::string_view family)

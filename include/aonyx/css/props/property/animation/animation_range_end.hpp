@@ -24,7 +24,7 @@ struct animation_range_end : types::property_base<"animation-range-end">, consta
     using super_property = types::property_base<"animation-range-end">;
 
     animation_range_end() = delete;
-    animation_range_end(std::string_view v) : super_property(std::string(v))
+    animation_range_end(const std::string_view s) : super_property(std::string(s))
     {
     }
     animation_range_end(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

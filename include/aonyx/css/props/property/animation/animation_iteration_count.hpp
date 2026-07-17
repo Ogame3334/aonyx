@@ -25,7 +25,7 @@ struct animation_iteration_count : types::property_base<"animation-iteration-cou
     using super_property = types::property_base<"animation-iteration-count">;
 
     animation_iteration_count() = delete;
-    animation_iteration_count(std::string_view v) : super_property(std::string(v))
+    animation_iteration_count(const std::string_view s) : super_property(std::string(s))
     {
     }
     animation_iteration_count(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2))

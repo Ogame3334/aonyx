@@ -24,7 +24,7 @@ struct filter : types::property_base<"filter">, constants::global_values<filter>
     using super_property = types::property_base<"filter">;
 
     filter() = delete;
-    filter(std::string_view v) : super_property(std::string(v))
+    filter(const std::string_view s) : super_property(std::string(s))
     {
     }
     filter(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

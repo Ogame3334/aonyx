@@ -23,7 +23,7 @@ struct text_box_trim : types::property_base<"text-box-trim">, constants::global_
     using super_property = types::property_base<"text-box-trim">;
 
     text_box_trim() = delete;
-    text_box_trim(std::string_view v) : super_property(std::string(v))
+    text_box_trim(const std::string_view s) : super_property(std::string(s))
     {
     }
 

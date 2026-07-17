@@ -23,7 +23,7 @@ struct text_transform : types::property_base<"text-transform">, constants::globa
     using super_property = types::property_base<"text-transform">;
 
     text_transform() = delete;
-    text_transform(std::string_view v) : super_property(std::string(v))
+    text_transform(const std::string_view s) : super_property(std::string(s))
     {
     }
 

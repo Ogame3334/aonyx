@@ -24,6 +24,9 @@ struct orphans : types::property_base<"orphans">, constants::global_values<orpha
     using super_property = types::property_base<"orphans">;
 
     orphans() = delete;
+    orphans(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     orphans(util::numerical v) : super_property(v.to_string())
     {
     }

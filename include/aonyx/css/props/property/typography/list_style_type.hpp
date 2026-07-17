@@ -23,7 +23,7 @@ struct list_style_type : types::property_base<"list-style-type">, constants::glo
     using super_property = types::property_base<"list-style-type">;
 
     list_style_type() = delete;
-    list_style_type(std::string_view v) : super_property(std::string(v))
+    list_style_type(const std::string_view s) : super_property(std::string(s))
     {
     }
 

@@ -23,7 +23,7 @@ struct scroll_padding_top : types::property_base<"scroll-padding-top">, constant
     using super_property = types::property_base<"scroll-padding-top">;
 
     scroll_padding_top() = delete;
-    scroll_padding_top(std::string_view v) : super_property(std::string(v))
+    scroll_padding_top(const std::string_view s) : super_property(std::string(s))
     {
     }
 };

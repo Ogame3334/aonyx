@@ -27,7 +27,7 @@ struct min_height : types::property_base<"min-height">, constants::global_values
     min_height(util::numerical h) : super_property(h.to_string())
     {
     }
-    min_height(std::string_view h) : super_property(std::string(h))
+    min_height(const std::string_view s) : super_property(std::string(s))
     {
     }
 

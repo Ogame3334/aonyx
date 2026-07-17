@@ -24,7 +24,7 @@ struct mask_border_width : types::property_base<"mask-border-width">, constants:
     using super_property = types::property_base<"mask-border-width">;
 
     mask_border_width() = delete;
-    mask_border_width(std::string_view v) : super_property(std::string(v))
+    mask_border_width(const std::string_view s) : super_property(std::string(s))
     {
     }
     mask_border_width(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

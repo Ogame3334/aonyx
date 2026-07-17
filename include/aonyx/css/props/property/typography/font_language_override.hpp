@@ -24,7 +24,7 @@ struct font_language_override : types::property_base<"font-language-override">,
     using super_property = types::property_base<"font-language-override">;
 
     font_language_override() = delete;
-    font_language_override(std::string_view v) : super_property(std::string(v))
+    font_language_override(const std::string_view s) : super_property(std::string(s))
     {
     }
 

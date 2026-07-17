@@ -24,7 +24,7 @@ struct border_image_repeat : types::property_base<"border-image-repeat">, consta
     using super_property = types::property_base<"border-image-repeat">;
 
     border_image_repeat() = delete;
-    border_image_repeat(std::string_view repeat) : super_property(std::string(repeat))
+    border_image_repeat(const std::string_view s) : super_property(std::string(s))
     {
     }
     border_image_repeat(std::string_view horizontal, std::string_view vertical)

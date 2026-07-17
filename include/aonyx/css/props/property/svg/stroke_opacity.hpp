@@ -23,7 +23,7 @@ struct stroke_opacity : types::property_base<"stroke-opacity">, constants::globa
     using super_property = types::property_base<"stroke-opacity">;
 
     stroke_opacity() = delete;
-    stroke_opacity(std::string_view v) : super_property(std::string(v))
+    stroke_opacity(const std::string_view s) : super_property(std::string(s))
     {
     }
 };

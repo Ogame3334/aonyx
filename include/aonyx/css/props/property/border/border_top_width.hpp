@@ -24,6 +24,9 @@ struct border_top_width : types::property_base<"border-top-width">, constants::g
     using super_property = types::property_base<"border-top-width">;
 
     border_top_width() = delete;
+    border_top_width(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     border_top_width(util::numerical w) : super_property(w.to_string())
     {
     }

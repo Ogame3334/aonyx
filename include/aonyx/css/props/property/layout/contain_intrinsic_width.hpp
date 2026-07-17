@@ -29,7 +29,7 @@ struct contain_intrinsic_width : types::property_base<"contain-intrinsic-width">
     contain_intrinsic_width(util::numerical v) : super_property(v.to_string())
     {
     }
-    contain_intrinsic_width(std::string_view v) : super_property(std::string(v))
+    contain_intrinsic_width(const std::string_view s) : super_property(std::string(s))
     {
     }
     contain_intrinsic_width(util::numerical v1, util::numerical v2) : super_property(std::format("{} {}", v1, v2))

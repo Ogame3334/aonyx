@@ -23,7 +23,7 @@ struct border_right_style : types::property_base<"border-right-style">, constant
     using super_property = types::property_base<"border-right-style">;
 
     border_right_style() = delete;
-    border_right_style(std::string_view style) : super_property(std::string(style))
+    border_right_style(const std::string_view s) : super_property(std::string(s))
     {
     }
 };

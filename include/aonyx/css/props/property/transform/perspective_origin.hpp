@@ -24,7 +24,7 @@ struct perspective_origin : types::property_base<"perspective-origin">, constant
     using super_property = types::property_base<"perspective-origin">;
 
     perspective_origin() = delete;
-    perspective_origin(std::string_view v) : super_property(std::string(v))
+    perspective_origin(const std::string_view s) : super_property(std::string(s))
     {
     }
     perspective_origin(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

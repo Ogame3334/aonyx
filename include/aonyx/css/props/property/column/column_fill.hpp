@@ -23,7 +23,7 @@ struct column_fill : types::property_base<"column-fill">, constants::global_valu
     using super_property = types::property_base<"column-fill">;
 
     column_fill() = delete;
-    column_fill(std::string_view v) : super_property(std::string(v))
+    column_fill(const std::string_view s) : super_property(std::string(s))
     {
     }
 

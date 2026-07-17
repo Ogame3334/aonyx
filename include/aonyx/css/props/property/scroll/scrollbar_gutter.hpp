@@ -24,7 +24,7 @@ struct scrollbar_gutter : types::property_base<"scrollbar-gutter">, constants::g
     using super_property = types::property_base<"scrollbar-gutter">;
 
     scrollbar_gutter() = delete;
-    scrollbar_gutter(std::string_view v) : super_property(std::string(v))
+    scrollbar_gutter(const std::string_view s) : super_property(std::string(s))
     {
     }
     scrollbar_gutter(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

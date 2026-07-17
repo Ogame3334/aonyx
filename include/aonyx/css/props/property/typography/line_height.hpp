@@ -27,7 +27,7 @@ struct line_height : types::property_base<"line-height">, constants::global_valu
     line_height(util::numerical v) : super_property(v.to_string())
     {
     }
-    line_height(std::string_view v) : super_property(std::string(v))
+    line_height(const std::string_view s) : super_property(std::string(s))
     {
     }
 

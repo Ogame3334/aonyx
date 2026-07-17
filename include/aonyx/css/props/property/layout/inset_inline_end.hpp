@@ -27,7 +27,7 @@ struct inset_inline_end : types::property_base<"inset-inline-end">, constants::g
     inset_inline_end(util::numerical v) : super_property(v.to_string())
     {
     }
-    inset_inline_end(std::string_view v) : super_property(std::string(v))
+    inset_inline_end(const std::string_view s) : super_property(std::string(s))
     {
     }
 

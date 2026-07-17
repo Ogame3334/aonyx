@@ -27,7 +27,7 @@ struct letter_spacing : types::property_base<"letter-spacing">, constants::globa
     letter_spacing(util::numerical v) : super_property(v.to_string())
     {
     }
-    letter_spacing(std::string_view v) : super_property(std::string(v))
+    letter_spacing(const std::string_view s) : super_property(std::string(s))
     {
     }
 

@@ -23,7 +23,7 @@ struct border_bottom_style : types::property_base<"border-bottom-style">, consta
     using super_property = types::property_base<"border-bottom-style">;
 
     border_bottom_style() = delete;
-    border_bottom_style(std::string_view style) : super_property(std::string(style))
+    border_bottom_style(const std::string_view s) : super_property(std::string(s))
     {
     }
 };

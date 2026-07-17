@@ -23,7 +23,7 @@ struct row_gap : types::property_base<"row-gap">, constants::global_values<row_g
     using super_property = types::property_base<"row-gap">;
 
     row_gap() = delete;
-    row_gap(std::string_view v) : super_property(std::string(v))
+    row_gap(const std::string_view s) : super_property(std::string(s))
     {
     }
 };

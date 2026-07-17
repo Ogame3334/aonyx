@@ -27,7 +27,7 @@ struct container : types::property_base<"container">, constants::global_values<c
     container(std::string_view type, std::string_view name) : super_property(std::format("{} / {}", type, name))
     {
     }
-    container(std::string_view name) : super_property(std::string(name))
+    container(const std::string_view s) : super_property(std::string(s))
     {
     }
 };

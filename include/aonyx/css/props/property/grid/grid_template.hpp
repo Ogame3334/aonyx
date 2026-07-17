@@ -32,7 +32,7 @@ struct grid_template : types::property_base<"grid-template">, constants::global_
         : super_property(std::format("{} / {} / {}", rows, columns, areas))
     {
     }
-    grid_template(std::string_view rows) : super_property(std::string(rows))
+    grid_template(const std::string_view s) : super_property(std::string(s))
     {
     }
 

@@ -24,7 +24,7 @@ struct border_block_start_color : types::property_base<"border-block-start-color
     using super_property = types::property_base<"border-block-start-color">;
 
     border_block_start_color() = delete;
-    border_block_start_color(std::string_view color) : super_property(std::string(color))
+    border_block_start_color(const std::string_view s) : super_property(std::string(s))
     {
     }
 };

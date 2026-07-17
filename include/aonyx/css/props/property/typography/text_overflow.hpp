@@ -23,7 +23,7 @@ struct text_overflow : types::property_base<"text-overflow">, constants::global_
     using super_property = types::property_base<"text-overflow">;
 
     text_overflow() = delete;
-    text_overflow(std::string_view v) : super_property(std::string(v))
+    text_overflow(const std::string_view s) : super_property(std::string(s))
     {
     }
 

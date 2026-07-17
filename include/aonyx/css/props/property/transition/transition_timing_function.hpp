@@ -25,7 +25,7 @@ struct transition_timing_function : types::property_base<"transition-timing-func
     using super_property = types::property_base<"transition-timing-function">;
 
     transition_timing_function() = delete;
-    transition_timing_function(std::string_view v) : super_property(std::string(v))
+    transition_timing_function(const std::string_view s) : super_property(std::string(s))
     {
     }
     transition_timing_function(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2))

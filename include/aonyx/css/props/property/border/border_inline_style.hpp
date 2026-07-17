@@ -24,7 +24,7 @@ struct border_inline_style : types::property_base<"border-inline-style">, consta
     using super_property = types::property_base<"border-inline-style">;
 
     border_inline_style() = delete;
-    border_inline_style(std::string_view style) : super_property(std::string(style))
+    border_inline_style(const std::string_view s) : super_property(std::string(s))
     {
     }
     border_inline_style(std::string_view start, std::string_view end) : super_property(std::format("{} {}", start, end))

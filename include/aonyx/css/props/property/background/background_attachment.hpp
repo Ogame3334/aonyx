@@ -25,7 +25,7 @@ struct background_attachment : types::property_base<"background-attachment">,
     using super_property = types::property_base<"background-attachment">;
 
     background_attachment() = delete;
-    background_attachment(std::string_view v) : super_property(std::string(v))
+    background_attachment(const std::string_view s) : super_property(std::string(s))
     {
     }
     background_attachment(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2))

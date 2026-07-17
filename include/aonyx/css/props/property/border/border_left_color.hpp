@@ -23,7 +23,7 @@ struct border_left_color : types::property_base<"border-left-color">, constants:
     using super_property = types::property_base<"border-left-color">;
 
     border_left_color() = delete;
-    border_left_color(std::string_view color) : super_property(std::string(color))
+    border_left_color(const std::string_view s) : super_property(std::string(s))
     {
     }
 };

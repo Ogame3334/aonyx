@@ -24,7 +24,7 @@ struct timeline_scope : types::property_base<"timeline-scope">, constants::globa
     using super_property = types::property_base<"timeline-scope">;
 
     timeline_scope() = delete;
-    timeline_scope(std::string_view v) : super_property(std::string(v))
+    timeline_scope(const std::string_view s) : super_property(std::string(s))
     {
     }
     timeline_scope(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2))

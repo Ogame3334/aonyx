@@ -24,7 +24,7 @@ struct background_repeat : types::property_base<"background-repeat">, constants:
     using super_property = types::property_base<"background-repeat">;
 
     background_repeat() = delete;
-    background_repeat(std::string_view v) : super_property(std::string(v))
+    background_repeat(const std::string_view s) : super_property(std::string(s))
     {
     }
     background_repeat(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

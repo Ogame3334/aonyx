@@ -24,7 +24,7 @@ struct speak_as : types::property_base<"speak-as">, constants::global_values<spe
     using super_property = types::property_base<"speak-as">;
 
     speak_as() = delete;
-    speak_as(std::string_view v) : super_property(std::string(v))
+    speak_as(const std::string_view s) : super_property(std::string(s))
     {
     }
     speak_as(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

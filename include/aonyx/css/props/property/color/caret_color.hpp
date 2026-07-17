@@ -23,7 +23,7 @@ struct caret_color : types::property_base<"caret-color">, constants::global_valu
     using super_property = types::property_base<"caret-color">;
 
     caret_color() = delete;
-    caret_color(std::string_view v) : super_property(std::string(v))
+    caret_color(const std::string_view s) : super_property(std::string(s))
     {
     }
 

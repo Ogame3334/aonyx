@@ -23,7 +23,7 @@ struct grid_row_start : types::property_base<"grid-row-start">, constants::globa
     using super_property = types::property_base<"grid-row-start">;
 
     grid_row_start() = delete;
-    grid_row_start(std::string_view v) : super_property(std::string(v))
+    grid_row_start(const std::string_view s) : super_property(std::string(s))
     {
     }
 

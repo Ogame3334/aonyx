@@ -28,7 +28,7 @@ struct aspect_ratio : types::property_base<"aspect-ratio">, constants::global_va
     aspect_ratio(util::numerical width, util::numerical height) : super_property(std::format("{} / {}", width, height))
     {
     }
-    aspect_ratio(std::string_view v) : super_property(std::string(v))
+    aspect_ratio(const std::string_view s) : super_property(std::string(s))
     {
     }
 

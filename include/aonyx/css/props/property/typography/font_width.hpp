@@ -23,7 +23,7 @@ struct font_width : types::property_base<"font-width">, constants::global_values
     using super_property = types::property_base<"font-width">;
 
     font_width() = delete;
-    font_width(std::string_view v) : super_property(std::string(v))
+    font_width(const std::string_view s) : super_property(std::string(s))
     {
     }
 

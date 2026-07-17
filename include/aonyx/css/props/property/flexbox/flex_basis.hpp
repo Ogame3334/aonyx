@@ -27,7 +27,7 @@ struct flex_basis : types::property_base<"flex-basis">, constants::global_values
     flex_basis(util::numerical v) : super_property(v.to_string())
     {
     }
-    flex_basis(std::string_view v) : super_property(std::string(v))
+    flex_basis(const std::string_view s) : super_property(std::string(s))
     {
     }
 

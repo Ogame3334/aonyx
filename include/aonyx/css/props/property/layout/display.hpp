@@ -23,7 +23,7 @@ struct display : types::property_base<"display">, constants::global_values<displ
     using super_property = types::property_base<"display">;
 
     display() = delete;
-    display(std::string_view v) : super_property(std::string(v))
+    display(const std::string_view s) : super_property(std::string(s))
     {
     }
 

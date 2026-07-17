@@ -23,7 +23,7 @@ struct justify_self : types::property_base<"justify-self">, constants::global_va
     using super_property = types::property_base<"justify-self">;
 
     justify_self() = delete;
-    justify_self(std::string_view v) : super_property(std::string(v))
+    justify_self(const std::string_view s) : super_property(std::string(s))
     {
     }
 

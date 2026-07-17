@@ -23,7 +23,7 @@ struct list_style_position : types::property_base<"list-style-position">, consta
     using super_property = types::property_base<"list-style-position">;
 
     list_style_position() = delete;
-    list_style_position(std::string_view v) : super_property(std::string(v))
+    list_style_position(const std::string_view s) : super_property(std::string(s))
     {
     }
 

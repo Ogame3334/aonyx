@@ -23,7 +23,7 @@ struct caret_shape : types::property_base<"caret-shape">, constants::global_valu
     using super_property = types::property_base<"caret-shape">;
 
     caret_shape() = delete;
-    caret_shape(std::string_view v) : super_property(std::string(v))
+    caret_shape(const std::string_view s) : super_property(std::string(s))
     {
     }
 

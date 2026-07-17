@@ -24,7 +24,7 @@ struct text_emphasis_style : types::property_base<"text-emphasis-style">, consta
     using super_property = types::property_base<"text-emphasis-style">;
 
     text_emphasis_style() = delete;
-    text_emphasis_style(std::string_view v) : super_property(std::string(v))
+    text_emphasis_style(const std::string_view s) : super_property(std::string(s))
     {
     }
     text_emphasis_style(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

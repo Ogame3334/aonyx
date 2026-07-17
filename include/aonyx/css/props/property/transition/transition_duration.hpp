@@ -24,7 +24,7 @@ struct transition_duration : types::property_base<"transition-duration">, consta
     using super_property = types::property_base<"transition-duration">;
 
     transition_duration() = delete;
-    transition_duration(std::string_view v) : super_property(std::string(v))
+    transition_duration(const std::string_view s) : super_property(std::string(s))
     {
     }
     transition_duration(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2))

@@ -25,7 +25,7 @@ struct border : types::property_base<"border">, constants::global_values<border>
     using super_property = types::property_base<"border">;
 
     border() = delete;
-    border(std::string_view style) : super_property(std::string(style))
+    border(const std::string_view s) : super_property(std::string(s))
     {
     }
     border(std::string_view style, std::string_view color) : super_property(std::format("{} {}", style, color))

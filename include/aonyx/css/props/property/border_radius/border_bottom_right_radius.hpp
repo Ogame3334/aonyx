@@ -26,6 +26,9 @@ struct border_bottom_right_radius : types::property_base<"border-bottom-right-ra
     using super_property = types::property_base<"border-bottom-right-radius">;
 
     border_bottom_right_radius() = delete;
+    border_bottom_right_radius(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     border_bottom_right_radius(util::numerical r) : super_property(r.to_string())
     {
     }

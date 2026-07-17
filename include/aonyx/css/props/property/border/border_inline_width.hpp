@@ -25,6 +25,9 @@ struct border_inline_width : types::property_base<"border-inline-width">, consta
     using super_property = types::property_base<"border-inline-width">;
 
     border_inline_width() = delete;
+    border_inline_width(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     border_inline_width(util::numerical w) : super_property(w.to_string())
     {
     }

@@ -25,7 +25,7 @@ struct background_position_x : types::property_base<"background-position-x">,
     using super_property = types::property_base<"background-position-x">;
 
     background_position_x() = delete;
-    background_position_x(std::string_view v) : super_property(std::string(v))
+    background_position_x(const std::string_view s) : super_property(std::string(s))
     {
     }
     background_position_x(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

@@ -23,7 +23,7 @@ struct scroll_target_group : types::property_base<"scroll-target-group">, consta
     using super_property = types::property_base<"scroll-target-group">;
 
     scroll_target_group() = delete;
-    scroll_target_group(std::string_view v) : super_property(std::string(v))
+    scroll_target_group(const std::string_view s) : super_property(std::string(s))
     {
     }
 

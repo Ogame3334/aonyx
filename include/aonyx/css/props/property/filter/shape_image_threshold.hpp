@@ -24,7 +24,7 @@ struct shape_image_threshold : types::property_base<"shape-image-threshold">,
     using super_property = types::property_base<"shape-image-threshold">;
 
     shape_image_threshold() = delete;
-    shape_image_threshold(std::string_view v) : super_property(std::string(v))
+    shape_image_threshold(const std::string_view s) : super_property(std::string(s))
     {
     }
 };

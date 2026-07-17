@@ -23,7 +23,7 @@ struct border_top_style : types::property_base<"border-top-style">, constants::g
     using super_property = types::property_base<"border-top-style">;
 
     border_top_style() = delete;
-    border_top_style(std::string_view style) : super_property(std::string(style))
+    border_top_style(const std::string_view s) : super_property(std::string(s))
     {
     }
 };

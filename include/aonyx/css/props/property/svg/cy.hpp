@@ -23,7 +23,7 @@ struct cy : types::property_base<"cy">, constants::global_values<cy>
     using super_property = types::property_base<"cy">;
 
     cy() = delete;
-    cy(std::string_view v) : super_property(std::string(v))
+    cy(const std::string_view s) : super_property(std::string(s))
     {
     }
 };

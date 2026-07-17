@@ -25,7 +25,7 @@ struct border_bottom : types::property_base<"border-bottom">, constants::global_
     using super_property = types::property_base<"border-bottom">;
 
     border_bottom() = delete;
-    border_bottom(std::string_view style) : super_property(std::string(style))
+    border_bottom(const std::string_view s) : super_property(std::string(s))
     {
     }
     border_bottom(util::numerical width, std::string_view style) : super_property(std::format("{} {}", width, style))

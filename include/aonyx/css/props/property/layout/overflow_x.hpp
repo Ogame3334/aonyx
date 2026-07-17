@@ -23,7 +23,7 @@ struct overflow_x : types::property_base<"overflow-x">, constants::global_values
     using super_property = types::property_base<"overflow-x">;
 
     overflow_x() = delete;
-    overflow_x(std::string_view v) : super_property(std::string(v))
+    overflow_x(const std::string_view s) : super_property(std::string(s))
     {
     }
 

@@ -24,7 +24,7 @@ struct overscroll_behavior_x : types::property_base<"overscroll-behavior-x">,
     using super_property = types::property_base<"overscroll-behavior-x">;
 
     overscroll_behavior_x() = delete;
-    overscroll_behavior_x(std::string_view v) : super_property(std::string(v))
+    overscroll_behavior_x(const std::string_view s) : super_property(std::string(s))
     {
     }
 

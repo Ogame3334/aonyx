@@ -26,6 +26,9 @@ struct border_start_end_radius : types::property_base<"border-start-end-radius">
     using super_property = types::property_base<"border-start-end-radius">;
 
     border_start_end_radius() = delete;
+    border_start_end_radius(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     border_start_end_radius(util::numerical r) : super_property(r.to_string())
     {
     }

@@ -25,6 +25,9 @@ struct border_block_width : types::property_base<"border-block-width">, constant
     using super_property = types::property_base<"border-block-width">;
 
     border_block_width() = delete;
+    border_block_width(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     border_block_width(util::numerical w) : super_property(w.to_string())
     {
     }

@@ -23,7 +23,7 @@ struct column_rule_width : types::property_base<"column-rule-width">, constants:
     using super_property = types::property_base<"column-rule-width">;
 
     column_rule_width() = delete;
-    column_rule_width(std::string_view v) : super_property(std::string(v))
+    column_rule_width(const std::string_view s) : super_property(std::string(s))
     {
     }
 

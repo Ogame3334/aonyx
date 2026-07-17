@@ -27,7 +27,7 @@ struct font_size : types::property_base<"font-size">, constants::global_values<f
     font_size(util::numerical v) : super_property(v.to_string())
     {
     }
-    font_size(std::string_view v) : super_property(std::string(v))
+    font_size(const std::string_view s) : super_property(std::string(s))
     {
     }
 

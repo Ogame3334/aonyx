@@ -23,7 +23,7 @@ struct rx : types::property_base<"rx">, constants::global_values<rx>
     using super_property = types::property_base<"rx">;
 
     rx() = delete;
-    rx(std::string_view v) : super_property(std::string(v))
+    rx(const std::string_view s) : super_property(std::string(s))
     {
     }
 };

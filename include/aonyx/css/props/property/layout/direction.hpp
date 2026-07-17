@@ -23,7 +23,7 @@ struct direction : types::property_base<"direction">, constants::global_values<d
     using super_property = types::property_base<"direction">;
 
     direction() = delete;
-    direction(std::string_view v) : super_property(std::string(v))
+    direction(const std::string_view s) : super_property(std::string(s))
     {
     }
 

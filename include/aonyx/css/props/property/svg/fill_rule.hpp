@@ -23,7 +23,7 @@ struct fill_rule : types::property_base<"fill-rule">, constants::global_values<f
     using super_property = types::property_base<"fill-rule">;
 
     fill_rule() = delete;
-    fill_rule(std::string_view v) : super_property(std::string(v))
+    fill_rule(const std::string_view s) : super_property(std::string(s))
     {
     }
 

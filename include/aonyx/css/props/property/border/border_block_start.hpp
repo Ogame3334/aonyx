@@ -25,7 +25,7 @@ struct border_block_start : types::property_base<"border-block-start">, constant
     using super_property = types::property_base<"border-block-start">;
 
     border_block_start() = delete;
-    border_block_start(std::string_view style) : super_property(std::string(style))
+    border_block_start(const std::string_view s) : super_property(std::string(s))
     {
     }
     border_block_start(util::numerical width, std::string_view style)

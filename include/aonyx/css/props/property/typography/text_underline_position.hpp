@@ -25,7 +25,7 @@ struct text_underline_position : types::property_base<"text-underline-position">
     using super_property = types::property_base<"text-underline-position">;
 
     text_underline_position() = delete;
-    text_underline_position(std::string_view v) : super_property(std::string(v))
+    text_underline_position(const std::string_view s) : super_property(std::string(s))
     {
     }
     text_underline_position(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

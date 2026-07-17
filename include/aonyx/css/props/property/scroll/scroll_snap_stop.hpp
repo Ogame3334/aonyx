@@ -23,7 +23,7 @@ struct scroll_snap_stop : types::property_base<"scroll-snap-stop">, constants::g
     using super_property = types::property_base<"scroll-snap-stop">;
 
     scroll_snap_stop() = delete;
-    scroll_snap_stop(std::string_view v) : super_property(std::string(v))
+    scroll_snap_stop(const std::string_view s) : super_property(std::string(s))
     {
     }
 

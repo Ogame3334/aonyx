@@ -23,7 +23,7 @@ struct text_anchor : types::property_base<"text-anchor">, constants::global_valu
     using super_property = types::property_base<"text-anchor">;
 
     text_anchor() = delete;
-    text_anchor(std::string_view v) : super_property(std::string(v))
+    text_anchor(const std::string_view s) : super_property(std::string(s))
     {
     }
 

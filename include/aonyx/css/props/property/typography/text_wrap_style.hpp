@@ -23,7 +23,7 @@ struct text_wrap_style : types::property_base<"text-wrap-style">, constants::glo
     using super_property = types::property_base<"text-wrap-style">;
 
     text_wrap_style() = delete;
-    text_wrap_style(std::string_view v) : super_property(std::string(v))
+    text_wrap_style(const std::string_view s) : super_property(std::string(s))
     {
     }
 

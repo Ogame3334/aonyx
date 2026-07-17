@@ -24,7 +24,7 @@ struct color_interpolation_filters : types::property_base<"color-interpolation-f
     using super_property = types::property_base<"color-interpolation-filters">;
 
     color_interpolation_filters() = delete;
-    color_interpolation_filters(std::string_view v) : super_property(std::string(v))
+    color_interpolation_filters(const std::string_view s) : super_property(std::string(s))
     {
     }
 

@@ -23,7 +23,7 @@ struct marker_mid : types::property_base<"marker-mid">, constants::global_values
     using super_property = types::property_base<"marker-mid">;
 
     marker_mid() = delete;
-    marker_mid(std::string_view v) : super_property(std::string(v))
+    marker_mid(const std::string_view s) : super_property(std::string(s))
     {
     }
 

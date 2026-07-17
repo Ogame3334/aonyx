@@ -23,7 +23,7 @@ struct mask_type : types::property_base<"mask-type">, constants::global_values<m
     using super_property = types::property_base<"mask-type">;
 
     mask_type() = delete;
-    mask_type(std::string_view v) : super_property(std::string(v))
+    mask_type(const std::string_view s) : super_property(std::string(s))
     {
     }
 

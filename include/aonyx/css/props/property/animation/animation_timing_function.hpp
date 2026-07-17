@@ -25,7 +25,7 @@ struct animation_timing_function : types::property_base<"animation-timing-functi
     using super_property = types::property_base<"animation-timing-function">;
 
     animation_timing_function() = delete;
-    animation_timing_function(std::string_view v) : super_property(std::string(v))
+    animation_timing_function(const std::string_view s) : super_property(std::string(s))
     {
     }
     animation_timing_function(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2))

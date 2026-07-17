@@ -24,7 +24,7 @@ struct overflow : types::property_base<"overflow">, constants::global_values<ove
     using super_property = types::property_base<"overflow">;
 
     overflow() = delete;
-    overflow(std::string_view v) : super_property(std::string(v))
+    overflow(const std::string_view s) : super_property(std::string(s))
     {
     }
     overflow(std::string_view x, std::string_view y) : super_property(std::format("{} {}", x, y))

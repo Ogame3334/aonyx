@@ -23,7 +23,7 @@ struct page_break_before : types::property_base<"page-break-before">, constants:
     using super_property = types::property_base<"page-break-before">;
 
     page_break_before() = delete;
-    page_break_before(std::string_view v) : super_property(std::string(v))
+    page_break_before(const std::string_view s) : super_property(std::string(s))
     {
     }
 

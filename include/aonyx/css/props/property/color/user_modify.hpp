@@ -23,7 +23,7 @@ struct user_modify : types::property_base<"user-modify">, constants::global_valu
     using super_property = types::property_base<"user-modify">;
 
     user_modify() = delete;
-    user_modify(std::string_view v) : super_property(std::string(v))
+    user_modify(const std::string_view s) : super_property(std::string(s))
     {
     }
 

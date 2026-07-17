@@ -23,7 +23,7 @@ struct image_orientation : types::property_base<"image-orientation">, constants:
     using super_property = types::property_base<"image-orientation">;
 
     image_orientation() = delete;
-    image_orientation(std::string_view v) : super_property(std::string(v))
+    image_orientation(const std::string_view s) : super_property(std::string(s))
     {
     }
 

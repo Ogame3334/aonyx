@@ -24,7 +24,7 @@ struct transition_property : types::property_base<"transition-property">, consta
     using super_property = types::property_base<"transition-property">;
 
     transition_property() = delete;
-    transition_property(std::string_view v) : super_property(std::string(v))
+    transition_property(const std::string_view s) : super_property(std::string(s))
     {
     }
     transition_property(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2))

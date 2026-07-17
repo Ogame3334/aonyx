@@ -24,7 +24,7 @@ struct animation_fill_mode : types::property_base<"animation-fill-mode">, consta
     using super_property = types::property_base<"animation-fill-mode">;
 
     animation_fill_mode() = delete;
-    animation_fill_mode(std::string_view v) : super_property(std::string(v))
+    animation_fill_mode(const std::string_view s) : super_property(std::string(s))
     {
     }
     animation_fill_mode(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2))

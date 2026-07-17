@@ -4,6 +4,8 @@
  */
 #pragma once
 
+#include <string>
+#include <string_view>
 #include <format>
 
 #include <aonyx/css/props/constants/global_values.hpp>
@@ -23,6 +25,9 @@ struct margin_block_end : types::property_base<"margin-block-end">, constants::g
     using super_property = types::property_base<"margin-block-end">;
 
     margin_block_end() = delete;
+    margin_block_end(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     margin_block_end(util::numerical e) : super_property(e.to_string())
     {
     }

@@ -4,6 +4,8 @@
  */
 #pragma once
 
+#include <string>
+#include <string_view>
 #include <format>
 
 #include <aonyx/css/props/constants/global_values.hpp>
@@ -23,6 +25,9 @@ struct margin_inline : types::property_base<"margin-inline">, constants::global_
     using super_property = types::property_base<"margin-inline">;
 
     margin_inline() = delete;
+    margin_inline(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     margin_inline(util::numerical s) : super_property(s.to_string())
     {
     }

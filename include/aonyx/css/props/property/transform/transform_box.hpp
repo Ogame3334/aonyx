@@ -23,7 +23,7 @@ struct transform_box : types::property_base<"transform-box">, constants::global_
     using super_property = types::property_base<"transform-box">;
 
     transform_box() = delete;
-    transform_box(std::string_view v) : super_property(std::string(v))
+    transform_box(const std::string_view s) : super_property(std::string(s))
     {
     }
 

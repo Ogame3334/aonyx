@@ -24,7 +24,7 @@ struct overscroll_behavior : types::property_base<"overscroll-behavior">, consta
     using super_property = types::property_base<"overscroll-behavior">;
 
     overscroll_behavior() = delete;
-    overscroll_behavior(std::string_view v) : super_property(std::string(v))
+    overscroll_behavior(const std::string_view s) : super_property(std::string(s))
     {
     }
     overscroll_behavior(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

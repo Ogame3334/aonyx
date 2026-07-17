@@ -27,7 +27,7 @@ struct grid_row : types::property_base<"grid-row">, constants::global_values<gri
     grid_row(std::string_view start, std::string_view end) : super_property(std::format("{} / {}", start, end))
     {
     }
-    grid_row(std::string_view start) : super_property(std::string(start))
+    grid_row(const std::string_view s) : super_property(std::string(s))
     {
     }
 

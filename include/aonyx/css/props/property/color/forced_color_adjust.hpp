@@ -23,7 +23,7 @@ struct forced_color_adjust : types::property_base<"forced-color-adjust">, consta
     using super_property = types::property_base<"forced-color-adjust">;
 
     forced_color_adjust() = delete;
-    forced_color_adjust(std::string_view v) : super_property(std::string(v))
+    forced_color_adjust(const std::string_view s) : super_property(std::string(s))
     {
     }
 

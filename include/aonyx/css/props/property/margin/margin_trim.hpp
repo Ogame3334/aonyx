@@ -4,6 +4,7 @@
  */
 #pragma once
 
+#include <string>
 #include <string_view>
 
 #include <aonyx/css/props/constants/global_values.hpp>
@@ -22,7 +23,7 @@ struct margin_trim : types::property_base<"margin-trim">, constants::global_valu
     using super_property = types::property_base<"margin-trim">;
 
     margin_trim() = delete;
-    margin_trim(std::string_view v) : super_property(std::string(v))
+    margin_trim(const std::string_view s) : super_property(std::string(s))
     {
     }
 

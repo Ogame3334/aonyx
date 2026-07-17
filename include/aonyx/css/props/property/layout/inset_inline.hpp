@@ -25,6 +25,9 @@ struct inset_inline : types::property_base<"inset-inline">, constants::global_va
     using super_property = types::property_base<"inset-inline">;
 
     inset_inline() = delete;
+    inset_inline(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     inset_inline(util::numerical v) : super_property(v.to_string())
     {
     }

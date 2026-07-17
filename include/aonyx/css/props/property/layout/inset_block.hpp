@@ -25,6 +25,9 @@ struct inset_block : types::property_base<"inset-block">, constants::global_valu
     using super_property = types::property_base<"inset-block">;
 
     inset_block() = delete;
+    inset_block(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     inset_block(util::numerical v) : super_property(v.to_string())
     {
     }

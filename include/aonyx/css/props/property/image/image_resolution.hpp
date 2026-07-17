@@ -24,7 +24,7 @@ struct image_resolution : types::property_base<"image-resolution">, constants::g
     using super_property = types::property_base<"image-resolution">;
 
     image_resolution() = delete;
-    image_resolution(std::string_view v) : super_property(std::string(v))
+    image_resolution(const std::string_view s) : super_property(std::string(s))
     {
     }
     image_resolution(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

@@ -24,6 +24,9 @@ struct opacity : types::property_base<"opacity">, constants::global_values<opaci
     using super_property = types::property_base<"opacity">;
 
     opacity() = delete;
+    opacity(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     opacity(util::numerical v) : super_property(v.to_string())
     {
     }

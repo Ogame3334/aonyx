@@ -24,7 +24,7 @@ struct scroll_snap_type : types::property_base<"scroll-snap-type">, constants::g
     using super_property = types::property_base<"scroll-snap-type">;
 
     scroll_snap_type() = delete;
-    scroll_snap_type(std::string_view v) : super_property(std::string(v))
+    scroll_snap_type(const std::string_view s) : super_property(std::string(s))
     {
     }
     scroll_snap_type(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

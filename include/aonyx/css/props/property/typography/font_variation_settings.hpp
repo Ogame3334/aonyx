@@ -25,7 +25,7 @@ struct font_variation_settings : types::property_base<"font-variation-settings">
     using super_property = types::property_base<"font-variation-settings">;
 
     font_variation_settings() = delete;
-    font_variation_settings(std::string_view v) : super_property(std::string(v))
+    font_variation_settings(const std::string_view s) : super_property(std::string(s))
     {
     }
     font_variation_settings(std::string_view tag, std::string_view value)

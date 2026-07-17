@@ -4,6 +4,8 @@
  */
 #pragma once
 
+#include <string>
+#include <string_view>
 #include <format>
 
 #include <aonyx/css/props/constants/global_values.hpp>
@@ -23,6 +25,9 @@ struct padding_top : types::property_base<"padding-top">, constants::global_valu
     using super_property = types::property_base<"padding-top">;
 
     padding_top() = delete;
+    padding_top(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     padding_top(util::numerical t) : super_property(t.to_string())
     {
     }

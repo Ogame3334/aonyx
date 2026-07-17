@@ -27,7 +27,7 @@ struct max_width : types::property_base<"max-width">, constants::global_values<m
     max_width(util::numerical w) : super_property(w.to_string())
     {
     }
-    max_width(std::string_view w) : super_property(std::string(w))
+    max_width(const std::string_view s) : super_property(std::string(s))
     {
     }
 

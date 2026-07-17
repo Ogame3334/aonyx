@@ -23,7 +23,7 @@ struct outline_offset : types::property_base<"outline-offset">, constants::globa
     using super_property = types::property_base<"outline-offset">;
 
     outline_offset() = delete;
-    outline_offset(std::string_view v) : super_property(std::string(v))
+    outline_offset(const std::string_view s) : super_property(std::string(s))
     {
     }
 };

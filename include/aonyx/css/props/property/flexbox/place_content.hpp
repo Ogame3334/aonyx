@@ -24,7 +24,7 @@ struct place_content : types::property_base<"place-content">, constants::global_
     using super_property = types::property_base<"place-content">;
 
     place_content() = delete;
-    place_content(std::string_view alignment) : super_property(std::string(alignment))
+    place_content(const std::string_view s) : super_property(std::string(s))
     {
     }
     place_content(std::string_view align, std::string_view justify)

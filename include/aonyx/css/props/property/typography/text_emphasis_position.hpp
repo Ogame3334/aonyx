@@ -25,6 +25,9 @@ struct text_emphasis_position : types::property_base<"text-emphasis-position">,
     using super_property = types::property_base<"text-emphasis-position">;
 
     text_emphasis_position() = delete;
+    text_emphasis_position(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     text_emphasis_position(std::string_view over_under, std::string_view left_right)
         : super_property(std::format("{} {}", over_under, left_right))
     {

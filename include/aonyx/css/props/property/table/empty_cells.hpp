@@ -23,7 +23,7 @@ struct empty_cells : types::property_base<"empty-cells">, constants::global_valu
     using super_property = types::property_base<"empty-cells">;
 
     empty_cells() = delete;
-    empty_cells(std::string_view v) : super_property(std::string(v))
+    empty_cells(const std::string_view s) : super_property(std::string(s))
     {
     }
 

@@ -23,7 +23,7 @@ struct border_image_source : types::property_base<"border-image-source">, consta
     using super_property = types::property_base<"border-image-source">;
 
     border_image_source() = delete;
-    border_image_source(std::string_view source) : super_property(std::string(source))
+    border_image_source(const std::string_view s) : super_property(std::string(s))
     {
     }
 

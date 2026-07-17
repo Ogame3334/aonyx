@@ -23,7 +23,7 @@ struct font_optical_sizing : types::property_base<"font-optical-sizing">, consta
     using super_property = types::property_base<"font-optical-sizing">;
 
     font_optical_sizing() = delete;
-    font_optical_sizing(std::string_view v) : super_property(std::string(v))
+    font_optical_sizing(const std::string_view s) : super_property(std::string(s))
     {
     }
 

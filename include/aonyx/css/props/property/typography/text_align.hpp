@@ -23,7 +23,7 @@ struct text_align : types::property_base<"text-align">, constants::global_values
     using super_property = types::property_base<"text-align">;
 
     text_align() = delete;
-    text_align(std::string_view v) : super_property(std::string(v))
+    text_align(const std::string_view s) : super_property(std::string(s))
     {
     }
 

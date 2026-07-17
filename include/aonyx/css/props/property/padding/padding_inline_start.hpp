@@ -4,6 +4,8 @@
  */
 #pragma once
 
+#include <string>
+#include <string_view>
 #include <format>
 
 #include <aonyx/css/props/constants/global_values.hpp>
@@ -24,6 +26,9 @@ struct padding_inline_start : types::property_base<"padding-inline-start">,
     using super_property = types::property_base<"padding-inline-start">;
 
     padding_inline_start() = delete;
+    padding_inline_start(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     padding_inline_start(util::numerical s) : super_property(s.to_string())
     {
     }

@@ -23,7 +23,7 @@ struct baseline_shift : types::property_base<"baseline-shift">, constants::globa
     using super_property = types::property_base<"baseline-shift">;
 
     baseline_shift() = delete;
-    baseline_shift(std::string_view v) : super_property(std::string(v))
+    baseline_shift(const std::string_view s) : super_property(std::string(s))
     {
     }
 

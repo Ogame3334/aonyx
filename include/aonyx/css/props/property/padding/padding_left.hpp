@@ -4,6 +4,8 @@
  */
 #pragma once
 
+#include <string>
+#include <string_view>
 #include <format>
 
 #include <aonyx/css/props/constants/global_values.hpp>
@@ -23,6 +25,9 @@ struct padding_left : types::property_base<"padding-left">, constants::global_va
     using super_property = types::property_base<"padding-left">;
 
     padding_left() = delete;
+    padding_left(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     padding_left(util::numerical l) : super_property(l.to_string())
     {
     }

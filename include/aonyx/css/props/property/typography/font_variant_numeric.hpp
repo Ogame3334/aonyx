@@ -25,7 +25,7 @@ struct font_variant_numeric : types::property_base<"font-variant-numeric">,
     using super_property = types::property_base<"font-variant-numeric">;
 
     font_variant_numeric() = delete;
-    font_variant_numeric(std::string_view v) : super_property(std::string(v))
+    font_variant_numeric(const std::string_view s) : super_property(std::string(s))
     {
     }
     font_variant_numeric(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

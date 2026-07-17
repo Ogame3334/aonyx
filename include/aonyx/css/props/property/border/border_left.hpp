@@ -25,7 +25,7 @@ struct border_left : types::property_base<"border-left">, constants::global_valu
     using super_property = types::property_base<"border-left">;
 
     border_left() = delete;
-    border_left(std::string_view style) : super_property(std::string(style))
+    border_left(const std::string_view s) : super_property(std::string(s))
     {
     }
     border_left(util::numerical width, std::string_view style) : super_property(std::format("{} {}", width, style))

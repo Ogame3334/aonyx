@@ -27,7 +27,7 @@ struct height : types::property_base<"height">, constants::global_values<height>
     height(util::numerical h) : super_property(h.to_string())
     {
     }
-    height(std::string_view h) : super_property(std::string(h))
+    height(const std::string_view s) : super_property(std::string(s))
     {
     }
 

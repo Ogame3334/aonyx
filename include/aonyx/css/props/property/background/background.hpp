@@ -24,7 +24,7 @@ struct background : types::property_base<"background">, constants::global_values
     using super_property = types::property_base<"background">;
 
     background() = delete;
-    background(std::string_view v) : super_property(std::string(v))
+    background(const std::string_view s) : super_property(std::string(s))
     {
     }
     background(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2))

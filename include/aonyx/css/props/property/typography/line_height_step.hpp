@@ -24,6 +24,9 @@ struct line_height_step : types::property_base<"line-height-step">, constants::g
     using super_property = types::property_base<"line-height-step">;
 
     line_height_step() = delete;
+    line_height_step(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     line_height_step(util::numerical v) : super_property(v.to_string())
     {
     }

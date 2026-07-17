@@ -24,7 +24,7 @@ struct grid_auto_flow : types::property_base<"grid-auto-flow">, constants::globa
     using super_property = types::property_base<"grid-auto-flow">;
 
     grid_auto_flow() = delete;
-    grid_auto_flow(std::string_view v) : super_property(std::string(v))
+    grid_auto_flow(const std::string_view s) : super_property(std::string(s))
     {
     }
     grid_auto_flow(std::string_view direction, std::string_view packing)

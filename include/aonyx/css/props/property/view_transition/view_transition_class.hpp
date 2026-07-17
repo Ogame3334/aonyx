@@ -25,7 +25,7 @@ struct view_transition_class : types::property_base<"view-transition-class">,
     using super_property = types::property_base<"view-transition-class">;
 
     view_transition_class() = delete;
-    view_transition_class(std::string_view v) : super_property(std::string(v))
+    view_transition_class(const std::string_view s) : super_property(std::string(s))
     {
     }
     view_transition_class(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2))

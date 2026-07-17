@@ -27,7 +27,7 @@ struct bottom : types::property_base<"bottom">, constants::global_values<bottom>
     bottom(util::numerical v) : super_property(v.to_string())
     {
     }
-    bottom(std::string_view v) : super_property(std::string(v))
+    bottom(const std::string_view s) : super_property(std::string(s))
     {
     }
 

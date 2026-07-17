@@ -24,7 +24,7 @@ struct mask_clip : types::property_base<"mask-clip">, constants::global_values<m
     using super_property = types::property_base<"mask-clip">;
 
     mask_clip() = delete;
-    mask_clip(std::string_view v) : super_property(std::string(v))
+    mask_clip(const std::string_view s) : super_property(std::string(s))
     {
     }
     mask_clip(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2))

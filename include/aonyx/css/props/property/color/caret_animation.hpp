@@ -23,7 +23,7 @@ struct caret_animation : types::property_base<"caret-animation">, constants::glo
     using super_property = types::property_base<"caret-animation">;
 
     caret_animation() = delete;
-    caret_animation(std::string_view v) : super_property(std::string(v))
+    caret_animation(const std::string_view s) : super_property(std::string(s))
     {
     }
 

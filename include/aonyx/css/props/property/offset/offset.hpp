@@ -24,7 +24,7 @@ struct offset : types::property_base<"offset">, constants::global_values<offset>
     using super_property = types::property_base<"offset">;
 
     offset() = delete;
-    offset(std::string_view v) : super_property(std::string(v))
+    offset(const std::string_view s) : super_property(std::string(s))
     {
     }
     offset(std::string_view v1, std::string_view v2) : super_property(std::format("{} {}", v1, v2))

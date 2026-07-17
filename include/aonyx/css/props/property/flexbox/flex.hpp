@@ -35,7 +35,7 @@ struct flex : types::property_base<"flex">, constants::global_values<flex>
         : super_property(std::format("{} {} {}", grow, shrink, basis))
     {
     }
-    flex(std::string_view v) : super_property(std::string(v))
+    flex(const std::string_view s) : super_property(std::string(s))
     {
     }
 

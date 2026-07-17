@@ -27,7 +27,7 @@ struct inset_block_end : types::property_base<"inset-block-end">, constants::glo
     inset_block_end(util::numerical v) : super_property(v.to_string())
     {
     }
-    inset_block_end(std::string_view v) : super_property(std::string(v))
+    inset_block_end(const std::string_view s) : super_property(std::string(s))
     {
     }
 

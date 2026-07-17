@@ -23,7 +23,7 @@ struct justify_content : types::property_base<"justify-content">, constants::glo
     using super_property = types::property_base<"justify-content">;
 
     justify_content() = delete;
-    justify_content(std::string_view v) : super_property(std::string(v))
+    justify_content(const std::string_view s) : super_property(std::string(s))
     {
     }
 

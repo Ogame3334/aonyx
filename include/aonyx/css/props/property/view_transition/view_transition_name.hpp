@@ -24,7 +24,7 @@ struct view_transition_name : types::property_base<"view-transition-name">,
     using super_property = types::property_base<"view-transition-name">;
 
     view_transition_name() = delete;
-    view_transition_name(std::string_view v) : super_property(std::string(v))
+    view_transition_name(const std::string_view s) : super_property(std::string(s))
     {
     }
 

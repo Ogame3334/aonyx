@@ -23,7 +23,7 @@ struct stroke : types::property_base<"stroke">, constants::global_values<stroke>
     using super_property = types::property_base<"stroke">;
 
     stroke() = delete;
-    stroke(std::string_view v) : super_property(std::string(v))
+    stroke(const std::string_view s) : super_property(std::string(s))
     {
     }
 

@@ -23,7 +23,7 @@ struct column_span : types::property_base<"column-span">, constants::global_valu
     using super_property = types::property_base<"column-span">;
 
     column_span() = delete;
-    column_span(std::string_view v) : super_property(std::string(v))
+    column_span(const std::string_view s) : super_property(std::string(s))
     {
     }
 

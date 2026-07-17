@@ -26,6 +26,9 @@ struct hyphenate_limit_chars : types::property_base<"hyphenate-limit-chars">,
     using super_property = types::property_base<"hyphenate-limit-chars">;
 
     hyphenate_limit_chars() = delete;
+    hyphenate_limit_chars(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     hyphenate_limit_chars(util::numerical v) : super_property(v.to_string())
     {
     }

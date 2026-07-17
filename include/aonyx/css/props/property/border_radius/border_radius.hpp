@@ -25,6 +25,9 @@ struct border_radius : types::property_base<"border-radius">, constants::global_
     using super_property = types::property_base<"border-radius">;
 
     border_radius() = delete;
+    border_radius(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     border_radius(util::numerical r) : super_property(r.to_string())
     {
     }

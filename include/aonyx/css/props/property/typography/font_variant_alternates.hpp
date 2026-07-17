@@ -24,7 +24,7 @@ struct font_variant_alternates : types::property_base<"font-variant-alternates">
     using super_property = types::property_base<"font-variant-alternates">;
 
     font_variant_alternates() = delete;
-    font_variant_alternates(std::string_view v) : super_property(std::string(v))
+    font_variant_alternates(const std::string_view s) : super_property(std::string(s))
     {
     }
 

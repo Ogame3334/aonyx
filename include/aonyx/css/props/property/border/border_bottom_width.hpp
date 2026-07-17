@@ -24,6 +24,9 @@ struct border_bottom_width : types::property_base<"border-bottom-width">, consta
     using super_property = types::property_base<"border-bottom-width">;
 
     border_bottom_width() = delete;
+    border_bottom_width(const std::string_view s) : super_property(std::string(s))
+    {
+    }
     border_bottom_width(util::numerical w) : super_property(w.to_string())
     {
     }

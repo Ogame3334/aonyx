@@ -24,7 +24,7 @@ struct background_origin : types::property_base<"background-origin">, constants:
     using super_property = types::property_base<"background-origin">;
 
     background_origin() = delete;
-    background_origin(std::string_view v) : super_property(std::string(v))
+    background_origin(const std::string_view s) : super_property(std::string(s))
     {
     }
     background_origin(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2))

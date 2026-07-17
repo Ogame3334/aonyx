@@ -24,7 +24,7 @@ struct animation_duration : types::property_base<"animation-duration">, constant
     using super_property = types::property_base<"animation-duration">;
 
     animation_duration() = delete;
-    animation_duration(std::string_view v) : super_property(std::string(v))
+    animation_duration(const std::string_view s) : super_property(std::string(s))
     {
     }
     animation_duration(std::string_view v1, std::string_view v2) : super_property(std::format("{}, {}", v1, v2))

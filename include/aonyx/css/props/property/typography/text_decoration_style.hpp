@@ -24,7 +24,7 @@ struct text_decoration_style : types::property_base<"text-decoration-style">,
     using super_property = types::property_base<"text-decoration-style">;
 
     text_decoration_style() = delete;
-    text_decoration_style(std::string_view v) : super_property(std::string(v))
+    text_decoration_style(const std::string_view s) : super_property(std::string(s))
     {
     }
 

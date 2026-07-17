@@ -23,7 +23,7 @@ struct float_ : types::property_base<"float">, constants::global_values<float_>
     using super_property = types::property_base<"float">;
 
     float_() = delete;
-    float_(std::string_view v) : super_property(std::string(v))
+    float_(const std::string_view s) : super_property(std::string(s))
     {
     }
 

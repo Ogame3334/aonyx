@@ -24,7 +24,7 @@ struct text_box : types::property_base<"text-box">, constants::global_values<tex
     using super_property = types::property_base<"text-box">;
 
     text_box() = delete;
-    text_box(std::string_view trim) : super_property(std::string(trim))
+    text_box(const std::string_view s) : super_property(std::string(s))
     {
     }
     text_box(std::string_view trim, std::string_view edge) : super_property(std::format("{} {}", trim, edge))

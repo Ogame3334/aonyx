@@ -24,7 +24,7 @@ struct object_view_box : types::property_base<"object-view-box">, constants::glo
     using super_property = types::property_base<"object-view-box">;
 
     object_view_box() = delete;
-    object_view_box(std::string_view v) : super_property(std::string(v))
+    object_view_box(const std::string_view s) : super_property(std::string(s))
     {
     }
     object_view_box(std::string_view v1, std::string_view v2, std::string_view v3, std::string_view v4)

@@ -23,7 +23,7 @@ struct column_rule_color : types::property_base<"column-rule-color">, constants:
     using super_property = types::property_base<"column-rule-color">;
 
     column_rule_color() = delete;
-    column_rule_color(std::string_view v) : super_property(std::string(v))
+    column_rule_color(const std::string_view s) : super_property(std::string(s))
     {
     }
 };

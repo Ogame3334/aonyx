@@ -24,7 +24,7 @@ struct border_inline_end_style : types::property_base<"border-inline-end-style">
     using super_property = types::property_base<"border-inline-end-style">;
 
     border_inline_end_style() = delete;
-    border_inline_end_style(std::string_view style) : super_property(std::string(style))
+    border_inline_end_style(const std::string_view s) : super_property(std::string(s))
     {
     }
 };
