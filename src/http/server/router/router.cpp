@@ -47,6 +47,12 @@ void router::dispatch(const request& req, response& res) const
         return;
     }
 
+    if (req.path.starts_with("/_aonyx/"))
+    {
+        handle_system_route(req, res);
+        return;
+    }
+
     std::vector<middleware_t> matched;
     for (const auto& entry : middlewares_)
     {
@@ -221,5 +227,22 @@ router::route_trie& router::dispatch_trie(method method)
             return unknown_trie_;
     }
 }
+
+void router::handle_system_route(const request& req, response& res) const
+{
+    if (req.path == "/_aonyx/health")
+    {
+        res.status = 200;
+        res.body = "{\"status\": \"ok\"}";
+        res.headers["Content-Type"] = "application/json";
+    }
+    else
+    {
+        res.status = 404;
+        res.body = "{\"error\": \"system route not found\"}";
+        res.headers["Content-Type"] = "application/json";
+    }
+}
+
 } // namespace http
 } // namespace aonyx

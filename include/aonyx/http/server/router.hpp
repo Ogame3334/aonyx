@@ -82,6 +82,8 @@ public:
     void dispatch(const request& req, response& res) const;
 
 private:
+    void handle_system_route(const request& req, response& res) const;
+
     class route_trie
     {
     public:
