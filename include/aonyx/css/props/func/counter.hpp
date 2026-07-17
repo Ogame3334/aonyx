@@ -1,3 +1,7 @@
+/** @brief CSS function: counter
+ *
+ * CSS function utilities for counter.
+ */
 #pragma once
 
 #include <string>

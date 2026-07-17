@@ -1,3 +1,7 @@
+/** @brief CSS property: border-spacing
+ *
+ * border-spacing CSS property.
+ */
 #pragma once
 
 #include <string>

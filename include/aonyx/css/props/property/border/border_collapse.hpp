@@ -1,3 +1,7 @@
+/** @brief CSS property: border-collapse
+ *
+ * border-collapse CSS property.
+ */
 #pragma once
 
 #include <string>

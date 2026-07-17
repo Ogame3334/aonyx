@@ -1,3 +1,7 @@
+/** @brief CSS property: background-origin
+ *
+ * background-origin CSS property.
+ */
 #pragma once
 
 #include <string>

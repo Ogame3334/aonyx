@@ -1,3 +1,7 @@
+/** @brief CSS property: line-height-step
+ *
+ * line-height-step CSS property.
+ */
 #pragma once
 
 #include <string>

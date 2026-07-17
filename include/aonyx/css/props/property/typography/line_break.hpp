@@ -1,3 +1,7 @@
+/** @brief CSS property: line-break
+ *
+ * line-break CSS property.
+ */
 #pragma once
 
 #include <string>

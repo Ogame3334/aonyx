@@ -1,3 +1,7 @@
+/** @brief CSS property: container
+ *
+ * container CSS property.
+ */
 #pragma once
 
 #include <string>

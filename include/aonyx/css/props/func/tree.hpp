@@ -1,3 +1,7 @@
+/** @brief CSS function: tree
+ *
+ * CSS function utilities for tree.
+ */
 #pragma once
 
 #include <string>

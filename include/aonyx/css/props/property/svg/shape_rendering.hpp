@@ -1,3 +1,7 @@
+/** @brief CSS property: shape-rendering
+ *
+ * shape-rendering CSS property.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,7 @@
+/** @brief CSS property: margin-inline-start
+ *
+ * margin-inline-start CSS property.
+ */
 #pragma once
 
 #include <format>

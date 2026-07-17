@@ -1,3 +1,7 @@
+/** @brief CSS property: column-rule-color
+ *
+ * column-rule-color CSS property.
+ */
 #pragma once
 
 #include <string>

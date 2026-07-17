@@ -1,3 +1,7 @@
+/** @brief CSS property: position-area
+ *
+ * position-area CSS property.
+ */
 #pragma once
 
 #include <string>

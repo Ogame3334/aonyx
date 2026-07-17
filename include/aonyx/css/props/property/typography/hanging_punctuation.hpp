@@ -1,3 +1,7 @@
+/** @brief CSS property: hanging-punctuation
+ *
+ * hanging-punctuation CSS property.
+ */
 #pragma once
 
 #include <string>

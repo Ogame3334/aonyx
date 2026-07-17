@@ -1,3 +1,7 @@
+/** @brief CSS property: inset-block-start
+ *
+ * inset-block-start CSS property.
+ */
 #pragma once
 
 #include <string>

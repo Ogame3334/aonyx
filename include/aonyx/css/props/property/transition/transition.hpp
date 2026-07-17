@@ -1,3 +1,7 @@
+/** @brief CSS property: transition
+ *
+ * transition CSS property.
+ */
 #pragma once
 
 #include <string>

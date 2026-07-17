@@ -1,3 +1,7 @@
+/** @brief CSS property: ruby-align
+ *
+ * ruby-align CSS property.
+ */
 #pragma once
 
 #include <string>

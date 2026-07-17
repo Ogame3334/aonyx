@@ -1,3 +1,7 @@
+/** @brief CSS property: text-decoration-skip-ink
+ *
+ * text-decoration-skip-ink CSS property.
+ */
 #pragma once
 
 #include <string>

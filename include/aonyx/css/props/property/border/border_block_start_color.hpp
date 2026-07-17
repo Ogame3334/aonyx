@@ -1,3 +1,7 @@
+/** @brief CSS property: border-block-start-color
+ *
+ * border-block-start-color CSS property.
+ */
 #pragma once
 
 #include <string>

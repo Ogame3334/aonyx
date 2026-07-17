@@ -1,3 +1,7 @@
+/** @brief CSS property: background-attachment
+ *
+ * background-attachment CSS property.
+ */
 #pragma once
 
 #include <string>

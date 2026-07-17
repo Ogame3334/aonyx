@@ -1,3 +1,7 @@
+/** @brief CSS property: caption-side
+ *
+ * caption-side CSS property.
+ */
 #pragma once
 
 #include <string>

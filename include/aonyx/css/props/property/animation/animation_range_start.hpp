@@ -1,3 +1,7 @@
+/** @brief CSS property: animation-range-start
+ *
+ * animation-range-start CSS property.
+ */
 #pragma once
 
 #include <string>

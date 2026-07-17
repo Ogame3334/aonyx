@@ -1,3 +1,7 @@
+/** @brief CSS property: gap
+ *
+ * gap CSS property.
+ */
 #pragma once
 
 #include <string>

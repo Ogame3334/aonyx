@@ -1,3 +1,7 @@
+/** @brief CSS property: forced-color-adjust
+ *
+ * forced-color-adjust CSS property.
+ */
 #pragma once
 
 #include <string>

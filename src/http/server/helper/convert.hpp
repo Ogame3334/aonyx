@@ -1,3 +1,5 @@
+/** @brief Declarations of type converters between aonyx types and Boost.Beast types. */
+
 #pragma once
 
 #include <string>
@@ -21,7 +23,9 @@ namespace aonyx
 
                 namespace method
                 {
+                    /** @brief Convert aonyx::http::method to boost::beast::http::verb. */
                     boost_verb convert(const aonyx_method method);
+                    /** @brief Convert boost::beast::http::verb to aonyx::http::method. */
                     aonyx_method convert(const boost_verb verb);
                 }
 
@@ -30,7 +34,9 @@ namespace aonyx
 
                 namespace request
                 {
+                    /** @brief Convert aonyx::http::request to boost::beast::http::request. */
                     boost_request convert(const aonyx_request &req);
+                    /** @brief Convert boost::beast::http::request to aonyx::http::request. */
                     aonyx_request convert(const boost_request &req);
                 }
 
@@ -39,7 +45,9 @@ namespace aonyx
 
                 namespace response
                 {
+                    /** @brief Convert aonyx::http::response to boost::beast::http::response. */
                     boost_response convert(const aonyx_response &res);
+                    /** @brief Convert boost::beast::http::response to aonyx::http::response. */
                     aonyx_response convert(const boost_response &res);
                 }
             }

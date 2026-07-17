@@ -1,3 +1,7 @@
+/** @brief CSS property: flex-flow
+ *
+ * flex-flow CSS property.
+ */
 #pragma once
 
 #include <string>

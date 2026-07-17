@@ -1,3 +1,7 @@
+/** @brief CSS property: margin-block-start
+ *
+ * margin-block-start CSS property.
+ */
 #pragma once
 
 #include <format>

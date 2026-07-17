@@ -1,3 +1,7 @@
+/** @brief CSS property: transform-style
+ *
+ * transform-style CSS property.
+ */
 #pragma once
 
 #include <string>

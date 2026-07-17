@@ -1,3 +1,7 @@
+/** @brief CSS property: scroll-snap-align
+ *
+ * scroll-snap-align CSS property.
+ */
 #pragma once
 
 #include <string>

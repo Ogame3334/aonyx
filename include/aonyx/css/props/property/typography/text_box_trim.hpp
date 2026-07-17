@@ -1,3 +1,7 @@
+/** @brief CSS property: text-box-trim
+ *
+ * text-box-trim CSS property.
+ */
 #pragma once
 
 #include <string>

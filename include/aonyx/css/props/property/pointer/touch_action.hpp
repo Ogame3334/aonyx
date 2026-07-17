@@ -1,3 +1,7 @@
+/** @brief CSS property: touch-action
+ *
+ * touch-action CSS property.
+ */
 #pragma once
 
 #include <string>

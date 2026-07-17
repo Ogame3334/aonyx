@@ -1,3 +1,7 @@
+/** @brief CSS property: position-try-fallbacks
+ *
+ * position-try-fallbacks CSS property.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,7 @@
+/** @brief CSS property: text-box
+ *
+ * text-box CSS property.
+ */
 #pragma once
 
 #include <string>

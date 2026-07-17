@@ -1,3 +1,7 @@
+/** @brief CSS property: mask-repeat
+ *
+ * mask-repeat CSS property.
+ */
 #pragma once
 
 #include <string>

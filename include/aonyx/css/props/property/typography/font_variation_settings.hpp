@@ -1,3 +1,7 @@
+/** @brief CSS property: font-variation-settings
+ *
+ * font-variation-settings CSS property.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,7 @@
+/** @brief CSS property: animation-composition
+ *
+ * animation-composition CSS property.
+ */
 #pragma once
 
 #include <string>

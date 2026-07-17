@@ -1,3 +1,7 @@
+/** @brief CSS property: padding-inline
+ *
+ * padding-inline CSS property.
+ */
 #pragma once
 
 #include <format>

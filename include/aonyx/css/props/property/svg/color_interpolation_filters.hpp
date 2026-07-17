@@ -1,3 +1,7 @@
+/** @brief CSS property: color-interpolation-filters
+ *
+ * color-interpolation-filters CSS property.
+ */
 #pragma once
 
 #include <string>

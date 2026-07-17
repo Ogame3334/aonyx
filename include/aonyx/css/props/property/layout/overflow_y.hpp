@@ -1,3 +1,7 @@
+/** @brief CSS property: overflow-y
+ *
+ * overflow-y CSS property.
+ */
 #pragma once
 
 #include <string>

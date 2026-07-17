@@ -1,3 +1,7 @@
+/** @brief CSS property: filter
+ *
+ * filter CSS property.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,7 @@
+/** @brief CSS property: lighting-color
+ *
+ * lighting-color CSS property.
+ */
 #pragma once
 
 #include <string>

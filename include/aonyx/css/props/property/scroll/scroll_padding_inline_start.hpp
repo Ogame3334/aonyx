@@ -1,3 +1,7 @@
+/** @brief CSS property: scroll-padding-inline-start
+ *
+ * scroll-padding-inline-start CSS property.
+ */
 #pragma once
 
 #include <string>

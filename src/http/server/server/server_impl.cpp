@@ -1,3 +1,5 @@
+/** @brief Implementation of the server_impl (accept loop and worker threads). */
+
 #include "http/server/server/server_impl.hpp"
 #include "http/server/session/session.hpp"
 #include <boost/beast/http/error.hpp>
@@ -7,6 +9,7 @@
 
 namespace aonyx::http
 {
+    /** @brief Start accepting connections and run the io_context on multiple threads. */
     void server::server_impl::run()
     {
         accept();
@@ -32,6 +35,7 @@ namespace aonyx::http
         }
     }
 
+    /** @brief Start an asynchronous accept loop (re-arms itself on completion). */
     void server::server_impl::accept()
     {
         acceptor_.async_accept(
@@ -50,6 +54,8 @@ namespace aonyx::http
             });
     }
 
+    /** @brief Access the internal router.
+     *  @return Reference to the router. */
     router &server::server_impl::router()
     {
         return router_;

@@ -1,3 +1,7 @@
+/** @brief CSS property: will-change
+ *
+ * will-change CSS property.
+ */
 #pragma once
 
 #include <string>

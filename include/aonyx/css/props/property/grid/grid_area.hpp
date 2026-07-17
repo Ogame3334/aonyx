@@ -1,3 +1,7 @@
+/** @brief CSS property: grid-area
+ *
+ * grid-area CSS property.
+ */
 #pragma once
 
 #include <string>

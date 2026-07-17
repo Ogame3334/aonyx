@@ -1,3 +1,7 @@
+/** @brief CSS property: padding-inline-start
+ *
+ * padding-inline-start CSS property.
+ */
 #pragma once
 
 #include <format>

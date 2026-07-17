@@ -1,3 +1,5 @@
+/** @brief Aggregate header that includes all CSS infrastructure headers. */
+
 #pragma once
 
 #include <aonyx/css/palette.hpp>

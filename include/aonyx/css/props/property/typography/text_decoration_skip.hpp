@@ -1,3 +1,7 @@
+/** @brief CSS property: text-decoration-skip
+ *
+ * text-decoration-skip CSS property.
+ */
 #pragma once
 
 #include <string>

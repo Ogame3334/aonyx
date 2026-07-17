@@ -1,3 +1,7 @@
+/** @brief CSS property: flex
+ *
+ * flex CSS property.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,7 @@
+/** @brief CSS property: hyphenate-character
+ *
+ * hyphenate-character CSS property.
+ */
 #pragma once
 
 #include <string>

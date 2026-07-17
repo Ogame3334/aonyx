@@ -1,3 +1,7 @@
+/** @brief CSS property: contain-intrinsic-height
+ *
+ * contain-intrinsic-height CSS property.
+ */
 #pragma once
 
 #include <string>

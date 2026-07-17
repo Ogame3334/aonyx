@@ -1,3 +1,7 @@
+/** @brief CSS property: image-rendering
+ *
+ * image-rendering CSS property.
+ */
 #pragma once
 
 #include <string>

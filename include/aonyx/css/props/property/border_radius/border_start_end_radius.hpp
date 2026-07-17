@@ -1,3 +1,7 @@
+/** @brief CSS property: border-start-end-radius
+ *
+ * border-start-end-radius CSS property.
+ */
 #pragma once
 
 #include <string>

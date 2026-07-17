@@ -1,3 +1,7 @@
+/** @brief CSS property: scrollbar-gutter
+ *
+ * scrollbar-gutter CSS property.
+ */
 #pragma once
 
 #include <string>

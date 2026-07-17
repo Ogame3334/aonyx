@@ -1,3 +1,7 @@
+/** @brief CSS property: counter-reset
+ *
+ * counter-reset CSS property.
+ */
 #pragma once
 
 #include <string>

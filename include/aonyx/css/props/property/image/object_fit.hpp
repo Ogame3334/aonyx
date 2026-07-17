@@ -1,3 +1,7 @@
+/** @brief CSS property: object-fit
+ *
+ * object-fit CSS property.
+ */
 #pragma once
 
 #include <string>

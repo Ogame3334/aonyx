@@ -1,3 +1,7 @@
+/** @brief CSS property: stroke-linejoin
+ *
+ * stroke-linejoin CSS property.
+ */
 #pragma once
 
 #include <string>

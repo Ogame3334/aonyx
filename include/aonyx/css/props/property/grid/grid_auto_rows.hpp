@@ -1,3 +1,7 @@
+/** @brief CSS property: grid-auto-rows
+ *
+ * grid-auto-rows CSS property.
+ */
 #pragma once
 
 #include <string>

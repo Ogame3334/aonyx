@@ -1,3 +1,7 @@
+/** @brief CSS property: ruby-overhang
+ *
+ * ruby-overhang CSS property.
+ */
 #pragma once
 
 #include <string>

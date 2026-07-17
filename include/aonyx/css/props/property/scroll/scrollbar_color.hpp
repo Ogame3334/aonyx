@@ -1,3 +1,7 @@
+/** @brief CSS property: scrollbar-color
+ *
+ * scrollbar-color CSS property.
+ */
 #pragma once
 
 #include <string>

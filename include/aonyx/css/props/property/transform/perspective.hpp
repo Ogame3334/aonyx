@@ -1,3 +1,7 @@
+/** @brief CSS property: perspective
+ *
+ * perspective CSS property.
+ */
 #pragma once
 
 #include <string>

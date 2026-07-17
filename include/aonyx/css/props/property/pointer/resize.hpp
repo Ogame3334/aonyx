@@ -1,3 +1,7 @@
+/** @brief CSS property: resize
+ *
+ * resize CSS property.
+ */
 #pragma once
 
 #include <string>

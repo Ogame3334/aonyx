@@ -1,3 +1,7 @@
+/** @brief CSS property: scroll-snap-stop
+ *
+ * scroll-snap-stop CSS property.
+ */
 #pragma once
 
 #include <string>

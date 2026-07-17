@@ -1,3 +1,7 @@
+/** @brief CSS property: column-rule-width
+ *
+ * column-rule-width CSS property.
+ */
 #pragma once
 
 #include <string>

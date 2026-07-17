@@ -1,3 +1,7 @@
+/** @brief CSS property: view-transition-name
+ *
+ * view-transition-name CSS property.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,7 @@
+/** @brief CSS property: position
+ *
+ * position CSS property.
+ */
 #pragma once
 
 #include <string>

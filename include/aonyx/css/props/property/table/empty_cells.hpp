@@ -1,3 +1,7 @@
+/** @brief CSS property: empty-cells
+ *
+ * empty-cells CSS property.
+ */
 #pragma once
 
 #include <string>

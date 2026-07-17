@@ -1,3 +1,7 @@
+/** @brief CSS property: scroll-timeline-name
+ *
+ * scroll-timeline-name CSS property.
+ */
 #pragma once
 
 #include <string>

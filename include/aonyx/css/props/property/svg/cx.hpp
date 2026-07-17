@@ -1,3 +1,7 @@
+/** @brief CSS property: cx
+ *
+ * cx CSS property.
+ */
 #pragma once
 
 #include <string>

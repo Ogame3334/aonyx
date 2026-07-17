@@ -1,3 +1,7 @@
+/** @brief CSS property: scroll-padding-left
+ *
+ * scroll-padding-left CSS property.
+ */
 #pragma once
 
 #include <string>

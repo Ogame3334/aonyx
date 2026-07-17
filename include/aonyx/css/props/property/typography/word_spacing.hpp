@@ -1,3 +1,7 @@
+/** @brief CSS property: word-spacing
+ *
+ * word-spacing CSS property.
+ */
 #pragma once
 
 #include <string>

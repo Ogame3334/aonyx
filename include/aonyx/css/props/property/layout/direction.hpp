@@ -1,3 +1,7 @@
+/** @brief CSS property: direction
+ *
+ * direction CSS property.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,7 @@
+/** @brief CSS property: max-width
+ *
+ * max-width CSS property.
+ */
 #pragma once
 
 #include <string>

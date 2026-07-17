@@ -1,3 +1,7 @@
+/** @brief CSS property: reading-order
+ *
+ * reading-order CSS property.
+ */
 #pragma once
 
 #include <string>

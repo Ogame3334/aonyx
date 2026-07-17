@@ -1,3 +1,7 @@
+/** @brief CSS property: flex-wrap
+ *
+ * flex-wrap CSS property.
+ */
 #pragma once
 
 #include <string>

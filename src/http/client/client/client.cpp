@@ -1,3 +1,5 @@
+/** @brief Implementation of the HTTP client (fetch, get, post, put, delete). */
+
 #include <aonyx/http/client/client.hpp>
 
 #include <tuple>
@@ -30,6 +32,9 @@ namespace aonyx
         {
             namespace helper
             {
+                /** @brief Convert an aonyx HTTP method to a Boost.Beast verb.
+                 *  @param method The aonyx method enum value.
+                 *  @return The corresponding Boost.Beast HTTP verb. */
                 beast::http::verb convert(aonyx::http::method method)
                 {
                     switch (method)
@@ -47,6 +52,10 @@ namespace aonyx
                     }
                 }
 
+                /** @brief Parse a URL into host, port, target path, and SSL flag.
+                 *  @param url The URL string to parse.
+                 *  @return A tuple of (host, port, target, is_https).
+                 *  @throws std::invalid_argument if the URL is malformed. */
                 std::tuple<std::string, std::string, std::string, bool> parse_url(const std::string_view url)
                 {
                     auto result = boost::urls::parse_uri(url);
@@ -78,6 +87,15 @@ namespace aonyx
                     return {host, port, target, is_https};
                 }
 
+                /** @brief Perform an HTTP request over an already-connected stream.
+                 *  @tparam Stream The stream type (e.g. tcp::socket or ssl::stream).
+                 *  @param stream The connected stream to write/read on.
+                 *  @param host The Host header value.
+                 *  @param target The request target path.
+                 *  @param method The HTTP method.
+                 *  @param body The request body.
+                 *  @param headers Additional HTTP headers.
+                 *  @return The parsed HTTP response. */
                 template <typename Stream>
                 aonyx::http::response do_fetch(
                     Stream& stream,
@@ -121,6 +139,11 @@ namespace aonyx
                 }
             }
 
+            /** @brief Perform an HTTP GET request.
+             *  @param url The target URL.
+             *  @param body The request body (typically empty for GET).
+             *  @param headers Additional HTTP headers.
+             *  @return The HTTP response. */
             aonyx::http::response get(
                 const std::string_view url,
                 const std::string_view body,
@@ -128,6 +151,11 @@ namespace aonyx
             {
                 return fetch(url, aonyx::http::method::get, body, headers);
             }
+            /** @brief Perform an HTTP POST request.
+             *  @param url The target URL.
+             *  @param body The request body.
+             *  @param headers Additional HTTP headers.
+             *  @return The HTTP response. */
             aonyx::http::response post(
                 const std::string_view url,
                 const std::string_view body,
@@ -135,6 +163,11 @@ namespace aonyx
             {
                 return fetch(url, aonyx::http::method::post, body, headers);
             }
+            /** @brief Perform an HTTP PUT request.
+             *  @param url The target URL.
+             *  @param body The request body.
+             *  @param headers Additional HTTP headers.
+             *  @return The HTTP response. */
             aonyx::http::response put(
                 const std::string_view url,
                 const std::string_view body,
@@ -142,6 +175,11 @@ namespace aonyx
             {
                 return fetch(url, aonyx::http::method::put, body, headers);
             }
+            /** @brief Perform an HTTP DELETE request.
+             *  @param url The target URL.
+             *  @param body The request body.
+             *  @param headers Additional HTTP headers.
+             *  @return The HTTP response. */
             aonyx::http::response delete_(
                 const std::string_view url,
                 const std::string_view body,
@@ -150,6 +188,12 @@ namespace aonyx
                 return fetch(url, aonyx::http::method::delete_, body, headers);
             }
 
+            /** @brief Perform an HTTP request to a URL with the given method.
+             *  @param url The target URL.
+             *  @param method The HTTP method.
+             *  @param body The request body.
+             *  @param headers Additional HTTP headers.
+             *  @return The HTTP response. */
             aonyx::http::response fetch(
                 const std::string_view url,
                 const aonyx::http::method method,
@@ -159,6 +203,15 @@ namespace aonyx
                 const auto [host, port, target, is_https] = helper::parse_url(url);
                 return fetch(host, port, target, method, body, headers, is_https);
             }
+            /** @brief Perform an HTTP request to an already-parsed host/port/target.
+             *  @param host The hostname.
+             *  @param port The port string.
+             *  @param target The request path.
+             *  @param method The HTTP method.
+             *  @param body The request body.
+             *  @param headers Additional HTTP headers.
+             *  @param is_https Whether to use TLS.
+             *  @return The HTTP response. */
             aonyx::http::response fetch(
                 const std::string_view host,
                 const std::string_view port,

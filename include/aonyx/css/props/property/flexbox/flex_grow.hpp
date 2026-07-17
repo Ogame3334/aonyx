@@ -1,3 +1,7 @@
+/** @brief CSS property: flex-grow
+ *
+ * flex-grow CSS property.
+ */
 #pragma once
 
 #include <string>

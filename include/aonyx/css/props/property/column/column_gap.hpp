@@ -1,3 +1,7 @@
+/** @brief CSS property: column-gap
+ *
+ * column-gap CSS property.
+ */
 #pragma once
 
 #include <string>

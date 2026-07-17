@@ -1,3 +1,7 @@
+/** @brief CSS property: line-clamp
+ *
+ * line-clamp CSS property.
+ */
 #pragma once
 
 #include <string>

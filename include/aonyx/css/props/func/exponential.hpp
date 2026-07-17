@@ -1,3 +1,7 @@
+/** @brief CSS function: exponential
+ *
+ * CSS function utilities for exponential.
+ */
 #pragma once
 
 #include <format>

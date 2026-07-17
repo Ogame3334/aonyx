@@ -1,7 +1,10 @@
+/** @brief Named CSS color constants from the CSS Color Module Level 4. */
+
 #pragma once
 
 #include <string_view>
 
+/** @brief Namespace containing inline constexpr std::string_view constants for all 148+ named CSS colors. */
 namespace aonyx::css::palette
 {
     inline static constexpr std::string_view alice_blue = "aliceblue";

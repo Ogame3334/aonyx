@@ -1,3 +1,7 @@
+/** @brief CSS property: mix-blend-mode
+ *
+ * mix-blend-mode CSS property.
+ */
 #pragma once
 
 #include <string>

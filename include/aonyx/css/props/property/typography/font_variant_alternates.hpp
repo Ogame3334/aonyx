@@ -1,3 +1,7 @@
+/** @brief CSS property: font-variant-alternates
+ *
+ * font-variant-alternates CSS property.
+ */
 #pragma once
 
 #include <string>

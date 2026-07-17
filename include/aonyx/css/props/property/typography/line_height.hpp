@@ -1,3 +1,7 @@
+/** @brief CSS property: line-height
+ *
+ * line-height CSS property.
+ */
 #pragma once
 
 #include <string>

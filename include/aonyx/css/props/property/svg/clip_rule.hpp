@@ -1,3 +1,7 @@
+/** @brief CSS property: clip-rule
+ *
+ * clip-rule CSS property.
+ */
 #pragma once
 
 #include <string>

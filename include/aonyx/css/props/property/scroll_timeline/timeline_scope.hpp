@@ -1,3 +1,7 @@
+/** @brief CSS property: timeline-scope
+ *
+ * timeline-scope CSS property.
+ */
 #pragma once
 
 #include <string>

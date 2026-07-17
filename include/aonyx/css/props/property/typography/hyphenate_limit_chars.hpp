@@ -1,3 +1,7 @@
+/** @brief CSS property: hyphenate-limit-chars
+ *
+ * hyphenate-limit-chars CSS property.
+ */
 #pragma once
 
 #include <string>

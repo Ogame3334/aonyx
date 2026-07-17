@@ -1,3 +1,7 @@
+/** @brief CSS property: columns
+ *
+ * columns CSS property.
+ */
 #pragma once
 
 #include <string>

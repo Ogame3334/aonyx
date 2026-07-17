@@ -1,3 +1,7 @@
+/** @brief CSS property: scroll-behavior
+ *
+ * scroll-behavior CSS property.
+ */
 #pragma once
 
 #include <string>

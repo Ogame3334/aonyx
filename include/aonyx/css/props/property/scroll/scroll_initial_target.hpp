@@ -1,3 +1,7 @@
+/** @brief CSS property: scroll-initial-target
+ *
+ * scroll-initial-target CSS property.
+ */
 #pragma once
 
 #include <string>

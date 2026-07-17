@@ -1,3 +1,7 @@
+/** @brief CSS property: float
+ *
+ * float CSS property.
+ */
 #pragma once
 
 #include <string>

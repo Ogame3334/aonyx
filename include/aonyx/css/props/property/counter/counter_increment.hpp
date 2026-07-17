@@ -1,3 +1,7 @@
+/** @brief CSS property: counter-increment
+ *
+ * counter-increment CSS property.
+ */
 #pragma once
 
 #include <string>

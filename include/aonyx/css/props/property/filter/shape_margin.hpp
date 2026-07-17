@@ -1,3 +1,7 @@
+/** @brief CSS property: shape-margin
+ *
+ * shape-margin CSS property.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,7 @@
+/** @brief CSS property: baseline-shift
+ *
+ * baseline-shift CSS property.
+ */
 #pragma once
 
 #include <string>

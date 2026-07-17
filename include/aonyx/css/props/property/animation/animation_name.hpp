@@ -1,3 +1,7 @@
+/** @brief CSS property: animation-name
+ *
+ * animation-name CSS property.
+ */
 #pragma once
 
 #include <string>

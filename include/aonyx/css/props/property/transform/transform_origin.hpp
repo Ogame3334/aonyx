@@ -1,3 +1,7 @@
+/** @brief CSS property: transform-origin
+ *
+ * transform-origin CSS property.
+ */
 #pragma once
 
 #include <string>

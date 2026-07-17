@@ -1,3 +1,7 @@
+/** @brief CSS property: color
+ *
+ * color CSS property.
+ */
 #pragma once
 
 #include <string>

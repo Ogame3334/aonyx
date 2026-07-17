@@ -1,3 +1,7 @@
+/** @brief CSS property: text-decoration-inset
+ *
+ * text-decoration-inset CSS property.
+ */
 #pragma once
 
 #include <string>

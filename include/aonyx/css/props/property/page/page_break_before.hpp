@@ -1,3 +1,7 @@
+/** @brief CSS property: page-break-before
+ *
+ * page-break-before CSS property.
+ */
 #pragma once
 
 #include <string>

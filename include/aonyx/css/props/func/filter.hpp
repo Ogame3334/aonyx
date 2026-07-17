@@ -1,3 +1,7 @@
+/** @brief CSS function: filter
+ *
+ * CSS function utilities for filter.
+ */
 #pragma once
 
 #include <format>

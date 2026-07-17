@@ -1,3 +1,7 @@
+/** @brief CSS property: border-radius
+ *
+ * border-radius CSS property.
+ */
 #pragma once
 
 #include <string>

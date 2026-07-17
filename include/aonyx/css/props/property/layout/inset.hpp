@@ -1,3 +1,7 @@
+/** @brief CSS property: inset
+ *
+ * inset CSS property.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,7 @@
+/** @brief CSS property: caret-color
+ *
+ * caret-color CSS property.
+ */
 #pragma once
 
 #include <string>

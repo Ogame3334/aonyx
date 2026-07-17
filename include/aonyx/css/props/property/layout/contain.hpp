@@ -1,3 +1,7 @@
+/** @brief CSS property: contain
+ *
+ * contain CSS property.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,7 @@
+/** @brief CSS property: overscroll-behavior
+ *
+ * overscroll-behavior CSS property.
+ */
 #pragma once
 
 #include <string>

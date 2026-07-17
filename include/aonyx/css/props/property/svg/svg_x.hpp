@@ -1,3 +1,7 @@
+/** @brief CSS property: svg-x
+ *
+ * svg-x CSS property.
+ */
 #pragma once
 
 #include <string>

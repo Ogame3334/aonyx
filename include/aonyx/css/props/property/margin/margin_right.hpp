@@ -1,3 +1,7 @@
+/** @brief CSS property: margin-right
+ *
+ * margin-right CSS property.
+ */
 #pragma once
 
 #include <format>

@@ -1,3 +1,7 @@
+/** @brief CSS property: animation-fill-mode
+ *
+ * animation-fill-mode CSS property.
+ */
 #pragma once
 
 #include <string>

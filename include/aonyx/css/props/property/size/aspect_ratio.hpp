@@ -1,3 +1,7 @@
+/** @brief CSS property: aspect-ratio
+ *
+ * aspect-ratio CSS property.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,7 @@
+/** @brief CSS property: text-wrap-mode
+ *
+ * text-wrap-mode CSS property.
+ */
 #pragma once
 
 #include <string>

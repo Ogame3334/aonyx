@@ -1,3 +1,7 @@
+/** @brief CSS property: view-timeline
+ *
+ * view-timeline CSS property.
+ */
 #pragma once
 
 #include <string>

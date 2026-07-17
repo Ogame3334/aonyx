@@ -1,3 +1,7 @@
+/** @brief CSS function: stepped-value
+ *
+ * CSS function utilities for stepped-value.
+ */
 #pragma once
 
 #include <format>

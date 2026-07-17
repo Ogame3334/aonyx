@@ -1,3 +1,7 @@
+/** @brief CSS property: position-visibility
+ *
+ * position-visibility CSS property.
+ */
 #pragma once
 
 #include <string>

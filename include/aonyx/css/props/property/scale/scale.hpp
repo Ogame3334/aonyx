@@ -1,3 +1,7 @@
+/** @brief CSS property: scale
+ *
+ * scale CSS property.
+ */
 #pragma once
 
 #include <format>

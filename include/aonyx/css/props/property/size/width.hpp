@@ -1,3 +1,7 @@
+/** @brief CSS property: width
+ *
+ * width CSS property.
+ */
 #pragma once
 
 #include <string>

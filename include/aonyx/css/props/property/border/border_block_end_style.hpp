@@ -1,3 +1,7 @@
+/** @brief CSS property: border-block-end-style
+ *
+ * border-block-end-style CSS property.
+ */
 #pragma once
 
 #include <string>

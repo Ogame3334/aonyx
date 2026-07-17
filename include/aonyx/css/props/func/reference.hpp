@@ -1,3 +1,7 @@
+/** @brief CSS function: reference
+ *
+ * CSS function utilities for reference.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,7 @@
+/** @brief CSS property: justify-content
+ *
+ * justify-content CSS property.
+ */
 #pragma once
 
 #include <string>

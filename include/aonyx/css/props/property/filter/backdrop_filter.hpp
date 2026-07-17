@@ -1,3 +1,7 @@
+/** @brief CSS property: backdrop-filter
+ *
+ * backdrop-filter CSS property.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,7 @@
+/** @brief CSS property: hyphens
+ *
+ * hyphens CSS property.
+ */
 #pragma once
 
 #include <string>

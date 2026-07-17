@@ -1,3 +1,7 @@
+/** @brief CSS property: scrollbar-width
+ *
+ * scrollbar-width CSS property.
+ */
 #pragma once
 
 #include <string>

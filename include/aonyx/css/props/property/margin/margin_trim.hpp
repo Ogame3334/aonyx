@@ -1,3 +1,7 @@
+/** @brief CSS property: margin-trim
+ *
+ * margin-trim CSS property.
+ */
 #pragma once
 
 #include <string_view>

@@ -1,3 +1,7 @@
+/** @brief CSS property: initial-letter
+ *
+ * initial-letter CSS property.
+ */
 #pragma once
 
 #include <string>

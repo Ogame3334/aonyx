@@ -1,3 +1,7 @@
+/** @brief CSS property: clip
+ *
+ * clip CSS property.
+ */
 #pragma once
 
 #include <string>

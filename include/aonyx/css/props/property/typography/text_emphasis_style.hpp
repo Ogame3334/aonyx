@@ -1,3 +1,7 @@
+/** @brief CSS property: text-emphasis-style
+ *
+ * text-emphasis-style CSS property.
+ */
 #pragma once
 
 #include <string>

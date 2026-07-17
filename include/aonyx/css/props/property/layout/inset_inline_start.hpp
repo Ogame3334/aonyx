@@ -1,3 +1,7 @@
+/** @brief CSS property: inset-inline-start
+ *
+ * inset-inline-start CSS property.
+ */
 #pragma once
 
 #include <string>

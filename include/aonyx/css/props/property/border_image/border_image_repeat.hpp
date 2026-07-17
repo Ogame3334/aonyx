@@ -1,3 +1,7 @@
+/** @brief CSS property: border-image-repeat
+ *
+ * border-image-repeat CSS property.
+ */
 #pragma once
 
 #include <string>

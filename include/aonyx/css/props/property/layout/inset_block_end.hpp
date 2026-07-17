@@ -1,3 +1,7 @@
+/** @brief CSS property: inset-block-end
+ *
+ * inset-block-end CSS property.
+ */
 #pragma once
 
 #include <string>

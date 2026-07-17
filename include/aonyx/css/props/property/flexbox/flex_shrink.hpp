@@ -1,3 +1,7 @@
+/** @brief CSS property: flex-shrink
+ *
+ * flex-shrink CSS property.
+ */
 #pragma once
 
 #include <string>

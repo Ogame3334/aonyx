@@ -1,3 +1,7 @@
+/** @brief CSS property: caret
+ *
+ * caret CSS property.
+ */
 #pragma once
 
 #include <string>

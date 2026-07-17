@@ -1,3 +1,7 @@
+/** @brief CSS property: font-optical-sizing
+ *
+ * font-optical-sizing CSS property.
+ */
 #pragma once
 
 #include <string>

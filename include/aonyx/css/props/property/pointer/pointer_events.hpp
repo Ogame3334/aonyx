@@ -1,3 +1,7 @@
+/** @brief CSS property: pointer-events
+ *
+ * pointer-events CSS property.
+ */
 #pragma once
 
 #include <string>

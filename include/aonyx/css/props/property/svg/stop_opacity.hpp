@@ -1,3 +1,7 @@
+/** @brief CSS property: stop-opacity
+ *
+ * stop-opacity CSS property.
+ */
 #pragma once
 
 #include <string>

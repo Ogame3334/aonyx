@@ -1,3 +1,7 @@
+/** @brief CSS property: text-anchor
+ *
+ * text-anchor CSS property.
+ */
 #pragma once
 
 #include <string>

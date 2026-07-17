@@ -1,3 +1,7 @@
+/** @brief CSS property: padding-top
+ *
+ * padding-top CSS property.
+ */
 #pragma once
 
 #include <format>

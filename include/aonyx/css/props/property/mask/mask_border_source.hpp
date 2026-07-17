@@ -1,3 +1,7 @@
+/** @brief CSS property: mask-border-source
+ *
+ * mask-border-source CSS property.
+ */
 #pragma once
 
 #include <string>

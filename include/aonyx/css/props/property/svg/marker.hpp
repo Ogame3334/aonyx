@@ -1,3 +1,7 @@
+/** @brief CSS property: marker
+ *
+ * marker CSS property.
+ */
 #pragma once
 
 #include <string>

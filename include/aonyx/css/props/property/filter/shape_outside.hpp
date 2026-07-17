@@ -1,3 +1,7 @@
+/** @brief CSS property: shape-outside
+ *
+ * shape-outside CSS property.
+ */
 #pragma once
 
 #include <string>

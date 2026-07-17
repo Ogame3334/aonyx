@@ -1,3 +1,7 @@
+/** @brief CSS property: fill-rule
+ *
+ * fill-rule CSS property.
+ */
 #pragma once
 
 #include <string>

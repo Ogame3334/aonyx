@@ -1,3 +1,7 @@
+/** @brief CSS function: easing
+ *
+ * CSS function utilities for easing.
+ */
 #pragma once
 
 #include <string>

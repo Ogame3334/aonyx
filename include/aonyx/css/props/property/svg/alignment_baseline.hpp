@@ -1,3 +1,7 @@
+/** @brief CSS property: alignment-baseline
+ *
+ * alignment-baseline CSS property.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,7 @@
+/** @brief CSS property: background-position-y
+ *
+ * background-position-y CSS property.
+ */
 #pragma once
 
 #include <string>

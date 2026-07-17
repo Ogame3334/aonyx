@@ -1,3 +1,7 @@
+/** @brief CSS property: font-stretch
+ *
+ * font-stretch CSS property.
+ */
 #pragma once
 
 #include <string>

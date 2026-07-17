@@ -1,3 +1,7 @@
+/** @brief CSS property: table-layout
+ *
+ * table-layout CSS property.
+ */
 #pragma once
 
 #include <string>

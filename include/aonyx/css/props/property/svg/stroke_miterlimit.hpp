@@ -1,3 +1,7 @@
+/** @brief CSS property: stroke-miterlimit
+ *
+ * stroke-miterlimit CSS property.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,7 @@
+/** @brief CSS property: caret-shape
+ *
+ * caret-shape CSS property.
+ */
 #pragma once
 
 #include <string>

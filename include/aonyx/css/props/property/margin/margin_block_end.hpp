@@ -1,3 +1,7 @@
+/** @brief CSS property: margin-block-end
+ *
+ * margin-block-end CSS property.
+ */
 #pragma once
 
 #include <format>

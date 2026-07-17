@@ -1,3 +1,7 @@
+/** @brief CSS property: margin-bottom
+ *
+ * margin-bottom CSS property.
+ */
 #pragma once
 
 #include <format>

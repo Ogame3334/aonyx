@@ -1,3 +1,7 @@
+/** @brief CSS property: animation-delay
+ *
+ * animation-delay CSS property.
+ */
 #pragma once
 
 #include <string>

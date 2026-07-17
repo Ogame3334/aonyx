@@ -1,3 +1,7 @@
+/** @brief CSS property: stroke
+ *
+ * stroke CSS property.
+ */
 #pragma once
 
 #include <string>

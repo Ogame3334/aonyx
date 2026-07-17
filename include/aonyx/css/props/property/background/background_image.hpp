@@ -1,3 +1,7 @@
+/** @brief CSS property: background-image
+ *
+ * background-image CSS property.
+ */
 #pragma once
 
 #include <string>

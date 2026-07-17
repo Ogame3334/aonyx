@@ -1,3 +1,7 @@
+/** @brief CSS property: transition-delay
+ *
+ * transition-delay CSS property.
+ */
 #pragma once
 
 #include <string>

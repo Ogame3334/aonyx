@@ -1,3 +1,7 @@
+/** @brief CSS property: outline-offset
+ *
+ * outline-offset CSS property.
+ */
 #pragma once
 
 #include <string>

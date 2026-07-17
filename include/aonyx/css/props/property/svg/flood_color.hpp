@@ -1,3 +1,7 @@
+/** @brief CSS property: flood-color
+ *
+ * flood-color CSS property.
+ */
 #pragma once
 
 #include <string>

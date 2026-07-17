@@ -1,3 +1,7 @@
+/** @brief CSS property: scroll-padding-block
+ *
+ * scroll-padding-block CSS property.
+ */
 #pragma once
 
 #include <string>

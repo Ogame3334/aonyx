@@ -1,3 +1,7 @@
+/** @brief CSS property: min-width
+ *
+ * min-width CSS property.
+ */
 #pragma once
 
 #include <string>

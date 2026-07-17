@@ -1,3 +1,7 @@
+/** @brief CSS property: page
+ *
+ * page CSS property.
+ */
 #pragma once
 
 #include <string>

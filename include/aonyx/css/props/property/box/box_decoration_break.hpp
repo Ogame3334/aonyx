@@ -1,3 +1,7 @@
+/** @brief CSS property: box-decoration-break
+ *
+ * box-decoration-break CSS property.
+ */
 #pragma once
 
 #include <string>

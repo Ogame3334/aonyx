@@ -1,3 +1,7 @@
+/** @brief CSS property: overflow-x
+ *
+ * overflow-x CSS property.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,7 @@
+/** @brief CSS property: margin
+ *
+ * margin CSS property.
+ */
 #pragma once
 
 #include <format>

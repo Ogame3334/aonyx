@@ -1,3 +1,7 @@
+/** @brief CSS property: stroke-width
+ *
+ * stroke-width CSS property.
+ */
 #pragma once
 
 #include <string>

@@ -1,3 +1,5 @@
+/** @brief Implementation of the HTTP router with path-trie dispatch. */
+
 #include <algorithm>
 
 #include <aonyx/http/server/router.hpp>
@@ -6,6 +8,9 @@ namespace aonyx
 {
     namespace http
     {
+        /** @brief Dispatch an incoming request to the matching handler.
+         *  @param req The incoming HTTP request.
+         *  @param res The response to populate. */
         void router::dispatch(const request &req, response &res) const
         {
             if (req.method == method::unknown)
@@ -33,6 +38,9 @@ namespace aonyx
             handler(req, res, params);
         }
 
+        /** @brief Register a handler at the given path in the trie.
+         *  @param path The URL path (e.g. "/api/users/{}").
+         *  @param handler The handler to invoke on match. */
         void router::route_trie::add(const std::string_view path, util::inner_handler_t &&handler)
         {
             using namespace std::literals;
@@ -75,6 +83,10 @@ namespace aonyx
             node->handler = std::forward<util::inner_handler_t>(handler);
         }
 
+        /** @brief Look up a path in the trie and extract wildcard parameters.
+         *  @param path The URL path to match.
+         *  @param params Output vector populated with wildcard segment values.
+         *  @return The matching handler, or nullptr if no route matches. */
         util::inner_handler_t router::route_trie::find(std::string_view path, util::inner_handler_params_t &params) const
         {
             using namespace std::literals;
@@ -127,6 +139,9 @@ namespace aonyx
 
             return node->handler;
         }
+        /** @brief Get the trie corresponding to the HTTP method (const).
+         *  @param method The HTTP method.
+         *  @return Reference to the matching route_trie. */
         const router::route_trie &router::dispatch_trie(method method) const
         {
             switch (method)
@@ -143,6 +158,9 @@ namespace aonyx
                 return unknown_trie_;
             }
         }
+        /** @brief Get the trie corresponding to the HTTP method (mutable).
+         *  @param method The HTTP method.
+         *  @return Reference to the matching route_trie. */
         router::route_trie &router::dispatch_trie(method method)
         {
             switch (method)

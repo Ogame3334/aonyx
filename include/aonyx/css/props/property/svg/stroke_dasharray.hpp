@@ -1,3 +1,7 @@
+/** @brief CSS property: stroke-dasharray
+ *
+ * stroke-dasharray CSS property.
+ */
 #pragma once
 
 #include <string>

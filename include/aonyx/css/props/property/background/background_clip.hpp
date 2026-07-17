@@ -1,3 +1,7 @@
+/** @brief CSS property: background-clip
+ *
+ * background-clip CSS property.
+ */
 #pragma once
 
 #include <string>

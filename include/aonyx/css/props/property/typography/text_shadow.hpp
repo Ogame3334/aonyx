@@ -1,3 +1,7 @@
+/** @brief CSS property: text-shadow
+ *
+ * text-shadow CSS property.
+ */
 #pragma once
 
 #include <string>

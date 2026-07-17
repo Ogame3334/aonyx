@@ -1,3 +1,7 @@
+/** @brief CSS property: max-height
+ *
+ * max-height CSS property.
+ */
 #pragma once
 
 #include <string>

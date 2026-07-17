@@ -1,3 +1,7 @@
+/** @brief CSS property: height
+ *
+ * height CSS property.
+ */
 #pragma once
 
 #include <string>

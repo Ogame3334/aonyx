@@ -1,3 +1,7 @@
+/** @brief CSS property: cy
+ *
+ * cy CSS property.
+ */
 #pragma once
 
 #include <string>

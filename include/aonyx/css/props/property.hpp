@@ -1,3 +1,5 @@
+/** @brief Aggregate header that includes all CSS property definition headers (~450+ properties). */
+
 #pragma once
 
 // anchor

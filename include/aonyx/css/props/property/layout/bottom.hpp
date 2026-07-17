@@ -1,3 +1,7 @@
+/** @brief CSS property: bottom
+ *
+ * bottom CSS property.
+ */
 #pragma once
 
 #include <string>

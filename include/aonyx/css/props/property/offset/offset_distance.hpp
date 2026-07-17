@@ -1,3 +1,7 @@
+/** @brief CSS property: offset-distance
+ *
+ * offset-distance CSS property.
+ */
 #pragma once
 
 #include <string>

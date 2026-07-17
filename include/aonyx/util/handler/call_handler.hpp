@@ -1,3 +1,4 @@
+/** @brief Internal machinery for dispatching handler calls with parameter conversion. */
 #pragma once
 
 #include <vector>

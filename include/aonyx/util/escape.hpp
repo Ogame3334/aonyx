@@ -1,3 +1,4 @@
+/** @brief HTML string escaping utilities. */
 #pragma once
 
 #include <string>
@@ -7,6 +8,9 @@ namespace aonyx
 {
     namespace util
     {
+        /** @brief Escape special HTML characters (&, ", ', <, >) with their entity equivalents.
+         *  @param data The input string view to escape.
+         *  @return A new string with HTML entities substituted. */
         inline std::string escape_html(std::string_view data)
         {
             std::string buffer;

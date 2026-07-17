@@ -1,3 +1,7 @@
+/** @brief CSS property: font-variant-caps
+ *
+ * font-variant-caps CSS property.
+ */
 #pragma once
 
 #include <string>

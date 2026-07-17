@@ -1,3 +1,7 @@
+/** @brief CSS property: font-width
+ *
+ * font-width CSS property.
+ */
 #pragma once
 
 #include <string>

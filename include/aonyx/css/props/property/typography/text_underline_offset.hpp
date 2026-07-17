@@ -1,3 +1,7 @@
+/** @brief CSS property: text-underline-offset
+ *
+ * text-underline-offset CSS property.
+ */
 #pragma once
 
 #include <string>

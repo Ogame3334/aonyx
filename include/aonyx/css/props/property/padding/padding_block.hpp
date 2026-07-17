@@ -1,3 +1,7 @@
+/** @brief CSS property: padding-block
+ *
+ * padding-block CSS property.
+ */
 #pragma once
 
 #include <format>

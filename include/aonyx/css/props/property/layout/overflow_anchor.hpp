@@ -1,3 +1,7 @@
+/** @brief CSS property: overflow-anchor
+ *
+ * overflow-anchor CSS property.
+ */
 #pragma once
 
 #include <string>

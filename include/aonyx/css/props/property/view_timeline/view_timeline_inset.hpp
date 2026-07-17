@@ -1,3 +1,7 @@
+/** @brief CSS property: view-timeline-inset
+ *
+ * view-timeline-inset CSS property.
+ */
 #pragma once
 
 #include <string>

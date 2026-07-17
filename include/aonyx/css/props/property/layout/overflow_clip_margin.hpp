@@ -1,3 +1,7 @@
+/** @brief CSS property: overflow-clip-margin
+ *
+ * overflow-clip-margin CSS property.
+ */
 #pragma once
 
 #include <string>

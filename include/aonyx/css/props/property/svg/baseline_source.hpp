@@ -1,3 +1,7 @@
+/** @brief CSS property: baseline-source
+ *
+ * baseline-source CSS property.
+ */
 #pragma once
 
 #include <string>

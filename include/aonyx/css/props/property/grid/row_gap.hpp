@@ -1,3 +1,7 @@
+/** @brief CSS property: row-gap
+ *
+ * row-gap CSS property.
+ */
 #pragma once
 
 #include <string>

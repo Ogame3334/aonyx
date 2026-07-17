@@ -1,3 +1,7 @@
+/** @brief CSS property: speak-as
+ *
+ * speak-as CSS property.
+ */
 #pragma once
 
 #include <string>

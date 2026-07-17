@@ -1,3 +1,7 @@
+/** @brief CSS property: letter-spacing
+ *
+ * letter-spacing CSS property.
+ */
 #pragma once
 
 #include <string>
