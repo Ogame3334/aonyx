@@ -1,7 +1,7 @@
 /** @brief Implementations of type converters between aonyx types and Boost.Beast types. */
 
 #include "http/server/helper/convert.hpp"
-#include <cstdio>
+#include <charconv>
 
 namespace aonyx
 {
@@ -23,8 +23,8 @@ std::string url_decode(std::string_view str)
         {
             if (i + 2 < str.length())
             {
-                int value;
-                if (std::sscanf(str.data() + i + 1, "%2x", &value) == 1)
+                unsigned int value;
+                if (std::from_chars(str.data() + i + 1, str.data() + i + 3, value, 16).ec == std::errc{})
                 {
                     decoded += static_cast<char>(value);
                     i += 2;
