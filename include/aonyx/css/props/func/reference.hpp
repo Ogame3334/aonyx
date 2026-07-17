@@ -48,7 +48,7 @@ std::string url(std::string_view address)
 
 std::string var(std::string_view name)
 {
-    return std::format("var(--{})", name);
+    return std::format("var({})", name);
 }
 
 std::string var(std::string_view name, std::string_view fallback)
