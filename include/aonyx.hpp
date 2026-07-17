@@ -9,5 +9,6 @@
 #include <aonyx/dom.hpp>
 #include <aonyx/http/client/client.hpp>
 #include <aonyx/http/server/server.hpp>
-#include <aonyx/wrap/nlohmann/json.hpp>
 #include <aonyx/util/literal/numerical.hpp>
+#include <aonyx/version.hpp>
+#include <aonyx/wrap/nlohmann/json.hpp>
