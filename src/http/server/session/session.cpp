@@ -14,17 +14,16 @@ void session::read()
 {
     auto self = shared_from_this();
 
-    boost::beast::http::async_read(
-        socket_,
-        buffer_,
-        req_,
-        [self](boost::beast::error_code ec, std::size_t)
-        {
-            if (ec)
-                return;
+    boost::beast::http::async_read(socket_,
+                                   buffer_,
+                                   req_,
+                                   [self](boost::beast::error_code ec, std::size_t)
+                                   {
+                                       if (ec)
+                                           return;
 
-            self->handle_request();
-        });
+                                       self->handle_request();
+                                   });
 }
 
 /** @brief Convert the request, dispatch via router, and write the response asynchronously. */
@@ -35,29 +34,28 @@ void session::handle_request()
     router_.dispatch(req, response);
     auto res = std::make_shared<boost::beast::http::response<boost::beast::http::string_body>>(
         aonyx::impl::http::helper::response::convert(response));
-        
+
     res->keep_alive(req_.keep_alive());
 
     auto self = shared_from_this();
 
-    boost::beast::http::async_write(
-        socket_,
-        *res,
-        [self, res](boost::beast::error_code ec, std::size_t)
-        {
-            if (ec)
-                return;
-                
-            if (res->keep_alive())
-            {
-                self->req_ = {};
-                self->read();
-            }
-            else
-            {
-                boost::system::error_code ec_shutdown;
-                self->socket_.shutdown(
-                    boost::asio::ip::tcp::socket::shutdown_send, ec_shutdown);
-            }
-        });
+    boost::beast::http::async_write(socket_,
+                                    *res,
+                                    [self, res](boost::beast::error_code ec, std::size_t)
+                                    {
+                                        if (ec)
+                                            return;
+
+                                        if (res->keep_alive())
+                                        {
+                                            self->req_ = {};
+                                            self->read();
+                                        }
+                                        else
+                                        {
+                                            boost::system::error_code ec_shutdown;
+                                            self->socket_.shutdown(boost::asio::ip::tcp::socket::shutdown_send,
+                                                                   ec_shutdown);
+                                        }
+                                    });
 }

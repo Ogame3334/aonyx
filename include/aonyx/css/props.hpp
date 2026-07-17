@@ -1,4 +1,5 @@
-/** @brief Aggregate header for the CSS properties subsystem. Includes global values, functions, and all property definitions. */
+/** @brief Aggregate header for the CSS properties subsystem. Includes global values, functions, and all property
+ * definitions. */
 
 #pragma once
 

@@ -7,25 +7,27 @@
 #include <string>
 #include <string_view>
 
-#include <aonyx/css/props/types/property.hpp>
 #include <aonyx/css/props/constants/global_values.hpp>
+#include <aonyx/css/props/types/property.hpp>
 
 namespace aonyx
 {
-    namespace css
-    {
-        namespace props
-        {
-            namespace property
-            {
-                struct scroll_padding_left : types::property_base<"scroll-padding-left">, constants::global_values<scroll_padding_left>
-                {
-                    using super_property = types::property_base<"scroll-padding-left">;
+namespace css
+{
+namespace props
+{
+namespace property
+{
+struct scroll_padding_left : types::property_base<"scroll-padding-left">, constants::global_values<scroll_padding_left>
+{
+    using super_property = types::property_base<"scroll-padding-left">;
 
-                    scroll_padding_left() = delete;
-                    scroll_padding_left(std::string_view v) : super_property(std::string(v)) {}
-                };
-            }
-        }
+    scroll_padding_left() = delete;
+    scroll_padding_left(std::string_view v) : super_property(std::string(v))
+    {
     }
-}
+};
+} // namespace property
+} // namespace props
+} // namespace css
+} // namespace aonyx

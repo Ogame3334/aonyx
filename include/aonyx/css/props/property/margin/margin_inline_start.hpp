@@ -6,26 +6,28 @@
 
 #include <format>
 
-#include <aonyx/css/props/types/property.hpp>
 #include <aonyx/css/props/constants/global_values.hpp>
+#include <aonyx/css/props/types/property.hpp>
 #include <aonyx/util/numerical.hpp>
 
 namespace aonyx
 {
-    namespace css
-    {
-        namespace props
-        {
-            namespace property
-            {
-                struct margin_inline_start : types::property_base<"margin-inline-start">, constants::global_values<margin_inline_start>
-                {
-                    using super_property = types::property_base<"margin-inline-start">;
+namespace css
+{
+namespace props
+{
+namespace property
+{
+struct margin_inline_start : types::property_base<"margin-inline-start">, constants::global_values<margin_inline_start>
+{
+    using super_property = types::property_base<"margin-inline-start">;
 
-                    margin_inline_start() = delete;
-                    margin_inline_start(util::numerical s) : super_property(s.to_string()) {}
-                };
-            }
-        }
+    margin_inline_start() = delete;
+    margin_inline_start(util::numerical s) : super_property(s.to_string())
+    {
     }
-}
+};
+} // namespace property
+} // namespace props
+} // namespace css
+} // namespace aonyx

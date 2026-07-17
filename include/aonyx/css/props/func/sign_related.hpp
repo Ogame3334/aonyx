@@ -11,22 +11,22 @@
 
 namespace aonyx
 {
-    namespace css
-    {
-        namespace props
-        {
-            namespace func
-            {
-                std::string abs(util::numerical n)
-                {
-                    return std::format("abs({})", n);
-                }
-
-                std::string sign(util::numerical n)
-                {
-                    return std::format("sign({})", n);
-                }
-            }
-        }
-    }
+namespace css
+{
+namespace props
+{
+namespace func
+{
+std::string abs(util::numerical n)
+{
+    return std::format("abs({})", n);
 }
+
+std::string sign(util::numerical n)
+{
+    return std::format("sign({})", n);
+}
+} // namespace func
+} // namespace props
+} // namespace css
+} // namespace aonyx

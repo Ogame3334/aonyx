@@ -8,21 +8,21 @@
 
 namespace aonyx
 {
-    namespace http
-    {
-        /**
-         * @brief Supported HTTP request methods.
-         *
-         * Includes GET, POST, PUT, DELETE, and a sentinel for
-         * unrecognised methods.
-         */
-        enum class method
-        {
-            get,
-            post,
-            put,
-            delete_,
-            unknown
-        };
-    }
-}
+namespace http
+{
+/**
+ * @brief Supported HTTP request methods.
+ *
+ * Includes GET, POST, PUT, DELETE, and a sentinel for
+ * unrecognised methods.
+ */
+enum class method
+{
+    get,
+    post,
+    put,
+    delete_,
+    unknown
+};
+} // namespace http
+} // namespace aonyx

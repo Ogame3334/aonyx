@@ -9,9 +9,9 @@
 
 namespace aonyx
 {
-    namespace http
-    {
-        /** @brief Map of header names to their values. */
-        using headers = std::unordered_map<std::string, std::string>;
-    }
-}
+namespace http
+{
+/** @brief Map of header names to their values. */
+using headers = std::unordered_map<std::string, std::string>;
+} // namespace http
+} // namespace aonyx

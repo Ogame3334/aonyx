@@ -7,25 +7,27 @@
 #include <string>
 #include <string_view>
 
-#include <aonyx/css/props/types/property.hpp>
 #include <aonyx/css/props/constants/global_values.hpp>
+#include <aonyx/css/props/types/property.hpp>
 
 namespace aonyx
 {
-    namespace css
-    {
-        namespace props
-        {
-            namespace property
-            {
-                struct border_top_color : types::property_base<"border-top-color">, constants::global_values<border_top_color>
-                {
-                    using super_property = types::property_base<"border-top-color">;
+namespace css
+{
+namespace props
+{
+namespace property
+{
+struct border_top_color : types::property_base<"border-top-color">, constants::global_values<border_top_color>
+{
+    using super_property = types::property_base<"border-top-color">;
 
-                    border_top_color() = delete;
-                    border_top_color(std::string_view color) : super_property(std::string(color)) {}
-                };
-            }
-        }
+    border_top_color() = delete;
+    border_top_color(std::string_view color) : super_property(std::string(color))
+    {
     }
-}
+};
+} // namespace property
+} // namespace props
+} // namespace css
+} // namespace aonyx

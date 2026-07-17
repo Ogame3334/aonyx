@@ -6,26 +6,26 @@
 
 namespace aonyx
 {
-    namespace css
-    {
-        namespace props
-        {
-            namespace constants
-            {
-                /**
-                 * @brief Provides static constant members for CSS global keywords.
-                 * @tparam T A property type whose `key` is used as the property name for each constant.
-                 */
-                template <typename T>
-                struct global_values
-                {
-                    inline static constexpr types::property_constant inherit = {T::key, "inherit"};
-                    inline static constexpr types::property_constant initial = {T::key, "initial"};
-                    inline static constexpr types::property_constant revert = {T::key, "revert"};
-                    inline static constexpr types::property_constant revert_layer = {T::key, "revert-layer"};
-                    inline static constexpr types::property_constant unset = {T::key, "unset"};
-                };
-            }
-        }
-    }
-}
+namespace css
+{
+namespace props
+{
+namespace constants
+{
+/**
+ * @brief Provides static constant members for CSS global keywords.
+ * @tparam T A property type whose `key` is used as the property name for each constant.
+ */
+template <typename T>
+struct global_values
+{
+    inline static constexpr types::property_constant inherit = {T::key, "inherit"};
+    inline static constexpr types::property_constant initial = {T::key, "initial"};
+    inline static constexpr types::property_constant revert = {T::key, "revert"};
+    inline static constexpr types::property_constant revert_layer = {T::key, "revert-layer"};
+    inline static constexpr types::property_constant unset = {T::key, "unset"};
+};
+} // namespace constants
+} // namespace props
+} // namespace css
+} // namespace aonyx

@@ -8,22 +8,22 @@
 
 namespace aonyx
 {
-    namespace css
-    {
-        namespace props
-        {
-            namespace func
-            {
-                std::string sibling_index()
-                {
-                    return "sibling-index()";
-                }
-
-                std::string sibling_count()
-                {
-                    return "sibling-count()";
-                }
-            }
-        }
-    }
+namespace css
+{
+namespace props
+{
+namespace func
+{
+std::string sibling_index()
+{
+    return "sibling-index()";
 }
+
+std::string sibling_count()
+{
+    return "sibling-count()";
+}
+} // namespace func
+} // namespace props
+} // namespace css
+} // namespace aonyx
