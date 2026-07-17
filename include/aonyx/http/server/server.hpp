@@ -41,6 +41,11 @@ namespace aonyx
             /** @brief Register a prefix-scoped middleware. */
             void use(const std::string_view prefix, middleware_t mw);
 
+            void serve_static(
+                const std::string_view prefix,
+                const std::string& root_dir,
+                serve_static_options opts = {});
+
         private:
             class server_impl;
             std::unique_ptr<server_impl> pimpl_;

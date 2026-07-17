@@ -31,6 +31,7 @@ add_library(
     src/dom/html_tag/html_tag.cpp
     src/http/server/helper/convert.cpp
     src/http/server/router/router.cpp
+    src/http/server/serve_static/serve_static.cpp
     src/http/client/client/client.cpp
     src/http/server/server/server.cpp
     src/http/server/server/server_impl.cpp

@@ -26,6 +26,14 @@ namespace aonyx
             return path.size() > prefix.size() && path[prefix.size()] == '/';
         }
 
+        void router::serve_static(
+            const std::string_view prefix,
+            const std::string& root_dir,
+            serve_static_options opts)
+        {
+            use(prefix, make_serve_static(std::string(prefix), root_dir, std::move(opts)));
+        }
+
         /** @brief Dispatch an incoming request through middleware chain.
          *  @param req The incoming HTTP request.
          *  @param res The response to populate. */

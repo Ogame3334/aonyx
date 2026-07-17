@@ -18,6 +18,7 @@
 #include <aonyx/http/request.hpp>
 #include <aonyx/http/response.hpp>
 #include <aonyx/http/server/middleware.hpp>
+#include <aonyx/http/server/serve_static.hpp>
 #include <aonyx/util/handler/handler.hpp>
 
 #define AONYX_PARAM(req, res) const aonyx::http::request& req, aonyx::http::response& res
@@ -70,6 +71,11 @@ namespace aonyx
 
             void use(middleware_t mw);
             void use(const std::string_view prefix, middleware_t mw);
+
+            void serve_static(
+                const std::string_view prefix,
+                const std::string& root_dir,
+                serve_static_options opts = {});
 
             /**
              * @brief Route an incoming request to its registered handler.

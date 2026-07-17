@@ -45,4 +45,12 @@ namespace aonyx::http
         pimpl_->router().use(prefix, std::move(mw));
     }
 
+    void server::serve_static(
+        const std::string_view prefix,
+        const std::string& root_dir,
+        serve_static_options opts)
+    {
+        pimpl_->router().serve_static(prefix, root_dir, std::move(opts));
+    }
+
 } // namespace aonyx::http

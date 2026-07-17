@@ -84,6 +84,9 @@ int main()
         res.status = 200;
         res.headers["Content-Type"] = "text/json"; });
 
+    // 静的ファイル配信: ./public ディレクトリを /static で配信
+    server.serve_static("/static", "./public");
+
     router.get("/heavy", [](AONYX_PARAM(req, res))
                { 
                 std::this_thread::sleep_for(std::chrono::minutes(1));
