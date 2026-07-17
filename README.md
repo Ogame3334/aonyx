@@ -18,9 +18,11 @@ aonyx is a brand new web framework for C++ !!
 - **Client**: client request.
 - **CSS**: C++ object for CSS.
 
-## How to build
+## How to build and install
 
 ```bash
+git clone https://github.com/Ogame3334/aonyx.git
+cd aonyx
 mkdir build
 cd build
 cmake ..
@@ -57,4 +59,17 @@ target_link_libraries(your_target PRIVATE aonyx::aonyx)
 ## Special Thanks
 I deeply appreciate the help of the following people.
 
-<a href="https://github.com/yaito3014"><img alt="yaito3014" width=50 src="https://avatars.githubusercontent.com/u/29890657?v=4"></a>
+<table>
+  <tr>
+    <td width="80" align="center">
+      <a href="https://github.com/yaito3014">
+        <img
+          src="https://avatars.githubusercontent.com/u/29890657?v=4"
+          width="50"
+          alt="yaito3014"
+        ><br>
+        <sub>yaito3014</sub>
+      </a>
+    </td>
+  </tr>
+</table>
