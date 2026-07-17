@@ -28,6 +28,32 @@ cmake --build .
 cmake --install .
 ```
 
+## How to integrate into your CMake project
+
+### Using `find_package` (after install)
+
+```cmake
+find_package(aonyx REQUIRED)
+
+target_link_libraries(your_target PRIVATE aonyx::aonyx)
+```
+
+### Using `add_subdirectory` (FetchContent / submodule)
+
+```cmake
+include(FetchContent)
+FetchContent_Declare(
+    aonyx
+    GIT_REPOSITORY https://github.com/Ogame3334/aonyx.git
+    GIT_TAG main
+)
+set(AONYX_BUILD_EXAMPLES OFF)
+set(AONYX_INSTALL OFF)
+FetchContent_MakeAvailable(aonyx)
+
+target_link_libraries(your_target PRIVATE aonyx::aonyx)
+```
+
 ## Special Thanks
 I deeply appreciate the help of the following people.
 
