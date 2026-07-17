@@ -1,3 +1,5 @@
+/** @brief Template implementation of the make_stylesheet() function. */
+
 #pragma once
 
 #include <aonyx/css/stylesheet.hpp>

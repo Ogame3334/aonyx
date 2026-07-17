@@ -1,3 +1,5 @@
+/** @brief Aggregate header that includes all CSS property definition headers (~450+ properties). */
+
 #pragma once
 
 // anchor
@@ -5,33 +7,33 @@
 #include <aonyx/css/props/property/anchor/anchor_scope.hpp>
 #include <aonyx/css/props/property/anchor/position_anchor.hpp>
 #include <aonyx/css/props/property/anchor/position_area.hpp>
-#include <aonyx/css/props/property/anchor/position_try_fallbacks.hpp>
 #include <aonyx/css/props/property/anchor/position_try.hpp>
+#include <aonyx/css/props/property/anchor/position_try_fallbacks.hpp>
 #include <aonyx/css/props/property/anchor/position_try_order.hpp>
 #include <aonyx/css/props/property/anchor/position_visibility.hpp>
 
 // animation
+#include <aonyx/css/props/property/animation/animation.hpp>
 #include <aonyx/css/props/property/animation/animation_composition.hpp>
 #include <aonyx/css/props/property/animation/animation_delay.hpp>
 #include <aonyx/css/props/property/animation/animation_direction.hpp>
 #include <aonyx/css/props/property/animation/animation_duration.hpp>
 #include <aonyx/css/props/property/animation/animation_fill_mode.hpp>
-#include <aonyx/css/props/property/animation/animation.hpp>
 #include <aonyx/css/props/property/animation/animation_iteration_count.hpp>
 #include <aonyx/css/props/property/animation/animation_name.hpp>
 #include <aonyx/css/props/property/animation/animation_play_state.hpp>
-#include <aonyx/css/props/property/animation/animation_range_end.hpp>
 #include <aonyx/css/props/property/animation/animation_range.hpp>
+#include <aonyx/css/props/property/animation/animation_range_end.hpp>
 #include <aonyx/css/props/property/animation/animation_range_start.hpp>
 #include <aonyx/css/props/property/animation/animation_timeline.hpp>
 #include <aonyx/css/props/property/animation/animation_timing_function.hpp>
 
 // background
+#include <aonyx/css/props/property/background/background.hpp>
 #include <aonyx/css/props/property/background/background_attachment.hpp>
 #include <aonyx/css/props/property/background/background_blend_mode.hpp>
 #include <aonyx/css/props/property/background/background_clip.hpp>
 #include <aonyx/css/props/property/background/background_color.hpp>
-#include <aonyx/css/props/property/background/background.hpp>
 #include <aonyx/css/props/property/background/background_image.hpp>
 #include <aonyx/css/props/property/background/background_origin.hpp>
 #include <aonyx/css/props/property/background/background_position.hpp>
@@ -43,49 +45,49 @@
 #include <aonyx/css/props/property/background/background_size.hpp>
 
 // border
+#include <aonyx/css/props/property/border/border.hpp>
+#include <aonyx/css/props/property/border/border_block.hpp>
 #include <aonyx/css/props/property/border/border_block_color.hpp>
-#include <aonyx/css/props/property/border/border_block_end_color.hpp>
 #include <aonyx/css/props/property/border/border_block_end.hpp>
+#include <aonyx/css/props/property/border/border_block_end_color.hpp>
 #include <aonyx/css/props/property/border/border_block_end_style.hpp>
 #include <aonyx/css/props/property/border/border_block_end_width.hpp>
-#include <aonyx/css/props/property/border/border_block.hpp>
-#include <aonyx/css/props/property/border/border_block_start_color.hpp>
 #include <aonyx/css/props/property/border/border_block_start.hpp>
+#include <aonyx/css/props/property/border/border_block_start_color.hpp>
 #include <aonyx/css/props/property/border/border_block_start_style.hpp>
 #include <aonyx/css/props/property/border/border_block_start_width.hpp>
 #include <aonyx/css/props/property/border/border_block_style.hpp>
 #include <aonyx/css/props/property/border/border_block_width.hpp>
-#include <aonyx/css/props/property/border/border_bottom_color.hpp>
 #include <aonyx/css/props/property/border/border_bottom.hpp>
+#include <aonyx/css/props/property/border/border_bottom_color.hpp>
 #include <aonyx/css/props/property/border/border_bottom_style.hpp>
 #include <aonyx/css/props/property/border/border_bottom_width.hpp>
 #include <aonyx/css/props/property/border/border_collapse.hpp>
 #include <aonyx/css/props/property/border/border_color.hpp>
-#include <aonyx/css/props/property/border/border.hpp>
+#include <aonyx/css/props/property/border/border_inline.hpp>
 #include <aonyx/css/props/property/border/border_inline_color.hpp>
-#include <aonyx/css/props/property/border/border_inline_end_color.hpp>
 #include <aonyx/css/props/property/border/border_inline_end.hpp>
+#include <aonyx/css/props/property/border/border_inline_end_color.hpp>
 #include <aonyx/css/props/property/border/border_inline_end_style.hpp>
 #include <aonyx/css/props/property/border/border_inline_end_width.hpp>
-#include <aonyx/css/props/property/border/border_inline.hpp>
-#include <aonyx/css/props/property/border/border_inline_start_color.hpp>
 #include <aonyx/css/props/property/border/border_inline_start.hpp>
+#include <aonyx/css/props/property/border/border_inline_start_color.hpp>
 #include <aonyx/css/props/property/border/border_inline_start_style.hpp>
 #include <aonyx/css/props/property/border/border_inline_start_width.hpp>
 #include <aonyx/css/props/property/border/border_inline_style.hpp>
 #include <aonyx/css/props/property/border/border_inline_width.hpp>
-#include <aonyx/css/props/property/border/border_left_color.hpp>
 #include <aonyx/css/props/property/border/border_left.hpp>
+#include <aonyx/css/props/property/border/border_left_color.hpp>
 #include <aonyx/css/props/property/border/border_left_style.hpp>
 #include <aonyx/css/props/property/border/border_left_width.hpp>
-#include <aonyx/css/props/property/border/border_right_color.hpp>
 #include <aonyx/css/props/property/border/border_right.hpp>
+#include <aonyx/css/props/property/border/border_right_color.hpp>
 #include <aonyx/css/props/property/border/border_right_style.hpp>
 #include <aonyx/css/props/property/border/border_right_width.hpp>
 #include <aonyx/css/props/property/border/border_spacing.hpp>
 #include <aonyx/css/props/property/border/border_style.hpp>
-#include <aonyx/css/props/property/border/border_top_color.hpp>
 #include <aonyx/css/props/property/border/border_top.hpp>
+#include <aonyx/css/props/property/border/border_top_color.hpp>
 #include <aonyx/css/props/property/border/border_top_style.hpp>
 #include <aonyx/css/props/property/border/border_top_width.hpp>
 #include <aonyx/css/props/property/border/border_width.hpp>
@@ -115,9 +117,9 @@
 #include <aonyx/css/props/property/box/box_sizing.hpp>
 
 // color
+#include <aonyx/css/props/property/color/caret.hpp>
 #include <aonyx/css/props/property/color/caret_animation.hpp>
 #include <aonyx/css/props/property/color/caret_color.hpp>
-#include <aonyx/css/props/property/color/caret.hpp>
 #include <aonyx/css/props/property/color/caret_shape.hpp>
 #include <aonyx/css/props/property/color/color.hpp>
 #include <aonyx/css/props/property/color/color_scheme.hpp>
@@ -132,14 +134,14 @@
 #include <aonyx/css/props/property/column/column_fill.hpp>
 #include <aonyx/css/props/property/column/column_gap.hpp>
 #include <aonyx/css/props/property/column/column_height.hpp>
-#include <aonyx/css/props/property/column/column_rule_color.hpp>
 #include <aonyx/css/props/property/column/column_rule.hpp>
+#include <aonyx/css/props/property/column/column_rule_color.hpp>
 #include <aonyx/css/props/property/column/column_rule_style.hpp>
 #include <aonyx/css/props/property/column/column_rule_width.hpp>
-#include <aonyx/css/props/property/column/columns.hpp>
 #include <aonyx/css/props/property/column/column_span.hpp>
 #include <aonyx/css/props/property/column/column_width.hpp>
 #include <aonyx/css/props/property/column/column_wrap.hpp>
+#include <aonyx/css/props/property/column/columns.hpp>
 
 // content
 #include <aonyx/css/props/property/content/content.hpp>
@@ -163,11 +165,11 @@
 #include <aonyx/css/props/property/flexbox/align_content.hpp>
 #include <aonyx/css/props/property/flexbox/align_items.hpp>
 #include <aonyx/css/props/property/flexbox/align_self.hpp>
+#include <aonyx/css/props/property/flexbox/flex.hpp>
 #include <aonyx/css/props/property/flexbox/flex_basis.hpp>
 #include <aonyx/css/props/property/flexbox/flex_direction.hpp>
 #include <aonyx/css/props/property/flexbox/flex_flow.hpp>
 #include <aonyx/css/props/property/flexbox/flex_grow.hpp>
-#include <aonyx/css/props/property/flexbox/flex.hpp>
 #include <aonyx/css/props/property/flexbox/flex_shrink.hpp>
 #include <aonyx/css/props/property/flexbox/flex_wrap.hpp>
 #include <aonyx/css/props/property/flexbox/justify_content.hpp>
@@ -180,20 +182,20 @@
 
 // grid
 #include <aonyx/css/props/property/grid/gap.hpp>
+#include <aonyx/css/props/property/grid/grid.hpp>
 #include <aonyx/css/props/property/grid/grid_area.hpp>
 #include <aonyx/css/props/property/grid/grid_auto_columns.hpp>
 #include <aonyx/css/props/property/grid/grid_auto_flow.hpp>
 #include <aonyx/css/props/property/grid/grid_auto_rows.hpp>
-#include <aonyx/css/props/property/grid/grid_column_end.hpp>
 #include <aonyx/css/props/property/grid/grid_column.hpp>
+#include <aonyx/css/props/property/grid/grid_column_end.hpp>
 #include <aonyx/css/props/property/grid/grid_column_start.hpp>
-#include <aonyx/css/props/property/grid/grid.hpp>
-#include <aonyx/css/props/property/grid/grid_row_end.hpp>
 #include <aonyx/css/props/property/grid/grid_row.hpp>
+#include <aonyx/css/props/property/grid/grid_row_end.hpp>
 #include <aonyx/css/props/property/grid/grid_row_start.hpp>
+#include <aonyx/css/props/property/grid/grid_template.hpp>
 #include <aonyx/css/props/property/grid/grid_template_areas.hpp>
 #include <aonyx/css/props/property/grid/grid_template_columns.hpp>
-#include <aonyx/css/props/property/grid/grid_template.hpp>
 #include <aonyx/css/props/property/grid/grid_template_rows.hpp>
 #include <aonyx/css/props/property/grid/row_gap.hpp>
 
@@ -208,31 +210,31 @@
 // layout
 #include <aonyx/css/props/property/layout/bottom.hpp>
 #include <aonyx/css/props/property/layout/clear.hpp>
-#include <aonyx/css/props/property/layout/container.hpp>
-#include <aonyx/css/props/property/layout/container_name.hpp>
-#include <aonyx/css/props/property/layout/container_type.hpp>
 #include <aonyx/css/props/property/layout/contain.hpp>
 #include <aonyx/css/props/property/layout/contain_intrinsic_block_size.hpp>
 #include <aonyx/css/props/property/layout/contain_intrinsic_height.hpp>
 #include <aonyx/css/props/property/layout/contain_intrinsic_inline_size.hpp>
 #include <aonyx/css/props/property/layout/contain_intrinsic_size.hpp>
 #include <aonyx/css/props/property/layout/contain_intrinsic_width.hpp>
+#include <aonyx/css/props/property/layout/container.hpp>
+#include <aonyx/css/props/property/layout/container_name.hpp>
+#include <aonyx/css/props/property/layout/container_type.hpp>
 #include <aonyx/css/props/property/layout/direction.hpp>
 #include <aonyx/css/props/property/layout/display.hpp>
 #include <aonyx/css/props/property/layout/float.hpp>
-#include <aonyx/css/props/property/layout/inset_block_end.hpp>
-#include <aonyx/css/props/property/layout/inset_block.hpp>
-#include <aonyx/css/props/property/layout/inset_block_start.hpp>
 #include <aonyx/css/props/property/layout/inset.hpp>
-#include <aonyx/css/props/property/layout/inset_inline_end.hpp>
+#include <aonyx/css/props/property/layout/inset_block.hpp>
+#include <aonyx/css/props/property/layout/inset_block_end.hpp>
+#include <aonyx/css/props/property/layout/inset_block_start.hpp>
 #include <aonyx/css/props/property/layout/inset_inline.hpp>
+#include <aonyx/css/props/property/layout/inset_inline_end.hpp>
 #include <aonyx/css/props/property/layout/inset_inline_start.hpp>
 #include <aonyx/css/props/property/layout/isolation.hpp>
 #include <aonyx/css/props/property/layout/left.hpp>
+#include <aonyx/css/props/property/layout/overflow.hpp>
 #include <aonyx/css/props/property/layout/overflow_anchor.hpp>
 #include <aonyx/css/props/property/layout/overflow_block.hpp>
 #include <aonyx/css/props/property/layout/overflow_clip_margin.hpp>
-#include <aonyx/css/props/property/layout/overflow.hpp>
 #include <aonyx/css/props/property/layout/overflow_inline.hpp>
 #include <aonyx/css/props/property/layout/overflow_wrap.hpp>
 #include <aonyx/css/props/property/layout/overflow_x.hpp>
@@ -249,13 +251,13 @@
 #include <aonyx/css/props/property/layout/z_index.hpp>
 
 // margin
-#include <aonyx/css/props/property/margin/margin_block_end.hpp>
+#include <aonyx/css/props/property/margin/margin.hpp>
 #include <aonyx/css/props/property/margin/margin_block.hpp>
+#include <aonyx/css/props/property/margin/margin_block_end.hpp>
 #include <aonyx/css/props/property/margin/margin_block_start.hpp>
 #include <aonyx/css/props/property/margin/margin_bottom.hpp>
-#include <aonyx/css/props/property/margin/margin.hpp>
-#include <aonyx/css/props/property/margin/margin_inline_end.hpp>
 #include <aonyx/css/props/property/margin/margin_inline.hpp>
+#include <aonyx/css/props/property/margin/margin_inline_end.hpp>
 #include <aonyx/css/props/property/margin/margin_inline_start.hpp>
 #include <aonyx/css/props/property/margin/margin_left.hpp>
 #include <aonyx/css/props/property/margin/margin_right.hpp>
@@ -263,6 +265,7 @@
 #include <aonyx/css/props/property/margin/margin_trim.hpp>
 
 // mask
+#include <aonyx/css/props/property/mask/mask.hpp>
 #include <aonyx/css/props/property/mask/mask_border.hpp>
 #include <aonyx/css/props/property/mask/mask_border_mode.hpp>
 #include <aonyx/css/props/property/mask/mask_border_outset.hpp>
@@ -272,7 +275,6 @@
 #include <aonyx/css/props/property/mask/mask_border_width.hpp>
 #include <aonyx/css/props/property/mask/mask_clip.hpp>
 #include <aonyx/css/props/property/mask/mask_composite.hpp>
-#include <aonyx/css/props/property/mask/mask.hpp>
 #include <aonyx/css/props/property/mask/mask_image.hpp>
 #include <aonyx/css/props/property/mask/mask_mode.hpp>
 #include <aonyx/css/props/property/mask/mask_origin.hpp>
@@ -285,46 +287,46 @@
 
 // offset
 #include <aonyx/css/props/property/offset/clip.hpp>
+#include <aonyx/css/props/property/offset/offset.hpp>
 #include <aonyx/css/props/property/offset/offset_anchor.hpp>
 #include <aonyx/css/props/property/offset/offset_distance.hpp>
-#include <aonyx/css/props/property/offset/offset.hpp>
 #include <aonyx/css/props/property/offset/offset_path.hpp>
 #include <aonyx/css/props/property/offset/offset_position.hpp>
 #include <aonyx/css/props/property/offset/offset_rotate.hpp>
 
 // outline
-#include <aonyx/css/props/property/outline/outline_color.hpp>
 #include <aonyx/css/props/property/outline/outline.hpp>
+#include <aonyx/css/props/property/outline/outline_color.hpp>
 #include <aonyx/css/props/property/outline/outline_offset.hpp>
 #include <aonyx/css/props/property/outline/outline_style.hpp>
 #include <aonyx/css/props/property/outline/outline_width.hpp>
 
 // overscroll
-#include <aonyx/css/props/property/overscroll/overscroll_behavior_block.hpp>
 #include <aonyx/css/props/property/overscroll/overscroll_behavior.hpp>
+#include <aonyx/css/props/property/overscroll/overscroll_behavior_block.hpp>
 #include <aonyx/css/props/property/overscroll/overscroll_behavior_inline.hpp>
 #include <aonyx/css/props/property/overscroll/overscroll_behavior_x.hpp>
 #include <aonyx/css/props/property/overscroll/overscroll_behavior_y.hpp>
 
 // padding
-#include <aonyx/css/props/property/padding/padding_block_end.hpp>
+#include <aonyx/css/props/property/padding/padding.hpp>
 #include <aonyx/css/props/property/padding/padding_block.hpp>
+#include <aonyx/css/props/property/padding/padding_block_end.hpp>
 #include <aonyx/css/props/property/padding/padding_block_start.hpp>
 #include <aonyx/css/props/property/padding/padding_bottom.hpp>
 #include <aonyx/css/props/property/padding/padding_end.hpp>
-#include <aonyx/css/props/property/padding/padding.hpp>
-#include <aonyx/css/props/property/padding/padding_inline_end.hpp>
 #include <aonyx/css/props/property/padding/padding_inline.hpp>
+#include <aonyx/css/props/property/padding/padding_inline_end.hpp>
 #include <aonyx/css/props/property/padding/padding_inline_start.hpp>
 #include <aonyx/css/props/property/padding/padding_left.hpp>
 #include <aonyx/css/props/property/padding/padding_right.hpp>
 #include <aonyx/css/props/property/padding/padding_top.hpp>
 
 // page
+#include <aonyx/css/props/property/page/page.hpp>
 #include <aonyx/css/props/property/page/page_break_after.hpp>
 #include <aonyx/css/props/property/page/page_break_before.hpp>
 #include <aonyx/css/props/property/page/page_break_inside.hpp>
-#include <aonyx/css/props/property/page/page.hpp>
 
 // pointer
 #include <aonyx/css/props/property/pointer/cursor.hpp>
@@ -341,30 +343,27 @@
 #include <aonyx/css/props/property/scale/scale.hpp>
 
 // scroll
-#include <aonyx/css/props/property/scroll/scrollbar_color.hpp>
-#include <aonyx/css/props/property/scroll/scrollbar_gutter.hpp>
-#include <aonyx/css/props/property/scroll/scrollbar_width.hpp>
 #include <aonyx/css/props/property/scroll/scroll_behavior.hpp>
 #include <aonyx/css/props/property/scroll/scroll_initial_target.hpp>
-#include <aonyx/css/props/property/scroll/scroll_margin_block_end.hpp>
+#include <aonyx/css/props/property/scroll/scroll_margin.hpp>
 #include <aonyx/css/props/property/scroll/scroll_margin_block.hpp>
+#include <aonyx/css/props/property/scroll/scroll_margin_block_end.hpp>
 #include <aonyx/css/props/property/scroll/scroll_margin_block_start.hpp>
 #include <aonyx/css/props/property/scroll/scroll_margin_bottom.hpp>
-#include <aonyx/css/props/property/scroll/scroll_margin.hpp>
-#include <aonyx/css/props/property/scroll/scroll_margin_inline_end.hpp>
 #include <aonyx/css/props/property/scroll/scroll_margin_inline.hpp>
+#include <aonyx/css/props/property/scroll/scroll_margin_inline_end.hpp>
 #include <aonyx/css/props/property/scroll/scroll_margin_inline_start.hpp>
 #include <aonyx/css/props/property/scroll/scroll_margin_left.hpp>
 #include <aonyx/css/props/property/scroll/scroll_margin_right.hpp>
 #include <aonyx/css/props/property/scroll/scroll_margin_top.hpp>
 #include <aonyx/css/props/property/scroll/scroll_marker_group.hpp>
-#include <aonyx/css/props/property/scroll/scroll_padding_block_end.hpp>
+#include <aonyx/css/props/property/scroll/scroll_padding.hpp>
 #include <aonyx/css/props/property/scroll/scroll_padding_block.hpp>
+#include <aonyx/css/props/property/scroll/scroll_padding_block_end.hpp>
 #include <aonyx/css/props/property/scroll/scroll_padding_block_start.hpp>
 #include <aonyx/css/props/property/scroll/scroll_padding_bottom.hpp>
-#include <aonyx/css/props/property/scroll/scroll_padding.hpp>
-#include <aonyx/css/props/property/scroll/scroll_padding_inline_end.hpp>
 #include <aonyx/css/props/property/scroll/scroll_padding_inline.hpp>
+#include <aonyx/css/props/property/scroll/scroll_padding_inline_end.hpp>
 #include <aonyx/css/props/property/scroll/scroll_padding_inline_start.hpp>
 #include <aonyx/css/props/property/scroll/scroll_padding_left.hpp>
 #include <aonyx/css/props/property/scroll/scroll_padding_right.hpp>
@@ -373,10 +372,13 @@
 #include <aonyx/css/props/property/scroll/scroll_snap_stop.hpp>
 #include <aonyx/css/props/property/scroll/scroll_snap_type.hpp>
 #include <aonyx/css/props/property/scroll/scroll_target_group.hpp>
+#include <aonyx/css/props/property/scroll/scrollbar_color.hpp>
+#include <aonyx/css/props/property/scroll/scrollbar_gutter.hpp>
+#include <aonyx/css/props/property/scroll/scrollbar_width.hpp>
 
 // scroll_timeline
-#include <aonyx/css/props/property/scroll_timeline/scroll_timeline_axis.hpp>
 #include <aonyx/css/props/property/scroll_timeline/scroll_timeline.hpp>
+#include <aonyx/css/props/property/scroll_timeline/scroll_timeline_axis.hpp>
 #include <aonyx/css/props/property/scroll_timeline/scroll_timeline_name.hpp>
 #include <aonyx/css/props/property/scroll_timeline/timeline_scope.hpp>
 
@@ -400,8 +402,8 @@
 #include <aonyx/css/props/property/svg/baseline_shift.hpp>
 #include <aonyx/css/props/property/svg/baseline_source.hpp>
 #include <aonyx/css/props/property/svg/clip_rule.hpp>
-#include <aonyx/css/props/property/svg/color_interpolation_filters.hpp>
 #include <aonyx/css/props/property/svg/color_interpolation.hpp>
+#include <aonyx/css/props/property/svg/color_interpolation_filters.hpp>
 #include <aonyx/css/props/property/svg/cx.hpp>
 #include <aonyx/css/props/property/svg/cy.hpp>
 #include <aonyx/css/props/property/svg/d.hpp>
@@ -412,8 +414,8 @@
 #include <aonyx/css/props/property/svg/flood_color.hpp>
 #include <aonyx/css/props/property/svg/flood_opacity.hpp>
 #include <aonyx/css/props/property/svg/lighting_color.hpp>
-#include <aonyx/css/props/property/svg/marker_end.hpp>
 #include <aonyx/css/props/property/svg/marker.hpp>
+#include <aonyx/css/props/property/svg/marker_end.hpp>
 #include <aonyx/css/props/property/svg/marker_mid.hpp>
 #include <aonyx/css/props/property/svg/marker_start.hpp>
 #include <aonyx/css/props/property/svg/paint_order.hpp>
@@ -424,9 +426,9 @@
 #include <aonyx/css/props/property/svg/speak_as.hpp>
 #include <aonyx/css/props/property/svg/stop_color.hpp>
 #include <aonyx/css/props/property/svg/stop_opacity.hpp>
+#include <aonyx/css/props/property/svg/stroke.hpp>
 #include <aonyx/css/props/property/svg/stroke_dasharray.hpp>
 #include <aonyx/css/props/property/svg/stroke_dashoffset.hpp>
-#include <aonyx/css/props/property/svg/stroke.hpp>
 #include <aonyx/css/props/property/svg/stroke_linecap.hpp>
 #include <aonyx/css/props/property/svg/stroke_linejoin.hpp>
 #include <aonyx/css/props/property/svg/stroke_miterlimit.hpp>
@@ -445,39 +447,39 @@
 #include <aonyx/css/props/property/transform/backface_visibility.hpp>
 #include <aonyx/css/props/property/transform/perspective.hpp>
 #include <aonyx/css/props/property/transform/perspective_origin.hpp>
-#include <aonyx/css/props/property/transform/transform_box.hpp>
 #include <aonyx/css/props/property/transform/transform.hpp>
+#include <aonyx/css/props/property/transform/transform_box.hpp>
 #include <aonyx/css/props/property/transform/transform_origin.hpp>
 #include <aonyx/css/props/property/transform/transform_style.hpp>
 #include <aonyx/css/props/property/transform/translate.hpp>
 
 // transition
+#include <aonyx/css/props/property/transition/transition.hpp>
 #include <aonyx/css/props/property/transition/transition_behavior.hpp>
 #include <aonyx/css/props/property/transition/transition_delay.hpp>
 #include <aonyx/css/props/property/transition/transition_duration.hpp>
-#include <aonyx/css/props/property/transition/transition.hpp>
 #include <aonyx/css/props/property/transition/transition_property.hpp>
 #include <aonyx/css/props/property/transition/transition_timing_function.hpp>
 
 // typography
+#include <aonyx/css/props/property/typography/font.hpp>
 #include <aonyx/css/props/property/typography/font_family.hpp>
 #include <aonyx/css/props/property/typography/font_feature_settings.hpp>
-#include <aonyx/css/props/property/typography/font.hpp>
 #include <aonyx/css/props/property/typography/font_kerning.hpp>
 #include <aonyx/css/props/property/typography/font_language_override.hpp>
 #include <aonyx/css/props/property/typography/font_optical_sizing.hpp>
 #include <aonyx/css/props/property/typography/font_palette.hpp>
-#include <aonyx/css/props/property/typography/font_size_adjust.hpp>
 #include <aonyx/css/props/property/typography/font_size.hpp>
+#include <aonyx/css/props/property/typography/font_size_adjust.hpp>
 #include <aonyx/css/props/property/typography/font_smooth.hpp>
 #include <aonyx/css/props/property/typography/font_stretch.hpp>
 #include <aonyx/css/props/property/typography/font_style.hpp>
 #include <aonyx/css/props/property/typography/font_synthesis.hpp>
+#include <aonyx/css/props/property/typography/font_variant.hpp>
 #include <aonyx/css/props/property/typography/font_variant_alternates.hpp>
 #include <aonyx/css/props/property/typography/font_variant_caps.hpp>
 #include <aonyx/css/props/property/typography/font_variant_east_asian.hpp>
 #include <aonyx/css/props/property/typography/font_variant_emoji.hpp>
-#include <aonyx/css/props/property/typography/font_variant.hpp>
 #include <aonyx/css/props/property/typography/font_variant_ligatures.hpp>
 #include <aonyx/css/props/property/typography/font_variant_numeric.hpp>
 #include <aonyx/css/props/property/typography/font_variant_position.hpp>
@@ -505,20 +507,20 @@
 #include <aonyx/css/props/property/typography/text_align_last.hpp>
 #include <aonyx/css/props/property/typography/text_anchor.hpp>
 #include <aonyx/css/props/property/typography/text_autospace.hpp>
-#include <aonyx/css/props/property/typography/text_box_edge.hpp>
 #include <aonyx/css/props/property/typography/text_box.hpp>
+#include <aonyx/css/props/property/typography/text_box_edge.hpp>
 #include <aonyx/css/props/property/typography/text_box_trim.hpp>
 #include <aonyx/css/props/property/typography/text_combine_upright.hpp>
-#include <aonyx/css/props/property/typography/text_decoration_color.hpp>
 #include <aonyx/css/props/property/typography/text_decoration.hpp>
+#include <aonyx/css/props/property/typography/text_decoration_color.hpp>
 #include <aonyx/css/props/property/typography/text_decoration_inset.hpp>
 #include <aonyx/css/props/property/typography/text_decoration_line.hpp>
 #include <aonyx/css/props/property/typography/text_decoration_skip.hpp>
 #include <aonyx/css/props/property/typography/text_decoration_skip_ink.hpp>
 #include <aonyx/css/props/property/typography/text_decoration_style.hpp>
 #include <aonyx/css/props/property/typography/text_decoration_thickness.hpp>
-#include <aonyx/css/props/property/typography/text_emphasis_color.hpp>
 #include <aonyx/css/props/property/typography/text_emphasis.hpp>
+#include <aonyx/css/props/property/typography/text_emphasis_color.hpp>
 #include <aonyx/css/props/property/typography/text_emphasis_position.hpp>
 #include <aonyx/css/props/property/typography/text_emphasis_style.hpp>
 #include <aonyx/css/props/property/typography/text_indent.hpp>
@@ -541,8 +543,8 @@
 #include <aonyx/css/props/property/typography/word_spacing.hpp>
 
 // view_timeline
-#include <aonyx/css/props/property/view_timeline/view_timeline_axis.hpp>
 #include <aonyx/css/props/property/view_timeline/view_timeline.hpp>
+#include <aonyx/css/props/property/view_timeline/view_timeline_axis.hpp>
 #include <aonyx/css/props/property/view_timeline/view_timeline_inset.hpp>
 #include <aonyx/css/props/property/view_timeline/view_timeline_name.hpp>
 
@@ -552,11 +554,11 @@
 
 namespace aonyx
 {
-    namespace css
-    {
-        namespace props
-        {
-            using namespace property;
-        }
-    }
+namespace css
+{
+namespace props
+{
+using namespace property;
 }
+} // namespace css
+} // namespace aonyx

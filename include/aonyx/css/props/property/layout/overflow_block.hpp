@@ -1,33 +1,39 @@
+/** @brief CSS property: overflow-block
+ *
+ * overflow-block CSS property.
+ */
 #pragma once
 
 #include <string>
 #include <string_view>
 
-#include <aonyx/css/props/types/property.hpp>
 #include <aonyx/css/props/constants/global_values.hpp>
+#include <aonyx/css/props/types/property.hpp>
 
 namespace aonyx
 {
-    namespace css
+namespace css
+{
+namespace props
+{
+namespace property
+{
+struct overflow_block : types::property_base<"overflow-block">, constants::global_values<overflow_block>
+{
+    using super_property = types::property_base<"overflow-block">;
+
+    overflow_block() = delete;
+    overflow_block(const std::string_view s) : super_property(std::string(s))
     {
-        namespace props
-        {
-            namespace property
-            {
-                struct overflow_block : types::property_base<"overflow-block">, constants::global_values<overflow_block>
-                {
-                    using super_property = types::property_base<"overflow-block">;
-
-                    overflow_block() = delete;
-                    overflow_block(std::string_view v) : super_property(std::string(v)) {}
-
-                    inline static constexpr types::property_constant visible{key, "visible"};
-                    inline static constexpr types::property_constant hidden{key, "hidden"};
-                    inline static constexpr types::property_constant clip{key, "clip"};
-                    inline static constexpr types::property_constant scroll{key, "scroll"};
-                    inline static constexpr types::property_constant auto_{key, "auto"};
-                };
-            }
-        }
     }
-}
+
+    inline static constexpr types::property_constant visible{key, "visible"};
+    inline static constexpr types::property_constant hidden{key, "hidden"};
+    inline static constexpr types::property_constant clip{key, "clip"};
+    inline static constexpr types::property_constant scroll{key, "scroll"};
+    inline static constexpr types::property_constant auto_{key, "auto"};
+};
+} // namespace property
+} // namespace props
+} // namespace css
+} // namespace aonyx

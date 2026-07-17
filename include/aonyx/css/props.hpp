@@ -1,3 +1,6 @@
+/** @brief Aggregate header for the CSS properties subsystem. Includes global values, functions, and all property
+ * definitions. */
+
 #pragma once
 
 #include <aonyx/css/props/constants/global_values.hpp>

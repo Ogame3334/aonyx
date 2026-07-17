@@ -1,3 +1,7 @@
+/**
+ * @brief HTTP header type definition.
+ */
+
 #pragma once
 
 #include <string>
@@ -5,8 +9,9 @@
 
 namespace aonyx
 {
-    namespace http
-    {
-        using headers = std::unordered_map<std::string, std::string>;
-    }
-}
+namespace http
+{
+/** @brief Map of header names to their values. */
+using headers = std::unordered_map<std::string, std::string>;
+} // namespace http
+} // namespace aonyx

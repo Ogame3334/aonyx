@@ -1,27 +1,33 @@
+/** @brief CSS property: background-color
+ *
+ * background-color CSS property.
+ */
 #pragma once
 
 #include <string>
 #include <string_view>
 
-#include <aonyx/css/props/types/property.hpp>
 #include <aonyx/css/props/constants/global_values.hpp>
+#include <aonyx/css/props/types/property.hpp>
 
 namespace aonyx
 {
-    namespace css
-    {
-        namespace props
-        {
-            namespace property
-            {
-                struct background_color : types::property_base<"background-color">, constants::global_values<background_color>
-                {
-                    using super_property = types::property_base<"background-color">;
+namespace css
+{
+namespace props
+{
+namespace property
+{
+struct background_color : types::property_base<"background-color">, constants::global_values<background_color>
+{
+    using super_property = types::property_base<"background-color">;
 
-                    background_color() = delete;
-                    background_color(std::string_view v) : super_property(std::string(v)) {}
-                };
-            }
-        }
+    background_color() = delete;
+    background_color(const std::string_view s) : super_property(std::string(s))
+    {
     }
-}
+};
+} // namespace property
+} // namespace props
+} // namespace css
+} // namespace aonyx

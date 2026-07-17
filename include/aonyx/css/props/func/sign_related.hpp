@@ -1,3 +1,7 @@
+/** @brief CSS function: sign-related
+ *
+ * CSS function utilities for sign-related.
+ */
 #pragma once
 
 #include <format>
@@ -7,22 +11,22 @@
 
 namespace aonyx
 {
-    namespace css
-    {
-        namespace props
-        {
-            namespace func
-            {
-                std::string abs(util::numerical n)
-                {
-                    return std::format("abs({})", n);
-                }
-
-                std::string sign(util::numerical n)
-                {
-                    return std::format("sign({})", n);
-                }
-            }
-        }
-    }
+namespace css
+{
+namespace props
+{
+namespace func
+{
+std::string abs(util::numerical n)
+{
+    return std::format("abs({})", n);
 }
+
+std::string sign(util::numerical n)
+{
+    return std::format("sign({})", n);
+}
+} // namespace func
+} // namespace props
+} // namespace css
+} // namespace aonyx

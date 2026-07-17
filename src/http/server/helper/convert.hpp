@@ -1,48 +1,56 @@
+/** @brief Declarations of type converters between aonyx types and Boost.Beast types. */
+
 #pragma once
 
-#include <string>
+#include <aonyx/http/method.hpp>
 #include <aonyx/http/request.hpp>
 #include <aonyx/http/response.hpp>
-#include <aonyx/http/method.hpp>
-#include <boost/beast/http/verb.hpp>
 #include <boost/beast/http/message.hpp>
 #include <boost/beast/http/string_body.hpp>
+#include <boost/beast/http/verb.hpp>
+#include <string>
 
 namespace aonyx
 {
-    namespace impl
-    {
-        namespace http
-        {
-            namespace helper
-            {
-                using boost_verb = boost::beast::http::verb;
-                using aonyx_method = aonyx::http::method;
+namespace impl
+{
+namespace http
+{
+namespace helper
+{
+using boost_verb = boost::beast::http::verb;
+using aonyx_method = aonyx::http::method;
 
-                namespace method
-                {
-                    boost_verb convert(const aonyx_method method);
-                    aonyx_method convert(const boost_verb verb);
-                }
+namespace method
+{
+/** @brief Convert aonyx::http::method to boost::beast::http::verb. */
+boost_verb convert(const aonyx_method method);
+/** @brief Convert boost::beast::http::verb to aonyx::http::method. */
+aonyx_method convert(const boost_verb verb);
+} // namespace method
 
-                using boost_request = boost::beast::http::request<boost::beast::http::string_body>;
-                using aonyx_request = aonyx::http::request;
+using boost_request = boost::beast::http::request<boost::beast::http::string_body>;
+using aonyx_request = aonyx::http::request;
 
-                namespace request
-                {
-                    boost_request convert(const aonyx_request &req);
-                    aonyx_request convert(const boost_request &req);
-                }
+namespace request
+{
+/** @brief Convert aonyx::http::request to boost::beast::http::request. */
+boost_request convert(const aonyx_request& req);
+/** @brief Convert boost::beast::http::request to aonyx::http::request. */
+aonyx_request convert(const boost_request& req);
+} // namespace request
 
-                using boost_response = boost::beast::http::response<boost::beast::http::string_body>;
-                using aonyx_response = aonyx::http::response;
+using boost_response = boost::beast::http::response<boost::beast::http::string_body>;
+using aonyx_response = aonyx::http::response;
 
-                namespace response
-                {
-                    boost_response convert(const aonyx_response &res);
-                    aonyx_response convert(const boost_response &res);
-                }
-            }
-        }
-    }
-}
+namespace response
+{
+/** @brief Convert aonyx::http::response to boost::beast::http::response. */
+boost_response convert(const aonyx_response& res);
+/** @brief Convert boost::beast::http::response to aonyx::http::response. */
+aonyx_response convert(const boost_response& res);
+} // namespace response
+} // namespace helper
+} // namespace http
+} // namespace impl
+} // namespace aonyx

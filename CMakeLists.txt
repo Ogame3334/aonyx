@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.21)
 
-project(aonyx VERSION 0.1.1 LANGUAGES CXX)
+project(aonyx VERSION 0.1.2 LANGUAGES CXX)
 
 include(GNUInstallDirs)
 include(CMakePackageConfigHelpers)
@@ -31,6 +31,7 @@ add_library(
     src/dom/html_tag/html_tag.cpp
     src/http/server/helper/convert.cpp
     src/http/server/router/router.cpp
+    src/http/server/serve_static/serve_static.cpp
     src/http/client/client/client.cpp
     src/http/server/server/server.cpp
     src/http/server/server/server_impl.cpp
@@ -94,5 +95,5 @@ if(AONYX_INSTALL)
         FILE aonyx-targets.cmake
     )
 
-    install(DIRECTORY include DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+    install(DIRECTORY include/ DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
 endif()
