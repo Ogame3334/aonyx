@@ -56,7 +56,7 @@ std::string html_node::to_string() const
     result += "<" + tag_name;
     for (const auto& attr : attributes)
     {
-        result += " " + attr.name + "=\"" + aonyx::util::escape_html(attr.value) + "\"";
+        result += " " + aonyx::util::escape_html(attr.name) + "=\"" + aonyx::util::escape_html(attr.value) + "\"";
     }
 
     if (is_void_element(tag_name))

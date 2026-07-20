@@ -15,7 +15,7 @@ middleware_t make_serve_static(const std::string& prefix, const std::string& roo
 
         std::string_view rel = req.path;
         rel.remove_prefix(prefix.size());
-        if (!rel.empty() && rel.front() == '/')
+        while (!rel.empty() && rel.front() == '/')
             rel.remove_prefix(1);
 
         std::string rel_path(rel);
