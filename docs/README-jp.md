@@ -31,7 +31,7 @@ mkdir build
 cd build
 cmake ..
 cmake --build .
-cmake --install .
+sudo cmake --install .
 ```
 
 ## CMakeプロジェクトへの統合方法
