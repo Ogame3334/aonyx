@@ -15,6 +15,11 @@ option(
     "Generate install and package-config rules"
     ${PROJECT_IS_TOP_LEVEL}
 )
+option(
+    AONYX_BUILD_TESTS
+    "Build the unit tests"
+    ${PROJECT_IS_TOP_LEVEL}
+)
 
 set(CMAKE_DEBUG_POSTFIX d)
 
@@ -60,6 +65,11 @@ if(AONYX_BUILD_EXAMPLES)
     add_executable(example examples/main.cpp)
 
     target_link_libraries(example PRIVATE aonyx::aonyx)
+endif()
+
+if(AONYX_BUILD_TESTS)
+    enable_testing()
+    add_subdirectory(tests)
 endif()
 
 if(AONYX_INSTALL)
